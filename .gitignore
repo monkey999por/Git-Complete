@@ -1,6 +1,6 @@
 ﻿Git-Complete/bin/
 Git-Complete/.vs/
-Git-Complete/obj/Debug/
+Git-Complete/obj/
 Git-Complete/work_temp/
 Git-Complete/out/
 
@@ -9,4 +9,4 @@ Git-Complete/out/
 
 Git-CompleteTest/bin/
 Git-CompleteTest/.vs/
-Git-CompleteTest/obj/Debug/
+Git-CompleteTest/obj/

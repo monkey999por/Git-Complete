@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\develop\\repos\\Git-Complete\\Git-Complete.csproj": {}
+    "C:\\develop\\Project_Git-Complete\\Git-Complete\\Git-Complete.csproj": {}
   },
   "projects": {
-    "C:\\develop\\repos\\Git-Complete\\Git-Complete.csproj": {
+    "C:\\develop\\Project_Git-Complete\\Git-Complete\\Git-Complete.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\develop\\repos\\Git-Complete\\Git-Complete.csproj",
+        "projectUniqueName": "C:\\develop\\Project_Git-Complete\\Git-Complete\\Git-Complete.csproj",
         "projectName": "Git-Complete",
-        "projectPath": "C:\\develop\\repos\\Git-Complete\\Git-Complete.csproj",
+        "projectPath": "C:\\develop\\Project_Git-Complete\\Git-Complete\\Git-Complete.csproj",
         "packagesPath": "C:\\Users\\nogam\\.nuget\\packages\\",
-        "outputPath": "C:\\develop\\repos\\Git-Complete\\obj\\",
+        "outputPath": "C:\\develop\\Project_Git-Complete\\Git-Complete\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nogam\\AppData\\Roaming\\NuGet\\NuGet.Config",

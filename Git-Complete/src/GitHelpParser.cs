@@ -45,7 +45,6 @@ namespace Git_Complete.src
             string gitCommand = "help";
             var entity = new GitCommandAndOptionsEntity();
             entity.gitCommand = gitCommand;
-
             while (gitOptions.MoveNext())
             {
                 entity.gitOptionList.Add(gitOptions.Current.InnerHtml);

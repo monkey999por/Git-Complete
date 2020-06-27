@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ii+OoqEyIPTs0lVw0RbdDR+O4pFx5gEkDrEPFty6vRg4IDSK2lYyzwsdSqJ6b4je2PGm7MRkD1ClZHwHiLkJDg==",
+  "dgSpecHash": "O0wKZt27y50LAvCC4d9IdMXRwu53py05ULiRiEBOyg8XQZ0WUG1xywDFPgoUKRNDbs3tgVktE7a3LbGWGddTHg==",
   "success": true,
-  "projectFilePath": "C:\\develop\\repos\\Git-CompleteTest\\Git-CompleteTest.csproj",
+  "projectFilePath": "C:\\develop\\Project_Git-Complete\\Git-CompleteTest\\Git-CompleteTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nogam\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\nogam\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",

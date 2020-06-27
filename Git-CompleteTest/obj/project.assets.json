@@ -5721,11 +5721,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\develop\\repos\\Git-CompleteTest\\Git-CompleteTest.csproj",
+      "projectUniqueName": "C:\\develop\\Project_Git-Complete\\Git-CompleteTest\\Git-CompleteTest.csproj",
       "projectName": "Git-CompleteTest",
-      "projectPath": "C:\\develop\\repos\\Git-CompleteTest\\Git-CompleteTest.csproj",
+      "projectPath": "C:\\develop\\Project_Git-Complete\\Git-CompleteTest\\Git-CompleteTest.csproj",
       "packagesPath": "C:\\Users\\nogam\\.nuget\\packages\\",
-      "outputPath": "C:\\develop\\repos\\Git-CompleteTest\\obj\\",
+      "outputPath": "C:\\develop\\Project_Git-Complete\\Git-CompleteTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nogam\\AppData\\Roaming\\NuGet\\NuGet.Config",
