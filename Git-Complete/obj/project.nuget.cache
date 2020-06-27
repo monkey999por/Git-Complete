@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "w+uEtBDB6COlmtqKyr5+fvC6Kife8fL7wmAfAEKXiXKV54364DQIeR7iOxPmfa/7MJ5+ogvuXrq0KdHH578dug==",
+  "success": true,
+  "projectFilePath": "C:\\develop\\repos\\Git-Complete\\Git-Complete.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nogam\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
+    "C:\\Users\\nogam\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\nogam\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.0\\system.runtime.compilerservices.unsafe.4.5.0.nupkg.sha512",
+    "C:\\Users\\nogam\\.nuget\\packages\\system.text.encoding.codepages\\4.5.0\\system.text.encoding.codepages.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
