@@ -2,6 +2,9 @@
 using Git_Complete.src;
 using Git_Complete.src.entity;
 using System.Collections.Generic;
+using Git_Complete.src.common;
+using System.Text;
+using System.IO;
 
 namespace Git_Complete
 {
@@ -32,21 +35,29 @@ namespace Git_Complete
             */
 
             var gitHelpParser = new GitHelpParser();
-            var entityList = new List<GitCommandAndOptionsEntity>();
+            var entityListOut = new List<GitCommandAndOptionsEntity>();
 
             //gitEnrityListにコマンドごとのインスタンスを入れ込む
-            await gitHelpParser.GetGitOptions(helpEntityList, entityList);
+            await gitHelpParser.GetGitOptions(helpEntityList, entityListOut);
 
-            //とりあえず目視確認用のテスト
-            foreach (var gitEntity in entityList)
+            //とりあえず目視確認用のテスト and ファイル出力
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var gitEntity in entityListOut)
             {
+                sb.AppendLine(gitEntity.gitCommand);
                 Console.WriteLine("git command: " + gitEntity.gitCommand);
                 foreach (var gitOption in gitEntity.gitOptionList)
                 {
+                    sb.AppendLine("  options: " + gitOption);
                     Console.WriteLine("  options: " + gitOption);
                 }
 
             }
+            //コマンドとオプションのツリーをファイルに出力
+            string outFullPath = @"C:\develop\Project_Git-Complete\Git-Complete\out\command_and_options_list.txt";
+            File.WriteAllText(outFullPath, sb.ToString());
+
         }
     }
 }
