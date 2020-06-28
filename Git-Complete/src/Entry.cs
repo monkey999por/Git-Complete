@@ -13,6 +13,7 @@ namespace Git_Complete
             var gitMetaInfoParser = new GitMetaInfoParser();
             List<GitCommandAndHelpFilePathEntity> helpEntityList = gitMetaInfoParser.CreatGitCommandAndHelpFilePathEntity();
 
+            /*
             //test
             if (helpEntityList is null)
             {
@@ -28,18 +29,15 @@ namespace Git_Complete
 
                 }
             }
-
+            */
 
             var gitHelpParser = new GitHelpParser();
             var entityList = new List<GitCommandAndOptionsEntity>();
 
             //gitEnrityListにコマンドごとのインスタンスを入れ込む
-            gitHelpParser.GetGitOptions(@"test", entityList);
-
-
+            await gitHelpParser.GetGitOptions(helpEntityList, entityList);
 
             //とりあえず目視確認用のテスト
-
             foreach (var gitEntity in entityList)
             {
                 Console.WriteLine("git command: " + gitEntity.gitCommand);

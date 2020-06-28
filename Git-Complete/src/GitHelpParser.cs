@@ -14,42 +14,43 @@ namespace Git_Complete.src
         string gitCommandOptionClassName = "hdlist1";
         private string gitHelpFile = @"C:\Program Files\Git\mingw64\share\doc\git-doc\git-help.html";
 
-        public async System.Threading.Tasks.Task GetGitOptions(string gitHelpFileDirPath, List<GitCommandAndOptionsEntity> entityList)
+        public async System.Threading.Tasks.Task GetGitOptions(List<GitCommandAndHelpFilePathEntity> inEntityList, List<GitCommandAndOptionsEntity> entityListOut)
         {
-            if (string.IsNullOrEmpty(gitHelpFileDirPath))
+
+            if (inEntityList is null)
             {
-                throw new ArgumentException("gitのヘルプファイルのパスが不正です", nameof(gitHelpFileDirPath));
+                throw new ArgumentNullException(nameof(inEntityList));
+            }
+            if (entityListOut is null)
+            {
+                throw new ArgumentNullException(nameof(entityListOut));
             }
 
-            if (entityList is null)
-            {
-                throw new ArgumentNullException(nameof(entityList));
-            }
-
-            //helpファイルの読み込み
             var config = Configuration.Default;
             var context = BrowsingContext.New(config);
             string source;
-            using (var reader = new StreamReader(gitHelpFile))
+            foreach (var inEntity in inEntityList)
             {
-                source = reader.ReadToEnd();
+                //helpファイルの読み込んでDomを構築
+                Console.WriteLine(inEntity.gitHelpFileFullPath);
+
+                using (var reader = new StreamReader(inEntity.gitHelpFileFullPath))
+                {
+                    source = reader.ReadToEnd();
+                }
+                AngleSharp.Dom.IDocument document = await context.OpenAsync(req => req.Content(source));
+
+                //使用可能なオプションリストの取得
+                var gitOptions = document.GetElementsByClassName(gitCommandOptionClassName).GetEnumerator();
+
+                //取得したコマンドとオプションをentityListに詰め込む処理
+                var entity = new GitCommandAndOptionsEntity(inEntity.gitCommand);
+                while (gitOptions.MoveNext())
+                {
+                    entity.gitOptionList.Add(gitOptions.Current.InnerHtml);
+                }
+                entityListOut.Add(entity);
             }
-
-            AngleSharp.Dom.IDocument document = await context.OpenAsync(req => req.Content(source));
-
-            //使用可能なオプションリストの取得
-            var gitOptions = document.GetElementsByClassName(gitCommandOptionClassName).GetEnumerator();
-
-            //取得したコマンドとオプションをentityListに詰め込む処理
-            //test
-            string gitCommand = "help";
-            var entity = new GitCommandAndOptionsEntity();
-            entity.gitCommand = gitCommand;
-            while (gitOptions.MoveNext())
-            {
-                entity.gitOptionList.Add(gitOptions.Current.InnerHtml);
-            }
-            entityList.Add(entity);
         }
     }
 }

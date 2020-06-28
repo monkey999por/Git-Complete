@@ -31,10 +31,6 @@ namespace Git_Complete.src
                 {
                     commandName = helpFile.Substring(gitHelpFileDirPath.Length, helpFile.Length - gitHelpFileDirPath.Length - DOTHTML.Length);
 
-                    Console.WriteLine(commandName);
-
-
-
                     //このあたりのファイルはgitのコマンドのヘルプじゃない
                     if (commandName.Equals("git-bisect-lk2009") ||
                         commandName.Equals("git-credential-cache--daemon") ||
@@ -51,7 +47,7 @@ namespace Git_Complete.src
                         continue;
                     }
                     
-                    retEntity.Add(new GitCommandAndHelpFilePathEntity(commandName, gitHelpFileDirPath + helpFile));
+                    retEntity.Add(new GitCommandAndHelpFilePathEntity(commandName, helpFile));
                 }
             }
             catch (Exception)

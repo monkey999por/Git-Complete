@@ -12,11 +12,11 @@ namespace Git_Complete.src.entity
         //各gitコマンドで使用できるオプションを保持する
         public List<string> gitOptionList;
 
-        public GitCommandAndOptionsEntity() : this("")
+        public GitCommandAndOptionsEntity()
         {
             gitOptionList = new List<string>();
         }
-        public GitCommandAndOptionsEntity(string gitCommand)
+        public GitCommandAndOptionsEntity(string gitCommand) : this()
         {
             this.gitCommand = gitCommand;
             
