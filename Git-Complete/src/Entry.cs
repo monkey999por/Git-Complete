@@ -9,24 +9,46 @@ namespace Git_Complete
     {
         static async System.Threading.Tasks.Task Main(string[] args)
         {
+            //gitのヘルプファイルパスとコマンド名を持ったentityを作成する
+            var gitMetaInfoParser = new GitMetaInfoParser();
+            List<GitCommandAndHelpFilePathEntity> helpEntityList = gitMetaInfoParser.CreatGitCommandAndHelpFilePathEntity();
+
+            //test
+            if (helpEntityList is null)
+            {
+                Console.WriteLine("null: " + nameof(helpEntityList));
+            }
+            else
+            {
+                foreach (var helpEntity in helpEntityList)
+                {
+                    Console.WriteLine("コマンド名" + helpEntity.gitCommand);
+                    Console.WriteLine("ファイル名" + helpEntity.gitHelpFileFullPath);
+                    Console.WriteLine();
+
+                }
+            }
+
+
             var gitHelpParser = new GitHelpParser();
-            var gitEntityList = new List<GitCommandAndOptionsEntity>();
+            var entityList = new List<GitCommandAndOptionsEntity>();
 
             //gitEnrityListにコマンドごとのインスタンスを入れ込む
-            gitHelpParser.GetGitOptions(@"test", gitEntityList);
+            gitHelpParser.GetGitOptions(@"test", entityList);
 
-            
+
+
             //とりあえず目視確認用のテスト
-            
-            foreach (var gitEntity in gitEntityList)
+
+            foreach (var gitEntity in entityList)
             {
                 Console.WriteLine("git command: " + gitEntity.gitCommand);
                 foreach (var gitOption in gitEntity.gitOptionList)
                 {
                     Console.WriteLine("  options: " + gitOption);
                 }
-                
-            }        
+
+            }
         }
     }
 }

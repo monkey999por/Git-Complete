@@ -10,21 +10,21 @@ namespace Git_Complete.src
 {
     class GitHelpParser
     {
+        //gitのコマンドオプションは、下記のクラス名の中に定義されている。
+        string gitCommandOptionClassName = "hdlist1";
+        private string gitHelpFile = @"C:\Program Files\Git\mingw64\share\doc\git-doc\git-help.html";
+
         public async System.Threading.Tasks.Task GetGitOptions(string gitHelpFileDirPath, List<GitCommandAndOptionsEntity> entityList)
         {
             if (string.IsNullOrEmpty(gitHelpFileDirPath))
             {
-                throw new ArgumentException("gitのヘルプファイルのパスがやばいです", nameof(gitHelpFileDirPath));
+                throw new ArgumentException("gitのヘルプファイルのパスが不正です", nameof(gitHelpFileDirPath));
             }
 
             if (entityList is null)
             {
                 throw new ArgumentNullException(nameof(entityList));
             }
-
-            //初期処理
-            string gitCommandOptionClassName = "hdlist1";
-            string gitHelpFile = @"C:\Program Files\Git\mingw64\share\doc\git-doc\git-help.html";
 
             //helpファイルの読み込み
             var config = Configuration.Default;
