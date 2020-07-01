@@ -65,6 +65,7 @@ $xml.Save("C:\develop\Project_Git-Complete\Git-Complete\out\git_command_object.x
 <#
 gitのhelpファイルのxml読み込みについて
 上のとこのlinkタグとmetaタグ（一行で書かれてるやつ）の終了のスラッシュがないのがだめらしい
+""
 #>
 
 
