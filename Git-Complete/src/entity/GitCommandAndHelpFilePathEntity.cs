@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Git_Complete.src.entity
 {
+    [Serializable]
     class GitCommandAndHelpFilePathEntity
     {
         //gitのコマンドを保持

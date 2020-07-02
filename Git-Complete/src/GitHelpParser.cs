@@ -11,8 +11,7 @@ namespace Git_Complete.src
     class GitHelpParser
     {
         //gitのコマンドオプションは、下記のクラス名の中に定義されている。
-        string gitCommandOptionClassName = "hdlist1";
-        private string gitHelpFile = @"C:\Program Files\Git\mingw64\share\doc\git-doc\git-help.html";
+        private string gitCommandOptionClassName = "hdlist1";
 
         public async System.Threading.Tasks.Task GetGitOptions(List<GitCommandAndHelpFilePathEntity> inEntityList, List<GitCommandAndOptionsEntity> entityListOut)
         {

@@ -16,6 +16,13 @@ namespace Git_Complete
             var gitMetaInfoParser = new GitMetaInfoParser();
             List<GitCommandAndHelpFilePathEntity> helpEntityList = gitMetaInfoParser.CreatGitCommandAndHelpFilePathEntity();
 
+            //xml出力
+            var fileCommon = new FileCommon();
+            fileCommon.OutFileFrom<List<GitCommandAndHelpFilePathEntity>>(helpEntityList, @"C:\develop\Project_Git-Complete\Git-Complete\out\git_help.xml");
+
+
+
+
             /*
             //test
             if (helpEntityList is null)
@@ -39,6 +46,9 @@ namespace Git_Complete
 
             //gitEnrityListにコマンドごとのインスタンスを入れ込む
             await gitHelpParser.GetGitOptions(helpEntityList, entityListOut);
+
+            //xml出力
+            fileCommon.OutFileFrom<List<GitCommandAndOptionsEntity>>(entityListOut, @"C:\develop\Project_Git-Complete\Git-Complete\out\git_command_and_options.xml");
 
             //とりあえず目視確認用のテスト and ファイル出力
             StringBuilder sb = new StringBuilder();
