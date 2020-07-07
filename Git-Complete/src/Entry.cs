@@ -12,13 +12,15 @@ namespace Git_Complete
     {
         static async System.Threading.Tasks.Task Main(string[] args)
         {
+            String outdir = @"C:\develop\Git-Complete\Git-Complete\out";
+
             //gitのヘルプファイルパスとコマンド名を持ったentityを作成する
             var gitMetaInfoParser = new GitMetaInfoParser();
             List<GitCommandAndHelpFilePathEntity> helpEntityList = gitMetaInfoParser.CreatGitCommandAndHelpFilePathEntity();
 
             //xml出力
             var fileCommon = new FileCommon();
-            fileCommon.OutFileFrom<List<GitCommandAndHelpFilePathEntity>>(helpEntityList, @"C:\develop\Project_Git-Complete\Git-Complete\out\git_help.xml");
+            fileCommon.OutFileFrom<List<GitCommandAndHelpFilePathEntity>>(helpEntityList, outdir + @"\git_help.xml");
 
             /*
             //test
@@ -45,7 +47,7 @@ namespace Git_Complete
             await gitHelpParser.GetGitOptions(helpEntityList, entityListOut);
 
             //xml出力
-            fileCommon.OutFileFrom<List<GitCommandAndOptionsEntity>>(entityListOut, @"C:\develop\Project_Git-Complete\Git-Complete\out\git_command_and_options.xml");
+            fileCommon.OutFileFrom<List<GitCommandAndOptionsEntity>>(entityListOut, outdir + @"\git_command_and_options.xml");
 
             //とりあえず目視確認用のテスト and ファイル出力
             StringBuilder sb = new StringBuilder();
@@ -62,7 +64,7 @@ namespace Git_Complete
 
             }
             //コマンドとオプションのツリーをファイルに出力
-            string outFullPath = @"C:\develop\Project_Git-Complete\Git-Complete\out\command_and_options_list.txt";
+            string outFullPath = outdir + @"\command_and_options_list.txt";
             File.WriteAllText(outFullPath, sb.ToString());
 
         }
