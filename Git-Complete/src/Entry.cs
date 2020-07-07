@@ -12,6 +12,8 @@ namespace Git_Complete
     {
         static async System.Threading.Tasks.Task Main(string[] args)
         {
+
+
             String outdir = @"C:\develop\Git-Complete\Git-Complete\out";
 
             //gitのヘルプファイルパスとコマンド名を持ったentityを作成する
