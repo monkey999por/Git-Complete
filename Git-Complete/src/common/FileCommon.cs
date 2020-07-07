@@ -18,6 +18,7 @@ namespace Git_Complete.src.common
                 throw new Exception();
 
             }
+            Directory.CreateDirectory(Path.GetDirectoryName(outPath));
 
             try
             {

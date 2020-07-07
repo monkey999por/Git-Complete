@@ -20,9 +20,6 @@ namespace Git_Complete
             var fileCommon = new FileCommon();
             fileCommon.OutFileFrom<List<GitCommandAndHelpFilePathEntity>>(helpEntityList, @"C:\develop\Project_Git-Complete\Git-Complete\out\git_help.xml");
 
-
-
-
             /*
             //test
             if (helpEntityList is null)
