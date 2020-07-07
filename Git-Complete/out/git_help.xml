@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfGitCommandAndHelpFilePathEntity xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Git_Complete.src.entity">
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-add</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-add.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-am</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-am.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-annotate</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-annotate.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-apply</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-apply.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-archive</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-archive.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-bash</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-bash.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-bisect</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-bisect.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-blame</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-blame.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-branch</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-branch.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-bugreport</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-bugreport.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-bundle</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-bundle.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-cat-file</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-cat-file.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-check-attr</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-check-attr.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-check-ignore</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-check-ignore.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-check-mailmap</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-check-mailmap.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-check-ref-format</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-check-ref-format.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-checkout-index</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-checkout-index.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-checkout</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-checkout.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-cherry-pick</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-cherry-pick.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-cherry</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-cherry.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-citool</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-citool.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-clean</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-clean.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-clone</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-clone.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-column</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-column.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-commit-graph</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-commit-graph.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-commit-tree</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-commit-tree.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-commit</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-commit.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-config</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-config.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-count-objects</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-count-objects.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-credential-store</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-credential-store.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-credential</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-credential.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-daemon</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-daemon.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-describe</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-describe.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-diff-files</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-diff-files.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-diff-index</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-diff-index.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-diff-tree</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-diff-tree.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-diff</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-diff.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-difftool</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-difftool.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-fast-export</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-fast-export.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-fast-import</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-fast-import.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-fetch-pack</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-fetch-pack.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-fetch</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-fetch.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-filter-branch</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-filter-branch.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-fmt-merge-msg</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-fmt-merge-msg.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-for-each-ref</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-for-each-ref.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-format-patch</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-format-patch.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-fsck-objects</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-fsck-objects.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-fsck</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-fsck.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-gc</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-gc.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-get-tar-commit-id</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-get-tar-commit-id.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-grep</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-grep.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-gui</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-gui.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-hash-object</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-hash-object.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-help</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-help.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-http-backend</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-http-backend.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-http-fetch</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-http-fetch.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-http-push</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-http-push.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-imap-send</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-imap-send.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-index-pack</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-index-pack.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-init-db</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-init-db.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-init</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-init.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-instaweb</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-instaweb.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-interpret-trailers</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-interpret-trailers.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-log</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-log.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-ls-files</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-ls-files.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-ls-remote</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-ls-remote.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-ls-tree</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-ls-tree.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-mailinfo</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-mailinfo.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-mailsplit</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-mailsplit.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-merge-base</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-merge-base.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-merge-file</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-merge-file.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-merge-index</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-merge-index.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-merge-one-file</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-merge-one-file.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-merge-tree</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-merge-tree.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-merge</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-merge.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-mergetool</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-mergetool.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-mktag</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-mktag.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-mktree</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-mktree.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-multi-pack-index</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-multi-pack-index.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-mv</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-mv.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-name-rev</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-name-rev.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-notes</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-notes.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-p4</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-p4.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-pack-objects</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-pack-objects.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-pack-redundant</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-pack-redundant.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-pack-refs</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-pack-refs.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-patch-id</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-patch-id.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-prune-packed</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-prune-packed.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-prune</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-prune.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-pull</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-pull.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-push</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-push.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-quiltimport</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-quiltimport.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-range-diff</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-range-diff.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-read-tree</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-read-tree.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-rebase</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-rebase.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-receive-pack</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-receive-pack.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-reflog</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-reflog.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-remote-ext</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-remote-ext.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-remote-fd</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-remote-fd.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-remote</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-remote.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-repack</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-repack.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-replace</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-replace.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-request-pull</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-request-pull.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-rerere</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-rerere.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-reset</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-reset.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-restore</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-restore.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-rev-list</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-rev-list.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-rev-parse</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-rev-parse.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-revert</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-revert.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-rm</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-rm.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-send-email</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-send-email.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-send-pack</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-send-pack.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-sh-i18n--envsubst</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-sh-i18n--envsubst.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-shortlog</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-shortlog.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-show-branch</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-show-branch.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-show-index</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-show-index.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-show-ref</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-show-ref.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-show</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-show.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-sparse-checkout</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-sparse-checkout.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-stage</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-stage.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-stash</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-stash.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-status</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-status.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-stripspace</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-stripspace.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-submodule</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-submodule.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-subtree</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-subtree.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-svn</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-svn.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-switch</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-switch.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-symbolic-ref</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-symbolic-ref.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-tag</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-tag.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-unpack-file</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-unpack-file.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-unpack-objects</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-unpack-objects.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-update-index</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-update-index.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-update-ref</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-update-ref.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-update-server-info</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-update-server-info.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-upload-archive</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-upload-archive.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-upload-pack</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-upload-pack.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-var</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-var.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-verify-commit</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-verify-commit.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-verify-pack</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-verify-pack.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-verify-tag</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-verify-tag.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-web--browse</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-web--browse.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-whatchanged</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-whatchanged.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-worktree</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-worktree.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+	<GitCommandAndHelpFilePathEntity>
+		<gitCommand>git-write-tree</gitCommand>
+		<gitHelpFileFullPath>C:\Program Files\Git\mingw64\share\doc\git-doc\git-write-tree.html</gitHelpFileFullPath>
+	</GitCommandAndHelpFilePathEntity>
+</ArrayOfGitCommandAndHelpFilePathEntity>

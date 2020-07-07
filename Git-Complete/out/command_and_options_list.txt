@@ -1,0 +1,5025 @@
+git-add
+  options: &lt;pathspec&gt;…​
+  options: -n
+  options: --dry-run
+  options: -v
+  options: --verbose
+  options: -f
+  options: --force
+  options: -i
+  options: --interactive
+  options: -p
+  options: --patch
+  options: -e
+  options: --edit
+  options: -u
+  options: --update
+  options: -A
+  options: --all
+  options: --no-ignore-removal
+  options: --no-all
+  options: --ignore-removal
+  options: -N
+  options: --intent-to-add
+  options: --refresh
+  options: --ignore-errors
+  options: --ignore-missing
+  options: --no-warn-embedded-repo
+  options: --renormalize
+  options: --chmod=(+|-)x
+  options: --pathspec-from-file=&lt;file&gt;
+  options: --pathspec-file-nul
+  options: --
+  options: status
+  options: update
+  options: revert
+  options: add untracked
+  options: patch
+  options: diff
+  options: added content
+  options: removed content
+  options: modified content
+  options: removing untouched content
+  options: modifying existing content
+  options: new content
+git-am
+  options: (&lt;mbox&gt;|&lt;Maildir&gt;)…​
+  options: -s
+  options: --signoff
+  options: -k
+  options: --keep
+  options: --keep-non-patch
+  options: --[no-]keep-cr
+  options: -c
+  options: --scissors
+  options: --no-scissors
+  options: -m
+  options: --message-id
+  options: --no-message-id
+  options: -q
+  options: --quiet
+  options: -u
+  options: --utf8
+  options: --no-utf8
+  options: -3
+  options: --3way
+  options: --no-3way
+  options: --rerere-autoupdate
+  options: --no-rerere-autoupdate
+  options: --ignore-space-change
+  options: --ignore-whitespace
+  options: --whitespace=&lt;option&gt;
+  options: -C&lt;n&gt;
+  options: -p&lt;n&gt;
+  options: --directory=&lt;dir&gt;
+  options: --exclude=&lt;path&gt;
+  options: --include=&lt;path&gt;
+  options: --reject
+  options: --patch-format
+  options: -i
+  options: --interactive
+  options: --committer-date-is-author-date
+  options: --ignore-date
+  options: --skip
+  options: -S[&lt;keyid&gt;]
+  options: --gpg-sign[=&lt;keyid&gt;]
+  options: --no-gpg-sign
+  options: --continue
+  options: -r
+  options: --resolved
+  options: --resolvemsg=&lt;msg&gt;
+  options: --abort
+  options: --quit
+  options: --show-current-patch[=(diff|raw)]
+git-annotate
+  options: -b
+  options: --root
+  options: --show-stats
+  options: -L &lt;start&gt;,&lt;end&gt;
+  options: -L :&lt;funcname&gt;
+  options: -l
+  options: -t
+  options: -S &lt;revs-file&gt;
+  options: --reverse &lt;rev&gt;..&lt;rev&gt;
+  options: -p
+  options: --porcelain
+  options: --line-porcelain
+  options: --incremental
+  options: --encoding=&lt;encoding&gt;
+  options: --contents &lt;file&gt;
+  options: --date &lt;format&gt;
+  options: --[no-]progress
+  options: -M[&lt;num&gt;]
+  options: -C[&lt;num&gt;]
+  options: --ignore-rev &lt;rev&gt;
+  options: --ignore-revs-file &lt;file&gt;
+  options: -h
+git-apply
+  options: &lt;patch&gt;…​
+  options: --stat
+  options: --numstat
+  options: --summary
+  options: --check
+  options: --index
+  options: --cached
+  options: --intent-to-add
+  options: -3
+  options: --3way
+  options: --build-fake-ancestor=&lt;file&gt;
+  options: -R
+  options: --reverse
+  options: --reject
+  options: -z
+  options: -p&lt;n&gt;
+  options: -C&lt;n&gt;
+  options: --unidiff-zero
+  options: --apply
+  options: --no-add
+  options: --allow-binary-replacement
+  options: --binary
+  options: --exclude=&lt;path-pattern&gt;
+  options: --include=&lt;path-pattern&gt;
+  options: --ignore-space-change
+  options: --ignore-whitespace
+  options: --whitespace=&lt;action&gt;
+  options: --inaccurate-eof
+  options: -v
+  options: --verbose
+  options: --recount
+  options: --directory=&lt;root&gt;
+  options: --unsafe-paths
+  options: apply.ignoreWhitespace
+  options: apply.whitespace
+git-archive
+  options: --format=&lt;fmt&gt;
+  options: -l
+  options: --list
+  options: -v
+  options: --verbose
+  options: --prefix=&lt;prefix&gt;/
+  options: -o &lt;file&gt;
+  options: --output=&lt;file&gt;
+  options: --worktree-attributes
+  options: &lt;extra&gt;
+  options: --remote=&lt;repo&gt;
+  options: --exec=&lt;git-upload-archive&gt;
+  options: &lt;tree-ish&gt;
+  options: &lt;path&gt;
+  options: -0
+  options: -9
+  options: tar.umask
+  options: tar.&lt;format&gt;.command
+  options: tar.&lt;format&gt;.remote
+  options: export-ignore
+  options: export-subst
+  options: <code>git archive --format=tar --prefix=junk/ HEAD | (cd /var/tmp/ &amp;&amp; tar xf -)</code>
+  options: <code>git archive --format=tar --prefix=git-1.4.0/ v1.4.0 | gzip &gt;git-1.4.0.tar.gz</code>
+  options: <code>git archive --format=tar.gz --prefix=git-1.4.0/ v1.4.0 &gt;git-1.4.0.tar.gz</code>
+  options: <code>git archive --prefix=git-1.4.0/ -o git-1.4.0.tar.gz v1.4.0</code>
+  options: <code>git archive --format=tar --prefix=git-1.4.0/ v1.4.0^{tree} | gzip &gt;git-1.4.0.tar.gz</code>
+  options: <code>git archive --format=zip --prefix=git-docs/ HEAD:Documentation/ &gt; git-1.4.0-docs.zip</code>
+  options: <code>git archive -o latest.zip HEAD</code>
+  options: <code>git config tar.tar.xz.command "xz -c"</code>
+git-bash
+  options: --cd-to-home
+  options: --no-cd
+  options: --cd=&lt;directory&gt;
+  options: --minimal-search-path
+  options: --no-minimal-search-path
+  options: --command=&lt;command&gt;
+  options: --app-id=&lt;command&gt;
+  options: --needs-console
+  options: --no-needs-console
+  options: --hide
+  options: --no-hide
+  options: --append-quote
+  options: --no-append-quote
+git-bisect
+  options: --no-checkout
+git-blame
+  options: -b
+  options: --root
+  options: --show-stats
+  options: -L &lt;start&gt;,&lt;end&gt;
+  options: -L :&lt;funcname&gt;
+  options: -l
+  options: -t
+  options: -S &lt;revs-file&gt;
+  options: --reverse &lt;rev&gt;..&lt;rev&gt;
+  options: -p
+  options: --porcelain
+  options: --line-porcelain
+  options: --incremental
+  options: --encoding=&lt;encoding&gt;
+  options: --contents &lt;file&gt;
+  options: --date &lt;format&gt;
+  options: --[no-]progress
+  options: -M[&lt;num&gt;]
+  options: -C[&lt;num&gt;]
+  options: --ignore-rev &lt;rev&gt;
+  options: --ignore-revs-file &lt;file&gt;
+  options: -h
+  options: -c
+  options: --score-debug
+  options: -f
+  options: --show-name
+  options: -n
+  options: --show-number
+  options: -s
+  options: -e
+  options: --show-email
+  options: -w
+  options: --abbrev=&lt;n&gt;
+git-branch
+  options: -d
+  options: --delete
+  options: -D
+  options: --create-reflog
+  options: -f
+  options: --force
+  options: -m
+  options: --move
+  options: -M
+  options: -c
+  options: --copy
+  options: -C
+  options: --color[=&lt;when&gt;]
+  options: --no-color
+  options: -i
+  options: --ignore-case
+  options: --column[=&lt;options&gt;]
+  options: --no-column
+  options: -r
+  options: --remotes
+  options: -a
+  options: --all
+  options: -l
+  options: --list
+  options: --show-current
+  options: -v
+  options: -vv
+  options: --verbose
+  options: -q
+  options: --quiet
+  options: --abbrev=&lt;length&gt;
+  options: --no-abbrev
+  options: -t
+  options: --track
+  options: --no-track
+  options: --set-upstream
+  options: -u &lt;upstream&gt;
+  options: --set-upstream-to=&lt;upstream&gt;
+  options: --unset-upstream
+  options: --edit-description
+  options: --contains [&lt;commit&gt;]
+  options: --no-contains [&lt;commit&gt;]
+  options: --merged [&lt;commit&gt;]
+  options: --no-merged [&lt;commit&gt;]
+  options: &lt;branchname&gt;
+  options: &lt;start-point&gt;
+  options: &lt;oldbranch&gt;
+  options: &lt;newbranch&gt;
+  options: --sort=&lt;key&gt;
+  options: --points-at &lt;object&gt;
+  options: --format &lt;format&gt;
+  options: Start development from a known tag
+  options: Delete an unneeded branch
+  options: Listing branches from a specific remote
+git-bugreport
+  options: -o &lt;path&gt;
+  options: --output-directory &lt;path&gt;
+  options: -s &lt;format&gt;
+  options: --suffix &lt;format&gt;
+git-bundle
+  options: create [options] &lt;file&gt; &lt;git-rev-list-args&gt;
+  options: verify &lt;file&gt;
+  options: list-heads &lt;file&gt;
+  options: unbundle &lt;file&gt;
+  options: &lt;git-rev-list-args&gt;
+  options: [&lt;refname&gt;…​]
+  options: --progress
+  options: --all-progress
+  options: --all-progress-implied
+  options: -q
+  options: --quiet
+git-cat-file
+  options: &lt;object&gt;
+  options: -t
+  options: -s
+  options: -e
+  options: -p
+  options: &lt;type&gt;
+  options: --textconv
+  options: --filters
+  options: --path=&lt;path&gt;
+  options: --batch
+  options: --batch=&lt;format&gt;
+  options: --batch-check
+  options: --batch-check=&lt;format&gt;
+  options: --batch-all-objects
+  options: --buffer
+  options: --unordered
+  options: --allow-unknown-type
+  options: --follow-symlinks
+  options: <code>objectname</code>
+  options: <code>objecttype</code>
+  options: <code>objectsize</code>
+  options: <code>objectsize:disk</code>
+  options: <code>deltabase</code>
+  options: <code>rest</code>
+git-check-attr
+  options: -a, --all
+  options: --cached
+  options: --stdin
+  options: -z
+  options: --
+  options: <em>unspecified</em>
+  options: <em>unset</em>
+  options: <em>set</em>
+  options: &lt;value&gt;
+git-check-ignore
+  options: -q, --quiet
+  options: -v, --verbose
+  options: --stdin
+  options: -z
+  options: -n, --non-matching
+  options: --no-index
+  options: 0
+  options: 1
+  options: 128
+git-check-mailmap
+  options: --stdin
+git-check-ref-format
+  options: --[no-]allow-onelevel
+  options: --refspec-pattern
+  options: --normalize
+git-checkout-index
+  options: -u
+  options: --index
+  options: -q
+  options: --quiet
+  options: -f
+  options: --force
+  options: -a
+  options: --all
+  options: -n
+  options: --no-create
+  options: --prefix=&lt;string&gt;
+  options: --stage=&lt;number&gt;|all
+  options: --temp
+  options: --stdin
+  options: -z
+  options: --
+  options: To update and refresh only the files already checked out
+  options: Using <em>git checkout-index</em> to "export an entire tree"
+  options: Export files with a prefix
+git-checkout
+  options: <em>git checkout</em> [&lt;branch&gt;]
+  options: <em>git checkout</em> -b|-B &lt;new_branch&gt; [&lt;start point&gt;]
+  options: <em>git checkout</em> --detach [&lt;branch&gt;]
+  options: <em>git checkout</em> [--detach] &lt;commit&gt;
+  options: <em>git checkout</em> [-f|--ours|--theirs|-m|--conflict=&lt;style&gt;] [&lt;tree-ish&gt;] [--] &lt;pathspec&gt;…​
+  options: <em>git checkout</em> [-f|--ours|--theirs|-m|--conflict=&lt;style&gt;] [&lt;tree-ish&gt;] --pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]
+  options: <em>git checkout</em> (-p|--patch) [&lt;tree-ish&gt;] [--] [&lt;pathspec&gt;…​]
+  options: -q
+  options: --quiet
+  options: --progress
+  options: --no-progress
+  options: -f
+  options: --force
+  options: --ours
+  options: --theirs
+  options: -b &lt;new_branch&gt;
+  options: -B &lt;new_branch&gt;
+  options: -t
+  options: --track
+  options: --no-track
+  options: --guess
+  options: --no-guess
+  options: -l
+  options: --detach
+  options: --orphan &lt;new_branch&gt;
+  options: --ignore-skip-worktree-bits
+  options: -m
+  options: --merge
+  options: --conflict=&lt;style&gt;
+  options: -p
+  options: --patch
+  options: --ignore-other-worktrees
+  options: --overwrite-ignore
+  options: --no-overwrite-ignore
+  options: --recurse-submodules
+  options: --no-recurse-submodules
+  options: --overlay
+  options: --no-overlay
+  options: --pathspec-from-file=&lt;file&gt;
+  options: --pathspec-file-nul
+  options: &lt;branch&gt;
+  options: &lt;new_branch&gt;
+  options: &lt;start_point&gt;
+  options: &lt;tree-ish&gt;
+  options: --
+  options: &lt;pathspec&gt;…​
+git-cherry-pick
+  options: &lt;commit&gt;…​
+  options: -e
+  options: --edit
+  options: --cleanup=&lt;mode&gt;
+  options: -x
+  options: -r
+  options: -m parent-number
+  options: --mainline parent-number
+  options: -n
+  options: --no-commit
+  options: -s
+  options: --signoff
+  options: -S[&lt;keyid&gt;]
+  options: --gpg-sign[=&lt;keyid&gt;]
+  options: --no-gpg-sign
+  options: --ff
+  options: --allow-empty
+  options: --allow-empty-message
+  options: --keep-redundant-commits
+  options: --strategy=&lt;strategy&gt;
+  options: -X&lt;option&gt;
+  options: --strategy-option=&lt;option&gt;
+  options: --rerere-autoupdate
+  options: --no-rerere-autoupdate
+  options: --continue
+  options: --skip
+  options: --quit
+  options: --abort
+  options: <code>git cherry-pick master</code>
+  options: <code>git cherry-pick ..master</code>
+  options: <code>git cherry-pick ^HEAD master</code>
+  options: <code>git cherry-pick maint next ^master</code>
+  options: <code>git cherry-pick maint master..next</code>
+  options: <code>git cherry-pick master~4 master~2</code>
+  options: <code>git cherry-pick -n master~1 next</code>
+  options: <code>git cherry-pick --ff ..next</code>
+  options: <code>git rev-list --reverse master -- README | git cherry-pick -n --stdin</code>
+git-cherry
+  options: -v
+  options: &lt;upstream&gt;
+  options: &lt;head&gt;
+  options: &lt;limit&gt;
+git-citool
+git-clean
+  options: -d
+  options: -f
+  options: --force
+  options: -i
+  options: --interactive
+  options: -n
+  options: --dry-run
+  options: -q
+  options: --quiet
+  options: -e &lt;pattern&gt;
+  options: --exclude=&lt;pattern&gt;
+  options: -x
+  options: -X
+  options: clean
+  options: filter by pattern
+  options: select by numbers
+  options: ask each
+  options: quit
+  options: help
+git-clone
+  options: -l
+  options: --local
+  options: --no-hardlinks
+  options: -s
+  options: --shared
+  options: --reference[-if-able] &lt;repository&gt;
+  options: --dissociate
+  options: -q
+  options: --quiet
+  options: -v
+  options: --verbose
+  options: --progress
+  options: --server-option=&lt;option&gt;
+  options: -n
+  options: --no-checkout
+  options: --bare
+  options: --sparse
+  options: --filter=&lt;filter-spec&gt;
+  options: --mirror
+  options: -o &lt;name&gt;
+  options: --origin &lt;name&gt;
+  options: -b &lt;name&gt;
+  options: --branch &lt;name&gt;
+  options: -u &lt;upload-pack&gt;
+  options: --upload-pack &lt;upload-pack&gt;
+  options: --template=&lt;template_directory&gt;
+  options: -c &lt;key&gt;=&lt;value&gt;
+  options: --config &lt;key&gt;=&lt;value&gt;
+  options: --depth &lt;depth&gt;
+  options: --shallow-since=&lt;date&gt;
+  options: --shallow-exclude=&lt;revision&gt;
+  options: --[no-]single-branch
+  options: --no-tags
+  options: --recurse-submodules[=&lt;pathspec]
+  options: --[no-]shallow-submodules
+  options: --[no-]remote-submodules
+  options: --separate-git-dir=&lt;git dir&gt;
+  options: -j &lt;n&gt;
+  options: --jobs &lt;n&gt;
+  options: &lt;repository&gt;
+  options: &lt;directory&gt;
+git-column
+  options: --command=&lt;name&gt;
+  options: --mode=&lt;mode&gt;
+  options: --raw-mode=&lt;n&gt;
+  options: --width=&lt;width&gt;
+  options: --indent=&lt;string&gt;
+  options: --nl=&lt;N&gt;
+  options: --padding=&lt;N&gt;
+git-commit-graph
+  options: --object-dir
+  options: --[no-]progress
+  options: <em>write</em>
+  options: <em>verify</em>
+git-commit-tree
+  options: &lt;tree&gt;
+  options: -p &lt;parent&gt;
+  options: -m &lt;message&gt;
+  options: -F &lt;file&gt;
+  options: -S[&lt;keyid&gt;]
+  options: --gpg-sign[=&lt;keyid&gt;]
+  options: --no-gpg-sign
+  options: Git internal format
+  options: RFC 2822
+  options: ISO 8601
+git-commit
+  options: -a
+  options: --all
+  options: -p
+  options: --patch
+  options: -C &lt;commit&gt;
+  options: --reuse-message=&lt;commit&gt;
+  options: -c &lt;commit&gt;
+  options: --reedit-message=&lt;commit&gt;
+  options: --fixup=&lt;commit&gt;
+  options: --squash=&lt;commit&gt;
+  options: --reset-author
+  options: --short
+  options: --branch
+  options: --porcelain
+  options: --long
+  options: -z
+  options: --null
+  options: -F &lt;file&gt;
+  options: --file=&lt;file&gt;
+  options: --author=&lt;author&gt;
+  options: --date=&lt;date&gt;
+  options: -m &lt;msg&gt;
+  options: --message=&lt;msg&gt;
+  options: -t &lt;file&gt;
+  options: --template=&lt;file&gt;
+  options: -s
+  options: --signoff
+  options: -n
+  options: --no-verify
+  options: --allow-empty
+  options: --allow-empty-message
+  options: --cleanup=&lt;mode&gt;
+  options: strip
+  options: whitespace
+  options: verbatim
+  options: scissors
+  options: default
+  options: -e
+  options: --edit
+  options: --no-edit
+  options: --amend
+  options: --no-post-rewrite
+  options: -i
+  options: --include
+  options: -o
+  options: --only
+  options: --pathspec-from-file=&lt;file&gt;
+  options: --pathspec-file-nul
+  options: -u[&lt;mode&gt;]
+  options: --untracked-files[=&lt;mode&gt;]
+  options: -v
+  options: --verbose
+  options: -q
+  options: --quiet
+  options: --dry-run
+  options: --status
+  options: --no-status
+  options: -S[&lt;keyid&gt;]
+  options: --gpg-sign[=&lt;keyid&gt;]
+  options: --no-gpg-sign
+  options: --
+  options: &lt;pathspec&gt;…​
+  options: Git internal format
+  options: RFC 2822
+  options: ISO 8601
+  options: <code>$GIT_DIR/COMMIT_EDITMSG</code>
+git-config
+  options: --replace-all
+  options: --add
+  options: --get
+  options: --get-all
+  options: --get-regexp
+  options: --get-urlmatch name URL
+  options: --global
+  options: --system
+  options: --local
+  options: --worktree
+  options: -f config-file
+  options: --file config-file
+  options: --blob blob
+  options: --remove-section
+  options: --rename-section
+  options: --unset
+  options: --unset-all
+  options: -l
+  options: --list
+  options: --type &lt;type&gt;
+  options: --bool
+  options: --int
+  options: --bool-or-int
+  options: --path
+  options: --expiry-date
+  options: --no-type
+  options: -z
+  options: --null
+  options: --name-only
+  options: --show-origin
+  options: --show-scope
+  options: --get-colorbool name [stdout-is-tty]
+  options: --get-color name [default]
+  options: -e
+  options: --edit
+  options: --[no-]includes
+  options: --default &lt;value&gt;
+  options: $(prefix)/etc/gitconfig
+  options: $XDG_CONFIG_HOME/git/config
+  options: ~/.gitconfig
+  options: $GIT_DIR/config
+  options: $GIT_DIR/config.worktree
+  options: GIT_CONFIG
+  options: GIT_CONFIG_NOSYSTEM
+  options: <code>gitdir</code>
+  options: <code>gitdir/i</code>
+  options: <code>onbranch</code>
+  options: boolean
+  options: true
+  options: false
+  options: integer
+  options: color
+  options: pathname
+  options: advice.*
+  options: fetchShowForcedUpdates
+  options: pushUpdateRejected
+  options: pushNonFFCurrent
+  options: pushNonFFMatching
+  options: pushAlreadyExists
+  options: pushFetchFirst
+  options: pushNeedsForce
+  options: pushUnqualifiedRefname
+  options: statusAheadBehind
+  options: statusHints
+  options: statusUoption
+  options: commitBeforeMerge
+  options: resetQuiet
+  options: resolveConflict
+  options: sequencerInUse
+  options: implicitIdentity
+  options: detachedHead
+  options: checkoutAmbiguousRemoteBranchName
+  options: amWorkDir
+  options: rmHints
+  options: addEmbeddedRepo
+  options: ignoredHook
+  options: waitingForEditor
+  options: nestedTag
+  options: submoduleAlternateErrorStrategyDie
+  options: addIgnoredFile
+  options: addEmptyPathspec
+  options: core.fileMode
+  options: core.hideDotFiles
+  options: core.ignoreCase
+  options: core.precomposeUnicode
+  options: core.protectHFS
+  options: core.protectNTFS
+  options: core.fsmonitor
+  options: core.fsmonitorHookVersion
+  options: core.trustctime
+  options: core.splitIndex
+  options: core.untrackedCache
+  options: core.checkStat
+  options: core.quotePath
+  options: core.eol
+  options: core.safecrlf
+  options: core.autocrlf
+  options: core.checkRoundtripEncoding
+  options: core.symlinks
+  options: core.gitProxy
+  options: core.sshCommand
+  options: core.ignoreStat
+  options: core.preferSymlinkRefs
+  options: core.alternateRefsCommand
+  options: core.alternateRefsPrefixes
+  options: core.bare
+  options: core.worktree
+  options: core.logAllRefUpdates
+  options: core.repositoryFormatVersion
+  options: core.sharedRepository
+  options: core.warnAmbiguousRefs
+  options: core.compression
+  options: core.looseCompression
+  options: core.packedGitWindowSize
+  options: core.packedGitLimit
+  options: core.deltaBaseCacheLimit
+  options: core.bigFileThreshold
+  options: core.excludesFile
+  options: core.askPass
+  options: core.attributesFile
+  options: core.hooksPath
+  options: core.editor
+  options: core.commentChar
+  options: core.filesRefLockTimeout
+  options: core.packedRefsTimeout
+  options: core.pager
+  options: core.whitespace
+  options: core.fsyncObjectFiles
+  options: core.preloadIndex
+  options: core.fscache
+  options: core.longpaths
+  options: core.unsetenvvars
+  options: core.restrictinheritedhandles
+  options: core.createObject
+  options: core.notesRef
+  options: core.commitGraph
+  options: core.useReplaceRefs
+  options: core.multiPackIndex
+  options: core.sparseCheckout
+  options: core.sparseCheckoutCone
+  options: core.abbrev
+  options: add.ignoreErrors
+  options: add.ignore-errors (deprecated)
+  options: add.interactive.useBuiltin
+  options: alias.*
+  options: am.keepcr
+  options: am.threeWay
+  options: apply.ignoreWhitespace
+  options: apply.whitespace
+  options: blame.blankBoundary
+  options: blame.coloring
+  options: blame.date
+  options: blame.showEmail
+  options: blame.showRoot
+  options: blame.ignoreRevsFile
+  options: blame.markUnblamables
+  options: blame.markIgnoredLines
+  options: branch.autoSetupMerge
+  options: branch.autoSetupRebase
+  options: branch.sort
+  options: branch.&lt;name&gt;.remote
+  options: branch.&lt;name&gt;.pushRemote
+  options: branch.&lt;name&gt;.merge
+  options: branch.&lt;name&gt;.mergeOptions
+  options: branch.&lt;name&gt;.rebase
+  options: branch.&lt;name&gt;.description
+  options: browser.&lt;tool&gt;.cmd
+  options: browser.&lt;tool&gt;.path
+  options: checkout.defaultRemote
+  options: clean.requireForce
+  options: color.advice
+  options: color.advice.hint
+  options: color.blame.highlightRecent
+  options: color.blame.repeatedLines
+  options: color.branch
+  options: color.branch.&lt;slot&gt;
+  options: color.diff
+  options: color.diff.&lt;slot&gt;
+  options: color.decorate.&lt;slot&gt;
+  options: color.grep
+  options: color.grep.&lt;slot&gt;
+  options: <code>context</code>
+  options: <code>filename</code>
+  options: <code>function</code>
+  options: <code>lineNumber</code>
+  options: <code>column</code>
+  options: <code>match</code>
+  options: <code>matchContext</code>
+  options: <code>matchSelected</code>
+  options: <code>selected</code>
+  options: <code>separator</code>
+  options: color.interactive
+  options: color.interactive.&lt;slot&gt;
+  options: color.pager
+  options: color.push
+  options: color.push.error
+  options: color.remote
+  options: color.remote.&lt;slot&gt;
+  options: color.showBranch
+  options: color.status
+  options: color.status.&lt;slot&gt;
+  options: color.transport
+  options: color.transport.rejected
+  options: color.ui
+  options: column.ui
+  options: <code>always</code>
+  options: <code>never</code>
+  options: <code>auto</code>
+  options: <code>column</code>
+  options: <code>row</code>
+  options: <code>plain</code>
+  options: <code>dense</code>
+  options: <code>nodense</code>
+  options: column.branch
+  options: column.clean
+  options: column.status
+  options: column.tag
+  options: commit.cleanup
+  options: commit.gpgSign
+  options: commit.status
+  options: commit.template
+  options: commit.verbose
+  options: credential.helper
+  options: credential.useHttpPath
+  options: credential.username
+  options: credential.&lt;url&gt;.*
+  options: credentialCache.ignoreSIGHUP
+  options: completion.commands
+  options: diff.autoRefreshIndex
+  options: diff.dirstat
+  options: <code>changes</code>
+  options: <code>lines</code>
+  options: <code>files</code>
+  options: <code>cumulative</code>
+  options: &lt;limit&gt;
+  options: diff.statGraphWidth
+  options: diff.context
+  options: diff.interHunkContext
+  options: diff.external
+  options: diff.ignoreSubmodules
+  options: diff.mnemonicPrefix
+  options: <code>git diff</code>
+  options: <code>git diff HEAD</code>
+  options: <code>git diff --cached</code>
+  options: <code>git diff HEAD:file1 file2</code>
+  options: <code>git diff --no-index a b</code>
+  options: diff.noprefix
+  options: diff.orderFile
+  options: diff.renameLimit
+  options: diff.renames
+  options: diff.suppressBlankEmpty
+  options: diff.submodule
+  options: diff.wordRegex
+  options: diff.&lt;driver&gt;.command
+  options: diff.&lt;driver&gt;.xfuncname
+  options: diff.&lt;driver&gt;.binary
+  options: diff.&lt;driver&gt;.textconv
+  options: diff.&lt;driver&gt;.wordRegex
+  options: diff.&lt;driver&gt;.cachetextconv
+  options: diff.tool
+  options: diff.guitool
+  options: diff.indentHeuristic
+  options: diff.algorithm
+  options: <code>default</code>, <code>myers</code>
+  options: <code>minimal</code>
+  options: <code>patience</code>
+  options: <code>histogram</code>
+  options: diff.wsErrorHighlight
+  options: diff.colorMoved
+  options: diff.colorMovedWS
+  options: difftool.&lt;tool&gt;.path
+  options: difftool.&lt;tool&gt;.cmd
+  options: difftool.prompt
+  options: fastimport.unpackLimit
+  options: feature.*
+  options: feature.experimental
+  options: feature.manyFiles
+  options: fetch.recurseSubmodules
+  options: fetch.fsckObjects
+  options: fetch.fsck.&lt;msg-id&gt;
+  options: fetch.fsck.skipList
+  options: fetch.unpackLimit
+  options: fetch.prune
+  options: fetch.pruneTags
+  options: fetch.output
+  options: fetch.negotiationAlgorithm
+  options: fetch.showForcedUpdates
+  options: fetch.parallel
+  options: fetch.writeCommitGraph
+  options: format.attach
+  options: format.from
+  options: format.numbered
+  options: format.headers
+  options: format.to
+  options: format.cc
+  options: format.subjectPrefix
+  options: format.coverFromDescription
+  options: format.signature
+  options: format.signatureFile
+  options: format.suffix
+  options: format.encodeEmailHeaders
+  options: format.pretty
+  options: format.thread
+  options: format.signOff
+  options: format.coverLetter
+  options: format.outputDirectory
+  options: format.useAutoBase
+  options: format.notes
+  options: filter.&lt;driver&gt;.clean
+  options: filter.&lt;driver&gt;.smudge
+  options: fsck.&lt;msg-id&gt;
+  options: fsck.skipList
+  options: gc.aggressiveDepth
+  options: gc.aggressiveWindow
+  options: gc.auto
+  options: gc.autoPackLimit
+  options: gc.autoDetach
+  options: gc.bigPackThreshold
+  options: gc.writeCommitGraph
+  options: gc.logExpiry
+  options: gc.packRefs
+  options: gc.pruneExpire
+  options: gc.worktreePruneExpire
+  options: gc.reflogExpire
+  options: gc.&lt;pattern&gt;.reflogExpire
+  options: gc.reflogExpireUnreachable
+  options: gc.&lt;pattern&gt;.reflogExpireUnreachable
+  options: gc.rerereResolved
+  options: gc.rerereUnresolved
+  options: gitcvs.commitMsgAnnotation
+  options: gitcvs.enabled
+  options: gitcvs.logFile
+  options: gitcvs.usecrlfattr
+  options: gitcvs.allBinary
+  options: gitcvs.dbName
+  options: gitcvs.dbDriver
+  options: gitcvs.dbUser, gitcvs.dbPass
+  options: gitcvs.dbTableNamePrefix
+  options: gitweb.category
+  options: gitweb.description
+  options: gitweb.owner
+  options: gitweb.url
+  options: gitweb.avatar
+  options: gitweb.blame
+  options: gitweb.grep
+  options: gitweb.highlight
+  options: gitweb.patches
+  options: gitweb.pickaxe
+  options: gitweb.remote_heads
+  options: gitweb.showSizes
+  options: gitweb.snapshot
+  options: grep.lineNumber
+  options: grep.column
+  options: grep.patternType
+  options: grep.extendedRegexp
+  options: grep.threads
+  options: grep.fallbackToNoIndex
+  options: gpg.program
+  options: gpg.format
+  options: gpg.&lt;format&gt;.program
+  options: gpg.minTrustLevel
+  options: gui.commitMsgWidth
+  options: gui.diffContext
+  options: gui.displayUntracked
+  options: gui.encoding
+  options: gui.matchTrackingBranch
+  options: gui.newBranchTemplate
+  options: gui.pruneDuringFetch
+  options: gui.trustmtime
+  options: gui.spellingDictionary
+  options: gui.fastCopyBlame
+  options: gui.copyBlameThreshold
+  options: gui.blamehistoryctx
+  options: guitool.&lt;name&gt;.cmd
+  options: guitool.&lt;name&gt;.needsFile
+  options: guitool.&lt;name&gt;.noConsole
+  options: guitool.&lt;name&gt;.noRescan
+  options: guitool.&lt;name&gt;.confirm
+  options: guitool.&lt;name&gt;.argPrompt
+  options: guitool.&lt;name&gt;.revPrompt
+  options: guitool.&lt;name&gt;.revUnmerged
+  options: guitool.&lt;name&gt;.title
+  options: guitool.&lt;name&gt;.prompt
+  options: help.browser
+  options: help.format
+  options: help.autoCorrect
+  options: help.htmlPath
+  options: http.proxy
+  options: http.proxyAuthMethod
+  options: http.proxySSLCert
+  options: http.proxySSLKey
+  options: http.proxySSLCertPasswordProtected
+  options: http.proxySSLCAInfo
+  options: http.emptyAuth
+  options: http.delegation
+  options: http.extraHeader
+  options: http.cookieFile
+  options: http.saveCookies
+  options: http.version
+  options: http.sslVersion
+  options: http.sslCipherList
+  options: http.sslVerify
+  options: http.sslCert
+  options: http.sslKey
+  options: http.sslCertPasswordProtected
+  options: http.sslCAInfo
+  options: http.sslCAPath
+  options: http.sslBackend
+  options: http.schannelCheckRevoke
+  options: http.schannelUseSSLCAInfo
+  options: http.pinnedpubkey
+  options: http.sslTry
+  options: http.maxRequests
+  options: http.minSessions
+  options: http.postBuffer
+  options: http.lowSpeedLimit, http.lowSpeedTime
+  options: http.noEPSV
+  options: http.userAgent
+  options: http.followRedirects
+  options: http.&lt;url&gt;.*
+  options: i18n.commitEncoding
+  options: i18n.logOutputEncoding
+  options: imap.folder
+  options: imap.tunnel
+  options: imap.host
+  options: imap.user
+  options: imap.pass
+  options: imap.port
+  options: imap.sslverify
+  options: imap.preformattedHTML
+  options: imap.authMethod
+  options: index.recordEndOfIndexEntries
+  options: index.recordOffsetTable
+  options: index.threads
+  options: index.version
+  options: init.templateDir
+  options: instaweb.browser
+  options: instaweb.httpd
+  options: instaweb.local
+  options: instaweb.modulePath
+  options: instaweb.port
+  options: interactive.singleKey
+  options: interactive.diffFilter
+  options: log.abbrevCommit
+  options: log.date
+  options: log.decorate
+  options: log.excludeDecoration
+  options: log.follow
+  options: log.graphColors
+  options: log.showRoot
+  options: log.showSignature
+  options: log.mailmap
+  options: mailinfo.scissors
+  options: mailmap.file
+  options: mailmap.blob
+  options: man.viewer
+  options: man.&lt;tool&gt;.cmd
+  options: man.&lt;tool&gt;.path
+  options: merge.conflictStyle
+  options: merge.defaultToUpstream
+  options: merge.ff
+  options: merge.verifySignatures
+  options: merge.branchdesc
+  options: merge.log
+  options: merge.renameLimit
+  options: merge.renames
+  options: merge.directoryRenames
+  options: merge.renormalize
+  options: merge.stat
+  options: merge.autoStash
+  options: merge.tool
+  options: merge.guitool
+  options: merge.verbosity
+  options: merge.&lt;driver&gt;.name
+  options: merge.&lt;driver&gt;.driver
+  options: merge.&lt;driver&gt;.recursive
+  options: mergetool.&lt;tool&gt;.path
+  options: mergetool.&lt;tool&gt;.cmd
+  options: mergetool.&lt;tool&gt;.trustExitCode
+  options: mergetool.meld.hasOutput
+  options: mergetool.keepBackup
+  options: mergetool.keepTemporaries
+  options: mergetool.writeToTemp
+  options: mergetool.prompt
+  options: notes.mergeStrategy
+  options: notes.&lt;name&gt;.mergeStrategy
+  options: notes.displayRef
+  options: notes.rewrite.&lt;command&gt;
+  options: notes.rewriteMode
+  options: notes.rewriteRef
+  options: pack.window
+  options: pack.depth
+  options: pack.windowMemory
+  options: pack.compression
+  options: pack.allowPackReuse
+  options: pack.island
+  options: pack.islandCore
+  options: pack.deltaCacheSize
+  options: pack.deltaCacheLimit
+  options: pack.threads
+  options: pack.indexVersion
+  options: pack.packSizeLimit
+  options: pack.useBitmaps
+  options: pack.useSparse
+  options: pack.writeBitmaps (deprecated)
+  options: pack.writeBitmapHashCache
+  options: pager.&lt;cmd&gt;
+  options: pretty.&lt;name&gt;
+  options: protocol.allow
+  options: protocol.&lt;name&gt;.allow
+  options: protocol.version
+  options: pull.ff
+  options: pull.rebase
+  options: pull.octopus
+  options: pull.twohead
+  options: push.default
+  options: push.followTags
+  options: push.gpgSign
+  options: push.pushOption
+  options: push.recurseSubmodules
+  options: rebase.useBuiltin
+  options: rebase.backend
+  options: rebase.stat
+  options: rebase.autoSquash
+  options: rebase.autoStash
+  options: rebase.missingCommitsCheck
+  options: rebase.instructionFormat
+  options: rebase.abbreviateCommands
+  options: rebase.rescheduleFailedExec
+  options: receive.advertiseAtomic
+  options: receive.advertisePushOptions
+  options: receive.autogc
+  options: receive.certNonceSeed
+  options: receive.certNonceSlop
+  options: receive.fsckObjects
+  options: receive.fsck.&lt;msg-id&gt;
+  options: receive.fsck.skipList
+  options: receive.keepAlive
+  options: receive.unpackLimit
+  options: receive.maxInputSize
+  options: receive.denyDeletes
+  options: receive.denyDeleteCurrent
+  options: receive.denyCurrentBranch
+  options: receive.denyNonFastForwards
+  options: receive.hideRefs
+  options: receive.updateServerInfo
+  options: receive.shallowUpdate
+  options: remote.pushDefault
+  options: remote.&lt;name&gt;.url
+  options: remote.&lt;name&gt;.pushurl
+  options: remote.&lt;name&gt;.proxy
+  options: remote.&lt;name&gt;.proxyAuthMethod
+  options: remote.&lt;name&gt;.fetch
+  options: remote.&lt;name&gt;.push
+  options: remote.&lt;name&gt;.mirror
+  options: remote.&lt;name&gt;.skipDefaultUpdate
+  options: remote.&lt;name&gt;.skipFetchAll
+  options: remote.&lt;name&gt;.receivepack
+  options: remote.&lt;name&gt;.uploadpack
+  options: remote.&lt;name&gt;.tagOpt
+  options: remote.&lt;name&gt;.vcs
+  options: remote.&lt;name&gt;.prune
+  options: remote.&lt;name&gt;.pruneTags
+  options: remote.&lt;name&gt;.promisor
+  options: remote.&lt;name&gt;.partialclonefilter
+  options: remotes.&lt;group&gt;
+  options: repack.useDeltaBaseOffset
+  options: repack.packKeptObjects
+  options: repack.useDeltaIslands
+  options: repack.writeBitmaps
+  options: rerere.autoUpdate
+  options: rerere.enabled
+  options: reset.quiet
+  options: sendemail.identity
+  options: sendemail.smtpEncryption
+  options: sendemail.smtpssl (deprecated)
+  options: sendemail.smtpsslcertpath
+  options: sendemail.&lt;identity&gt;.*
+  options: sendemail.aliasesFile
+  options: sendemail.aliasFileType
+  options: sendemail.annotate
+  options: sendemail.bcc
+  options: sendemail.cc
+  options: sendemail.ccCmd
+  options: sendemail.chainReplyTo
+  options: sendemail.confirm
+  options: sendemail.envelopeSender
+  options: sendemail.from
+  options: sendemail.multiEdit
+  options: sendemail.signedoffbycc
+  options: sendemail.smtpPass
+  options: sendemail.suppresscc
+  options: sendemail.suppressFrom
+  options: sendemail.to
+  options: sendemail.tocmd
+  options: sendemail.smtpDomain
+  options: sendemail.smtpServer
+  options: sendemail.smtpServerPort
+  options: sendemail.smtpServerOption
+  options: sendemail.smtpUser
+  options: sendemail.thread
+  options: sendemail.transferEncoding
+  options: sendemail.validate
+  options: sendemail.xmailer
+  options: sendemail.signedoffcc (deprecated)
+  options: sendemail.smtpBatchSize
+  options: sendemail.smtpReloginDelay
+  options: sendpack.sideband
+  options: sequence.editor
+  options: showBranch.default
+  options: splitIndex.maxPercentChange
+  options: splitIndex.sharedIndexExpire
+  options: ssh.variant
+  options: status.relativePaths
+  options: status.short
+  options: status.branch
+  options: status.aheadBehind
+  options: status.displayCommentPrefix
+  options: status.renameLimit
+  options: status.renames
+  options: status.showStash
+  options: status.showUntrackedFiles
+  options: status.submoduleSummary
+  options: stash.useBuiltin
+  options: stash.showPatch
+  options: stash.showStat
+  options: submodule.&lt;name&gt;.url
+  options: submodule.&lt;name&gt;.update
+  options: submodule.&lt;name&gt;.branch
+  options: submodule.&lt;name&gt;.fetchRecurseSubmodules
+  options: submodule.&lt;name&gt;.ignore
+  options: submodule.&lt;name&gt;.active
+  options: submodule.active
+  options: submodule.recurse
+  options: submodule.fetchJobs
+  options: submodule.alternateLocation
+  options: submodule.alternateErrorStrategy
+  options: tag.forceSignAnnotated
+  options: tag.sort
+  options: tag.gpgSign
+  options: tar.umask
+  options: trace2.normalTarget
+  options: trace2.perfTarget
+  options: trace2.eventTarget
+  options: trace2.normalBrief
+  options: trace2.perfBrief
+  options: trace2.eventBrief
+  options: trace2.eventNesting
+  options: trace2.configParams
+  options: trace2.envVars
+  options: trace2.destinationDebug
+  options: trace2.maxFiles
+  options: transfer.fsckObjects
+  options: transfer.hideRefs
+  options: transfer.unpackLimit
+  options: uploadarchive.allowUnreachable
+  options: uploadpack.hideRefs
+  options: uploadpack.allowTipSHA1InWant
+  options: uploadpack.allowReachableSHA1InWant
+  options: uploadpack.allowAnySHA1InWant
+  options: uploadpack.keepAlive
+  options: uploadpack.packObjectsHook
+  options: uploadpack.allowFilter
+  options: uploadpack.allowRefInWant
+  options: url.&lt;base&gt;.insteadOf
+  options: url.&lt;base&gt;.pushInsteadOf
+  options: user.name
+  options: user.email
+  options: author.name
+  options: author.email
+  options: committer.name
+  options: committer.email
+  options: user.useConfigOnly
+  options: user.signingKey
+  options: versionsort.prereleaseSuffix (deprecated)
+  options: versionsort.suffix
+  options: web.browser
+  options: worktree.guessRemote
+git-count-objects
+  options: -v
+  options: --verbose
+  options: -H
+  options: --human-readable
+git-credential-store
+  options: --file=&lt;path&gt;
+  options: ~/.git-credentials
+  options: $XDG_CONFIG_HOME/git/credentials
+git-credential
+  options: <code>protocol</code>
+  options: <code>host</code>
+  options: <code>path</code>
+  options: <code>username</code>
+  options: <code>password</code>
+  options: <code>url</code>
+git-daemon
+  options: --strict-paths
+  options: --base-path=&lt;path&gt;
+  options: --base-path-relaxed
+  options: --interpolated-path=&lt;pathtemplate&gt;
+  options: --export-all
+  options: --inetd
+  options: --listen=&lt;host_or_ipaddr&gt;
+  options: --port=&lt;n&gt;
+  options: --init-timeout=&lt;n&gt;
+  options: --timeout=&lt;n&gt;
+  options: --max-connections=&lt;n&gt;
+  options: --syslog
+  options: --log-destination=&lt;destination&gt;
+  options: stderr
+  options: syslog
+  options: none
+  options: --user-path
+  options: --user-path=&lt;path&gt;
+  options: --verbose
+  options: --reuseaddr
+  options: --detach
+  options: --pid-file=&lt;file&gt;
+  options: --user=&lt;user&gt;
+  options: --group=&lt;group&gt;
+  options: --enable=&lt;service&gt;
+  options: --disable=&lt;service&gt;
+  options: --allow-override=&lt;service&gt;
+  options: --forbid-override=&lt;service&gt;
+  options: --[no-]informative-errors
+  options: --access-hook=&lt;path&gt;
+  options: &lt;directory&gt;
+  options: upload-pack
+  options: upload-archive
+  options: receive-pack
+  options: We assume the following in /etc/services
+  options: <em>git daemon</em> as inetd server
+  options: <em>git daemon</em> as inetd server for virtual hosts
+  options: <em>git daemon</em> as regular daemon for virtual hosts
+  options: selectively enable/disable services per repository
+git-describe
+  options: &lt;commit-ish&gt;…​
+  options: --dirty[=&lt;mark&gt;]
+  options: --broken[=&lt;mark&gt;]
+  options: --all
+  options: --tags
+  options: --contains
+  options: --abbrev=&lt;n&gt;
+  options: --candidates=&lt;n&gt;
+  options: --exact-match
+  options: --debug
+  options: --long
+  options: --match &lt;pattern&gt;
+  options: --exclude &lt;pattern&gt;
+  options: --always
+  options: --first-parent
+git-diff-files
+  options: -p
+  options: -u
+  options: --patch
+  options: -s
+  options: --no-patch
+  options: -U&lt;n&gt;
+  options: --unified=&lt;n&gt;
+  options: --output=&lt;file&gt;
+  options: --output-indicator-new=&lt;char&gt;
+  options: --output-indicator-old=&lt;char&gt;
+  options: --output-indicator-context=&lt;char&gt;
+  options: --raw
+  options: --patch-with-raw
+  options: --indent-heuristic
+  options: --no-indent-heuristic
+  options: --minimal
+  options: --patience
+  options: --histogram
+  options: --anchored=&lt;text&gt;
+  options: --diff-algorithm={patience|minimal|histogram|myers}
+  options: <code>default</code>, <code>myers</code>
+  options: <code>minimal</code>
+  options: <code>patience</code>
+  options: <code>histogram</code>
+  options: --stat[=&lt;width&gt;[,&lt;name-width&gt;[,&lt;count&gt;]]]
+  options: --compact-summary
+  options: --numstat
+  options: --shortstat
+  options: -X[&lt;param1,param2,…​&gt;]
+  options: --dirstat[=&lt;param1,param2,…​&gt;]
+  options: <code>changes</code>
+  options: <code>lines</code>
+  options: <code>files</code>
+  options: <code>cumulative</code>
+  options: &lt;limit&gt;
+  options: --cumulative
+  options: --dirstat-by-file[=&lt;param1,param2&gt;…​]
+  options: --summary
+  options: --patch-with-stat
+  options: -z
+  options: --name-only
+  options: --name-status
+  options: --submodule[=&lt;format&gt;]
+  options: --color[=&lt;when&gt;]
+  options: --no-color
+  options: --color-moved[=&lt;mode&gt;]
+  options: no
+  options: default
+  options: plain
+  options: blocks
+  options: zebra
+  options: dimmed-zebra
+  options: --no-color-moved
+  options: --color-moved-ws=&lt;modes&gt;
+  options: no
+  options: ignore-space-at-eol
+  options: ignore-space-change
+  options: ignore-all-space
+  options: allow-indentation-change
+  options: --no-color-moved-ws
+  options: --word-diff[=&lt;mode&gt;]
+  options: color
+  options: plain
+  options: porcelain
+  options: none
+  options: --word-diff-regex=&lt;regex&gt;
+  options: --color-words[=&lt;regex&gt;]
+  options: --no-renames
+  options: --[no-]rename-empty
+  options: --check
+  options: --ws-error-highlight=&lt;kind&gt;
+  options: --full-index
+  options: --binary
+  options: --abbrev[=&lt;n&gt;]
+  options: -B[&lt;n&gt;][/&lt;m&gt;]
+  options: --break-rewrites[=[&lt;n&gt;][/&lt;m&gt;]]
+  options: -M[&lt;n&gt;]
+  options: --find-renames[=&lt;n&gt;]
+  options: -C[&lt;n&gt;]
+  options: --find-copies[=&lt;n&gt;]
+  options: --find-copies-harder
+  options: -D
+  options: --irreversible-delete
+  options: -l&lt;num&gt;
+  options: --diff-filter=[(A|C|D|M|R|T|U|X|B)…​[*]]
+  options: -S&lt;string&gt;
+  options: -G&lt;regex&gt;
+  options: --find-object=&lt;object-id&gt;
+  options: --pickaxe-all
+  options: --pickaxe-regex
+  options: -O&lt;orderfile&gt;
+  options: -R
+  options: --relative[=&lt;path&gt;]
+  options: -a
+  options: --text
+  options: --ignore-cr-at-eol
+  options: --ignore-space-at-eol
+  options: -b
+  options: --ignore-space-change
+  options: -w
+  options: --ignore-all-space
+  options: --ignore-blank-lines
+  options: --inter-hunk-context=&lt;lines&gt;
+  options: -W
+  options: --function-context
+  options: --exit-code
+  options: --quiet
+  options: --ext-diff
+  options: --no-ext-diff
+  options: --textconv
+  options: --no-textconv
+  options: --ignore-submodules[=&lt;when&gt;]
+  options: --src-prefix=&lt;prefix&gt;
+  options: --dst-prefix=&lt;prefix&gt;
+  options: --no-prefix
+  options: --line-prefix=&lt;prefix&gt;
+  options: --ita-invisible-in-index
+  options: -1 --base
+  options: -2 --ours
+  options: -3 --theirs
+  options: -0
+  options: -c
+  options: --cc
+  options: -q
+  options: git-diff-index &lt;tree-ish&gt;
+  options: git-diff-index --cached &lt;tree-ish&gt;
+  options: git-diff-tree [-r] &lt;tree-ish-1&gt; &lt;tree-ish-2&gt; [&lt;pattern&gt;…​]
+  options: git-diff-files [&lt;pattern&gt;…​]
+git-diff-index
+  options: -p
+  options: -u
+  options: --patch
+  options: -s
+  options: --no-patch
+  options: -U&lt;n&gt;
+  options: --unified=&lt;n&gt;
+  options: --output=&lt;file&gt;
+  options: --output-indicator-new=&lt;char&gt;
+  options: --output-indicator-old=&lt;char&gt;
+  options: --output-indicator-context=&lt;char&gt;
+  options: --raw
+  options: --patch-with-raw
+  options: --indent-heuristic
+  options: --no-indent-heuristic
+  options: --minimal
+  options: --patience
+  options: --histogram
+  options: --anchored=&lt;text&gt;
+  options: --diff-algorithm={patience|minimal|histogram|myers}
+  options: <code>default</code>, <code>myers</code>
+  options: <code>minimal</code>
+  options: <code>patience</code>
+  options: <code>histogram</code>
+  options: --stat[=&lt;width&gt;[,&lt;name-width&gt;[,&lt;count&gt;]]]
+  options: --compact-summary
+  options: --numstat
+  options: --shortstat
+  options: -X[&lt;param1,param2,…​&gt;]
+  options: --dirstat[=&lt;param1,param2,…​&gt;]
+  options: <code>changes</code>
+  options: <code>lines</code>
+  options: <code>files</code>
+  options: <code>cumulative</code>
+  options: &lt;limit&gt;
+  options: --cumulative
+  options: --dirstat-by-file[=&lt;param1,param2&gt;…​]
+  options: --summary
+  options: --patch-with-stat
+  options: -z
+  options: --name-only
+  options: --name-status
+  options: --submodule[=&lt;format&gt;]
+  options: --color[=&lt;when&gt;]
+  options: --no-color
+  options: --color-moved[=&lt;mode&gt;]
+  options: no
+  options: default
+  options: plain
+  options: blocks
+  options: zebra
+  options: dimmed-zebra
+  options: --no-color-moved
+  options: --color-moved-ws=&lt;modes&gt;
+  options: no
+  options: ignore-space-at-eol
+  options: ignore-space-change
+  options: ignore-all-space
+  options: allow-indentation-change
+  options: --no-color-moved-ws
+  options: --word-diff[=&lt;mode&gt;]
+  options: color
+  options: plain
+  options: porcelain
+  options: none
+  options: --word-diff-regex=&lt;regex&gt;
+  options: --color-words[=&lt;regex&gt;]
+  options: --no-renames
+  options: --[no-]rename-empty
+  options: --check
+  options: --ws-error-highlight=&lt;kind&gt;
+  options: --full-index
+  options: --binary
+  options: --abbrev[=&lt;n&gt;]
+  options: -B[&lt;n&gt;][/&lt;m&gt;]
+  options: --break-rewrites[=[&lt;n&gt;][/&lt;m&gt;]]
+  options: -M[&lt;n&gt;]
+  options: --find-renames[=&lt;n&gt;]
+  options: -C[&lt;n&gt;]
+  options: --find-copies[=&lt;n&gt;]
+  options: --find-copies-harder
+  options: -D
+  options: --irreversible-delete
+  options: -l&lt;num&gt;
+  options: --diff-filter=[(A|C|D|M|R|T|U|X|B)…​[*]]
+  options: -S&lt;string&gt;
+  options: -G&lt;regex&gt;
+  options: --find-object=&lt;object-id&gt;
+  options: --pickaxe-all
+  options: --pickaxe-regex
+  options: -O&lt;orderfile&gt;
+  options: -R
+  options: --relative[=&lt;path&gt;]
+  options: -a
+  options: --text
+  options: --ignore-cr-at-eol
+  options: --ignore-space-at-eol
+  options: -b
+  options: --ignore-space-change
+  options: -w
+  options: --ignore-all-space
+  options: --ignore-blank-lines
+  options: --inter-hunk-context=&lt;lines&gt;
+  options: -W
+  options: --function-context
+  options: --exit-code
+  options: --quiet
+  options: --ext-diff
+  options: --no-ext-diff
+  options: --textconv
+  options: --no-textconv
+  options: --ignore-submodules[=&lt;when&gt;]
+  options: --src-prefix=&lt;prefix&gt;
+  options: --dst-prefix=&lt;prefix&gt;
+  options: --no-prefix
+  options: --line-prefix=&lt;prefix&gt;
+  options: --ita-invisible-in-index
+  options: &lt;tree-ish&gt;
+  options: --cached
+  options: -m
+  options: git-diff-index &lt;tree-ish&gt;
+  options: git-diff-index --cached &lt;tree-ish&gt;
+  options: git-diff-tree [-r] &lt;tree-ish-1&gt; &lt;tree-ish-2&gt; [&lt;pattern&gt;…​]
+  options: git-diff-files [&lt;pattern&gt;…​]
+git-diff-tree
+  options: -p
+  options: -u
+  options: --patch
+  options: -s
+  options: --no-patch
+  options: -U&lt;n&gt;
+  options: --unified=&lt;n&gt;
+  options: --output=&lt;file&gt;
+  options: --output-indicator-new=&lt;char&gt;
+  options: --output-indicator-old=&lt;char&gt;
+  options: --output-indicator-context=&lt;char&gt;
+  options: --raw
+  options: --patch-with-raw
+  options: --indent-heuristic
+  options: --no-indent-heuristic
+  options: --minimal
+  options: --patience
+  options: --histogram
+  options: --anchored=&lt;text&gt;
+  options: --diff-algorithm={patience|minimal|histogram|myers}
+  options: <code>default</code>, <code>myers</code>
+  options: <code>minimal</code>
+  options: <code>patience</code>
+  options: <code>histogram</code>
+  options: --stat[=&lt;width&gt;[,&lt;name-width&gt;[,&lt;count&gt;]]]
+  options: --compact-summary
+  options: --numstat
+  options: --shortstat
+  options: -X[&lt;param1,param2,…​&gt;]
+  options: --dirstat[=&lt;param1,param2,…​&gt;]
+  options: <code>changes</code>
+  options: <code>lines</code>
+  options: <code>files</code>
+  options: <code>cumulative</code>
+  options: &lt;limit&gt;
+  options: --cumulative
+  options: --dirstat-by-file[=&lt;param1,param2&gt;…​]
+  options: --summary
+  options: --patch-with-stat
+  options: -z
+  options: --name-only
+  options: --name-status
+  options: --submodule[=&lt;format&gt;]
+  options: --color[=&lt;when&gt;]
+  options: --no-color
+  options: --color-moved[=&lt;mode&gt;]
+  options: no
+  options: default
+  options: plain
+  options: blocks
+  options: zebra
+  options: dimmed-zebra
+  options: --no-color-moved
+  options: --color-moved-ws=&lt;modes&gt;
+  options: no
+  options: ignore-space-at-eol
+  options: ignore-space-change
+  options: ignore-all-space
+  options: allow-indentation-change
+  options: --no-color-moved-ws
+  options: --word-diff[=&lt;mode&gt;]
+  options: color
+  options: plain
+  options: porcelain
+  options: none
+  options: --word-diff-regex=&lt;regex&gt;
+  options: --color-words[=&lt;regex&gt;]
+  options: --no-renames
+  options: --[no-]rename-empty
+  options: --check
+  options: --ws-error-highlight=&lt;kind&gt;
+  options: --full-index
+  options: --binary
+  options: --abbrev[=&lt;n&gt;]
+  options: -B[&lt;n&gt;][/&lt;m&gt;]
+  options: --break-rewrites[=[&lt;n&gt;][/&lt;m&gt;]]
+  options: -M[&lt;n&gt;]
+  options: --find-renames[=&lt;n&gt;]
+  options: -C[&lt;n&gt;]
+  options: --find-copies[=&lt;n&gt;]
+  options: --find-copies-harder
+  options: -D
+  options: --irreversible-delete
+  options: -l&lt;num&gt;
+  options: --diff-filter=[(A|C|D|M|R|T|U|X|B)…​[*]]
+  options: -S&lt;string&gt;
+  options: -G&lt;regex&gt;
+  options: --find-object=&lt;object-id&gt;
+  options: --pickaxe-all
+  options: --pickaxe-regex
+  options: -O&lt;orderfile&gt;
+  options: -R
+  options: --relative[=&lt;path&gt;]
+  options: -a
+  options: --text
+  options: --ignore-cr-at-eol
+  options: --ignore-space-at-eol
+  options: -b
+  options: --ignore-space-change
+  options: -w
+  options: --ignore-all-space
+  options: --ignore-blank-lines
+  options: --inter-hunk-context=&lt;lines&gt;
+  options: -W
+  options: --function-context
+  options: --exit-code
+  options: --quiet
+  options: --ext-diff
+  options: --no-ext-diff
+  options: --textconv
+  options: --no-textconv
+  options: --ignore-submodules[=&lt;when&gt;]
+  options: --src-prefix=&lt;prefix&gt;
+  options: --dst-prefix=&lt;prefix&gt;
+  options: --no-prefix
+  options: --line-prefix=&lt;prefix&gt;
+  options: --ita-invisible-in-index
+  options: &lt;tree-ish&gt;
+  options: &lt;path&gt;…​
+  options: -r
+  options: -t
+  options: --root
+  options: --stdin
+  options: -m
+  options: -s
+  options: -v
+  options: --pretty[=&lt;format&gt;]
+  options: --format=&lt;format&gt;
+  options: --abbrev-commit
+  options: --no-abbrev-commit
+  options: --oneline
+  options: --encoding=&lt;encoding&gt;
+  options: --expand-tabs=&lt;n&gt;
+  options: --expand-tabs
+  options: --no-expand-tabs
+  options: --notes[=&lt;ref&gt;]
+  options: --no-notes
+  options: --show-notes[=&lt;ref&gt;]
+  options: --[no-]standard-notes
+  options: --show-signature
+  options: --no-commit-id
+  options: -c
+  options: --cc
+  options: --combined-all-paths
+  options: --always
+  options: <em>%n</em>
+  options: <em>%%</em>
+  options: <em>%x00</em>
+  options: <em>%Cred</em>
+  options: <em>%Cgreen</em>
+  options: <em>%Cblue</em>
+  options: <em>%Creset</em>
+  options: <em>%C(…​)</em>
+  options: <em>%m</em>
+  options: <em>%w([&lt;w&gt;[,&lt;i1&gt;[,&lt;i2&gt;]]])</em>
+  options: <em>%&lt;(&lt;N&gt;[,trunc|ltrunc|mtrunc])</em>
+  options: <em>%&lt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;(&lt;N&gt;)</em>, <em>%&gt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;&gt;(&lt;N&gt;)</em>, <em>%&gt;&gt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;&lt;(&lt;N&gt;)</em>, <em>%&gt;&lt;|(&lt;N&gt;)</em>
+  options: <em>%H</em>
+  options: <em>%h</em>
+  options: <em>%T</em>
+  options: <em>%t</em>
+  options: <em>%P</em>
+  options: <em>%p</em>
+  options: <em>%an</em>
+  options: <em>%aN</em>
+  options: <em>%ae</em>
+  options: <em>%aE</em>
+  options: <em>%al</em>
+  options: <em>%aL</em>
+  options: <em>%ad</em>
+  options: <em>%aD</em>
+  options: <em>%ar</em>
+  options: <em>%at</em>
+  options: <em>%ai</em>
+  options: <em>%aI</em>
+  options: <em>%as</em>
+  options: <em>%cn</em>
+  options: <em>%cN</em>
+  options: <em>%ce</em>
+  options: <em>%cE</em>
+  options: <em>%cl</em>
+  options: <em>%cL</em>
+  options: <em>%cd</em>
+  options: <em>%cD</em>
+  options: <em>%cr</em>
+  options: <em>%ct</em>
+  options: <em>%ci</em>
+  options: <em>%cI</em>
+  options: <em>%cs</em>
+  options: <em>%d</em>
+  options: <em>%D</em>
+  options: <em>%S</em>
+  options: <em>%e</em>
+  options: <em>%s</em>
+  options: <em>%f</em>
+  options: <em>%b</em>
+  options: <em>%B</em>
+  options: <em>%N</em>
+  options: <em>%GG</em>
+  options: <em>%G?</em>
+  options: <em>%GS</em>
+  options: <em>%GK</em>
+  options: <em>%GF</em>
+  options: <em>%GP</em>
+  options: <em>%GT</em>
+  options: <em>%gD</em>
+  options: <em>%gd</em>
+  options: <em>%gn</em>
+  options: <em>%gN</em>
+  options: <em>%ge</em>
+  options: <em>%gE</em>
+  options: <em>%gs</em>
+  options: <em>%(trailers[:options])</em>
+  options: git-diff-index &lt;tree-ish&gt;
+  options: git-diff-index --cached &lt;tree-ish&gt;
+  options: git-diff-tree [-r] &lt;tree-ish-1&gt; &lt;tree-ish-2&gt; [&lt;pattern&gt;…​]
+  options: git-diff-files [&lt;pattern&gt;…​]
+git-diff
+  options: <em>git diff</em> [&lt;options&gt;] [--] [&lt;path&gt;…​]
+  options: <em>git diff</em> [&lt;options&gt;] --no-index [--] &lt;path&gt; &lt;path&gt;
+  options: <em>git diff</em> [&lt;options&gt;] --cached [&lt;commit&gt;] [--] [&lt;path&gt;…​]
+  options: <em>git diff</em> [&lt;options&gt;] &lt;commit&gt; [--] [&lt;path&gt;…​]
+  options: <em>git diff</em> [&lt;options&gt;] &lt;commit&gt; &lt;commit&gt; [--] [&lt;path&gt;…​]
+  options: <em>git diff</em> [&lt;options&gt;] &lt;commit&gt;..&lt;commit&gt; [--] [&lt;path&gt;…​]
+  options: <em>git diff</em> [&lt;options&gt;] &lt;commit&gt;...&lt;commit&gt; [--] [&lt;path&gt;…​]
+  options: <em>git diff</em> [&lt;options&gt;] &lt;blob&gt; &lt;blob&gt;
+  options: -p
+  options: -u
+  options: --patch
+  options: -s
+  options: --no-patch
+  options: -U&lt;n&gt;
+  options: --unified=&lt;n&gt;
+  options: --output=&lt;file&gt;
+  options: --output-indicator-new=&lt;char&gt;
+  options: --output-indicator-old=&lt;char&gt;
+  options: --output-indicator-context=&lt;char&gt;
+  options: --raw
+  options: --patch-with-raw
+  options: --indent-heuristic
+  options: --no-indent-heuristic
+  options: --minimal
+  options: --patience
+  options: --histogram
+  options: --anchored=&lt;text&gt;
+  options: --diff-algorithm={patience|minimal|histogram|myers}
+  options: <code>default</code>, <code>myers</code>
+  options: <code>minimal</code>
+  options: <code>patience</code>
+  options: <code>histogram</code>
+  options: --stat[=&lt;width&gt;[,&lt;name-width&gt;[,&lt;count&gt;]]]
+  options: --compact-summary
+  options: --numstat
+  options: --shortstat
+  options: -X[&lt;param1,param2,…​&gt;]
+  options: --dirstat[=&lt;param1,param2,…​&gt;]
+  options: <code>changes</code>
+  options: <code>lines</code>
+  options: <code>files</code>
+  options: <code>cumulative</code>
+  options: &lt;limit&gt;
+  options: --cumulative
+  options: --dirstat-by-file[=&lt;param1,param2&gt;…​]
+  options: --summary
+  options: --patch-with-stat
+  options: -z
+  options: --name-only
+  options: --name-status
+  options: --submodule[=&lt;format&gt;]
+  options: --color[=&lt;when&gt;]
+  options: --no-color
+  options: --color-moved[=&lt;mode&gt;]
+  options: no
+  options: default
+  options: plain
+  options: blocks
+  options: zebra
+  options: dimmed-zebra
+  options: --no-color-moved
+  options: --color-moved-ws=&lt;modes&gt;
+  options: no
+  options: ignore-space-at-eol
+  options: ignore-space-change
+  options: ignore-all-space
+  options: allow-indentation-change
+  options: --no-color-moved-ws
+  options: --word-diff[=&lt;mode&gt;]
+  options: color
+  options: plain
+  options: porcelain
+  options: none
+  options: --word-diff-regex=&lt;regex&gt;
+  options: --color-words[=&lt;regex&gt;]
+  options: --no-renames
+  options: --[no-]rename-empty
+  options: --check
+  options: --ws-error-highlight=&lt;kind&gt;
+  options: --full-index
+  options: --binary
+  options: --abbrev[=&lt;n&gt;]
+  options: -B[&lt;n&gt;][/&lt;m&gt;]
+  options: --break-rewrites[=[&lt;n&gt;][/&lt;m&gt;]]
+  options: -M[&lt;n&gt;]
+  options: --find-renames[=&lt;n&gt;]
+  options: -C[&lt;n&gt;]
+  options: --find-copies[=&lt;n&gt;]
+  options: --find-copies-harder
+  options: -D
+  options: --irreversible-delete
+  options: -l&lt;num&gt;
+  options: --diff-filter=[(A|C|D|M|R|T|U|X|B)…​[*]]
+  options: -S&lt;string&gt;
+  options: -G&lt;regex&gt;
+  options: --find-object=&lt;object-id&gt;
+  options: --pickaxe-all
+  options: --pickaxe-regex
+  options: -O&lt;orderfile&gt;
+  options: -R
+  options: --relative[=&lt;path&gt;]
+  options: -a
+  options: --text
+  options: --ignore-cr-at-eol
+  options: --ignore-space-at-eol
+  options: -b
+  options: --ignore-space-change
+  options: -w
+  options: --ignore-all-space
+  options: --ignore-blank-lines
+  options: --inter-hunk-context=&lt;lines&gt;
+  options: -W
+  options: --function-context
+  options: --exit-code
+  options: --quiet
+  options: --ext-diff
+  options: --no-ext-diff
+  options: --textconv
+  options: --no-textconv
+  options: --ignore-submodules[=&lt;when&gt;]
+  options: --src-prefix=&lt;prefix&gt;
+  options: --dst-prefix=&lt;prefix&gt;
+  options: --no-prefix
+  options: --line-prefix=&lt;prefix&gt;
+  options: --ita-invisible-in-index
+  options: -1 --base
+  options: -2 --ours
+  options: -3 --theirs
+  options: -0
+  options: &lt;path&gt;…​
+  options: git-diff-index &lt;tree-ish&gt;
+  options: git-diff-index --cached &lt;tree-ish&gt;
+  options: git-diff-tree [-r] &lt;tree-ish-1&gt; &lt;tree-ish-2&gt; [&lt;pattern&gt;…​]
+  options: git-diff-files [&lt;pattern&gt;…​]
+  options: Various ways to check your working tree
+  options: Comparing with arbitrary commits
+  options: Comparing branches
+  options: Limiting the diff output
+  options: Munging the diff output
+git-difftool
+  options: -d
+  options: --dir-diff
+  options: -y
+  options: --no-prompt
+  options: --prompt
+  options: -t &lt;tool&gt;
+  options: --tool=&lt;tool&gt;
+  options: --tool-help
+  options: --[no-]symlinks
+  options: -x &lt;command&gt;
+  options: --extcmd=&lt;command&gt;
+  options: -g
+  options: --[no-]gui
+  options: --[no-]trust-exit-code
+  options: diff.tool
+  options: diff.guitool
+  options: difftool.&lt;tool&gt;.path
+  options: difftool.&lt;tool&gt;.cmd
+  options: difftool.prompt
+  options: difftool.trustExitCode
+  options: <a href="git-diff.html">git-diff(1)</a>
+  options: <a href="git-mergetool.html">git-mergetool(1)</a>
+  options: <a href="git-config.html">git-config(1)</a>
+git-fast-export
+  options: --progress=&lt;n&gt;
+  options: --signed-tags=(verbatim|warn|warn-strip|strip|abort)
+  options: --tag-of-filtered-object=(abort|drop|rewrite)
+  options: -M
+  options: -C
+  options: --export-marks=&lt;file&gt;
+  options: --import-marks=&lt;file&gt;
+  options: --mark-tags
+  options: --fake-missing-tagger
+  options: --use-done-feature
+  options: --no-data
+  options: --full-tree
+  options: --anonymize
+  options: --reference-excluded-parents
+  options: --show-original-ids
+  options: --reencode=(yes|no|abort)
+  options: --refspec
+  options: [&lt;git-rev-list-args&gt;…​]
+git-fast-import
+  options: --force
+  options: --quiet
+  options: --stats
+  options: --allow-unsafe-features
+  options: --cat-blob-fd=&lt;fd&gt;
+  options: --date-format=&lt;fmt&gt;
+  options: --done
+  options: --export-marks=&lt;file&gt;
+  options: --import-marks=&lt;file&gt;
+  options: --import-marks-if-exists=&lt;file&gt;
+  options: --[no-]relative-marks
+  options: --rewrite-submodules-from=&lt;name&gt;:&lt;file&gt;
+  options: --rewrite-submodules-to=&lt;name&gt;:&lt;file&gt;
+  options: --active-branches=&lt;n&gt;
+  options: --big-file-threshold=&lt;n&gt;
+  options: --depth=&lt;n&gt;
+  options: --export-pack-edges=&lt;file&gt;
+  options: --max-pack-size=&lt;n&gt;
+  options: fastimport.unpackLimit
+  options: <code>raw</code>
+  options: <code>rfc2822</code>
+  options: <code>now</code>
+  options: <code>commit</code>
+  options: <code>tag</code>
+  options: <code>reset</code>
+  options: <code>blob</code>
+  options: <code>alias</code>
+  options: <code>checkpoint</code>
+  options: <code>progress</code>
+  options: <code>done</code>
+  options: <code>get-mark</code>
+  options: <code>cat-blob</code>
+  options: <code>ls</code>
+  options: <code>feature</code>
+  options: <code>option</code>
+  options: External data format
+  options: Inline data format
+  options: External data format
+  options: Inline data format
+  options: Exact byte count format
+  options: Delimited format
+  options: Reading from the active commit
+  options: Reading from a named tree
+  options: date-format
+  options: export-marks
+  options: relative-marks
+  options: no-relative-marks
+  options: force
+  options: import-marks
+  options: import-marks-if-exists
+  options: get-mark
+  options: cat-blob
+  options: ls
+  options: notes
+  options: done
+git-fetch-pack
+  options: --all
+  options: --stdin
+  options: -q
+  options: --quiet
+  options: -k
+  options: --keep
+  options: --thin
+  options: --include-tag
+  options: --upload-pack=&lt;git-upload-pack&gt;
+  options: --exec=&lt;git-upload-pack&gt;
+  options: --depth=&lt;n&gt;
+  options: --shallow-since=&lt;date&gt;
+  options: --shallow-exclude=&lt;revision&gt;
+  options: --deepen-relative
+  options: --no-progress
+  options: --check-self-contained-and-connected
+  options: -v
+  options: &lt;repository&gt;
+  options: &lt;refs&gt;…​
+git-fetch
+  options: --all
+  options: -a
+  options: --append
+  options: --depth=&lt;depth&gt;
+  options: --deepen=&lt;depth&gt;
+  options: --shallow-since=&lt;date&gt;
+  options: --shallow-exclude=&lt;revision&gt;
+  options: --unshallow
+  options: --update-shallow
+  options: --negotiation-tip=&lt;commit|glob&gt;
+  options: --dry-run
+  options: -f
+  options: --force
+  options: -k
+  options: --keep
+  options: --multiple
+  options: --[no-]auto-gc
+  options: --[no-]write-commit-graph
+  options: -p
+  options: --prune
+  options: -P
+  options: --prune-tags
+  options: -n
+  options: --no-tags
+  options: --refmap=&lt;refspec&gt;
+  options: -t
+  options: --tags
+  options: --recurse-submodules[=yes|on-demand|no]
+  options: -j
+  options: --jobs=&lt;n&gt;
+  options: --no-recurse-submodules
+  options: --set-upstream
+  options: --submodule-prefix=&lt;path&gt;
+  options: --recurse-submodules-default=[yes|on-demand]
+  options: -u
+  options: --update-head-ok
+  options: --upload-pack &lt;upload-pack&gt;
+  options: -q
+  options: --quiet
+  options: -v
+  options: --verbose
+  options: --progress
+  options: -o &lt;option&gt;
+  options: --server-option=&lt;option&gt;
+  options: --show-forced-updates
+  options: --no-show-forced-updates
+  options: -4
+  options: --ipv4
+  options: -6
+  options: --ipv6
+  options: &lt;repository&gt;
+  options: &lt;group&gt;
+  options: &lt;refspec&gt;
+  options: flag
+  options: (space)
+  options: <code>+</code>
+  options: <code>-</code>
+  options: <code>t</code>
+  options: <code>*</code>
+  options: <code>!</code>
+  options: <code>=</code>
+  options: summary
+  options: from
+  options: to
+  options: reason
+git-filter-branch
+  options: --setup &lt;command&gt;
+  options: --subdirectory-filter &lt;directory&gt;
+  options: --env-filter &lt;command&gt;
+  options: --tree-filter &lt;command&gt;
+  options: --index-filter &lt;command&gt;
+  options: --parent-filter &lt;command&gt;
+  options: --msg-filter &lt;command&gt;
+  options: --commit-filter &lt;command&gt;
+  options: --tag-name-filter &lt;command&gt;
+  options: --prune-empty
+  options: --original &lt;namespace&gt;
+  options: -d &lt;directory&gt;
+  options: -f
+  options: --force
+  options: --state-branch &lt;branch&gt;
+  options: &lt;rev-list options&gt;…​
+git-fmt-merge-msg
+  options: --log[=&lt;n&gt;]
+  options: --no-log
+  options: --[no-]summary
+  options: -m &lt;message&gt;
+  options: --message &lt;message&gt;
+  options: -F &lt;file&gt;
+  options: --file &lt;file&gt;
+  options: merge.branchdesc
+  options: merge.log
+  options: merge.summary
+git-for-each-ref
+  options: &lt;pattern&gt;…​
+  options: --count=&lt;count&gt;
+  options: --sort=&lt;key&gt;
+  options: --format=&lt;format&gt;
+  options: --color[=&lt;when&gt;]
+  options: --shell
+  options: --perl
+  options: --python
+  options: --tcl
+  options: --points-at=&lt;object&gt;
+  options: --merged[=&lt;object&gt;]
+  options: --no-merged[=&lt;object&gt;]
+  options: --contains[=&lt;object&gt;]
+  options: --no-contains[=&lt;object&gt;]
+  options: --ignore-case
+  options: refname
+  options: objecttype
+  options: objectsize
+  options: objectname
+  options: deltabase
+  options: upstream
+  options: push
+  options: HEAD
+  options: color
+  options: align
+  options: if
+  options: symref
+  options: worktreepath
+git-format-patch
+  options: -p
+  options: --no-stat
+  options: -U&lt;n&gt;
+  options: --unified=&lt;n&gt;
+  options: --output=&lt;file&gt;
+  options: --output-indicator-new=&lt;char&gt;
+  options: --output-indicator-old=&lt;char&gt;
+  options: --output-indicator-context=&lt;char&gt;
+  options: --indent-heuristic
+  options: --no-indent-heuristic
+  options: --minimal
+  options: --patience
+  options: --histogram
+  options: --anchored=&lt;text&gt;
+  options: --diff-algorithm={patience|minimal|histogram|myers}
+  options: <code>default</code>, <code>myers</code>
+  options: <code>minimal</code>
+  options: <code>patience</code>
+  options: <code>histogram</code>
+  options: --stat[=&lt;width&gt;[,&lt;name-width&gt;[,&lt;count&gt;]]]
+  options: --compact-summary
+  options: --numstat
+  options: --shortstat
+  options: -X[&lt;param1,param2,…​&gt;]
+  options: --dirstat[=&lt;param1,param2,…​&gt;]
+  options: <code>changes</code>
+  options: <code>lines</code>
+  options: <code>files</code>
+  options: <code>cumulative</code>
+  options: &lt;limit&gt;
+  options: --cumulative
+  options: --dirstat-by-file[=&lt;param1,param2&gt;…​]
+  options: --summary
+  options: --no-renames
+  options: --[no-]rename-empty
+  options: --full-index
+  options: --binary
+  options: --abbrev[=&lt;n&gt;]
+  options: -B[&lt;n&gt;][/&lt;m&gt;]
+  options: --break-rewrites[=[&lt;n&gt;][/&lt;m&gt;]]
+  options: -M[&lt;n&gt;]
+  options: --find-renames[=&lt;n&gt;]
+  options: -C[&lt;n&gt;]
+  options: --find-copies[=&lt;n&gt;]
+  options: --find-copies-harder
+  options: -D
+  options: --irreversible-delete
+  options: -l&lt;num&gt;
+  options: -O&lt;orderfile&gt;
+  options: -a
+  options: --text
+  options: --ignore-cr-at-eol
+  options: --ignore-space-at-eol
+  options: -b
+  options: --ignore-space-change
+  options: -w
+  options: --ignore-all-space
+  options: --ignore-blank-lines
+  options: --inter-hunk-context=&lt;lines&gt;
+  options: -W
+  options: --function-context
+  options: --ext-diff
+  options: --no-ext-diff
+  options: --textconv
+  options: --no-textconv
+  options: --ignore-submodules[=&lt;when&gt;]
+  options: --src-prefix=&lt;prefix&gt;
+  options: --dst-prefix=&lt;prefix&gt;
+  options: --no-prefix
+  options: --line-prefix=&lt;prefix&gt;
+  options: --ita-invisible-in-index
+  options: -&lt;n&gt;
+  options: -o &lt;dir&gt;
+  options: --output-directory &lt;dir&gt;
+  options: -n
+  options: --numbered
+  options: -N
+  options: --no-numbered
+  options: --start-number &lt;n&gt;
+  options: --numbered-files
+  options: -k
+  options: --keep-subject
+  options: -s
+  options: --signoff
+  options: --stdout
+  options: --attach[=&lt;boundary&gt;]
+  options: --no-attach
+  options: --inline[=&lt;boundary&gt;]
+  options: --thread[=&lt;style&gt;]
+  options: --no-thread
+  options: --in-reply-to=&lt;message id&gt;
+  options: --ignore-if-in-upstream
+  options: --cover-from-description=&lt;mode&gt;
+  options: --subject-prefix=&lt;subject prefix&gt;
+  options: --rfc
+  options: -v &lt;n&gt;
+  options: --reroll-count=&lt;n&gt;
+  options: --to=&lt;email&gt;
+  options: --cc=&lt;email&gt;
+  options: --from
+  options: --from=&lt;ident&gt;
+  options: --add-header=&lt;header&gt;
+  options: --[no-]cover-letter
+  options: --encode-email-headers
+  options: --no-encode-email-headers
+  options: --interdiff=&lt;previous&gt;
+  options: --range-diff=&lt;previous&gt;
+  options: --creation-factor=&lt;percent&gt;
+  options: --notes[=&lt;ref&gt;]
+  options: --no-notes
+  options: --[no-]signature=&lt;signature&gt;
+  options: --signature-file=&lt;file&gt;
+  options: --suffix=.&lt;sfx&gt;
+  options: -q
+  options: --quiet
+  options: --no-binary
+  options: --zero-commit
+  options: --[no-]base[=&lt;commit&gt;]
+  options: --root
+  options: --progress
+git-fsck-objects
+git-fsck
+  options: &lt;object&gt;
+  options: --unreachable
+  options: --[no-]dangling
+  options: --root
+  options: --tags
+  options: --cache
+  options: --no-reflogs
+  options: --full
+  options: --connectivity-only
+  options: --strict
+  options: --verbose
+  options: --lost-found
+  options: --name-objects
+  options: --[no-]progress
+  options: fsck.&lt;msg-id&gt;
+  options: fsck.skipList
+  options: expect dangling commits - potential heads - due to lack of head information
+  options: missing sha1 directory <em>&lt;dir&gt;</em>
+  options: unreachable &lt;type&gt; &lt;object&gt;
+  options: missing &lt;type&gt; &lt;object&gt;
+  options: dangling &lt;type&gt; &lt;object&gt;
+  options: hash mismatch &lt;object&gt;
+  options: GIT_OBJECT_DIRECTORY
+  options: GIT_INDEX_FILE
+  options: GIT_ALTERNATE_OBJECT_DIRECTORIES
+git-gc
+  options: --aggressive
+  options: --auto
+  options: --prune=&lt;date&gt;
+  options: --no-prune
+  options: --quiet
+  options: --force
+  options: --keep-largest-pack
+  options: gc.aggressiveDepth
+  options: gc.aggressiveWindow
+  options: gc.auto
+  options: gc.autoPackLimit
+  options: gc.autoDetach
+  options: gc.bigPackThreshold
+  options: gc.writeCommitGraph
+  options: gc.logExpiry
+  options: gc.packRefs
+  options: gc.pruneExpire
+  options: gc.worktreePruneExpire
+  options: gc.reflogExpire
+  options: gc.&lt;pattern&gt;.reflogExpire
+  options: gc.reflogExpireUnreachable
+  options: gc.&lt;pattern&gt;.reflogExpireUnreachable
+  options: gc.rerereResolved
+  options: gc.rerereUnresolved
+git-get-tar-commit-id
+git-grep
+  options: grep.lineNumber
+  options: grep.column
+  options: grep.patternType
+  options: grep.extendedRegexp
+  options: grep.threads
+  options: grep.fullName
+  options: grep.fallbackToNoIndex
+  options: --cached
+  options: --no-index
+  options: --untracked
+  options: --no-exclude-standard
+  options: --exclude-standard
+  options: --recurse-submodules
+  options: -a
+  options: --text
+  options: --textconv
+  options: --no-textconv
+  options: -i
+  options: --ignore-case
+  options: -I
+  options: --max-depth &lt;depth&gt;
+  options: -r
+  options: --recursive
+  options: --no-recursive
+  options: -w
+  options: --word-regexp
+  options: -v
+  options: --invert-match
+  options: -h
+  options: -H
+  options: --full-name
+  options: -E
+  options: --extended-regexp
+  options: -G
+  options: --basic-regexp
+  options: -P
+  options: --perl-regexp
+  options: -F
+  options: --fixed-strings
+  options: -n
+  options: --line-number
+  options: --column
+  options: -l
+  options: --files-with-matches
+  options: --name-only
+  options: -L
+  options: --files-without-match
+  options: -O[&lt;pager&gt;]
+  options: --open-files-in-pager[=&lt;pager&gt;]
+  options: -z
+  options: --null
+  options: -o
+  options: --only-matching
+  options: -c
+  options: --count
+  options: --color[=&lt;when&gt;]
+  options: --no-color
+  options: --break
+  options: --heading
+  options: -p
+  options: --show-function
+  options: -&lt;num&gt;
+  options: -C &lt;num&gt;
+  options: --context &lt;num&gt;
+  options: -A &lt;num&gt;
+  options: --after-context &lt;num&gt;
+  options: -B &lt;num&gt;
+  options: --before-context &lt;num&gt;
+  options: -W
+  options: --function-context
+  options: --threads &lt;num&gt;
+  options: -f &lt;file&gt;
+  options: -e
+  options: --and
+  options: --or
+  options: --not
+  options: ( …​ )
+  options: --all-match
+  options: -q
+  options: --quiet
+  options: &lt;tree&gt;…​
+  options: --
+  options: &lt;pathspec&gt;…​
+  options: <code>git grep 'time_t' -- '*.[ch]'</code>
+  options: <code>git grep -e '#define' --and \( -e MAX_PATH -e PATH_MAX \)</code>
+  options: <code>git grep --all-match -e NODE -e Unexpected</code>
+  options: <code>git grep solution -- :^Documentation</code>
+git-gui
+  options: blame
+  options: browser
+  options: citool
+  options: version
+  options: <code>git gui blame Makefile</code>
+  options: <code>git gui blame v0.99.8 Makefile</code>
+  options: <code>git gui blame --line=100 Makefile</code>
+  options: <code>git gui citool</code>
+  options: <code>git gui citool --amend</code>
+  options: <code>git gui citool --nocommit</code>
+  options: <code>git citool</code>
+  options: <code>git gui browser maint</code>
+  options: <a href="gitk.html">gitk(1)</a>
+git-hash-object
+  options: -t &lt;type&gt;
+  options: -w
+  options: --stdin
+  options: --stdin-paths
+  options: --path
+  options: --no-filters
+  options: --literally
+git-help
+  options: -a
+  options: --all
+  options: --verbose
+  options: -c
+  options: --config
+  options: -g
+  options: --guides
+  options: -i
+  options: --info
+  options: -m
+  options: --man
+  options: -w
+  options: --web
+git-http-backend
+  options: http.getanyfile
+  options: http.uploadpack
+  options: http.receivepack
+  options: Apache 2.x
+  options: Accelerated static Apache 2.x
+  options: Lighttpd
+git-http-fetch
+  options: commit-id
+  options: -a, -c, -t
+  options: -v
+  options: -w &lt;filename&gt;
+  options: --stdin
+  options: --recover
+git-http-push
+  options: --all
+  options: --force
+  options: --dry-run
+  options: --verbose
+  options: -d
+  options: -D
+  options: &lt;ref&gt;…​
+git-imap-send
+  options: -v
+  options: --verbose
+  options: -q
+  options: --quiet
+  options: --curl
+  options: --no-curl
+  options: imap.folder
+  options: imap.tunnel
+  options: imap.host
+  options: imap.user
+  options: imap.pass
+  options: imap.port
+  options: imap.sslverify
+  options: imap.preformattedHTML
+  options: imap.authMethod
+git-index-pack
+  options: -v
+  options: -o &lt;index-file&gt;
+  options: --stdin
+  options: --fix-thin
+  options: --keep
+  options: --keep=&lt;msg&gt;
+  options: --index-version=&lt;version&gt;[,&lt;offset&gt;]
+  options: --strict
+  options: --check-self-contained-and-connected
+  options: --fsck-objects
+  options: --threads=&lt;n&gt;
+  options: --max-input-size=&lt;size&gt;
+git-init-db
+git-init
+  options: -q
+  options: --quiet
+  options: --bare
+  options: --object-format=&lt;format&gt;
+  options: --template=&lt;template_directory&gt;
+  options: --separate-git-dir=&lt;git dir&gt;
+  options: --shared[=(false|true|umask|group|all|world|everybody|0xxx)]
+  options: <em>umask</em> (or <em>false</em>)
+  options: <em>group</em> (or <em>true</em>)
+  options: <em>all</em> (or <em>world</em> or <em>everybody</em>)
+  options: <em>0xxx</em>
+  options: Start a new Git repository for an existing code base
+git-instaweb
+  options: -l
+  options: --local
+  options: -d
+  options: --httpd
+  options: -m
+  options: --module-path
+  options: -p
+  options: --port
+  options: -b
+  options: --browser
+  options: start
+  options: --start
+  options: stop
+  options: --stop
+  options: restart
+  options: --restart
+git-interpret-trailers
+  options: --in-place
+  options: --trim-empty
+  options: --trailer &lt;token&gt;[(=|:)&lt;value&gt;]
+  options: --where &lt;placement&gt;
+  options: --no-where
+  options: --if-exists &lt;action&gt;
+  options: --no-if-exists
+  options: --if-missing &lt;action&gt;
+  options: --no-if-missing
+  options: --only-trailers
+  options: --only-input
+  options: --unfold
+  options: --parse
+  options: --no-divider
+  options: trailer.separators
+  options: trailer.where
+  options: trailer.ifexists
+  options: trailer.ifmissing
+  options: trailer.&lt;token&gt;.key
+  options: trailer.&lt;token&gt;.where
+  options: trailer.&lt;token&gt;.ifexists
+  options: trailer.&lt;token&gt;.ifmissing
+  options: trailer.&lt;token&gt;.command
+git-log
+  options: --follow
+  options: --no-decorate
+  options: --decorate[=short|full|auto|no]
+  options: --decorate-refs=&lt;pattern&gt;
+  options: --decorate-refs-exclude=&lt;pattern&gt;
+  options: --source
+  options: --[no-]mailmap
+  options: --[no-]use-mailmap
+  options: --full-diff
+  options: --log-size
+  options: -L &lt;start&gt;,&lt;end&gt;:&lt;file&gt;
+  options: -L :&lt;funcname&gt;:&lt;file&gt;
+  options: &lt;revision range&gt;
+  options: [--] &lt;path&gt;…​
+  options: -&lt;number&gt;
+  options: -n &lt;number&gt;
+  options: --max-count=&lt;number&gt;
+  options: --skip=&lt;number&gt;
+  options: --since=&lt;date&gt;
+  options: --after=&lt;date&gt;
+  options: --until=&lt;date&gt;
+  options: --before=&lt;date&gt;
+  options: --author=&lt;pattern&gt;
+  options: --committer=&lt;pattern&gt;
+  options: --grep-reflog=&lt;pattern&gt;
+  options: --grep=&lt;pattern&gt;
+  options: --all-match
+  options: --invert-grep
+  options: -i
+  options: --regexp-ignore-case
+  options: --basic-regexp
+  options: -E
+  options: --extended-regexp
+  options: -F
+  options: --fixed-strings
+  options: -P
+  options: --perl-regexp
+  options: --remove-empty
+  options: --merges
+  options: --no-merges
+  options: --min-parents=&lt;number&gt;
+  options: --max-parents=&lt;number&gt;
+  options: --no-min-parents
+  options: --no-max-parents
+  options: --first-parent
+  options: --not
+  options: --all
+  options: --branches[=&lt;pattern&gt;]
+  options: --tags[=&lt;pattern&gt;]
+  options: --remotes[=&lt;pattern&gt;]
+  options: --glob=&lt;glob-pattern&gt;
+  options: --exclude=&lt;glob-pattern&gt;
+  options: --reflog
+  options: --alternate-refs
+  options: --single-worktree
+  options: --ignore-missing
+  options: --bisect
+  options: --stdin
+  options: --cherry-mark
+  options: --cherry-pick
+  options: --left-only
+  options: --right-only
+  options: --cherry
+  options: -g
+  options: --walk-reflogs
+  options: --merge
+  options: --boundary
+  options: &lt;paths&gt;
+  options: --simplify-by-decoration
+  options: Default mode
+  options: --show-pulls
+  options: --full-history
+  options: --dense
+  options: --sparse
+  options: --simplify-merges
+  options: --ancestry-path
+  options: Default mode
+  options: --full-history without parent rewriting
+  options: --full-history with parent rewriting
+  options: --dense
+  options: --sparse
+  options: --simplify-merges
+  options: --ancestry-path
+  options: --show-pulls
+  options: --date-order
+  options: --author-date-order
+  options: --topo-order
+  options: --reverse
+  options: --no-walk[=(sorted|unsorted)]
+  options: --do-walk
+  options: --pretty[=&lt;format&gt;]
+  options: --format=&lt;format&gt;
+  options: --abbrev-commit
+  options: --no-abbrev-commit
+  options: --oneline
+  options: --encoding=&lt;encoding&gt;
+  options: --expand-tabs=&lt;n&gt;
+  options: --expand-tabs
+  options: --no-expand-tabs
+  options: --notes[=&lt;ref&gt;]
+  options: --no-notes
+  options: --show-notes[=&lt;ref&gt;]
+  options: --[no-]standard-notes
+  options: --show-signature
+  options: --relative-date
+  options: --date=&lt;format&gt;
+  options: --parents
+  options: --children
+  options: --left-right
+  options: --graph
+  options: --show-linear-break[=&lt;barrier&gt;]
+  options: -c
+  options: --cc
+  options: --combined-all-paths
+  options: -m
+  options: -r
+  options: -t
+  options: <em>%n</em>
+  options: <em>%%</em>
+  options: <em>%x00</em>
+  options: <em>%Cred</em>
+  options: <em>%Cgreen</em>
+  options: <em>%Cblue</em>
+  options: <em>%Creset</em>
+  options: <em>%C(…​)</em>
+  options: <em>%m</em>
+  options: <em>%w([&lt;w&gt;[,&lt;i1&gt;[,&lt;i2&gt;]]])</em>
+  options: <em>%&lt;(&lt;N&gt;[,trunc|ltrunc|mtrunc])</em>
+  options: <em>%&lt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;(&lt;N&gt;)</em>, <em>%&gt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;&gt;(&lt;N&gt;)</em>, <em>%&gt;&gt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;&lt;(&lt;N&gt;)</em>, <em>%&gt;&lt;|(&lt;N&gt;)</em>
+  options: <em>%H</em>
+  options: <em>%h</em>
+  options: <em>%T</em>
+  options: <em>%t</em>
+  options: <em>%P</em>
+  options: <em>%p</em>
+  options: <em>%an</em>
+  options: <em>%aN</em>
+  options: <em>%ae</em>
+  options: <em>%aE</em>
+  options: <em>%al</em>
+  options: <em>%aL</em>
+  options: <em>%ad</em>
+  options: <em>%aD</em>
+  options: <em>%ar</em>
+  options: <em>%at</em>
+  options: <em>%ai</em>
+  options: <em>%aI</em>
+  options: <em>%as</em>
+  options: <em>%cn</em>
+  options: <em>%cN</em>
+  options: <em>%ce</em>
+  options: <em>%cE</em>
+  options: <em>%cl</em>
+  options: <em>%cL</em>
+  options: <em>%cd</em>
+  options: <em>%cD</em>
+  options: <em>%cr</em>
+  options: <em>%ct</em>
+  options: <em>%ci</em>
+  options: <em>%cI</em>
+  options: <em>%cs</em>
+  options: <em>%d</em>
+  options: <em>%D</em>
+  options: <em>%S</em>
+  options: <em>%e</em>
+  options: <em>%s</em>
+  options: <em>%f</em>
+  options: <em>%b</em>
+  options: <em>%B</em>
+  options: <em>%N</em>
+  options: <em>%GG</em>
+  options: <em>%G?</em>
+  options: <em>%GS</em>
+  options: <em>%GK</em>
+  options: <em>%GF</em>
+  options: <em>%GP</em>
+  options: <em>%GT</em>
+  options: <em>%gD</em>
+  options: <em>%gd</em>
+  options: <em>%gn</em>
+  options: <em>%gN</em>
+  options: <em>%ge</em>
+  options: <em>%gE</em>
+  options: <em>%gs</em>
+  options: <em>%(trailers[:options])</em>
+  options: -p
+  options: -u
+  options: --patch
+  options: -s
+  options: --no-patch
+  options: -U&lt;n&gt;
+  options: --unified=&lt;n&gt;
+  options: --output=&lt;file&gt;
+  options: --output-indicator-new=&lt;char&gt;
+  options: --output-indicator-old=&lt;char&gt;
+  options: --output-indicator-context=&lt;char&gt;
+  options: --raw
+  options: --patch-with-raw
+  options: --indent-heuristic
+  options: --no-indent-heuristic
+  options: --minimal
+  options: --patience
+  options: --histogram
+  options: --anchored=&lt;text&gt;
+  options: --diff-algorithm={patience|minimal|histogram|myers}
+  options: <code>default</code>, <code>myers</code>
+  options: <code>minimal</code>
+  options: <code>patience</code>
+  options: <code>histogram</code>
+  options: --stat[=&lt;width&gt;[,&lt;name-width&gt;[,&lt;count&gt;]]]
+  options: --compact-summary
+  options: --numstat
+  options: --shortstat
+  options: -X[&lt;param1,param2,…​&gt;]
+  options: --dirstat[=&lt;param1,param2,…​&gt;]
+  options: <code>changes</code>
+  options: <code>lines</code>
+  options: <code>files</code>
+  options: <code>cumulative</code>
+  options: &lt;limit&gt;
+  options: --cumulative
+  options: --dirstat-by-file[=&lt;param1,param2&gt;…​]
+  options: --summary
+  options: --patch-with-stat
+  options: -z
+  options: --name-only
+  options: --name-status
+  options: --submodule[=&lt;format&gt;]
+  options: --color[=&lt;when&gt;]
+  options: --no-color
+  options: --color-moved[=&lt;mode&gt;]
+  options: no
+  options: default
+  options: plain
+  options: blocks
+  options: zebra
+  options: dimmed-zebra
+  options: --no-color-moved
+  options: --color-moved-ws=&lt;modes&gt;
+  options: no
+  options: ignore-space-at-eol
+  options: ignore-space-change
+  options: ignore-all-space
+  options: allow-indentation-change
+  options: --no-color-moved-ws
+  options: --word-diff[=&lt;mode&gt;]
+  options: color
+  options: plain
+  options: porcelain
+  options: none
+  options: --word-diff-regex=&lt;regex&gt;
+  options: --color-words[=&lt;regex&gt;]
+  options: --no-renames
+  options: --[no-]rename-empty
+  options: --check
+  options: --ws-error-highlight=&lt;kind&gt;
+  options: --full-index
+  options: --binary
+  options: --abbrev[=&lt;n&gt;]
+  options: -B[&lt;n&gt;][/&lt;m&gt;]
+  options: --break-rewrites[=[&lt;n&gt;][/&lt;m&gt;]]
+  options: -M[&lt;n&gt;]
+  options: --find-renames[=&lt;n&gt;]
+  options: -C[&lt;n&gt;]
+  options: --find-copies[=&lt;n&gt;]
+  options: --find-copies-harder
+  options: -D
+  options: --irreversible-delete
+  options: -l&lt;num&gt;
+  options: --diff-filter=[(A|C|D|M|R|T|U|X|B)…​[*]]
+  options: -S&lt;string&gt;
+  options: -G&lt;regex&gt;
+  options: --find-object=&lt;object-id&gt;
+  options: --pickaxe-all
+  options: --pickaxe-regex
+  options: -O&lt;orderfile&gt;
+  options: -R
+  options: --relative[=&lt;path&gt;]
+  options: -a
+  options: --text
+  options: --ignore-cr-at-eol
+  options: --ignore-space-at-eol
+  options: -b
+  options: --ignore-space-change
+  options: -w
+  options: --ignore-all-space
+  options: --ignore-blank-lines
+  options: --inter-hunk-context=&lt;lines&gt;
+  options: -W
+  options: --function-context
+  options: --ext-diff
+  options: --no-ext-diff
+  options: --textconv
+  options: --no-textconv
+  options: --ignore-submodules[=&lt;when&gt;]
+  options: --src-prefix=&lt;prefix&gt;
+  options: --dst-prefix=&lt;prefix&gt;
+  options: --no-prefix
+  options: --line-prefix=&lt;prefix&gt;
+  options: --ita-invisible-in-index
+  options: <code>git log --no-merges</code>
+  options: <code>git log v2.6.12.. include/scsi drivers/scsi</code>
+  options: <code>git log --since="2 weeks ago" -- gitk</code>
+  options: <code>git log --name-status release..test</code>
+  options: <code>git log --follow builtin/rev-list.c</code>
+  options: <code>git log --branches --not --remotes=origin</code>
+  options: <code>git log master --not --remotes=*/master</code>
+  options: <code>git log -p -m --first-parent</code>
+  options: <code>git log -L '/int main/',/^}/:main.c</code>
+  options: <code>git log -3</code>
+  options: format.pretty
+  options: i18n.logOutputEncoding
+  options: log.date
+  options: log.follow
+  options: log.showRoot
+  options: log.showSignature
+  options: mailmap.*
+  options: notes.displayRef
+git-ls-files
+  options: -c
+  options: --cached
+  options: -d
+  options: --deleted
+  options: -m
+  options: --modified
+  options: -o
+  options: --others
+  options: -i
+  options: --ignored
+  options: -s
+  options: --stage
+  options: --directory
+  options: --no-empty-directory
+  options: -u
+  options: --unmerged
+  options: -k
+  options: --killed
+  options: -z
+  options: -x &lt;pattern&gt;
+  options: --exclude=&lt;pattern&gt;
+  options: -X &lt;file&gt;
+  options: --exclude-from=&lt;file&gt;
+  options: --exclude-per-directory=&lt;file&gt;
+  options: --exclude-standard
+  options: --error-unmatch
+  options: --with-tree=&lt;tree-ish&gt;
+  options: -t
+  options: H
+  options: S
+  options: M
+  options: R
+  options: C
+  options: K
+  options: ?
+  options: -v
+  options: -f
+  options: --full-name
+  options: --recurse-submodules
+  options: --abbrev[=&lt;n&gt;]
+  options: --debug
+  options: --eol
+  options: --
+  options: &lt;file&gt;
+git-ls-remote
+  options: -h
+  options: --heads
+  options: -t
+  options: --tags
+  options: --refs
+  options: -q
+  options: --quiet
+  options: --upload-pack=&lt;exec&gt;
+  options: --exit-code
+  options: --get-url
+  options: --symref
+  options: --sort=&lt;key&gt;
+  options: -o &lt;option&gt;
+  options: --server-option=&lt;option&gt;
+  options: &lt;repository&gt;
+  options: &lt;refs&gt;…​
+git-ls-tree
+  options: &lt;tree-ish&gt;
+  options: -d
+  options: -r
+  options: -t
+  options: -l
+  options: --long
+  options: -z
+  options: --name-only
+  options: --name-status
+  options: --abbrev[=&lt;n&gt;]
+  options: --full-name
+  options: --full-tree
+  options: [&lt;path&gt;…​]
+git-mailinfo
+  options: -k
+  options: -b
+  options: -u
+  options: --encoding=&lt;encoding&gt;
+  options: -n
+  options: -m
+  options: --message-id
+  options: --scissors
+  options: --no-scissors
+  options: &lt;msg&gt;
+  options: &lt;patch&gt;
+git-mailsplit
+  options: &lt;mbox&gt;
+  options: &lt;Maildir&gt;
+  options: -o&lt;directory&gt;
+  options: -b
+  options: -d&lt;prec&gt;
+  options: -f&lt;nn&gt;
+  options: --keep-cr
+  options: --mboxrd
+git-merge-base
+  options: --octopus
+  options: --independent
+  options: --is-ancestor
+  options: --fork-point
+  options: -a
+  options: --all
+git-merge-file
+  options: -L &lt;label&gt;
+  options: -p
+  options: -q
+  options: --diff3
+  options: --ours
+  options: --theirs
+  options: --union
+  options: <code>git merge-file README.my README README.upstream</code>
+  options: <code>git merge-file -L a -L b -L c tmp/a123 tmp/b234 tmp/c345</code>
+git-merge-index
+  options: --
+  options: -a
+  options: -o
+  options: -q
+git-merge-one-file
+git-merge-tree
+git-merge
+  options: --commit
+  options: --no-commit
+  options: --edit
+  options: -e
+  options: --no-edit
+  options: --cleanup=&lt;mode&gt;
+  options: --ff
+  options: --no-ff
+  options: --ff-only
+  options: -S[&lt;keyid&gt;]
+  options: --gpg-sign[=&lt;keyid&gt;]
+  options: --no-gpg-sign
+  options: --log[=&lt;n&gt;]
+  options: --no-log
+  options: --signoff
+  options: --no-signoff
+  options: --stat
+  options: -n
+  options: --no-stat
+  options: --squash
+  options: --no-squash
+  options: --no-verify
+  options: -s &lt;strategy&gt;
+  options: --strategy=&lt;strategy&gt;
+  options: -X &lt;option&gt;
+  options: --strategy-option=&lt;option&gt;
+  options: --verify-signatures
+  options: --no-verify-signatures
+  options: --summary
+  options: --no-summary
+  options: -q
+  options: --quiet
+  options: -v
+  options: --verbose
+  options: --progress
+  options: --no-progress
+  options: --autostash
+  options: --no-autostash
+  options: --allow-unrelated-histories
+  options: -m &lt;msg&gt;
+  options: -F &lt;file&gt;
+  options: --file=&lt;file&gt;
+  options: --rerere-autoupdate
+  options: --no-rerere-autoupdate
+  options: --overwrite-ignore
+  options: --no-overwrite-ignore
+  options: --abort
+  options: --quit
+  options: --continue
+  options: &lt;commit&gt;…​
+  options: resolve
+  options: recursive
+  options: ours
+  options: theirs
+  options: patience
+  options: diff-algorithm=[patience|minimal|histogram|myers]
+  options: ignore-space-change
+  options: ignore-all-space
+  options: ignore-space-at-eol
+  options: ignore-cr-at-eol
+  options: renormalize
+  options: no-renormalize
+  options: no-renames
+  options: find-renames[=&lt;n&gt;]
+  options: rename-threshold=&lt;n&gt;
+  options: subtree[=&lt;path&gt;]
+  options: octopus
+  options: ours
+  options: subtree
+  options: merge.conflictStyle
+  options: merge.defaultToUpstream
+  options: merge.ff
+  options: merge.verifySignatures
+  options: merge.branchdesc
+  options: merge.log
+  options: merge.renameLimit
+  options: merge.renames
+  options: merge.directoryRenames
+  options: merge.renormalize
+  options: merge.stat
+  options: merge.autoStash
+  options: merge.tool
+  options: merge.guitool
+  options: merge.verbosity
+  options: merge.&lt;driver&gt;.name
+  options: merge.&lt;driver&gt;.driver
+  options: merge.&lt;driver&gt;.recursive
+  options: branch.&lt;name&gt;.mergeOptions
+git-mergetool
+  options: -t &lt;tool&gt;
+  options: --tool=&lt;tool&gt;
+  options: --tool-help
+  options: -y
+  options: --no-prompt
+  options: --prompt
+  options: -g
+  options: --gui
+  options: --no-gui
+  options: -O&lt;orderfile&gt;
+git-mktag
+git-mktree
+  options: -z
+  options: --missing
+  options: --batch
+git-multi-pack-index
+  options: --object-dir=&lt;dir&gt;
+  options: --[no-]progress
+  options: write
+  options: verify
+  options: expire
+  options: repack
+git-mv
+  options: -f
+  options: --force
+  options: -k
+  options: -n
+  options: --dry-run
+  options: -v
+  options: --verbose
+git-name-rev
+  options: --tags
+  options: --refs=&lt;pattern&gt;
+  options: --exclude=&lt;pattern&gt;
+  options: --all
+  options: --stdin
+  options: --name-only
+  options: --no-undefined
+  options: --always
+git-notes
+  options: list
+  options: add
+  options: copy
+  options: append
+  options: edit
+  options: show
+  options: merge
+  options: remove
+  options: prune
+  options: get-ref
+  options: -f
+  options: --force
+  options: -m &lt;msg&gt;
+  options: --message=&lt;msg&gt;
+  options: -F &lt;file&gt;
+  options: --file=&lt;file&gt;
+  options: -C &lt;object&gt;
+  options: --reuse-message=&lt;object&gt;
+  options: -c &lt;object&gt;
+  options: --reedit-message=&lt;object&gt;
+  options: --allow-empty
+  options: --ref &lt;ref&gt;
+  options: --ignore-missing
+  options: --stdin
+  options: -n
+  options: --dry-run
+  options: -s &lt;strategy&gt;
+  options: --strategy=&lt;strategy&gt;
+  options: --commit
+  options: --abort
+  options: -q
+  options: --quiet
+  options: -v
+  options: --verbose
+  options: core.notesRef
+  options: notes.mergeStrategy
+  options: notes.&lt;name&gt;.mergeStrategy
+  options: notes.displayRef
+  options: notes.rewrite.&lt;command&gt;
+  options: notes.rewriteMode
+  options: notes.rewriteRef
+  options: <code>GIT_NOTES_REF</code>
+  options: <code>GIT_NOTES_DISPLAY_REF</code>
+  options: <code>GIT_NOTES_REWRITE_MODE</code>
+  options: <code>GIT_NOTES_REWRITE_REF</code>
+git-p4
+  options: --git-dir &lt;dir&gt;
+  options: -v
+  options: --verbose
+  options: --branch &lt;ref&gt;
+  options: --detect-branches
+  options: --changesfile &lt;file&gt;
+  options: --silent
+  options: --detect-labels
+  options: --import-labels
+  options: --import-local
+  options: --max-changes &lt;n&gt;
+  options: --changes-block-size &lt;n&gt;
+  options: --keep-path
+  options: --use-client-spec
+  options: -/ &lt;path&gt;
+  options: --destination &lt;directory&gt;
+  options: --bare
+  options: --origin &lt;commit&gt;
+  options: -M
+  options: --preserve-user
+  options: --export-labels
+  options: -n
+  options: --dry-run
+  options: --prepare-p4-only
+  options: --shelve
+  options: --update-shelve CHANGELIST
+  options: --conflict=(ask|skip|quit)
+  options: --branch &lt;branch&gt;
+  options: --commit &lt;sha1&gt;|&lt;sha1..sha1&gt;
+  options: --disable-rebase
+  options: --disable-p4sync
+  options: --import-labels
+  options: --origin
+  options: "//depot/my/project"
+  options: "//depot/my/project@all"
+  options: "//depot/my/project@1,6"
+  options: "//depot/proj1@all //depot/proj2@all"
+  options: git-p4.user
+  options: git-p4.password
+  options: git-p4.port
+  options: git-p4.host
+  options: git-p4.client
+  options: git-p4.retries
+  options: git-p4.syncFromOrigin
+  options: git-p4.branchUser
+  options: git-p4.branchList
+  options: git-p4.ignoredP4Labels
+  options: git-p4.importLabels
+  options: git-p4.labelImportRegexp
+  options: git-p4.useClientSpec
+  options: git-p4.pathEncoding
+  options: git-p4.largeFileSystem
+  options: git-p4.largeFileExtensions
+  options: git-p4.largeFileThreshold
+  options: git-p4.largeFileCompressedThreshold
+  options: git-p4.largeFilePush
+  options: git-p4.keepEmptyCommits
+  options: git-p4.mapUser
+  options: git-p4.detectRenames
+  options: git-p4.detectCopies
+  options: git-p4.detectCopiesHarder
+  options: git-p4.preserveUser
+  options: git-p4.allowMissingP4Users
+  options: git-p4.skipSubmitEdit
+  options: git-p4.skipSubmitEditCheck
+  options: git-p4.allowSubmit
+  options: git-p4.skipUserNameCheck
+  options: git-p4.attemptRCSCleanup
+  options: git-p4.exportLabels
+  options: git-p4.labelExportRegexp
+  options: git-p4.conflict
+  options: git-p4.disableRebase
+  options: git-p4.disableP4Sync
+git-pack-objects
+  options: base-name
+  options: --stdout
+  options: --revs
+  options: --unpacked
+  options: --all
+  options: --include-tag
+  options: --window=&lt;n&gt;
+  options: --depth=&lt;n&gt;
+  options: --window-memory=&lt;n&gt;
+  options: --max-pack-size=&lt;n&gt;
+  options: --honor-pack-keep
+  options: --keep-pack=&lt;pack-name&gt;
+  options: --incremental
+  options: --local
+  options: --non-empty
+  options: --progress
+  options: --all-progress
+  options: --all-progress-implied
+  options: -q
+  options: --no-reuse-delta
+  options: --no-reuse-object
+  options: --compression=&lt;n&gt;
+  options: --[no-]sparse
+  options: --thin
+  options: --shallow
+  options: --delta-base-offset
+  options: --threads=&lt;n&gt;
+  options: --index-version=&lt;version&gt;[,&lt;offset&gt;]
+  options: --keep-true-parents
+  options: --filter=&lt;filter-spec&gt;
+  options: --no-filter
+  options: --missing=&lt;missing-action&gt;
+  options: --exclude-promisor-objects
+  options: --keep-unreachable
+  options: --pack-loose-unreachable
+  options: --unpack-unreachable
+  options: --delta-islands
+git-pack-redundant
+  options: --all
+  options: --alt-odb
+  options: --verbose
+git-pack-refs
+  options: --all
+  options: --no-prune
+git-patch-id
+  options: --stable
+  options: --unstable
+git-prune-packed
+  options: -n
+  options: --dry-run
+  options: -q
+  options: --quiet
+git-prune
+  options: -n
+  options: --dry-run
+  options: -v
+  options: --verbose
+  options: --progress
+  options: --expire &lt;time&gt;
+  options: --
+  options: &lt;head&gt;…​
+git-pull
+  options: -q
+  options: --quiet
+  options: -v
+  options: --verbose
+  options: --[no-]recurse-submodules[=yes|on-demand|no]
+  options: --commit
+  options: --no-commit
+  options: --edit
+  options: -e
+  options: --no-edit
+  options: --cleanup=&lt;mode&gt;
+  options: --ff
+  options: --no-ff
+  options: --ff-only
+  options: -S[&lt;keyid&gt;]
+  options: --gpg-sign[=&lt;keyid&gt;]
+  options: --no-gpg-sign
+  options: --log[=&lt;n&gt;]
+  options: --no-log
+  options: --signoff
+  options: --no-signoff
+  options: --stat
+  options: -n
+  options: --no-stat
+  options: --squash
+  options: --no-squash
+  options: --no-verify
+  options: -s &lt;strategy&gt;
+  options: --strategy=&lt;strategy&gt;
+  options: -X &lt;option&gt;
+  options: --strategy-option=&lt;option&gt;
+  options: --verify-signatures
+  options: --no-verify-signatures
+  options: --summary
+  options: --no-summary
+  options: --autostash
+  options: --no-autostash
+  options: --allow-unrelated-histories
+  options: -r
+  options: --rebase[=false|true|merges|preserve|interactive]
+  options: --no-rebase
+  options: --all
+  options: -a
+  options: --append
+  options: --depth=&lt;depth&gt;
+  options: --deepen=&lt;depth&gt;
+  options: --shallow-since=&lt;date&gt;
+  options: --shallow-exclude=&lt;revision&gt;
+  options: --unshallow
+  options: --update-shallow
+  options: --negotiation-tip=&lt;commit|glob&gt;
+  options: --dry-run
+  options: -f
+  options: --force
+  options: -k
+  options: --keep
+  options: -p
+  options: --prune
+  options: --no-tags
+  options: --refmap=&lt;refspec&gt;
+  options: -t
+  options: --tags
+  options: -j
+  options: --jobs=&lt;n&gt;
+  options: --set-upstream
+  options: --upload-pack &lt;upload-pack&gt;
+  options: --progress
+  options: -o &lt;option&gt;
+  options: --server-option=&lt;option&gt;
+  options: --show-forced-updates
+  options: --no-show-forced-updates
+  options: -4
+  options: --ipv4
+  options: -6
+  options: --ipv6
+  options: &lt;repository&gt;
+  options: &lt;refspec&gt;
+  options: resolve
+  options: recursive
+  options: ours
+  options: theirs
+  options: patience
+  options: diff-algorithm=[patience|minimal|histogram|myers]
+  options: ignore-space-change
+  options: ignore-all-space
+  options: ignore-space-at-eol
+  options: ignore-cr-at-eol
+  options: renormalize
+  options: no-renormalize
+  options: no-renames
+  options: find-renames[=&lt;n&gt;]
+  options: rename-threshold=&lt;n&gt;
+  options: subtree[=&lt;path&gt;]
+  options: octopus
+  options: ours
+  options: subtree
+git-push
+  options: &lt;repository&gt;
+  options: &lt;refspec&gt;…​
+  options: --all
+  options: --prune
+  options: --mirror
+  options: -n
+  options: --dry-run
+  options: --porcelain
+  options: -d
+  options: --delete
+  options: --tags
+  options: --follow-tags
+  options: --[no-]signed
+  options: --signed=(true|false|if-asked)
+  options: --[no-]atomic
+  options: -o &lt;option&gt;
+  options: --push-option=&lt;option&gt;
+  options: --receive-pack=&lt;git-receive-pack&gt;
+  options: --exec=&lt;git-receive-pack&gt;
+  options: --[no-]force-with-lease
+  options: --force-with-lease=&lt;refname&gt;
+  options: --force-with-lease=&lt;refname&gt;:&lt;expect&gt;
+  options: -f
+  options: --force
+  options: --repo=&lt;repository&gt;
+  options: -u
+  options: --set-upstream
+  options: --[no-]thin
+  options: -q
+  options: --quiet
+  options: -v
+  options: --verbose
+  options: --progress
+  options: --no-recurse-submodules
+  options: --recurse-submodules=check|on-demand|only|no
+  options: --[no-]verify
+  options: -4
+  options: --ipv4
+  options: -6
+  options: --ipv6
+  options: flag
+  options: (space)
+  options: <code>+</code>
+  options: <code>-</code>
+  options: <code>*</code>
+  options: <code>!</code>
+  options: <code>=</code>
+  options: summary
+  options: rejected
+  options: remote rejected
+  options: remote failure
+  options: from
+  options: to
+  options: reason
+  options: <code>git push</code>
+  options: <code>git push origin</code>
+  options: <code>git push origin :</code>
+  options: <code>git push origin master</code>
+  options: <code>git push origin HEAD</code>
+  options: <code>git push mothership master:satellite/master dev:satellite/dev</code>
+  options: <code>git push origin HEAD:master</code>
+  options: <code>git push origin master:refs/heads/experimental</code>
+  options: <code>git push origin :experimental</code>
+  options: <code>git push origin +dev:master</code>
+git-quiltimport
+  options: -n
+  options: --dry-run
+  options: --author Author Name &lt;Author Email&gt;
+  options: --patches &lt;dir&gt;
+  options: --series &lt;file&gt;
+  options: --keep-non-patch
+git-range-diff
+  options: --no-dual-color
+  options: --creation-factor=&lt;percent&gt;
+  options: --[no-]notes[=&lt;ref&gt;]
+  options: &lt;range1&gt; &lt;range2&gt;
+  options: &lt;rev1&gt;…​&lt;rev2&gt;
+  options: &lt;base&gt; &lt;rev1&gt; &lt;rev2&gt;
+git-read-tree
+  options: -m
+  options: --reset
+  options: -u
+  options: -i
+  options: -n
+  options: --dry-run
+  options: -v
+  options: --trivial
+  options: --aggressive
+  options: --prefix=&lt;prefix&gt;
+  options: --exclude-per-directory=&lt;gitignore&gt;
+  options: --index-output=&lt;file&gt;
+  options: --[no-]recurse-submodules
+  options: --no-sparse-checkout
+  options: --empty
+  options: -q
+  options: --quiet
+  options: &lt;tree-ish#&gt;
+git-rebase
+  options: rebase.useBuiltin
+  options: rebase.backend
+  options: rebase.stat
+  options: rebase.autoSquash
+  options: rebase.autoStash
+  options: rebase.missingCommitsCheck
+  options: rebase.instructionFormat
+  options: rebase.abbreviateCommands
+  options: rebase.rescheduleFailedExec
+  options: --onto &lt;newbase&gt;
+  options: --keep-base
+  options: &lt;upstream&gt;
+  options: &lt;branch&gt;
+  options: --continue
+  options: --abort
+  options: --quit
+  options: --empty={drop,keep,ask}
+  options: --no-keep-empty
+  options: --keep-empty
+  options: --reapply-cherry-picks
+  options: --no-reapply-cherry-picks
+  options: --allow-empty-message
+  options: --skip
+  options: --edit-todo
+  options: --show-current-patch
+  options: -m
+  options: --merge
+  options: -s &lt;strategy&gt;
+  options: --strategy=&lt;strategy&gt;
+  options: -X &lt;strategy-option&gt;
+  options: --strategy-option=&lt;strategy-option&gt;
+  options: --rerere-autoupdate
+  options: --no-rerere-autoupdate
+  options: -S[&lt;keyid&gt;]
+  options: --gpg-sign[=&lt;keyid&gt;]
+  options: --no-gpg-sign
+  options: -q
+  options: --quiet
+  options: -v
+  options: --verbose
+  options: --stat
+  options: -n
+  options: --no-stat
+  options: --no-verify
+  options: --verify
+  options: -C&lt;n&gt;
+  options: --no-ff
+  options: --force-rebase
+  options: -f
+  options: --fork-point
+  options: --no-fork-point
+  options: --ignore-whitespace
+  options: --whitespace=&lt;option&gt;
+  options: --committer-date-is-author-date
+  options: --ignore-date
+  options: --signoff
+  options: -i
+  options: --interactive
+  options: -r
+  options: --rebase-merges[=(rebase-cousins|no-rebase-cousins)]
+  options: -p
+  options: --preserve-merges
+  options: -x &lt;cmd&gt;
+  options: --exec &lt;cmd&gt;
+  options: --root
+  options: --autosquash
+  options: --no-autosquash
+  options: --autostash
+  options: --no-autostash
+  options: --reschedule-failed-exec
+  options: --no-reschedule-failed-exec
+  options: resolve
+  options: recursive
+  options: ours
+  options: theirs
+  options: patience
+  options: diff-algorithm=[patience|minimal|histogram|myers]
+  options: ignore-space-change
+  options: ignore-all-space
+  options: ignore-space-at-eol
+  options: ignore-cr-at-eol
+  options: renormalize
+  options: no-renormalize
+  options: no-renames
+  options: find-renames[=&lt;n&gt;]
+  options: rename-threshold=&lt;n&gt;
+  options: subtree[=&lt;path&gt;]
+  options: octopus
+  options: ours
+  options: subtree
+  options: Easy case: The changes are literally the same.
+  options: Hard case: The changes are not the same.
+git-receive-pack
+  options: &lt;directory&gt;
+  options: <code>GIT_PUSH_CERT_SIGNER</code>
+  options: <code>GIT_PUSH_CERT_KEY</code>
+  options: <code>GIT_PUSH_CERT_STATUS</code>
+  options: <code>GIT_PUSH_CERT_NONCE</code>
+  options: <code>GIT_PUSH_CERT_NONCE_STATUS</code>
+  options: <code>UNSOLICITED</code>
+  options: <code>MISSING</code>
+  options: <code>BAD</code>
+  options: <code>OK</code>
+  options: <code>SLOP</code>
+  options: <code>GIT_PUSH_CERT_NONCE_SLOP</code>
+git-reflog
+  options: --all
+  options: --single-worktree
+  options: --expire=&lt;time&gt;
+  options: --expire-unreachable=&lt;time&gt;
+  options: --updateref
+  options: --rewrite
+  options: --stale-fix
+  options: -n
+  options: --dry-run
+  options: --verbose
+git-remote-ext
+  options: '% '
+  options: <em>%%</em>
+  options: <em>%s</em>
+  options: <em>%S</em>
+  options: <em>%G</em> (must be the first characters in an argument)
+  options: <em>%V</em> (must be first characters in argument)
+  options: GIT_TRANSLOOP_DEBUG
+  options: GIT_EXT_SERVICE
+  options: GIT_EXT_SERVICE_NOPREFIX
+  options: "ext::ssh -i /home/foo/.ssh/somekey user@host.example %S <em>foo/repo</em>"
+  options: "ext::socat -t3600 - ABSTRACT-CONNECT:/git-server %G/somerepo"
+  options: "ext::git-server-alias foo %G/repo"
+  options: "ext::git-server-alias foo %G/repo %Vfoo"
+  options: "ext::git-server-alias foo %G/repo% with% spaces %Vfoo"
+  options: "ext::git-ssl foo.example /bar"
+git-remote-fd
+  options: GIT_TRANSLOOP_DEBUG
+  options: <code>git fetch fd::17 master</code>
+  options: <code>git fetch fd::17/foo master</code>
+  options: <code>git push fd::7,8 master (as URL)</code>
+  options: <code>git push fd::7,8/bar master</code>
+git-remote
+  options: -v
+  options: --verbose
+  options: <em>add</em>
+  options: <em>rename</em>
+  options: <em>remove</em>
+  options: <em>rm</em>
+  options: <em>set-head</em>
+  options: <em>set-branches</em>
+  options: <em>get-url</em>
+  options: <em>set-url</em>
+  options: <em>show</em>
+  options: <em>prune</em>
+  options: <em>update</em>
+git-repack
+  options: -a
+  options: -A
+  options: -d
+  options: -l
+  options: -f
+  options: -F
+  options: -q
+  options: -n
+  options: --window=&lt;n&gt;
+  options: --depth=&lt;n&gt;
+  options: --threads=&lt;n&gt;
+  options: --window-memory=&lt;n&gt;
+  options: --max-pack-size=&lt;n&gt;
+  options: -b
+  options: --write-bitmap-index
+  options: --pack-kept-objects
+  options: --keep-pack=&lt;pack-name&gt;
+  options: --unpack-unreachable=&lt;when&gt;
+  options: -k
+  options: --keep-unreachable
+  options: -i
+  options: --delta-islands
+git-replace
+  options: -f
+  options: --force
+  options: -d
+  options: --delete
+  options: --edit &lt;object&gt;
+  options: --raw
+  options: --graft &lt;commit&gt; [&lt;parent&gt;…​]
+  options: --convert-graft-file
+  options: -l &lt;pattern&gt;
+  options: --list &lt;pattern&gt;
+  options: --format=&lt;format&gt;
+git-request-pull
+  options: -p
+  options: &lt;start&gt;
+  options: &lt;url&gt;
+  options: &lt;end&gt;
+git-rerere
+  options: <em>clear</em>
+  options: <em>forget</em> &lt;pathspec&gt;
+  options: <em>diff</em>
+  options: <em>status</em>
+  options: <em>remaining</em>
+  options: <em>gc</em>
+git-reset
+  options: <em>git reset</em> [-q] [&lt;tree-ish&gt;] [--] &lt;pathspec&gt;…​
+  options: <em>git reset</em> [-q] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]] [&lt;tree-ish&gt;]
+  options: <em>git reset</em> (--patch | -p) [&lt;tree-ish&gt;] [--] [&lt;pathspec&gt;…​]
+  options: <em>git reset</em> [&lt;mode&gt;] [&lt;commit&gt;]
+  options: --soft
+  options: --mixed
+  options: --hard
+  options: --merge
+  options: --keep
+  options: --[no-]recurse-submodules
+  options: -q
+  options: --quiet
+  options: --no-quiet
+  options: --pathspec-from-file=&lt;file&gt;
+  options: --pathspec-file-nul
+  options: --
+  options: &lt;pathspec&gt;…​
+  options: --stdin
+  options: -z
+  options: Undo add
+  options: Undo a commit and redo
+  options: Undo a commit, making it a topic branch
+  options: Undo commits permanently
+  options: Undo a merge or pull
+  options: Undo a merge or pull inside a dirty working tree
+  options: Interrupted workflow
+  options: Reset a single file in the index
+  options: Keep changes in working tree while discarding some previous commits
+  options: Split a commit apart into a sequence of commits
+git-restore
+  options: -s &lt;tree&gt;
+  options: --source=&lt;tree&gt;
+  options: -p
+  options: --patch
+  options: -W
+  options: --worktree
+  options: -S
+  options: --staged
+  options: -q
+  options: --quiet
+  options: --progress
+  options: --no-progress
+  options: --ours
+  options: --theirs
+  options: -m
+  options: --merge
+  options: --conflict=&lt;style&gt;
+  options: --ignore-unmerged
+  options: --ignore-skip-worktree-bits
+  options: --recurse-submodules
+  options: --no-recurse-submodules
+  options: --overlay
+  options: --no-overlay
+  options: --pathspec-from-file=&lt;file&gt;
+  options: --pathspec-file-nul
+  options: --
+  options: &lt;pathspec&gt;…​
+git-rev-list
+  options: -&lt;number&gt;
+  options: -n &lt;number&gt;
+  options: --max-count=&lt;number&gt;
+  options: --skip=&lt;number&gt;
+  options: --since=&lt;date&gt;
+  options: --after=&lt;date&gt;
+  options: --until=&lt;date&gt;
+  options: --before=&lt;date&gt;
+  options: --max-age=&lt;timestamp&gt;
+  options: --min-age=&lt;timestamp&gt;
+  options: --author=&lt;pattern&gt;
+  options: --committer=&lt;pattern&gt;
+  options: --grep-reflog=&lt;pattern&gt;
+  options: --grep=&lt;pattern&gt;
+  options: --all-match
+  options: --invert-grep
+  options: -i
+  options: --regexp-ignore-case
+  options: --basic-regexp
+  options: -E
+  options: --extended-regexp
+  options: -F
+  options: --fixed-strings
+  options: -P
+  options: --perl-regexp
+  options: --remove-empty
+  options: --merges
+  options: --no-merges
+  options: --min-parents=&lt;number&gt;
+  options: --max-parents=&lt;number&gt;
+  options: --no-min-parents
+  options: --no-max-parents
+  options: --first-parent
+  options: --not
+  options: --all
+  options: --branches[=&lt;pattern&gt;]
+  options: --tags[=&lt;pattern&gt;]
+  options: --remotes[=&lt;pattern&gt;]
+  options: --glob=&lt;glob-pattern&gt;
+  options: --exclude=&lt;glob-pattern&gt;
+  options: --reflog
+  options: --alternate-refs
+  options: --single-worktree
+  options: --ignore-missing
+  options: --stdin
+  options: --quiet
+  options: --cherry-mark
+  options: --cherry-pick
+  options: --left-only
+  options: --right-only
+  options: --cherry
+  options: -g
+  options: --walk-reflogs
+  options: --merge
+  options: --boundary
+  options: --use-bitmap-index
+  options: --progress=&lt;header&gt;
+  options: &lt;paths&gt;
+  options: --simplify-by-decoration
+  options: Default mode
+  options: --show-pulls
+  options: --full-history
+  options: --dense
+  options: --sparse
+  options: --simplify-merges
+  options: --ancestry-path
+  options: Default mode
+  options: --full-history without parent rewriting
+  options: --full-history with parent rewriting
+  options: --dense
+  options: --sparse
+  options: --simplify-merges
+  options: --ancestry-path
+  options: --show-pulls
+  options: --bisect
+  options: --bisect-vars
+  options: --bisect-all
+  options: --date-order
+  options: --author-date-order
+  options: --topo-order
+  options: --reverse
+  options: --objects
+  options: --in-commit-order
+  options: --objects-edge
+  options: --objects-edge-aggressive
+  options: --indexed-objects
+  options: --unpacked
+  options: --object-names
+  options: --no-object-names
+  options: --filter=&lt;filter-spec&gt;
+  options: --no-filter
+  options: --filter-print-omitted
+  options: --missing=&lt;missing-action&gt;
+  options: --exclude-promisor-objects
+  options: --no-walk[=(sorted|unsorted)]
+  options: --do-walk
+  options: --pretty[=&lt;format&gt;]
+  options: --format=&lt;format&gt;
+  options: --abbrev-commit
+  options: --no-abbrev-commit
+  options: --oneline
+  options: --encoding=&lt;encoding&gt;
+  options: --expand-tabs=&lt;n&gt;
+  options: --expand-tabs
+  options: --no-expand-tabs
+  options: --show-signature
+  options: --relative-date
+  options: --date=&lt;format&gt;
+  options: --header
+  options: --parents
+  options: --children
+  options: --timestamp
+  options: --left-right
+  options: --graph
+  options: --show-linear-break[=&lt;barrier&gt;]
+  options: --count
+  options: <em>%n</em>
+  options: <em>%%</em>
+  options: <em>%x00</em>
+  options: <em>%Cred</em>
+  options: <em>%Cgreen</em>
+  options: <em>%Cblue</em>
+  options: <em>%Creset</em>
+  options: <em>%C(…​)</em>
+  options: <em>%m</em>
+  options: <em>%w([&lt;w&gt;[,&lt;i1&gt;[,&lt;i2&gt;]]])</em>
+  options: <em>%&lt;(&lt;N&gt;[,trunc|ltrunc|mtrunc])</em>
+  options: <em>%&lt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;(&lt;N&gt;)</em>, <em>%&gt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;&gt;(&lt;N&gt;)</em>, <em>%&gt;&gt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;&lt;(&lt;N&gt;)</em>, <em>%&gt;&lt;|(&lt;N&gt;)</em>
+  options: <em>%H</em>
+  options: <em>%h</em>
+  options: <em>%T</em>
+  options: <em>%t</em>
+  options: <em>%P</em>
+  options: <em>%p</em>
+  options: <em>%an</em>
+  options: <em>%aN</em>
+  options: <em>%ae</em>
+  options: <em>%aE</em>
+  options: <em>%al</em>
+  options: <em>%aL</em>
+  options: <em>%ad</em>
+  options: <em>%aD</em>
+  options: <em>%ar</em>
+  options: <em>%at</em>
+  options: <em>%ai</em>
+  options: <em>%aI</em>
+  options: <em>%as</em>
+  options: <em>%cn</em>
+  options: <em>%cN</em>
+  options: <em>%ce</em>
+  options: <em>%cE</em>
+  options: <em>%cl</em>
+  options: <em>%cL</em>
+  options: <em>%cd</em>
+  options: <em>%cD</em>
+  options: <em>%cr</em>
+  options: <em>%ct</em>
+  options: <em>%ci</em>
+  options: <em>%cI</em>
+  options: <em>%cs</em>
+  options: <em>%d</em>
+  options: <em>%D</em>
+  options: <em>%S</em>
+  options: <em>%e</em>
+  options: <em>%s</em>
+  options: <em>%f</em>
+  options: <em>%b</em>
+  options: <em>%B</em>
+  options: <em>%GG</em>
+  options: <em>%G?</em>
+  options: <em>%GS</em>
+  options: <em>%GK</em>
+  options: <em>%GF</em>
+  options: <em>%GP</em>
+  options: <em>%GT</em>
+  options: <em>%gD</em>
+  options: <em>%gd</em>
+  options: <em>%gn</em>
+  options: <em>%gN</em>
+  options: <em>%ge</em>
+  options: <em>%gE</em>
+  options: <em>%gs</em>
+  options: <em>%(trailers[:options])</em>
+git-rev-parse
+  options: --parseopt
+  options: --sq-quote
+  options: --keep-dashdash
+  options: --stop-at-non-option
+  options: --stuck-long
+  options: --revs-only
+  options: --no-revs
+  options: --flags
+  options: --no-flags
+  options: --default &lt;arg&gt;
+  options: --prefix &lt;arg&gt;
+  options: --verify
+  options: -q
+  options: --quiet
+  options: --sq
+  options: --short[=length]
+  options: --not
+  options: --abbrev-ref[=(strict|loose)]
+  options: --symbolic
+  options: --symbolic-full-name
+  options: --all
+  options: --branches[=pattern]
+  options: --tags[=pattern]
+  options: --remotes[=pattern]
+  options: --glob=pattern
+  options: --exclude=&lt;glob-pattern&gt;
+  options: --disambiguate=&lt;prefix&gt;
+  options: --local-env-vars
+  options: --git-dir
+  options: --absolute-git-dir
+  options: --git-common-dir
+  options: --is-inside-git-dir
+  options: --is-inside-work-tree
+  options: --is-bare-repository
+  options: --is-shallow-repository
+  options: --resolve-git-dir &lt;path&gt;
+  options: --git-path &lt;path&gt;
+  options: --show-cdup
+  options: --show-prefix
+  options: --show-toplevel
+  options: --show-superproject-working-tree
+  options: --shared-index-path
+  options: --show-object-format[=(storage|input|output)]
+  options: --since=datestring
+  options: --after=datestring
+  options: --until=datestring
+  options: --before=datestring
+  options: &lt;args&gt;…​
+  options: <em>&lt;sha1&gt;</em>, e.g. <em>dae86e1950b1277e545cee180551750029cfe735</em>, <em>dae86e</em>
+  options: <em>&lt;describeOutput&gt;</em>, e.g. <em>v1.7.4.2-679-g3bee7fb</em>
+  options: <em>&lt;refname&gt;</em>, e.g. <em>master</em>, <em>heads/master</em>, <em>refs/heads/master</em>
+  options: <em>@</em>
+  options: <em>[&lt;refname&gt;]@{&lt;date&gt;}</em>, e.g. <em>master@{yesterday}</em>, <em>HEAD@{5 minutes ago}</em>
+  options: <em>&lt;refname&gt;@{&lt;n&gt;}</em>, e.g. <em>master@{1}</em>
+  options: <em>@{&lt;n&gt;}</em>, e.g. <em>@{1}</em>
+  options: <em>@{-&lt;n&gt;}</em>, e.g. <em>@{-1}</em>
+  options: <em>[&lt;branchname&gt;]@{upstream}</em>, e.g. <em>master@{upstream}</em>, <em>@{u}</em>
+  options: <em>[&lt;branchname&gt;]@{push}</em>, e.g. <em>master@{push}</em>, <em>@{push}</em>
+  options: <em>&lt;rev&gt;^[&lt;n&gt;]</em>, e.g. <em>HEAD^, v1.5.1^0</em>
+  options: <em>&lt;rev&gt;~[&lt;n&gt;]</em>, e.g. <em>HEAD~, master~3</em>
+  options: <em>&lt;rev&gt;^{&lt;type&gt;}</em>, e.g. <em>v0.99.8^{commit}</em>
+  options: <em>&lt;rev&gt;^{}</em>, e.g. <em>v0.99.8^{}</em>
+  options: <em>&lt;rev&gt;^{/&lt;text&gt;}</em>, e.g. <em>HEAD^{/fix nasty bug}</em>
+  options: <em>:/&lt;text&gt;</em>, e.g. <em>:/fix nasty bug</em>
+  options: <em>&lt;rev&gt;:&lt;path&gt;</em>, e.g. <em>HEAD:README</em>, <em>master:./README</em>
+  options: <em>:[&lt;n&gt;:]&lt;path&gt;</em>, e.g. <em>:0:README</em>, <em>:README</em>
+  options: <em>^&lt;rev&gt;</em> (caret) Notation
+  options: The <em>..</em> (two-dot) Range Notation
+  options: The <em>…​</em> (three-dot) Symmetric Difference Notation
+  options: <em>&lt;rev&gt;</em>
+  options: <em>^&lt;rev&gt;</em>
+  options: <em>&lt;rev1&gt;..&lt;rev2&gt;</em>
+  options: <em>&lt;rev1&gt;...&lt;rev2&gt;</em>
+  options: <em>&lt;rev&gt;^@</em>, e.g. <em>HEAD^@</em>
+  options: <em>&lt;rev&gt;^!</em>, e.g. <em>HEAD^!</em>
+  options: <em>&lt;rev&gt;^-&lt;n&gt;</em>, e.g. <em>HEAD^-, HEAD^-2</em>
+  options: <code>&lt;opt-spec&gt;</code>
+  options: <code>&lt;flags&gt;</code>
+  options: <code>&lt;arg-hint&gt;</code>
+git-revert
+  options: &lt;commit&gt;…​
+  options: -e
+  options: --edit
+  options: -m parent-number
+  options: --mainline parent-number
+  options: --no-edit
+  options: --cleanup=&lt;mode&gt;
+  options: -n
+  options: --no-commit
+  options: -S[&lt;keyid&gt;]
+  options: --gpg-sign[=&lt;keyid&gt;]
+  options: --no-gpg-sign
+  options: -s
+  options: --signoff
+  options: --strategy=&lt;strategy&gt;
+  options: -X&lt;option&gt;
+  options: --strategy-option=&lt;option&gt;
+  options: --rerere-autoupdate
+  options: --no-rerere-autoupdate
+  options: --continue
+  options: --skip
+  options: --quit
+  options: --abort
+  options: <code>git revert HEAD~3</code>
+  options: <code>git revert -n master~5..master~2</code>
+git-rm
+  options: &lt;pathspec&gt;…​
+  options: -f
+  options: --force
+  options: -n
+  options: --dry-run
+  options: -r
+  options: --
+  options: --cached
+  options: --ignore-unmatch
+  options: -q
+  options: --quiet
+  options: --pathspec-from-file=&lt;file&gt;
+  options: --pathspec-file-nul
+  options: <code>git rm Documentation/\*.txt</code>
+  options: <code>git rm -f git-*.sh</code>
+git-send-email
+  options: --annotate
+  options: --bcc=&lt;address&gt;,…​
+  options: --cc=&lt;address&gt;,…​
+  options: --compose
+  options: --from=&lt;address&gt;
+  options: --reply-to=&lt;address&gt;
+  options: --in-reply-to=&lt;identifier&gt;
+  options: --subject=&lt;string&gt;
+  options: --to=&lt;address&gt;,…​
+  options: --8bit-encoding=&lt;encoding&gt;
+  options: --compose-encoding=&lt;encoding&gt;
+  options: --transfer-encoding=(7bit|8bit|quoted-printable|base64|auto)
+  options: --xmailer
+  options: --no-xmailer
+  options: --envelope-sender=&lt;address&gt;
+  options: --smtp-encryption=&lt;encryption&gt;
+  options: --smtp-domain=&lt;FQDN&gt;
+  options: --smtp-auth=&lt;mechanisms&gt;
+  options: --smtp-pass[=&lt;password&gt;]
+  options: --no-smtp-auth
+  options: --smtp-server=&lt;host&gt;
+  options: --smtp-server-port=&lt;port&gt;
+  options: --smtp-server-option=&lt;option&gt;
+  options: --smtp-ssl
+  options: --smtp-ssl-cert-path
+  options: --smtp-user=&lt;user&gt;
+  options: --smtp-debug=0|1
+  options: --batch-size=&lt;num&gt;
+  options: --relogin-delay=&lt;int&gt;
+  options: --no-[to|cc|bcc]
+  options: --no-identity
+  options: --to-cmd=&lt;command&gt;
+  options: --cc-cmd=&lt;command&gt;
+  options: --[no-]chain-reply-to
+  options: --identity=&lt;identity&gt;
+  options: --[no-]signed-off-by-cc
+  options: --[no-]cc-cover
+  options: --[no-]to-cover
+  options: --suppress-cc=&lt;category&gt;
+  options: --[no-]suppress-from
+  options: --[no-]thread
+  options: --confirm=&lt;mode&gt;
+  options: --dry-run
+  options: --[no-]format-patch
+  options: --quiet
+  options: --[no-]validate
+  options: --force
+  options: --dump-aliases
+  options: sendemail.aliasesFile
+  options: sendemail.aliasFileType
+  options: sendmail
+  options: sendemail.multiEdit
+  options: sendemail.confirm
+git-send-pack
+  options: --receive-pack=&lt;git-receive-pack&gt;
+  options: --exec=&lt;git-receive-pack&gt;
+  options: --all
+  options: --stdin
+  options: --dry-run
+  options: --force
+  options: --verbose
+  options: --thin
+  options: --atomic
+  options: --[no-]signed
+  options: --signed=(true|false|if-asked)
+  options: --push-option=&lt;string&gt;
+  options: &lt;host&gt;
+  options: &lt;directory&gt;
+  options: &lt;ref&gt;…​
+git-sh-i18n--envsubst
+git-shortlog
+  options: -n
+  options: --numbered
+  options: -s
+  options: --summary
+  options: -e
+  options: --email
+  options: --format[=&lt;format&gt;]
+  options: -c
+  options: --committer
+  options: -w[&lt;width&gt;[,&lt;indent1&gt;[,&lt;indent2&gt;]]]
+  options: &lt;revision range&gt;
+  options: [--] &lt;path&gt;…​
+  options: -&lt;number&gt;
+  options: -n &lt;number&gt;
+  options: --max-count=&lt;number&gt;
+  options: --skip=&lt;number&gt;
+  options: --since=&lt;date&gt;
+  options: --after=&lt;date&gt;
+  options: --until=&lt;date&gt;
+  options: --before=&lt;date&gt;
+  options: --author=&lt;pattern&gt;
+  options: --committer=&lt;pattern&gt;
+  options: --grep-reflog=&lt;pattern&gt;
+  options: --grep=&lt;pattern&gt;
+  options: --all-match
+  options: --invert-grep
+  options: -i
+  options: --regexp-ignore-case
+  options: --basic-regexp
+  options: -E
+  options: --extended-regexp
+  options: -F
+  options: --fixed-strings
+  options: -P
+  options: --perl-regexp
+  options: --remove-empty
+  options: --merges
+  options: --no-merges
+  options: --min-parents=&lt;number&gt;
+  options: --max-parents=&lt;number&gt;
+  options: --no-min-parents
+  options: --no-max-parents
+  options: --first-parent
+  options: --not
+  options: --all
+  options: --branches[=&lt;pattern&gt;]
+  options: --tags[=&lt;pattern&gt;]
+  options: --remotes[=&lt;pattern&gt;]
+  options: --glob=&lt;glob-pattern&gt;
+  options: --exclude=&lt;glob-pattern&gt;
+  options: --reflog
+  options: --alternate-refs
+  options: --single-worktree
+  options: --ignore-missing
+  options: --bisect
+  options: --stdin
+  options: --cherry-mark
+  options: --cherry-pick
+  options: --left-only
+  options: --right-only
+  options: --cherry
+  options: -g
+  options: --walk-reflogs
+  options: --merge
+  options: --boundary
+  options: &lt;paths&gt;
+  options: --simplify-by-decoration
+  options: Default mode
+  options: --show-pulls
+  options: --full-history
+  options: --dense
+  options: --sparse
+  options: --simplify-merges
+  options: --ancestry-path
+  options: Default mode
+  options: --full-history without parent rewriting
+  options: --full-history with parent rewriting
+  options: --dense
+  options: --sparse
+  options: --simplify-merges
+  options: --ancestry-path
+  options: --show-pulls
+git-show-branch
+  options: &lt;rev&gt;
+  options: &lt;glob&gt;
+  options: -r
+  options: --remotes
+  options: -a
+  options: --all
+  options: --current
+  options: --topo-order
+  options: --date-order
+  options: --sparse
+  options: --more=&lt;n&gt;
+  options: --list
+  options: --merge-base
+  options: --independent
+  options: --no-name
+  options: --sha1-name
+  options: --topics
+  options: -g
+  options: --reflog[=&lt;n&gt;[,&lt;base&gt;]] [&lt;ref&gt;]
+  options: --color[=&lt;when&gt;]
+  options: --no-color
+git-show-index
+git-show-ref
+  options: --head
+  options: --heads
+  options: --tags
+  options: -d
+  options: --dereference
+  options: -s
+  options: --hash[=&lt;n&gt;]
+  options: --verify
+  options: --abbrev[=&lt;n&gt;]
+  options: -q
+  options: --quiet
+  options: --exclude-existing[=&lt;pattern&gt;]
+  options: &lt;pattern&gt;…​
+git-show
+  options: &lt;object&gt;…​
+  options: --pretty[=&lt;format&gt;]
+  options: --format=&lt;format&gt;
+  options: --abbrev-commit
+  options: --no-abbrev-commit
+  options: --oneline
+  options: --encoding=&lt;encoding&gt;
+  options: --expand-tabs=&lt;n&gt;
+  options: --expand-tabs
+  options: --no-expand-tabs
+  options: --notes[=&lt;ref&gt;]
+  options: --no-notes
+  options: --show-notes[=&lt;ref&gt;]
+  options: --[no-]standard-notes
+  options: --show-signature
+  options: <em>%n</em>
+  options: <em>%%</em>
+  options: <em>%x00</em>
+  options: <em>%Cred</em>
+  options: <em>%Cgreen</em>
+  options: <em>%Cblue</em>
+  options: <em>%Creset</em>
+  options: <em>%C(…​)</em>
+  options: <em>%m</em>
+  options: <em>%w([&lt;w&gt;[,&lt;i1&gt;[,&lt;i2&gt;]]])</em>
+  options: <em>%&lt;(&lt;N&gt;[,trunc|ltrunc|mtrunc])</em>
+  options: <em>%&lt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;(&lt;N&gt;)</em>, <em>%&gt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;&gt;(&lt;N&gt;)</em>, <em>%&gt;&gt;|(&lt;N&gt;)</em>
+  options: <em>%&gt;&lt;(&lt;N&gt;)</em>, <em>%&gt;&lt;|(&lt;N&gt;)</em>
+  options: <em>%H</em>
+  options: <em>%h</em>
+  options: <em>%T</em>
+  options: <em>%t</em>
+  options: <em>%P</em>
+  options: <em>%p</em>
+  options: <em>%an</em>
+  options: <em>%aN</em>
+  options: <em>%ae</em>
+  options: <em>%aE</em>
+  options: <em>%al</em>
+  options: <em>%aL</em>
+  options: <em>%ad</em>
+  options: <em>%aD</em>
+  options: <em>%ar</em>
+  options: <em>%at</em>
+  options: <em>%ai</em>
+  options: <em>%aI</em>
+  options: <em>%as</em>
+  options: <em>%cn</em>
+  options: <em>%cN</em>
+  options: <em>%ce</em>
+  options: <em>%cE</em>
+  options: <em>%cl</em>
+  options: <em>%cL</em>
+  options: <em>%cd</em>
+  options: <em>%cD</em>
+  options: <em>%cr</em>
+  options: <em>%ct</em>
+  options: <em>%ci</em>
+  options: <em>%cI</em>
+  options: <em>%cs</em>
+  options: <em>%d</em>
+  options: <em>%D</em>
+  options: <em>%S</em>
+  options: <em>%e</em>
+  options: <em>%s</em>
+  options: <em>%f</em>
+  options: <em>%b</em>
+  options: <em>%B</em>
+  options: <em>%N</em>
+  options: <em>%GG</em>
+  options: <em>%G?</em>
+  options: <em>%GS</em>
+  options: <em>%GK</em>
+  options: <em>%GF</em>
+  options: <em>%GP</em>
+  options: <em>%GT</em>
+  options: <em>%gD</em>
+  options: <em>%gd</em>
+  options: <em>%gn</em>
+  options: <em>%gN</em>
+  options: <em>%ge</em>
+  options: <em>%gE</em>
+  options: <em>%gs</em>
+  options: <em>%(trailers[:options])</em>
+  options: -p
+  options: -u
+  options: --patch
+  options: -s
+  options: --no-patch
+  options: -U&lt;n&gt;
+  options: --unified=&lt;n&gt;
+  options: --output=&lt;file&gt;
+  options: --output-indicator-new=&lt;char&gt;
+  options: --output-indicator-old=&lt;char&gt;
+  options: --output-indicator-context=&lt;char&gt;
+  options: --raw
+  options: --patch-with-raw
+  options: --indent-heuristic
+  options: --no-indent-heuristic
+  options: --minimal
+  options: --patience
+  options: --histogram
+  options: --anchored=&lt;text&gt;
+  options: --diff-algorithm={patience|minimal|histogram|myers}
+  options: <code>default</code>, <code>myers</code>
+  options: <code>minimal</code>
+  options: <code>patience</code>
+  options: <code>histogram</code>
+  options: --stat[=&lt;width&gt;[,&lt;name-width&gt;[,&lt;count&gt;]]]
+  options: --compact-summary
+  options: --numstat
+  options: --shortstat
+  options: -X[&lt;param1,param2,…​&gt;]
+  options: --dirstat[=&lt;param1,param2,…​&gt;]
+  options: <code>changes</code>
+  options: <code>lines</code>
+  options: <code>files</code>
+  options: <code>cumulative</code>
+  options: &lt;limit&gt;
+  options: --cumulative
+  options: --dirstat-by-file[=&lt;param1,param2&gt;…​]
+  options: --summary
+  options: --patch-with-stat
+  options: -z
+  options: --name-only
+  options: --name-status
+  options: --submodule[=&lt;format&gt;]
+  options: --color[=&lt;when&gt;]
+  options: --no-color
+  options: --color-moved[=&lt;mode&gt;]
+  options: no
+  options: default
+  options: plain
+  options: blocks
+  options: zebra
+  options: dimmed-zebra
+  options: --no-color-moved
+  options: --color-moved-ws=&lt;modes&gt;
+  options: no
+  options: ignore-space-at-eol
+  options: ignore-space-change
+  options: ignore-all-space
+  options: allow-indentation-change
+  options: --no-color-moved-ws
+  options: --word-diff[=&lt;mode&gt;]
+  options: color
+  options: plain
+  options: porcelain
+  options: none
+  options: --word-diff-regex=&lt;regex&gt;
+  options: --color-words[=&lt;regex&gt;]
+  options: --no-renames
+  options: --[no-]rename-empty
+  options: --check
+  options: --ws-error-highlight=&lt;kind&gt;
+  options: --full-index
+  options: --binary
+  options: --abbrev[=&lt;n&gt;]
+  options: -B[&lt;n&gt;][/&lt;m&gt;]
+  options: --break-rewrites[=[&lt;n&gt;][/&lt;m&gt;]]
+  options: -M[&lt;n&gt;]
+  options: --find-renames[=&lt;n&gt;]
+  options: -C[&lt;n&gt;]
+  options: --find-copies[=&lt;n&gt;]
+  options: --find-copies-harder
+  options: -D
+  options: --irreversible-delete
+  options: -l&lt;num&gt;
+  options: --diff-filter=[(A|C|D|M|R|T|U|X|B)…​[*]]
+  options: -S&lt;string&gt;
+  options: -G&lt;regex&gt;
+  options: --find-object=&lt;object-id&gt;
+  options: --pickaxe-all
+  options: --pickaxe-regex
+  options: -O&lt;orderfile&gt;
+  options: -R
+  options: --relative[=&lt;path&gt;]
+  options: -a
+  options: --text
+  options: --ignore-cr-at-eol
+  options: --ignore-space-at-eol
+  options: -b
+  options: --ignore-space-change
+  options: -w
+  options: --ignore-all-space
+  options: --ignore-blank-lines
+  options: --inter-hunk-context=&lt;lines&gt;
+  options: -W
+  options: --function-context
+  options: --ext-diff
+  options: --no-ext-diff
+  options: --textconv
+  options: --no-textconv
+  options: --ignore-submodules[=&lt;when&gt;]
+  options: --src-prefix=&lt;prefix&gt;
+  options: --dst-prefix=&lt;prefix&gt;
+  options: --no-prefix
+  options: --line-prefix=&lt;prefix&gt;
+  options: --ita-invisible-in-index
+  options: <code>git show v1.0.0</code>
+  options: <code>git show v1.0.0^{tree}</code>
+  options: <code>git show -s --format=%s v1.0.0^{commit}</code>
+  options: <code>git show next~10:Documentation/README</code>
+  options: <code>git show master:Makefile master:t/Makefile</code>
+git-sparse-checkout
+  options: <em>list</em>
+  options: <em>init</em>
+  options: <em>set</em>
+  options: <em>add</em>
+  options: <em>reapply</em>
+  options: <em>disable</em>
+git-stage
+git-stash
+  options: push [-p|--patch] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] [-q|--quiet] [-m|--message &lt;message&gt;] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]] [--] [&lt;pathspec&gt;…​]
+  options: save [-p|--patch] [-k|--[no-]keep-index] [-u|--include-untracked] [-a|--all] [-q|--quiet] [&lt;message&gt;]
+  options: list [&lt;options&gt;]
+  options: show [&lt;options&gt;] [&lt;stash&gt;]
+  options: pop [--index] [-q|--quiet] [&lt;stash&gt;]
+  options: apply [--index] [-q|--quiet] [&lt;stash&gt;]
+  options: branch &lt;branchname&gt; [&lt;stash&gt;]
+  options: clear
+  options: drop [-q|--quiet] [&lt;stash&gt;]
+  options: create
+  options: store
+  options: -a
+  options: --all
+  options: -u
+  options: --include-untracked
+  options: --index
+  options: -k
+  options: --keep-index
+  options: --no-keep-index
+  options: -p
+  options: --patch
+  options: --pathspec-from-file=&lt;file&gt;
+  options: --pathspec-file-nul
+  options: -q
+  options: --quiet
+  options: --
+  options: &lt;pathspec&gt;…​
+  options: &lt;stash&gt;
+  options: Pulling into a dirty tree
+  options: Interrupted workflow
+  options: Testing partial commits
+  options: Recovering stash entries that were cleared/dropped erroneously
+git-status
+  options: -s
+  options: --short
+  options: -b
+  options: --branch
+  options: --show-stash
+  options: --porcelain[=&lt;version&gt;]
+  options: --long
+  options: -v
+  options: --verbose
+  options: -u[&lt;mode&gt;]
+  options: --untracked-files[=&lt;mode&gt;]
+  options: --ignore-submodules[=&lt;when&gt;]
+  options: --ignored[=&lt;mode&gt;]
+  options: -z
+  options: --column[=&lt;options&gt;]
+  options: --no-column
+  options: --ahead-behind
+  options: --no-ahead-behind
+  options: --renames
+  options: --no-renames
+  options: --find-renames[=&lt;n&gt;]
+  options: --no-lock-index
+  options: --lock-index
+  options: &lt;pathspec&gt;…​
+git-stripspace
+  options: -s
+  options: --strip-comments
+  options: -c
+  options: --comment-lines
+git-submodule
+  options: add [-b &lt;branch&gt;] [-f|--force] [--name &lt;name&gt;] [--reference &lt;repository&gt;] [--depth &lt;depth&gt;] [--] &lt;repository&gt; [&lt;path&gt;]
+  options: status [--cached] [--recursive] [--] [&lt;path&gt;…​]
+  options: init [--] [&lt;path&gt;…​]
+  options: deinit [-f|--force] (--all|[--] &lt;path&gt;…​)
+  options: update [--init] [--remote] [-N|--no-fetch] [--[no-]recommend-shallow] [-f|--force] [--checkout|--rebase|--merge] [--reference &lt;repository&gt;] [--depth &lt;depth&gt;] [--recursive] [--jobs &lt;n&gt;] [--[no-]single-branch] [--] [&lt;path&gt;…​]
+  options: checkout
+  options: rebase
+  options: merge
+  options: custom command
+  options: none
+  options: set-branch (-b|--branch) &lt;branch&gt; [--] &lt;path&gt;
+  options: set-branch (-d|--default) [--] &lt;path&gt;
+  options: set-url [--] &lt;path&gt; &lt;newurl&gt;
+  options: summary [--cached|--files] [(-n|--summary-limit) &lt;n&gt;] [commit] [--] [&lt;path&gt;…​]
+  options: foreach [--recursive] &lt;command&gt;
+  options: sync [--recursive] [--] [&lt;path&gt;…​]
+  options: absorbgitdirs
+  options: -q
+  options: --quiet
+  options: --progress
+  options: --all
+  options: -b &lt;branch&gt;
+  options: --branch &lt;branch&gt;
+  options: -f
+  options: --force
+  options: --cached
+  options: --files
+  options: -n
+  options: --summary-limit
+  options: --remote
+  options: -N
+  options: --no-fetch
+  options: --checkout
+  options: --merge
+  options: --rebase
+  options: --init
+  options: --name
+  options: --reference &lt;repository&gt;
+  options: --dissociate
+  options: --recursive
+  options: --depth
+  options: --[no-]recommend-shallow
+  options: -j &lt;n&gt;
+  options: --jobs &lt;n&gt;
+  options: --[no-]single-branch
+  options: &lt;path&gt;…​
+git-subtree
+  options: add
+  options: merge
+  options: pull
+  options: push
+  options: split
+  options: -q
+  options: --quiet
+  options: -d
+  options: --debug
+  options: -P &lt;prefix&gt;
+  options: --prefix=&lt;prefix&gt;
+  options: -m &lt;message&gt;
+  options: --message=&lt;message&gt;
+  options: --squash
+  options: --annotate=&lt;annotation&gt;
+  options: -b &lt;branch&gt;
+  options: --branch=&lt;branch&gt;
+  options: --ignore-joins
+  options: --onto=&lt;onto&gt;
+  options: --rejoin
+git-svn
+  options: <em>init</em>
+  options: -T&lt;trunk_subdir&gt;
+  options: --trunk=&lt;trunk_subdir&gt;
+  options: -t&lt;tags_subdir&gt;
+  options: --tags=&lt;tags_subdir&gt;
+  options: -b&lt;branches_subdir&gt;
+  options: --branches=&lt;branches_subdir&gt;
+  options: -s
+  options: --stdlayout
+  options: --no-metadata
+  options: --use-svm-props
+  options: --use-svnsync-props
+  options: --rewrite-root=&lt;URL&gt;
+  options: --rewrite-uuid=&lt;UUID&gt;
+  options: --username=&lt;user&gt;
+  options: --prefix=&lt;prefix&gt;
+  options: --ignore-refs=&lt;regex&gt;
+  options: --ignore-paths=&lt;regex&gt;
+  options: --include-paths=&lt;regex&gt;
+  options: --no-minimize-url
+  options: <em>fetch</em>
+  options: --localtime
+  options: --parent
+  options: --ignore-refs=&lt;regex&gt;
+  options: --ignore-paths=&lt;regex&gt;
+  options: Skip "doc*" directory for every fetch
+  options: Skip "branches" and "tags" of first level directories
+  options: --include-paths=&lt;regex&gt;
+  options: --log-window-size=&lt;n&gt;
+  options: <em>clone</em>
+  options: --preserve-empty-dirs
+  options: --placeholder-filename=&lt;filename&gt;
+  options: <em>rebase</em>
+  options: -l
+  options: --local
+  options: <em>dcommit</em>
+  options: --no-rebase
+  options: --commit-url &lt;URL&gt;
+  options: --mergeinfo=&lt;mergeinfo&gt;
+  options: --interactive
+  options: <em>branch</em>
+  options: -m
+  options: --message
+  options: -t
+  options: --tag
+  options: -d&lt;path&gt;
+  options: --destination=&lt;path&gt;
+  options: --username
+  options: --commit-url
+  options: --parents
+  options: <em>tag</em>
+  options: <em>log</em>
+  options: -r &lt;n&gt;[:&lt;n&gt;]
+  options: --revision=&lt;n&gt;[:&lt;n&gt;]
+  options: -v
+  options: --verbose
+  options: --limit=&lt;n&gt;
+  options: --incremental
+  options: --show-commit
+  options: --oneline
+  options: <em>blame</em>
+  options: --git-format
+  options: <em>find-rev</em>
+  options: -B
+  options: --before
+  options: -A
+  options: --after
+  options: <em>set-tree</em>
+  options: <em>create-ignore</em>
+  options: <em>show-ignore</em>
+  options: <em>mkdirs</em>
+  options: <em>commit-diff</em>
+  options: -m &lt;msg&gt;
+  options: --message=&lt;msg&gt;
+  options: -F &lt;filename&gt;
+  options: --file=&lt;filename&gt;
+  options: <em>info</em>
+  options: <em>proplist</em>
+  options: <em>propget</em>
+  options: <em>propset</em>
+  options: <em>show-externals</em>
+  options: <em>gc</em>
+  options: <em>reset</em>
+  options: -r &lt;n&gt;
+  options: --revision=&lt;n&gt;
+  options: -p
+  options: --parent
+  options: Example:
+  options: --shared[=(false|true|umask|group|all|world|everybody)]
+  options: --template=&lt;template_directory&gt;
+  options: -r &lt;arg&gt;
+  options: --revision &lt;arg&gt;
+  options: -
+  options: --stdin
+  options: --rmdir
+  options: -e
+  options: --edit
+  options: -l&lt;num&gt;
+  options: --find-copies-harder
+  options: -A&lt;filename&gt;
+  options: --authors-file=&lt;filename&gt;
+  options: --authors-prog=&lt;filename&gt;
+  options: -q
+  options: --quiet
+  options: -m
+  options: --merge
+  options: -s&lt;strategy&gt;
+  options: --strategy=&lt;strategy&gt;
+  options: -p
+  options: --rebase-merges
+  options: --preserve-merges (DEPRECATED)
+  options: -n
+  options: --dry-run
+  options: --use-log-author
+  options: --add-author-from
+  options: -i&lt;GIT_SVN_ID&gt;
+  options: --id &lt;GIT_SVN_ID&gt;
+  options: -R&lt;remote name&gt;
+  options: --svn-remote &lt;remote name&gt;
+  options: --follow-parent
+  options: svn.noMetadata
+  options: svn-remote.&lt;name&gt;.noMetadata
+  options: svn.useSvmProps
+  options: svn-remote.&lt;name&gt;.useSvmProps
+  options: svn.useSvnsyncProps
+  options: svn-remote.&lt;name&gt;.useSvnsyncprops
+  options: svn-remote.&lt;name&gt;.rewriteRoot
+  options: svn-remote.&lt;name&gt;.rewriteUUID
+  options: svn-remote.&lt;name&gt;.pushurl
+  options: svn.brokenSymlinkWorkaround
+  options: svn.pathnameencoding
+  options: svn-remote.&lt;name&gt;.automkdirs
+  options: $GIT_DIR/svn/**/.rev_map.*
+git-switch
+  options: &lt;branch&gt;
+  options: &lt;new-branch&gt;
+  options: &lt;start-point&gt;
+  options: -c &lt;new-branch&gt;
+  options: --create &lt;new-branch&gt;
+  options: -C &lt;new-branch&gt;
+  options: --force-create &lt;new-branch&gt;
+  options: -d
+  options: --detach
+  options: --guess
+  options: --no-guess
+  options: -f
+  options: --force
+  options: --discard-changes
+  options: -m
+  options: --merge
+  options: --conflict=&lt;style&gt;
+  options: -q
+  options: --quiet
+  options: --progress
+  options: --no-progress
+  options: -t
+  options: --track
+  options: --no-track
+  options: --orphan &lt;new-branch&gt;
+  options: --ignore-other-worktrees
+  options: --recurse-submodules
+  options: --no-recurse-submodules
+git-symbolic-ref
+  options: -d
+  options: --delete
+  options: -q
+  options: --quiet
+  options: --short
+  options: -m
+git-tag
+  options: -a
+  options: --annotate
+  options: -s
+  options: --sign
+  options: --no-sign
+  options: -u &lt;keyid&gt;
+  options: --local-user=&lt;keyid&gt;
+  options: -f
+  options: --force
+  options: -d
+  options: --delete
+  options: -v
+  options: --verify
+  options: -n&lt;num&gt;
+  options: -l
+  options: --list
+  options: --sort=&lt;key&gt;
+  options: --color[=&lt;when&gt;]
+  options: -i
+  options: --ignore-case
+  options: --column[=&lt;options&gt;]
+  options: --no-column
+  options: --contains [&lt;commit&gt;]
+  options: --no-contains [&lt;commit&gt;]
+  options: --merged [&lt;commit&gt;]
+  options: --no-merged [&lt;commit&gt;]
+  options: --points-at &lt;object&gt;
+  options: -m &lt;msg&gt;
+  options: --message=&lt;msg&gt;
+  options: -F &lt;file&gt;
+  options: --file=&lt;file&gt;
+  options: -e
+  options: --edit
+  options: --cleanup=&lt;mode&gt;
+  options: --create-reflog
+  options: --format=&lt;format&gt;
+  options: &lt;tagname&gt;
+  options: &lt;commit&gt;
+  options: &lt;object&gt;
+  options: Git internal format
+  options: RFC 2822
+  options: ISO 8601
+git-unpack-file
+  options: &lt;blob&gt;
+git-unpack-objects
+  options: -n
+  options: -q
+  options: -r
+  options: --strict
+  options: --max-input-size=&lt;size&gt;
+git-update-index
+  options: --add
+  options: --remove
+  options: --refresh
+  options: -q
+  options: --ignore-submodules
+  options: --unmerged
+  options: --ignore-missing
+  options: --cacheinfo &lt;mode&gt;,&lt;object&gt;,&lt;path&gt;
+  options: --cacheinfo &lt;mode&gt; &lt;object&gt; &lt;path&gt;
+  options: --index-info
+  options: --chmod=(+|-)x
+  options: --[no-]assume-unchanged
+  options: --really-refresh
+  options: --[no-]skip-worktree
+  options: --[no-]ignore-skip-worktree-entries
+  options: --[no-]fsmonitor-valid
+  options: -g
+  options: --again
+  options: --unresolve
+  options: --info-only
+  options: --force-remove
+  options: --replace
+  options: --stdin
+  options: --verbose
+  options: --index-version &lt;n&gt;
+  options: -z
+  options: --split-index
+  options: --no-split-index
+  options: --untracked-cache
+  options: --no-untracked-cache
+  options: --test-untracked-cache
+  options: --force-untracked-cache
+  options: --fsmonitor
+  options: --no-fsmonitor
+  options: --
+  options: &lt;file&gt;
+  options: On an inefficient filesystem with <code>core.ignorestat</code> set
+git-update-ref
+  options: update
+  options: create
+  options: delete
+  options: verify
+  options: option
+  options: start
+  options: prepare
+  options: commit
+  options: abort
+git-update-server-info
+git-upload-archive
+  options: &lt;directory&gt;
+git-upload-pack
+  options: --[no-]strict
+  options: --timeout=&lt;n&gt;
+  options: --stateless-rpc
+  options: --advertise-refs
+  options: &lt;directory&gt;
+git-var
+  options: -l
+  options: GIT_AUTHOR_IDENT
+  options: GIT_COMMITTER_IDENT
+  options: GIT_EDITOR
+  options: GIT_PAGER
+git-verify-commit
+  options: --raw
+  options: -v
+  options: --verbose
+  options: &lt;commit&gt;…​
+git-verify-pack
+  options: &lt;pack&gt;.idx …​
+  options: -v
+  options: --verbose
+  options: -s
+  options: --stat-only
+  options: --
+git-verify-tag
+  options: --raw
+  options: -v
+  options: --verbose
+  options: &lt;tag&gt;…​
+git-web--browse
+  options: -b &lt;browser&gt;
+  options: --browser=&lt;browser&gt;
+  options: -t &lt;browser&gt;
+  options: --tool=&lt;browser&gt;
+  options: -c &lt;conf.var&gt;
+  options: --config=&lt;conf.var&gt;
+git-whatchanged
+  options: <code>git whatchanged -p v2.6.12.. include/scsi drivers/scsi</code>
+  options: <code>git whatchanged --since="2 weeks ago" -- gitk</code>
+git-worktree
+  options: add &lt;path&gt; [&lt;commit-ish&gt;]
+  options: list
+  options: lock
+  options: move
+  options: prune
+  options: remove
+  options: unlock
+  options: -f
+  options: --force
+  options: -b &lt;new-branch&gt;
+  options: -B &lt;new-branch&gt;
+  options: --detach
+  options: --[no-]checkout
+  options: --[no-]guess-remote
+  options: --[no-]track
+  options: --lock
+  options: -n
+  options: --dry-run
+  options: --porcelain
+  options: -q
+  options: --quiet
+  options: -v
+  options: --verbose
+  options: --expire &lt;time&gt;
+  options: --reason &lt;string&gt;
+  options: &lt;worktree&gt;
+git-write-tree
+  options: --missing-ok
+  options: --prefix=&lt;prefix&gt;/
