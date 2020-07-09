@@ -23,16 +23,17 @@ namespace Git_Complete
             FileCommon fileCommon = new FileCommon();
             gitCommandEntityList = fileCommon.getInstanceFrom<List<GitCommandEntity>>(entityPath);
 
-            foreach (var item in gitCommandEntityList)
+            //test
+            if (!(gitCommandEntityList.Count == 136))
             {
-                Console.WriteLine(item.command);
+                throw new Exception("コマンドの数があってない");
+
             }
 
+            //なぜか↑の読み込みでおかしな文字コードの空白がxmlに付加されて、再度xmlを読もうとするとエラーになる
+            //なので、ここで再書き込みする
+            fileCommon.OutFileTo <List < GitCommandEntity >> (gitCommandEntityList, entityPath);
 
-
-            //xml出力
-
-            //xml読み込み
 
             //git-scm.comから、synopsisを取得する（html parserを使用）
 
