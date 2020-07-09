@@ -13,7 +13,7 @@ namespace Git_Complete.src
         //gitのコマンドオプションは、下記のクラス名の中に定義されている。
         private string gitCommandOptionClassName = "hdlist1";
 
-        public async System.Threading.Tasks.Task GetGitOptions(List<GitCommandAndHelpFilePathEntity> inEntityList, List<GitCommandAndOptionsEntity> entityListOut)
+        public async System.Threading.Tasks.Task GetGitOptions(List<GitCommandAndHelpFilePathEntity> inEntityList, List<GitCommandEntity> entityListOut)
         {
 
             if (inEntityList is null)
@@ -43,10 +43,10 @@ namespace Git_Complete.src
                 var gitOptions = document.GetElementsByClassName(gitCommandOptionClassName).GetEnumerator();
 
                 //取得したコマンドとオプションをentityListに詰め込む処理
-                var entity = new GitCommandAndOptionsEntity(inEntity.gitCommand);
+                var entity = new GitCommandEntity(inEntity.gitCommand);
                 while (gitOptions.MoveNext())
                 {
-                    entity.gitOptionList.Add(gitOptions.Current.InnerHtml);
+                    entity.options.Add(gitOptions.Current.InnerHtml);
                 }
                 entityListOut.Add(entity);
             }

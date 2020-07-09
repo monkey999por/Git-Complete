@@ -17,10 +17,10 @@ namespace Git_Complete.src
         private const string DOTHTML = ".html";
 
         // gitのヘルプファイルとコマンドの一覧を作成する
-        public List<GitCommandAndHelpFilePathEntity> CreatGitCommandAndHelpFilePathEntity()
+        public List<GitCommandEntity> CreatGitCommandAndHelpFilePathEntity()
         {
             //init
-            List<GitCommandAndHelpFilePathEntity> retEntity = new List<GitCommandAndHelpFilePathEntity>();
+            List<GitCommandEntity> retEntity = new List<GitCommandEntity>();
             string[] helpFileArray = Directory.GetFiles(gitHelpFileDirPath, "git-*" + DOTHTML);
 
             //parse and add return list
@@ -47,7 +47,7 @@ namespace Git_Complete.src
                         continue;
                     }
                     
-                    retEntity.Add(new GitCommandAndHelpFilePathEntity(commandName, helpFile));
+                    retEntity.Add(new GitCommandEntity(commandName, helpFile));
                 }
             }
             catch (Exception)
