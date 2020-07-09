@@ -9,7 +9,7 @@ namespace Git_Complete.src.common
     {
         public static GitCommandEntity retrieveGitCommandEntity(string command)
         {
-            var list = GitSummarizedToList.getInstance().commandAndOptionsList;
+            var list = FullBurst.getInstance().commandAndOptionsList;
 
             foreach (var entity in list)
             {

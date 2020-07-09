@@ -14,12 +14,17 @@ namespace Git_Complete
         {
 
             //初期化
+            var full = FullBurst.getInstance();
+
 
             String outDir = @"C:\develop\Git-Complete\Git-Complete\out";
             String entityOutDir = outDir + @"\entity";
 
             //gitコマンドとオプションのリストを生成する。
             // temp: とりあえずコマンドだけ
+
+
+
 
             //xml出力
 
@@ -48,7 +53,7 @@ namespace Git_Complete
 
 
 
-
+            /*
 
             //gitのヘルプファイルパスとコマンド名を持ったentityを作成する
             var gitMetaInfoParser = new GitMetaInfoParser();
@@ -84,7 +89,7 @@ namespace Git_Complete
             //コマンドとオプションのツリーをファイルに出力
             string outFullPath = outDir + @"\command_and_options_list.txt";
             File.WriteAllText(outFullPath, sb.ToString());
-
+            */
         }
     }
 }

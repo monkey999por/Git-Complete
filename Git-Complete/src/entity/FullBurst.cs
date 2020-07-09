@@ -5,16 +5,16 @@ using System.Text;
 namespace Git_Complete.src.entity
 {
     [Serializable]
-    class GitSummarizedToList
+    class FullBurst
     {
         //singleton 
-        private static GitSummarizedToList forCommandEntity = new GitSummarizedToList();
+        private static FullBurst forCommandEntity = new FullBurst();
 
         public List<GitCommandEntity> gitCommandEntityList = new List<GitCommandEntity>();
 
-        private GitSummarizedToList() { }
+        private FullBurst() { }
 
-        public static GitSummarizedToList getInstance()
+        public static FullBurst getInstance()
         {
             return forCommandEntity;
         }
