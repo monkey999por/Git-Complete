@@ -16,7 +16,7 @@ namespace Git_Complete
             //初期化
             ref var gitCommandEntityList = ref MainEntity.gitCommandEntityList;
             
-            String outDir = @"C:\develop\Git-Complete\Git-Complete\out";
+            String outDir = @"C:\develop\Git-Complete\Git-Complete\instance";
             String entityPath = outDir + @"\entity.xml";
 
             //gitコマンドとオプションのリストを生成する。
