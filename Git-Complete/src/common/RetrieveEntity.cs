@@ -6,10 +6,11 @@ using System.Text;
 namespace Git_Complete.src.common
 {
     class RetrieveEntity
-    {
+    {/*
         public static GitCommandEntity retrieveGitCommandEntity(string command)
         {
-            var list = FullBurst.getInstance().commandAndOptionsList;
+
+            var list = MainEntity.getInstance().commandAndOptionsList;
 
             foreach (var entity in list)
             {
@@ -18,5 +19,7 @@ namespace Git_Complete.src.common
             }
         return null;
         }
+        */
     }
+        
 }

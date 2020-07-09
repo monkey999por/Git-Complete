@@ -10,19 +10,23 @@ namespace Git_Complete
 {
     class Entry
     {
-        static async System.Threading.Tasks.Task Main(string[] args)
+        static void Main(string[] args)
         {
 
             //初期化
-            var full = FullBurst.getInstance();
-
-
+            ref var gitCommandEntityList = ref MainEntity.gitCommandEntityList;
+            
             String outDir = @"C:\develop\Git-Complete\Git-Complete\out";
-            String entityOutDir = outDir + @"\entity";
+            String entityPath = outDir + @"\entity.xml";
 
             //gitコマンドとオプションのリストを生成する。
-            // temp: とりあえずコマンドだけ
+            FileCommon fileCommon = new FileCommon();
+            gitCommandEntityList = fileCommon.getInstanceFrom<List<GitCommandEntity>>(entityPath);
 
+            foreach (var item in gitCommandEntityList)
+            {
+                Console.WriteLine(item.command);
+            }
 
 
 

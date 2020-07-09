@@ -47,7 +47,7 @@ namespace Git_Complete.src
                         continue;
                     }
                     
-                    retEntity.Add(new GitCommandEntity(commandName, helpFile));
+                    //retEntity.Add(new GitCommandEntity(commandName, helpFile));
                 }
             }
             catch (Exception)

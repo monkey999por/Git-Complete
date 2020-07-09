@@ -48,26 +48,23 @@ namespace Git_Complete.src.common
             {
                 var serializer = new DataContractSerializer(typeof(T));
 
-                using (var fs = new FileStream(filePath, FileMode.Create))
-                using (var xw = XmlWriter.Create(fs, new XmlWriterSettings
+                using (var fs = new FileStream(filePath, FileMode.Open))
+                using (XmlWriter xw = XmlWriter.Create(fs, new XmlWriterSettings
                 {
                     Indent = true,
                     IndentChars = "\t"
                 }))
                 {
-                    // オブジェクトをシリアル化してXMLファイルに書き込む
+                    // XMLファイルからオブジェクトを読み込む
                     var ret = (T)serializer.ReadObject(fs);
+                    return ret;
                 }
 
             }
             catch (Exception)
             {
                 throw new Exception();
-            }
-
-
-            return default(T);
-
+            } 
         }
     }
 }
