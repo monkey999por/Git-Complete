@@ -16,38 +16,46 @@ namespace Git_Complete.src
 {
     class GitHelpParser
     {
-        private const String helpUrlbase = @"https://git-scm.com/docs/git-add";
+        private const String helpUrlbase = @"https://git-scm.com/docs/";
 
 
-        public async Task<MainEntity> GetSynopsisAsync()
+        public async Task<List<GitCommandEntity>> GetSynopsisAsync(List<GitCommandEntity> inEntity)
         {
-            Console.WriteLine("start");
+
+            //初期化
+            List<GitCommandEntity> ret = MainEntity.gitCommandEntityList;
 
             var config = Configuration.Default;
             var context = BrowsingContext.New(config);
             IDocument document;
-
+            String synopsis = "";
             //helpファイルの読み込んでDomを構築
             using (var client = new HttpClient())
-            using (var stream = await client.GetStreamAsync(new Uri(helpUrlbase)))
             {
-                document = await context.OpenAsync(req => req.Content(stream));
+                var command = "";
+                foreach (var entity in inEntity)
+                {
+                    command = entity.command;
+                    using (var stream = await client.GetStreamAsync(new Uri(helpUrlbase + "git-" + command)))
+                    {
+                        document = await context.OpenAsync(req => req.Content(stream));
+
+                        //get synopsis
+                        synopsis = document.QuerySelector("#_synopsis").ParentElement.QuerySelector(".content").InnerHtml;
+                        Console.WriteLine(command);
+
+                        Console.WriteLine("   " + synopsis);
+
+                    }
+                }
+                
             }
+            
+            
 
-            Console.WriteLine("ggg");
-
-
-
-            //get synopsis
-            var synopsis = document.QuerySelector("#_synopsis").ParentElement.QuerySelector(".content").InnerHtml;
+            return default(List<GitCommandEntity>);
 
 
-            synopsis += "testaaa";
-            Console.WriteLine("next");
-
-            Console.WriteLine(synopsis);
-
-            return default(MainEntity);
 
         }
 

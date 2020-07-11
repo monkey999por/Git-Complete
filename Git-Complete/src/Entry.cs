@@ -15,7 +15,7 @@ namespace Git_Complete
         {
 
             //初期化
-            ref var gitCommandEntityList = ref MainEntity.gitCommandEntityList;
+            var gitCommandEntityList = MainEntity.gitCommandEntityList;
             
             String outDir = @"C:\develop\Git-Complete\Git-Complete\instance";
             String entityPath = outDir + @"\entity.xml";
@@ -35,22 +35,17 @@ namespace Git_Complete
             //なので、ここで再書き込みする
             fileCommon.OutFileTo <List < GitCommandEntity >> (gitCommandEntityList, entityPath);
 
-
             //git-scm.comから、synopsisを取得する（html parserを使用）
             var helpParser = new GitHelpParser();
-            Console.WriteLine("start");
-
-            Task<MainEntity> task = Task.Run(() =>
+            Task<List<GitCommandEntity>> task = (Task<List<GitCommandEntity>>)Task.Run(() =>
             {
-                return helpParser.GetSynopsisAsync();
+                return helpParser.GetSynopsisAsync(gitCommandEntityList);
             });
 
-            MainEntity m = task.Result;
+            var EntityInSynopsis = task.Result;
+
+
             
-
-            Console.WriteLine("end");
-
-
 
 
             //git-scm.comから、オプションの一覧を取得する（html parserを使用）
