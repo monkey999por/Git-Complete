@@ -41,12 +41,8 @@ namespace Git_Complete
             {
                 return helpParser.GetSynopsisAsync(gitCommandEntityList);
             });
-
-            var EntityInSynopsis = task.Result;
-
-
-            
-
+            gitCommandEntityList = task.Result;
+            fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
 
             //git-scm.comから、オプションの一覧を取得する（html parserを使用）
 

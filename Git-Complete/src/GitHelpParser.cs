@@ -19,86 +19,49 @@ namespace Git_Complete.src
         private const String helpUrlbase = @"https://git-scm.com/docs/";
 
 
-        public async Task<List<GitCommandEntity>> GetSynopsisAsync(List<GitCommandEntity> inEntity)
+        public async Task<List<GitCommandEntity>> GetSynopsisAsync(List<GitCommandEntity> _in)
         {
 
-            //初期化
-            List<GitCommandEntity> ret = MainEntity.gitCommandEntityList;
+            //戻り値初期化
+            var ret = new List<GitCommandEntity>();
 
             var config = Configuration.Default;
             var context = BrowsingContext.New(config);
             IDocument document;
-            String synopsis = "";
+            IHtmlCollection<IElement> synopsisList;
+            List<String> synopsis = null;
+
             //helpファイルの読み込んでDomを構築
             using (var client = new HttpClient())
             {
                 var command = "";
-                foreach (var entity in inEntity)
+                foreach (var entity in _in)
                 {
                     command = entity.command;
+                    synopsis = new List<string>();
                     using (var stream = await client.GetStreamAsync(new Uri(helpUrlbase + "git-" + command)))
                     {
                         document = await context.OpenAsync(req => req.Content(stream));
 
                         //get synopsis
-                        synopsis = document.QuerySelector("#_synopsis").ParentElement.QuerySelector(".content").InnerHtml;
+                        synopsisList = document.QuerySelector("#_synopsis").ParentElement.QuerySelectorAll(".content");
+                        foreach (var e in synopsisList)
+                        {
+                            synopsis.Add(e.TextContent);
+                        }
+                        entity.synopsis = synopsis;
+                        ret.Add(entity);
+
                         Console.WriteLine(command);
 
-                        Console.WriteLine("   " + synopsis);
-
+                        foreach (var item in synopsis)
+                        {
+                            Console.WriteLine("   " + item);
+                        }
                     }
                 }
-                
             }
-            
-            
-
-            return default(List<GitCommandEntity>);
-
-
-
+            return ret;
         }
-
-
-        /*
-        public async System.Threading.Tasks.Task GetGitOptions(List<GitCommandAndHelpFilePathEntity> inEntityList, List<GitCommandEntity> entityListOut)
-        {
-
-            if (inEntityList is null)
-            {
-                throw new ArgumentNullException(nameof(inEntityList));
-            }
-            if (entityListOut is null)
-            {
-                throw new ArgumentNullException(nameof(entityListOut));
-            }
-
-            var config = Configuration.Default;
-            var context = BrowsingContext.New(config);
-            string source;
-            foreach (var inEntity in inEntityList)
-            {
-                //helpファイルの読み込んでDomを構築
-                Console.WriteLine(inEntity.gitHelpFileFullPath);
-
-                using (var reader = new StreamReader(inEntity.gitHelpFileFullPath))
-                {
-                    source = reader.ReadToEnd();
-                }
-                AngleSharp.Dom.IDocument document = await context.OpenAsync(req => req.Content(source));
-
-                //使用可能なオプションリストの取得
-                var gitOptions = document.GetElementsByClassName(gitCommandOptionClassName).GetEnumerator();
-
-                //取得したコマンドとオプションをentityListに詰め込む処理
-                var entity = new GitCommandEntity(inEntity.gitCommand);
-                while (gitOptions.MoveNext())
-                {
-                    entity.options.Add(gitOptions.Current.InnerHtml);
-                }
-                entityListOut.Add(entity);
-            }
-        }
-        */
     }
 }
