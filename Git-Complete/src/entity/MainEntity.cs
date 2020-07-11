@@ -10,7 +10,7 @@ namespace Git_Complete.src.entity
         //singleton 
         private static MainEntity mainEntity = new MainEntity();
 
-        public static List<GitCommandEntity> gitCommandEntityList = new List<GitCommandEntity>();
+        public List<GitCommandEntity> gitCommandEntityList = new List<GitCommandEntity>();
 
         private MainEntity() { }
 

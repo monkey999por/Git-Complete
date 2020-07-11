@@ -15,39 +15,41 @@ namespace Git_Complete
         {
 
             //初期化
-            var gitCommandEntityList = MainEntity.gitCommandEntityList;
+            MainEntity mainEntity = MainEntity.getInstance();
+            var gitCommandEntityList = mainEntity.gitCommandEntityList;
             
             String outDir = @"C:\develop\Git-Complete\Git-Complete\instance";
             String entityPath = outDir + @"\entity.xml";
+            String readPath = outDir + @"\entity_only_command.xml";
 
             //gitコマンドとオプションのリストを生成する。
             FileCommon fileCommon = new FileCommon();
-            gitCommandEntityList = fileCommon.getInstanceFrom<List<GitCommandEntity>>(entityPath);
+            gitCommandEntityList = fileCommon.getInstanceFrom<List<GitCommandEntity>>(readPath);
 
             //test
             if (!(gitCommandEntityList.Count == 136))
             {
                 throw new Exception("コマンドの数があってない");
-
             }
 
+            
             //なぜか↑の読み込みでおかしな文字コードの空白がxmlに付加されて、再度xmlを読もうとするとエラーになる
             //なので、ここで再書き込みする
-            fileCommon.OutFileTo <List < GitCommandEntity >> (gitCommandEntityList, entityPath);
-
-            //git-scm.comから、synopsisを取得する（html parserを使用）
+            fileCommon.OutFileTo <List < GitCommandEntity >> (gitCommandEntityList, readPath);
+            
             var helpParser = new GitHelpParser();
-            Task<List<GitCommandEntity>> task = (Task<List<GitCommandEntity>>)Task.Run(() =>
-            {
-                return helpParser.GetSynopsisAsync(gitCommandEntityList);
-            });
-            gitCommandEntityList = task.Result;
-            fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
+            
+            //git-scm.comから、synopsisを取得する（html parserを使用）
+            gitCommandEntityList = helpParser.GetSynopsis(gitCommandEntityList);
+
 
             //git-scm.comから、オプションの一覧を取得する（html parserを使用）
+            gitCommandEntityList = helpParser.GetOptions(gitCommandEntityList);
+
+
 
             //xml出力
-
+            fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
 
             //xml読み込み
 

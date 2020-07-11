@@ -20,6 +20,8 @@ namespace Git_Complete.src.common
             }
             Directory.CreateDirectory(Path.GetDirectoryName(outPath));
 
+            //File.Delete(outPath);
+
             try
             {
                 var serializer = new DataContractSerializer(typeof(T));

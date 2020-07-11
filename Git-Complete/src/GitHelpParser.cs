@@ -16,49 +16,125 @@ namespace Git_Complete.src
 {
     class GitHelpParser
     {
-        private const String helpUrlbase = @"https://git-scm.com/docs/";
+        private const String _helpUrlBase = @"https://git-scm.com/docs/";
 
+        private static Dictionary<String, IDocument> _helpDocsDom = null;
 
-        public async Task<List<GitCommandEntity>> GetSynopsisAsync(List<GitCommandEntity> _in)
+        private static async Task<Dictionary<string, IDocument>> GetHelpDocsDom(List<GitCommandEntity> _in)
         {
+            if (_helpDocsDom != null)
+            {
+                return _helpDocsDom;
+            }
 
-            //戻り値初期化
-            var ret = new List<GitCommandEntity>();
+            //return value
+            Dictionary<String, IDocument> helpDocs = new Dictionary<string, IDocument>();
 
             var config = Configuration.Default;
             var context = BrowsingContext.New(config);
-            IDocument document;
-            IHtmlCollection<IElement> synopsisList;
-            List<String> synopsis = null;
 
+            var command = "";
+            IDocument document;
             //helpファイルの読み込んでDomを構築
             using (var client = new HttpClient())
-            {
-                var command = "";
                 foreach (var entity in _in)
                 {
                     command = entity.command;
-                    synopsis = new List<string>();
-                    using (var stream = await client.GetStreamAsync(new Uri(helpUrlbase + "git-" + command)))
+                    using (var stream = await client.GetStreamAsync(new Uri(_helpUrlBase + "git-" + command)))
                     {
                         document = await context.OpenAsync(req => req.Content(stream));
+                        helpDocs.Add(command, document);
 
-                        //get synopsis
-                        synopsisList = document.QuerySelector("#_synopsis").ParentElement.QuerySelectorAll(".content");
-                        foreach (var e in synopsisList)
-                        {
-                            synopsis.Add(e.TextContent);
-                        }
-                        entity.synopsis = synopsis;
-                        ret.Add(entity);
-
-                        Console.WriteLine(command);
-
-                        foreach (var item in synopsis)
-                        {
-                            Console.WriteLine("   " + item);
-                        }
                     }
+                }
+            _helpDocsDom = helpDocs;
+            return _helpDocsDom;
+        }
+
+        public List<GitCommandEntity> GetSynopsis(List<GitCommandEntity> _in)
+        {
+
+            //戻り値初期化(コピー)
+            var ret = new List<GitCommandEntity>(_in);
+
+            IHtmlCollection<IElement> synopsisList;
+            List<String> synopsis = null;
+            
+            //ヘルプファイルのDomを取得
+            Task<Dictionary<String, IDocument>> task = (Task<Dictionary<String, IDocument>>)Task.Run(() =>
+            {
+                return GitHelpParser.GetHelpDocsDom(_in);
+            });
+            Dictionary<String, IDocument> helpDocsDom = task.Result;
+
+            //synopsisを読み込む
+            foreach (var entity in _in)
+            {
+                //get synopsis
+                var document = helpDocsDom[entity.command];
+
+                synopsisList = document.QuerySelector("#_synopsis").ParentElement.QuerySelectorAll(".content");
+                
+                synopsis = new List<string>();
+
+                foreach (var e in synopsisList)
+                {
+                    synopsis.Add(e.TextContent);
+                }
+                
+                entity.synopsis = synopsis;
+
+                Debug.WriteLine(entity.command);
+
+                foreach (var item in synopsis)
+                {
+                    Debug.WriteLine("   " + item);
+                }
+            }
+            return ret;
+        }
+
+        public List<GitCommandEntity> GetOptions(List<GitCommandEntity> _in)
+        {
+
+            //戻り値初期化
+            var ret = new List<GitCommandEntity>(_in);
+
+            IHtmlCollection<IElement> optionsList;
+            List<String> options = null;
+
+            //ヘルプファイルのDomを取得
+            Task<Dictionary<String, IDocument>> task = (Task<Dictionary<String, IDocument>>)Task.Run(() =>
+            {
+                return GitHelpParser.GetHelpDocsDom(_in);
+            });
+            Dictionary<String, IDocument> helpDocsDom = task.Result;
+
+            //optionを読み込む
+            foreach (var entity in _in)
+            {
+                //get synopsis
+                var document = helpDocsDom[entity.command];
+
+                var temp = document.QuerySelector("#_options");
+                if (temp is null)
+                {
+                    continue;
+                }
+                optionsList = temp.ParentElement.QuerySelectorAll(".hdlist1");
+
+                options = new List<string>();
+                foreach (var e in optionsList)
+                {
+                    options.Add(e.TextContent);
+                }
+                entity.options = options;
+
+                Debug.WriteLine(entity.command);
+
+                foreach (var item in options)
+                {
+                    Debug.WriteLine("   " + item);
                 }
             }
             return ret;

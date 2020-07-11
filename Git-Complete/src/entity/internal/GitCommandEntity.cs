@@ -13,7 +13,6 @@ namespace Git_Complete.src.entity
         //各gitコマンドで使用できるSYNOPSISを保持する
         public List<string> synopsis = new List<string>();
 
-
         //各gitコマンドで使用できるオプションを保持する
         public List<string> options = new List<string>();
 
