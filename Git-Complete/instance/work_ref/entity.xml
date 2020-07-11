@@ -1,0 +1,999 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfGitCommandEntity xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Git_Complete.src.entity">
+	<GitCommandEntity>
+		<command>stage</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>annotate</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitweb</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>blame</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>rerere</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>bugreport</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>count-objects</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>difftool</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>fsck</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>help</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>instaweb</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>merge-tree</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>show-branch</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>verify-commit</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>verify-tag</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>whatchanged</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>reflog</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>remote</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>repack</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>replace</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>fast-import</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>config</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>fast-export</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>filter-branch</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>mergetool</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>pack-refs</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>prune</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>svn</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>archimport</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>cvsexportcommit</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>cvsimport</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>cvsserver</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>imap-send</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>p4</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>quiltimport</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>request-pull</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>send-email</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitattributes</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitcli</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitcore-tutorial</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitcvs-migration</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitdiffcore</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>giteveryday</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitfaq</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitglossary</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>githooks</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitignore</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitmodules</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitnamespaces</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitrepository-layout</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitrevisions</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitsubmodules</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gittutorial</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gittutorial-2</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitworkflows</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>bisect</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>format-patch</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>init</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>rm</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>show</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>stash</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>archive</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>describe</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gitk</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>shortlog</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>clean</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>pull</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>reset</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>add</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>am</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>branch</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>bundle</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>checkout</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>cherry-pick</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>citool</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>clone</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>commit</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>diff</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>fetch</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gc</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>grep</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>gui</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>log</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>merge</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>mv</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>notes</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>push</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>range-diff</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>rebase</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>restore</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>revert</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>sparse-checkout</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>status</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>submodule</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>switch</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>tag</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>worktree</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>diff-tree</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>get-tar-commit-id</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>rev-parse</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>cat-file</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>cherry</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>diff-files</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>diff-index</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>for-each-ref</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>ls-files</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>ls-remote</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>ls-tree</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>merge-base</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>name-rev</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>pack-redundant</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>rev-list</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>show-index</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>show-ref</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>unpack-file</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>var</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>verify-pack</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>commit-tree</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>hash-object</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>read-tree</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>symbolic-ref</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>index-pack</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>prune-packed</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>mktree</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>apply</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>checkout-index</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>commit-graph</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>merge-file</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>merge-index</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>mktag</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>multi-pack-index</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>pack-objects</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>unpack-objects</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>update-index</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>update-ref</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>write-tree</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>check-ref-format</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>merge-one-file</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>patch-id</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>column</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>mailsplit</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>sh-setup</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>check-attr</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>check-ignore</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>check-mailmap</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>credential</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>credential-cache</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>credential-store</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>fmt-merge-msg</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>interpret-trailers</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>mailinfo</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>sh-i18n</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>stripspace</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>receive-pack</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>http-fetch</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>http-push</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>parse-remote</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>shell</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>upload-archive</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>upload-pack</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>daemon</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>fetch-pack</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>http-backend</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>send-pack</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>update-server-info</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+	<GitCommandEntity>
+		<command>stage</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+	</GitCommandEntity>
+</ArrayOfGitCommandEntity>﻿
