@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Git_Complete.src.common;
 using System.Text;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace Git_Complete
 {
@@ -36,6 +37,20 @@ namespace Git_Complete
 
 
             //git-scm.comから、synopsisを取得する（html parserを使用）
+            var helpParser = new GitHelpParser();
+            Console.WriteLine("start");
+
+            Task<MainEntity> task = Task.Run(() =>
+            {
+                return helpParser.GetSynopsisAsync();
+            });
+
+            MainEntity m = task.Result;
+            
+
+            Console.WriteLine("end");
+
+
 
 
             //git-scm.comから、オプションの一覧を取得する（html parserを使用）

@@ -5,13 +5,53 @@ using AngleSharp;
 using AngleSharp.Html.Parser;
 using System.IO;
 using Git_Complete.src.entity;
+using System.Threading.Tasks;
+using AngleSharp.Dom;
+using AngleSharp.Html.Dom;
+using System.ComponentModel;
+using System.Net.Http;
+using System.Diagnostics;
 
 namespace Git_Complete.src
 {
     class GitHelpParser
     {
-        //gitのコマンドオプションは、下記のクラス名の中に定義されている。
-        private string gitCommandOptionClassName = "hdlist1";
+        private const String helpUrlbase = @"https://git-scm.com/docs/git-add";
+
+
+        public async Task<MainEntity> GetSynopsisAsync()
+        {
+            Console.WriteLine("start");
+
+            var config = Configuration.Default;
+            var context = BrowsingContext.New(config);
+            IDocument document;
+
+            //helpファイルの読み込んでDomを構築
+            using (var client = new HttpClient())
+            using (var stream = await client.GetStreamAsync(new Uri(helpUrlbase)))
+            {
+                document = await context.OpenAsync(req => req.Content(stream));
+            }
+
+            Console.WriteLine("ggg");
+
+
+
+            //get synopsis
+            var synopsis = document.QuerySelector("#_synopsis").ParentElement.QuerySelector(".content").InnerHtml;
+
+
+            synopsis += "testaaa";
+            Console.WriteLine("next");
+
+            Console.WriteLine(synopsis);
+
+            return default(MainEntity);
+
+        }
+
+
         /*
         public async System.Threading.Tasks.Task GetGitOptions(List<GitCommandAndHelpFilePathEntity> inEntityList, List<GitCommandEntity> entityListOut)
         {
