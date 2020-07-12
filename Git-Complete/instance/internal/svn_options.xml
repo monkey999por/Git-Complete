@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> --shared[=(false|true|umask|group|all|world|everybody)] </string>
+	<string> --template=&lt;template_directory&gt; </string>
+	<string> -r &lt;arg&gt; </string>
+	<string> --revision &lt;arg&gt; </string>
+	<string> - </string>
+	<string> --stdin </string>
+	<string> --rmdir </string>
+	<string> -e </string>
+	<string> --edit </string>
+	<string> -l&lt;num&gt; </string>
+	<string> --find-copies-harder </string>
+	<string> -A&lt;filename&gt; </string>
+	<string> --authors-file=&lt;filename&gt; </string>
+	<string> --authors-prog=&lt;filename&gt; </string>
+	<string> -q </string>
+	<string> --quiet </string>
+	<string> -m </string>
+	<string> --merge </string>
+	<string> -s&lt;strategy&gt; </string>
+	<string> --strategy=&lt;strategy&gt; </string>
+	<string> -p </string>
+	<string> --rebase-merges </string>
+	<string> --preserve-merges (DEPRECATED) </string>
+	<string> -n </string>
+	<string> --dry-run </string>
+	<string> --use-log-author </string>
+	<string> --add-author-from </string>
+</ArrayOfstring>

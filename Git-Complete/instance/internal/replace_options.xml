@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -f </string>
+	<string> --force </string>
+	<string> -d </string>
+	<string> --delete </string>
+	<string> --edit &lt;object&gt; </string>
+	<string> --raw </string>
+	<string> --graft &lt;commit&gt; [&lt;parent&gt;…​] </string>
+	<string> --convert-graft-file </string>
+	<string> -l &lt;pattern&gt; </string>
+	<string> --list &lt;pattern&gt; </string>
+	<string> --format=&lt;format&gt; </string>
+</ArrayOfstring>

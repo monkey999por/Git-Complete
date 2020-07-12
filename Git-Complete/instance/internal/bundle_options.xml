@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> create [options] &lt;file&gt; &lt;git-rev-list-args&gt; </string>
+	<string> verify &lt;file&gt; </string>
+	<string> list-heads &lt;file&gt; </string>
+	<string> unbundle &lt;file&gt; </string>
+	<string> &lt;git-rev-list-args&gt; </string>
+	<string> [&lt;refname&gt;…​] </string>
+	<string> --progress </string>
+	<string> --all-progress </string>
+	<string> --all-progress-implied </string>
+	<string> -q </string>
+	<string> --quiet </string>
+</ArrayOfstring>

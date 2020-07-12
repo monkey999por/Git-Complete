@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git apply [--stat] [--numstat] [--summary] [--check] [--index | --intent-to-add] [--3way]
+	  [--apply] [--no-add] [--build-fake-ancestor=&lt;file&gt;] [-R | --reverse]
+	  [--allow-binary-replacement | --binary] [--reject] [-z]
+	  [-p&lt;n&gt;] [-C&lt;n&gt;] [--inaccurate-eof] [--recount] [--cached]
+	  [--ignore-space-change | --ignore-whitespace]
+	  [--whitespace=(nowarn|warn|fix|error|error-all)]
+	  [--exclude=&lt;path&gt;] [--include=&lt;path&gt;] [--directory=&lt;root&gt;]
+	  [--verbose] [--unsafe-paths] [&lt;patch&gt;…​]</string>
+</ArrayOfstring>

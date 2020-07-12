@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> --format=&lt;fmt&gt; </string>
+	<string> -l </string>
+	<string> --list </string>
+	<string> -v </string>
+	<string> --verbose </string>
+	<string> --prefix=&lt;prefix&gt;/ </string>
+	<string> -o &lt;file&gt; </string>
+	<string> --output=&lt;file&gt; </string>
+	<string> --worktree-attributes </string>
+	<string> &lt;extra&gt; </string>
+	<string> --remote=&lt;repo&gt; </string>
+	<string> --exec=&lt;git-upload-archive&gt; </string>
+	<string> &lt;tree-ish&gt; </string>
+	<string> &lt;path&gt; </string>
+</ArrayOfstring>

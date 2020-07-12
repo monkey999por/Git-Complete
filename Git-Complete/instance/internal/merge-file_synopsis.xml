@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git merge-file [-L &lt;current-name&gt; [-L &lt;base-name&gt; [-L &lt;other-name&gt;]]]
+	[--ours|--theirs|--union] [-p|--stdout] [-q|--quiet] [--marker-size=&lt;n&gt;]
+	[--[no-]diff3] &lt;current-file&gt; &lt;base-file&gt; &lt;other-file&gt;</string>
+</ArrayOfstring>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -m </string>
+	<string> --reset </string>
+	<string> -u </string>
+	<string> -i </string>
+	<string> -n </string>
+	<string> --dry-run </string>
+	<string> -v </string>
+	<string> --trivial </string>
+	<string> --aggressive </string>
+	<string> --prefix=&lt;prefix&gt; </string>
+	<string> --exclude-per-directory=&lt;gitignore&gt; </string>
+	<string> --index-output=&lt;file&gt; </string>
+	<string> --[no-]recurse-submodules </string>
+	<string> --no-sparse-checkout </string>
+	<string> --empty </string>
+	<string> -q </string>
+	<string> --quiet </string>
+	<string> &lt;tree-ish#&gt; </string>
+</ArrayOfstring>

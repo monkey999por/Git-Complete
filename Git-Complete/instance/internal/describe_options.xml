@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> &lt;commit-ish&gt;…​ </string>
+	<string> --dirty[=&lt;mark&gt;] </string>
+	<string> --broken[=&lt;mark&gt;] </string>
+	<string> --all </string>
+	<string> --tags </string>
+	<string> --contains </string>
+	<string> --abbrev=&lt;n&gt; </string>
+	<string> --candidates=&lt;n&gt; </string>
+	<string> --exact-match </string>
+	<string> --debug </string>
+	<string> --long </string>
+	<string> --match &lt;pattern&gt; </string>
+	<string> --exclude &lt;pattern&gt; </string>
+	<string> --always </string>
+	<string> --first-parent </string>
+</ArrayOfstring>

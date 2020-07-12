@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> --all </string>
+	<string> -a </string>
+	<string> --append </string>
+	<string> --depth=&lt;depth&gt; </string>
+	<string> --deepen=&lt;depth&gt; </string>
+	<string> --shallow-since=&lt;date&gt; </string>
+	<string> --shallow-exclude=&lt;revision&gt; </string>
+	<string> --unshallow </string>
+	<string> --update-shallow </string>
+	<string> --negotiation-tip=&lt;commit|glob&gt; </string>
+	<string> --dry-run </string>
+	<string> -f </string>
+	<string> --force </string>
+	<string> -k </string>
+	<string> --keep </string>
+	<string> --multiple </string>
+	<string> --[no-]auto-gc </string>
+	<string> --[no-]write-commit-graph </string>
+	<string> -p </string>
+	<string> --prune </string>
+	<string> -P </string>
+	<string> --prune-tags </string>
+	<string> -n </string>
+	<string> --no-tags </string>
+	<string> --refmap=&lt;refspec&gt; </string>
+	<string> -t </string>
+	<string> --tags </string>
+	<string> --recurse-submodules[=yes|on-demand|no] </string>
+	<string> -j </string>
+	<string> --jobs=&lt;n&gt; </string>
+	<string> --no-recurse-submodules </string>
+	<string> --set-upstream </string>
+	<string> --submodule-prefix=&lt;path&gt; </string>
+	<string> --recurse-submodules-default=[yes|on-demand] </string>
+	<string> -u </string>
+	<string> --update-head-ok </string>
+	<string> --upload-pack &lt;upload-pack&gt; </string>
+	<string> -q </string>
+	<string> --quiet </string>
+	<string> -v </string>
+	<string> --verbose </string>
+	<string> --progress </string>
+	<string> -o &lt;option&gt; </string>
+	<string> --server-option=&lt;option&gt; </string>
+	<string> --show-forced-updates </string>
+	<string> --no-show-forced-updates </string>
+	<string> -4 </string>
+	<string> --ipv4 </string>
+	<string> -6 </string>
+	<string> --ipv6 </string>
+	<string> &lt;repository&gt; </string>
+	<string> &lt;group&gt; </string>
+	<string> &lt;refspec&gt; </string>
+</ArrayOfstring>

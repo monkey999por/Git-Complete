@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git instaweb [--local] [--httpd=&lt;httpd&gt;] [--port=&lt;port&gt;]
+               [--browser=&lt;browser&gt;]
+git instaweb [--start] [--stop] [--restart]</string>
+</ArrayOfstring>

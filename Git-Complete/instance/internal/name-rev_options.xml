@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> --tags </string>
+	<string> --refs=&lt;pattern&gt; </string>
+	<string> --exclude=&lt;pattern&gt; </string>
+	<string> --all </string>
+	<string> --stdin </string>
+	<string> --name-only </string>
+	<string> --no-undefined </string>
+	<string> --always </string>
+</ArrayOfstring>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git clean [-d] [-f] [-i] [-n] [-q] [-e &lt;pattern&gt;] [-x | -X] [--] &lt;path&gt;…​</string>
+</ArrayOfstring>

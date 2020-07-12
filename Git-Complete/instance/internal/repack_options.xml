@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -a </string>
+	<string> -A </string>
+	<string> -d </string>
+	<string> -l </string>
+	<string> -f </string>
+	<string> -F </string>
+	<string> -q </string>
+	<string> -n </string>
+	<string> --window=&lt;n&gt; </string>
+	<string> --depth=&lt;n&gt; </string>
+	<string> --threads=&lt;n&gt; </string>
+	<string> --window-memory=&lt;n&gt; </string>
+	<string> --max-pack-size=&lt;n&gt; </string>
+	<string> -b </string>
+	<string> --write-bitmap-index </string>
+	<string> --pack-kept-objects </string>
+	<string> --keep-pack=&lt;pack-name&gt; </string>
+	<string> --unpack-unreachable=&lt;when&gt; </string>
+	<string> -k </string>
+	<string> --keep-unreachable </string>
+	<string> -i </string>
+	<string> --delta-islands </string>
+</ArrayOfstring>

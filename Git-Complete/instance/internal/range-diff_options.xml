@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> --no-dual-color </string>
+	<string> --creation-factor=&lt;percent&gt; </string>
+	<string> --[no-]notes[=&lt;ref&gt;] </string>
+	<string> &lt;range1&gt; &lt;range2&gt; </string>
+	<string> &lt;rev1&gt;…​&lt;rev2&gt; </string>
+	<string> &lt;base&gt; &lt;rev1&gt; &lt;rev2&gt; </string>
+</ArrayOfstring>

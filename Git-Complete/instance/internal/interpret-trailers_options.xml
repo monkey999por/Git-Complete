@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> --in-place </string>
+	<string> --trim-empty </string>
+	<string> --trailer &lt;token&gt;[(=|:)&lt;value&gt;] </string>
+	<string> --where &lt;placement&gt; </string>
+	<string> --no-where </string>
+	<string> --if-exists &lt;action&gt; </string>
+	<string> --no-if-exists </string>
+	<string> --if-missing &lt;action&gt; </string>
+	<string> --no-if-missing </string>
+	<string> --only-trailers </string>
+	<string> --only-input </string>
+	<string> --unfold </string>
+	<string> --parse </string>
+	<string> --no-divider </string>
+</ArrayOfstring>

@@ -13,11 +13,7 @@ namespace Git_Complete.src.common
 
        public void OutFileTo<T>(T obj, String outPath)
         {
-            if (obj is null)
-            { 
-                throw new Exception();
-
-            }
+            
             Directory.CreateDirectory(Path.GetDirectoryName(outPath));
 
             //File.Delete(outPath);
@@ -55,6 +51,7 @@ namespace Git_Complete.src.common
                 {
                     Indent = true,
                     IndentChars = "\t"
+
                 }))
                 {
                     // XMLファイルからオブジェクトを読み込む

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -k </string>
+	<string> -b </string>
+	<string> -u </string>
+	<string> --encoding=&lt;encoding&gt; </string>
+	<string> -n </string>
+	<string> -m </string>
+	<string> --message-id </string>
+	<string> --scissors </string>
+	<string> --no-scissors </string>
+	<string> &lt;msg&gt; </string>
+	<string> &lt;patch&gt; </string>
+</ArrayOfstring>

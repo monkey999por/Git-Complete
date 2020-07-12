@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git hash-object [-t &lt;type&gt;] [-w] [--path=&lt;file&gt;|--no-filters] [--stdin [--literally]] [--] &lt;file&gt;…​
+git hash-object [-t &lt;type&gt;] [-w] --stdin-paths [--no-filters]</string>
+</ArrayOfstring>

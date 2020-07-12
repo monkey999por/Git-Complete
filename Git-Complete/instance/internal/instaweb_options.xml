@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -l </string>
+	<string> --local </string>
+	<string> -d </string>
+	<string> --httpd </string>
+	<string> -m </string>
+	<string> --module-path </string>
+	<string> -p </string>
+	<string> --port </string>
+	<string> -b </string>
+	<string> --browser </string>
+	<string> start </string>
+	<string> --start </string>
+	<string> stop </string>
+	<string> --stop </string>
+	<string> restart </string>
+	<string> --restart </string>
+</ArrayOfstring>

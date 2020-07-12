@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> --git-dir &lt;dir&gt; </string>
+	<string> -v </string>
+	<string> --verbose </string>
+	<string> --branch &lt;ref&gt; </string>
+	<string> --detect-branches </string>
+	<string> --changesfile &lt;file&gt; </string>
+	<string> --silent </string>
+	<string> --detect-labels </string>
+	<string> --import-labels </string>
+	<string> --import-local </string>
+	<string> --max-changes &lt;n&gt; </string>
+	<string> --changes-block-size &lt;n&gt; </string>
+	<string> --keep-path </string>
+	<string> --use-client-spec </string>
+	<string> -/ &lt;path&gt; </string>
+	<string> --destination &lt;directory&gt; </string>
+	<string> --bare </string>
+	<string> --origin &lt;commit&gt; </string>
+	<string> -M </string>
+	<string> --preserve-user </string>
+	<string> --export-labels </string>
+	<string> -n </string>
+	<string> --dry-run </string>
+	<string> --prepare-p4-only </string>
+	<string> --shelve </string>
+	<string> --update-shelve CHANGELIST </string>
+	<string> --conflict=(ask|skip|quit) </string>
+	<string> --branch &lt;branch&gt; </string>
+	<string> --commit &lt;sha1&gt;|&lt;sha1..sha1&gt; </string>
+	<string> --disable-rebase </string>
+	<string> --disable-p4sync </string>
+</ArrayOfstring>

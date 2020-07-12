@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> &lt;object&gt; </string>
+	<string> -t </string>
+	<string> -s </string>
+	<string> -e </string>
+	<string> -p </string>
+	<string> &lt;type&gt; </string>
+	<string> --textconv </string>
+	<string> --filters </string>
+	<string> --path=&lt;path&gt; </string>
+	<string> --batch </string>
+	<string> --batch=&lt;format&gt; </string>
+	<string> --batch-check </string>
+	<string> --batch-check=&lt;format&gt; </string>
+	<string> --batch-all-objects </string>
+	<string> --buffer </string>
+	<string> --unordered </string>
+	<string> --allow-unknown-type </string>
+	<string> --follow-symlinks </string>
+</ArrayOfstring>

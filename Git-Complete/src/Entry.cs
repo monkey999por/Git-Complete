@@ -15,22 +15,25 @@ namespace Git_Complete
         {
 
             bool isMakeEntityFromGitHelp = false;
+            bool debugMode = true;
 
             //初期化
             MainEntity mainEntity = MainEntity.getInstance();
             var gitCommandEntityList = mainEntity.gitCommandEntityList;
             
             String outDir = @"C:\develop\Git-Complete\Git-Complete\instance";
+            String internalOutDir = @"C:\develop\Git-Complete\Git-Complete\instance\internal";
 
-            String entityPath = isMakeEntityFromGitHelp ? outDir + @"\entity_only_command.xml" : outDir + @"\entity.xml";
+            String readPath = isMakeEntityFromGitHelp ? outDir + @"\entity_only_command.xml" : outDir + @"\entity.xml";
+            String entityPath = outDir + @"\entity.xml";
 
             //gitコマンドとオプションのリストを生成する。
             FileCommon fileCommon = new FileCommon();
-            gitCommandEntityList = fileCommon.getInstanceFrom<List<GitCommandEntity>>(entityPath);
+            gitCommandEntityList = fileCommon.getInstanceFrom<List<GitCommandEntity>>(readPath);
 
             //なぜか↑の読み込みでおかしな文字コードの空白がxmlに付加されて、再度xmlを読もうとするとエラーになる
             //なので、ここで再書き込みする
-            fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
+            fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, readPath);
 
             //test
             if (!(gitCommandEntityList.Count == 136))
@@ -52,6 +55,22 @@ namespace Git_Complete
                 //xml出力
                 fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
             }
+
+            //test
+            //オプション、synopsisをファイルに書き出す
+            // 出力形式 -> {command_name}_synopsis.xml, {command_name}_options.xml
+            if (debugMode)
+            {
+                foreach (var item in gitCommandEntityList)
+                {
+                    //command and synopsis
+                    fileCommon.OutFileTo<List<String>>(item.synopsis, internalOutDir + @"\" + item.command + "_" + nameof(item.synopsis) + ".xml");
+
+                    //command and options
+                    fileCommon.OutFileTo<List<String>>(item.options, internalOutDir + @"\" + item.command + "_" + nameof(item.options) + ".xml");
+                }
+            }
+
 
             //synopsisを解析 -> パターンを検討し、生成するpowershellでどうやって使うかを検討する
 

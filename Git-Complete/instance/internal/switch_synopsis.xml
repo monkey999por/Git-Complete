@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git switch [&lt;options&gt;] [--no-guess] &lt;branch&gt;
+git switch [&lt;options&gt;] --detach [&lt;start-point&gt;]
+git switch [&lt;options&gt;] (-c|-C) &lt;new-branch&gt; [&lt;start-point&gt;]
+git switch [&lt;options&gt;] --orphan &lt;new-branch&gt;</string>
+</ArrayOfstring>

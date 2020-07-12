@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git am [--signoff] [--keep] [--[no-]keep-cr] [--[no-]utf8]
+	 [--[no-]3way] [--interactive] [--committer-date-is-author-date]
+	 [--ignore-date] [--ignore-space-change | --ignore-whitespace]
+	 [--whitespace=&lt;option&gt;] [-C&lt;n&gt;] [-p&lt;n&gt;] [--directory=&lt;dir&gt;]
+	 [--exclude=&lt;path&gt;] [--include=&lt;path&gt;] [--reject] [-q | --quiet]
+	 [--[no-]scissors] [-S[&lt;keyid&gt;]] [--patch-format=&lt;format&gt;]
+	 [(&lt;mbox&gt; | &lt;Maildir&gt;)…​]
+git am (--continue | --skip | --abort | --quit | --show-current-patch[=(diff|raw)])</string>
+</ArrayOfstring>

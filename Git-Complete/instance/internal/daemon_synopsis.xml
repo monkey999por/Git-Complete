@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git daemon [--verbose] [--syslog] [--export-all]
+	     [--timeout=&lt;n&gt;] [--init-timeout=&lt;n&gt;] [--max-connections=&lt;n&gt;]
+	     [--strict-paths] [--base-path=&lt;path&gt;] [--base-path-relaxed]
+	     [--user-path | --user-path=&lt;path&gt;]
+	     [--interpolated-path=&lt;pathtemplate&gt;]
+	     [--reuseaddr] [--detach] [--pid-file=&lt;file&gt;]
+	     [--enable=&lt;service&gt;] [--disable=&lt;service&gt;]
+	     [--allow-override=&lt;service&gt;] [--forbid-override=&lt;service&gt;]
+	     [--access-hook=&lt;path&gt;] [--[no-]informative-errors]
+	     [--inetd |
+	      [--listen=&lt;host_or_ipaddr&gt;] [--port=&lt;n&gt;]
+	      [--user=&lt;user&gt; [--group=&lt;group&gt;]]]
+	     [--log-destination=(stderr|syslog|none)]
+	     [&lt;directory&gt;…​]</string>
+</ArrayOfstring>

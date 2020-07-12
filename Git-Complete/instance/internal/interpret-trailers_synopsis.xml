@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git interpret-trailers [&lt;options&gt;] [(--trailer &lt;token&gt;[(=|:)&lt;value&gt;])…​] [&lt;file&gt;…​]
+git interpret-trailers [&lt;options&gt;] [--parse] [&lt;file&gt;…​]</string>
+</ArrayOfstring>

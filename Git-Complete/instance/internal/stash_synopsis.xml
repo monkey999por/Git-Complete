@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git stash list [&lt;options&gt;]
+git stash show [&lt;options&gt;] [&lt;stash&gt;]
+git stash drop [-q|--quiet] [&lt;stash&gt;]
+git stash ( pop | apply ) [--index] [-q|--quiet] [&lt;stash&gt;]
+git stash branch &lt;branchname&gt; [&lt;stash&gt;]
+git stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
+	     [-u|--include-untracked] [-a|--all] [-m|--message &lt;message&gt;]
+	     [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]]
+	     [--] [&lt;pathspec&gt;…​]]
+git stash clear
+git stash create [&lt;message&gt;]
+git stash store [-m|--message &lt;message&gt;] [-q|--quiet] &lt;commit&gt;</string>
+</ArrayOfstring>

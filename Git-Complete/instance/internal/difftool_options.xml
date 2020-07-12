@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -d </string>
+	<string> --dir-diff </string>
+	<string> -y </string>
+	<string> --no-prompt </string>
+	<string> --prompt </string>
+	<string> -t &lt;tool&gt; </string>
+	<string> --tool=&lt;tool&gt; </string>
+	<string> --tool-help </string>
+	<string> --[no-]symlinks </string>
+	<string> -x &lt;command&gt; </string>
+	<string> --extcmd=&lt;command&gt; </string>
+	<string> -g </string>
+	<string> --[no-]gui </string>
+	<string> --[no-]trust-exit-code </string>
+</ArrayOfstring>

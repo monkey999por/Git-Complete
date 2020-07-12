@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -n </string>
+	<string> --numbered </string>
+	<string> -s </string>
+	<string> --summary </string>
+	<string> -e </string>
+	<string> --email </string>
+	<string> --format[=&lt;format&gt;] </string>
+	<string> -c </string>
+	<string> --committer </string>
+	<string> -w[&lt;width&gt;[,&lt;indent1&gt;[,&lt;indent2&gt;]]] </string>
+	<string> &lt;revision range&gt; </string>
+	<string> [--] &lt;path&gt;…​ </string>
+	<string> -&lt;number&gt; </string>
+	<string> -n &lt;number&gt; </string>
+	<string> --max-count=&lt;number&gt; </string>
+	<string> --skip=&lt;number&gt; </string>
+	<string> --since=&lt;date&gt; </string>
+	<string> --after=&lt;date&gt; </string>
+	<string> --until=&lt;date&gt; </string>
+	<string> --before=&lt;date&gt; </string>
+	<string> --author=&lt;pattern&gt; </string>
+	<string> --committer=&lt;pattern&gt; </string>
+	<string> --grep-reflog=&lt;pattern&gt; </string>
+	<string> --grep=&lt;pattern&gt; </string>
+	<string> --all-match </string>
+	<string> --invert-grep </string>
+	<string> -i </string>
+	<string> --regexp-ignore-case </string>
+	<string> --basic-regexp </string>
+	<string> -E </string>
+	<string> --extended-regexp </string>
+	<string> -F </string>
+	<string> --fixed-strings </string>
+	<string> -P </string>
+	<string> --perl-regexp </string>
+	<string> --remove-empty </string>
+	<string> --merges </string>
+	<string> --no-merges </string>
+	<string> --min-parents=&lt;number&gt; </string>
+	<string> --max-parents=&lt;number&gt; </string>
+	<string> --no-min-parents </string>
+	<string> --no-max-parents </string>
+	<string> --first-parent </string>
+	<string> --not </string>
+	<string> --all </string>
+	<string> --branches[=&lt;pattern&gt;] </string>
+	<string> --tags[=&lt;pattern&gt;] </string>
+	<string> --remotes[=&lt;pattern&gt;] </string>
+	<string> --glob=&lt;glob-pattern&gt; </string>
+	<string> --exclude=&lt;glob-pattern&gt; </string>
+	<string> --reflog </string>
+	<string> --alternate-refs </string>
+	<string> --single-worktree </string>
+	<string> --ignore-missing </string>
+	<string> --bisect </string>
+	<string> --stdin </string>
+	<string> --cherry-mark </string>
+	<string> --cherry-pick </string>
+	<string> --left-only </string>
+	<string> --right-only </string>
+	<string> --cherry </string>
+	<string> -g </string>
+	<string> --walk-reflogs </string>
+	<string> --merge </string>
+	<string> --boundary </string>
+	<string> &lt;paths&gt; </string>
+	<string> --simplify-by-decoration </string>
+	<string> Default mode </string>
+	<string> --show-pulls </string>
+	<string> --full-history </string>
+	<string> --dense </string>
+	<string> --sparse </string>
+	<string> --simplify-merges </string>
+	<string> --ancestry-path </string>
+	<string> Default mode </string>
+	<string> --full-history without parent rewriting </string>
+	<string> --full-history with parent rewriting </string>
+	<string> --dense </string>
+	<string> --sparse </string>
+	<string> --simplify-merges </string>
+	<string> --ancestry-path </string>
+	<string> --show-pulls </string>
+</ArrayOfstring>

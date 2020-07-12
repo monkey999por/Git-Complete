@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -a </string>
+	<string> --annotate </string>
+	<string> -s </string>
+	<string> --sign </string>
+	<string> --no-sign </string>
+	<string> -u &lt;keyid&gt; </string>
+	<string> --local-user=&lt;keyid&gt; </string>
+	<string> -f </string>
+	<string> --force </string>
+	<string> -d </string>
+	<string> --delete </string>
+	<string> -v </string>
+	<string> --verify </string>
+	<string> -n&lt;num&gt; </string>
+	<string> -l </string>
+	<string> --list </string>
+	<string> --sort=&lt;key&gt; </string>
+	<string> --color[=&lt;when&gt;] </string>
+	<string> -i </string>
+	<string> --ignore-case </string>
+	<string> --column[=&lt;options&gt;] </string>
+	<string> --no-column </string>
+	<string> --contains [&lt;commit&gt;] </string>
+	<string> --no-contains [&lt;commit&gt;] </string>
+	<string> --merged [&lt;commit&gt;] </string>
+	<string> --no-merged [&lt;commit&gt;] </string>
+	<string> --points-at &lt;object&gt; </string>
+	<string> -m &lt;msg&gt; </string>
+	<string> --message=&lt;msg&gt; </string>
+	<string> -F &lt;file&gt; </string>
+	<string> --file=&lt;file&gt; </string>
+	<string> -e </string>
+	<string> --edit </string>
+	<string> --cleanup=&lt;mode&gt; </string>
+	<string> --create-reflog </string>
+	<string> --format=&lt;format&gt; </string>
+	<string> &lt;tagname&gt; </string>
+	<string> &lt;commit&gt; </string>
+	<string> &lt;object&gt; </string>
+</ArrayOfstring>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -s &lt;tree&gt; </string>
+	<string> --source=&lt;tree&gt; </string>
+	<string> -p </string>
+	<string> --patch </string>
+	<string> -W </string>
+	<string> --worktree </string>
+	<string> -S </string>
+	<string> --staged </string>
+	<string> -q </string>
+	<string> --quiet </string>
+	<string> --progress </string>
+	<string> --no-progress </string>
+	<string> --ours </string>
+	<string> --theirs </string>
+	<string> -m </string>
+	<string> --merge </string>
+	<string> --conflict=&lt;style&gt; </string>
+	<string> --ignore-unmerged </string>
+	<string> --ignore-skip-worktree-bits </string>
+	<string> --recurse-submodules </string>
+	<string> --no-recurse-submodules </string>
+	<string> --overlay </string>
+	<string> --no-overlay </string>
+	<string> --pathspec-from-file=&lt;file&gt; </string>
+	<string> --pathspec-file-nul </string>
+	<string> -- </string>
+	<string> &lt;pathspec&gt;…​ </string>
+</ArrayOfstring>

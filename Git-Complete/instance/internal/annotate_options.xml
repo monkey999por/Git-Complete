@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -b </string>
+	<string> --root </string>
+	<string> --show-stats </string>
+	<string> -L &lt;start&gt;,&lt;end&gt; </string>
+	<string> -L :&lt;funcname&gt; </string>
+	<string> -l </string>
+	<string> -t </string>
+	<string> -S &lt;revs-file&gt; </string>
+	<string> --reverse &lt;rev&gt;..&lt;rev&gt; </string>
+	<string> -p </string>
+	<string> --porcelain </string>
+	<string> --line-porcelain </string>
+	<string> --incremental </string>
+	<string> --encoding=&lt;encoding&gt; </string>
+	<string> --contents &lt;file&gt; </string>
+	<string> --date &lt;format&gt; </string>
+	<string> --[no-]progress </string>
+	<string> -M[&lt;num&gt;] </string>
+	<string> -C[&lt;num&gt;] </string>
+	<string> --ignore-rev &lt;rev&gt; </string>
+	<string> --ignore-revs-file &lt;file&gt; </string>
+	<string> -h </string>
+</ArrayOfstring>

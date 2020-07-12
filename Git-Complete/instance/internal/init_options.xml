@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -q </string>
+	<string> --quiet </string>
+	<string> --bare </string>
+	<string> --object-format=&lt;format&gt; </string>
+	<string> --template=&lt;template_directory&gt; </string>
+	<string> --separate-git-dir=&lt;git dir&gt; </string>
+	<string> --shared[=(false|true|umask|group|all|world|everybody|0xxx)] </string>
+	<string> umask (or false) </string>
+	<string> group (or true) </string>
+	<string> all (or world or everybody) </string>
+	<string> 0xxx </string>
+</ArrayOfstring>

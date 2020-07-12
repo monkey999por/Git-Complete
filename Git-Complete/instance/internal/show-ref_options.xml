@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> --head </string>
+	<string> --heads </string>
+	<string> --tags </string>
+	<string> -d </string>
+	<string> --dereference </string>
+	<string> -s </string>
+	<string> --hash[=&lt;n&gt;] </string>
+	<string> --verify </string>
+	<string> --abbrev[=&lt;n&gt;] </string>
+	<string> -q </string>
+	<string> --quiet </string>
+	<string> --exclude-existing[=&lt;pattern&gt;] </string>
+	<string> &lt;pattern&gt;…​ </string>
+</ArrayOfstring>

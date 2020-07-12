@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git notes [list [&lt;object&gt;]]
+git notes add [-f] [--allow-empty] [-F &lt;file&gt; | -m &lt;msg&gt; | (-c | -C) &lt;object&gt;] [&lt;object&gt;]
+git notes copy [-f] ( --stdin | &lt;from-object&gt; [&lt;to-object&gt;] )
+git notes append [--allow-empty] [-F &lt;file&gt; | -m &lt;msg&gt; | (-c | -C) &lt;object&gt;] [&lt;object&gt;]
+git notes edit [--allow-empty] [&lt;object&gt;]
+git notes show [&lt;object&gt;]
+git notes merge [-v | -q] [-s &lt;strategy&gt; ] &lt;notes-ref&gt;
+git notes merge --commit [-v | -q]
+git notes merge --abort [-v | -q]
+git notes remove [--ignore-missing] [--stdin] [&lt;object&gt;…​]
+git notes prune [-n] [-v]
+git notes get-ref</string>
+</ArrayOfstring>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -a </string>
+	<string> --all </string>
+	<string> -u </string>
+	<string> --include-untracked </string>
+	<string> --index </string>
+	<string> -k </string>
+	<string> --keep-index </string>
+	<string> --no-keep-index </string>
+	<string> -p </string>
+	<string> --patch </string>
+	<string> --pathspec-from-file=&lt;file&gt; </string>
+	<string> --pathspec-file-nul </string>
+	<string> -q </string>
+	<string> --quiet </string>
+	<string> -- </string>
+	<string> &lt;pathspec&gt;…​ </string>
+	<string> &lt;stash&gt; </string>
+</ArrayOfstring>

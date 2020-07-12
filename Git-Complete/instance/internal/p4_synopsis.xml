@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git p4 clone [&lt;sync options&gt;] [&lt;clone options&gt;] &lt;p4 depot path&gt;…​
+git p4 sync [&lt;sync options&gt;] [&lt;p4 depot path&gt;…​]
+git p4 rebase
+git p4 submit [&lt;submit options&gt;] [&lt;master branch name&gt;]</string>
+</ArrayOfstring>

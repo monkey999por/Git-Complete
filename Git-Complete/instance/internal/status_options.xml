@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string> -s </string>
+	<string> --short </string>
+	<string> -b </string>
+	<string> --branch </string>
+	<string> --show-stash </string>
+	<string> --porcelain[=&lt;version&gt;] </string>
+	<string> --long </string>
+	<string> -v </string>
+	<string> --verbose </string>
+	<string> -u[&lt;mode&gt;] </string>
+	<string> --untracked-files[=&lt;mode&gt;] </string>
+	<string> --ignore-submodules[=&lt;when&gt;] </string>
+	<string> --ignored[=&lt;mode&gt;] </string>
+	<string> -z </string>
+	<string> --column[=&lt;options&gt;] </string>
+	<string> --no-column </string>
+	<string> --ahead-behind </string>
+	<string> --no-ahead-behind </string>
+	<string> --renames </string>
+	<string> --no-renames </string>
+	<string> --find-renames[=&lt;n&gt;] </string>
+	<string> &lt;pathspec&gt;…​ </string>
+</ArrayOfstring>

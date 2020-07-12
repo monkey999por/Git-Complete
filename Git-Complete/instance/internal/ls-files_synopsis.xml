@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git ls-files [-z] [-t] [-v] [-f]
+		(--[cached|deleted|others|ignored|stage|unmerged|killed|modified])*
+		(-[c|d|o|i|s|u|k|m])*
+		[--eol]
+		[-x &lt;pattern&gt;|--exclude=&lt;pattern&gt;]
+		[-X &lt;file&gt;|--exclude-from=&lt;file&gt;]
+		[--exclude-per-directory=&lt;file&gt;]
+		[--exclude-standard]
+		[--error-unmatch] [--with-tree=&lt;tree-ish&gt;]
+		[--full-name] [--recurse-submodules]
+		[--abbrev] [--] [&lt;file&gt;…​]</string>
+</ArrayOfstring>

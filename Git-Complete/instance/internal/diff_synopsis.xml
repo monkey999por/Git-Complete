@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git diff [&lt;options&gt;] [&lt;commit&gt;] [--] [&lt;path&gt;…​]
+git diff [&lt;options&gt;] --cached [&lt;commit&gt;] [--] [&lt;path&gt;…​]
+git diff [&lt;options&gt;] &lt;commit&gt; &lt;commit&gt; [--] [&lt;path&gt;…​]
+git diff [&lt;options&gt;] &lt;blob&gt; &lt;blob&gt;
+git diff [&lt;options&gt;] --no-index [--] &lt;path&gt; &lt;path&gt;</string>
+</ArrayOfstring>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+	<string>git worktree add [-f] [--detach] [--checkout] [--lock] [-b &lt;new-branch&gt;] &lt;path&gt; [&lt;commit-ish&gt;]
+git worktree list [--porcelain]
+git worktree lock [--reason &lt;string&gt;] &lt;worktree&gt;
+git worktree move &lt;worktree&gt; &lt;new-path&gt;
+git worktree prune [-n] [-v] [--expire &lt;expire&gt;]
+git worktree remove [-f] &lt;worktree&gt;
+git worktree unlock &lt;worktree&gt;</string>
+</ArrayOfstring>
