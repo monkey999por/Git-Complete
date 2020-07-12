@@ -12,7 +12,7 @@ using System.ComponentModel;
 using System.Net.Http;
 using System.Diagnostics;
 
-namespace Git_Complete.src
+namespace Git_Complete.function.parser
 {
     class GitHelpParser
     {

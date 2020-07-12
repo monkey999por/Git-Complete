@@ -6,6 +6,7 @@ using Git_Complete.src.common;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
+using Git_Complete.function.parser;
 
 namespace Git_Complete
 {
