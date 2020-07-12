@@ -63,12 +63,12 @@ namespace Git_Complete.src
             //ヘルプファイルのDomを取得
             Task<Dictionary<String, IDocument>> task = (Task<Dictionary<String, IDocument>>)Task.Run(() =>
             {
-                return GitHelpParser.GetHelpDocsDom(_in);
+                return GitHelpParser.GetHelpDocsDom(ret);
             });
             Dictionary<String, IDocument> helpDocsDom = task.Result;
 
             //synopsisを読み込む
-            foreach (var entity in _in)
+            foreach (var entity in ret)
             {
                 //get synopsis
                 var document = helpDocsDom[entity.command];
@@ -106,12 +106,12 @@ namespace Git_Complete.src
             //ヘルプファイルのDomを取得
             Task<Dictionary<String, IDocument>> task = (Task<Dictionary<String, IDocument>>)Task.Run(() =>
             {
-                return GitHelpParser.GetHelpDocsDom(_in);
+                return GitHelpParser.GetHelpDocsDom(ret);
             });
             Dictionary<String, IDocument> helpDocsDom = task.Result;
 
             //optionを読み込む
-            foreach (var entity in _in)
+            foreach (var entity in ret)
             {
                 //get synopsis
                 var document = helpDocsDom[entity.command];

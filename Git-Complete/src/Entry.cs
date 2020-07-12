@@ -32,6 +32,12 @@ namespace Git_Complete
                 throw new Exception("コマンドの数があってない");
             }
 
+            //test
+            if (gitCommandEntityList[1].synopsis != null)
+            {
+                throw new Exception( "読み込んだコマンドのインスタンスが違います");
+            }
+
             
             //なぜか↑の読み込みでおかしな文字コードの空白がxmlに付加されて、再度xmlを読もうとするとエラーになる
             //なので、ここで再書き込みする
