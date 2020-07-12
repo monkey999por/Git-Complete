@@ -14,17 +14,23 @@ namespace Git_Complete
         static void Main(string[] args)
         {
 
+            bool isMakeEntityFromGitHelp = false;
+
             //初期化
             MainEntity mainEntity = MainEntity.getInstance();
             var gitCommandEntityList = mainEntity.gitCommandEntityList;
             
             String outDir = @"C:\develop\Git-Complete\Git-Complete\instance";
-            String entityPath = outDir + @"\entity.xml";
-            String readPath = outDir + @"\entity_only_command.xml";
+
+            String entityPath = isMakeEntityFromGitHelp ? outDir + @"\entity_only_command.xml" : outDir + @"\entity.xml";
 
             //gitコマンドとオプションのリストを生成する。
             FileCommon fileCommon = new FileCommon();
-            gitCommandEntityList = fileCommon.getInstanceFrom<List<GitCommandEntity>>(readPath);
+            gitCommandEntityList = fileCommon.getInstanceFrom<List<GitCommandEntity>>(entityPath);
+
+            //なぜか↑の読み込みでおかしな文字コードの空白がxmlに付加されて、再度xmlを読もうとするとエラーになる
+            //なので、ここで再書き込みする
+            fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
 
             //test
             if (!(gitCommandEntityList.Count == 136))
@@ -32,39 +38,32 @@ namespace Git_Complete
                 throw new Exception("コマンドの数があってない");
             }
 
-            //test
-            if (gitCommandEntityList[1].synopsis != null)
+            if (isMakeEntityFromGitHelp)
             {
-                throw new Exception( "読み込んだコマンドのインスタンスが違います");
+
+                var helpParser = new GitHelpParser();
+
+                //git-scm.comから、synopsisを取得する（html parserを使用）
+                gitCommandEntityList = helpParser.GetSynopsis(gitCommandEntityList);
+
+                //git-scm.comから、オプションの一覧を取得する（html parserを使用）
+                gitCommandEntityList = helpParser.GetOptions(gitCommandEntityList);
+
+                //xml出力
+                fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
             }
-
-            
-            //なぜか↑の読み込みでおかしな文字コードの空白がxmlに付加されて、再度xmlを読もうとするとエラーになる
-            //なので、ここで再書き込みする
-            fileCommon.OutFileTo <List < GitCommandEntity >> (gitCommandEntityList, readPath);
-            
-            var helpParser = new GitHelpParser();
-            
-            //git-scm.comから、synopsisを取得する（html parserを使用）
-            gitCommandEntityList = helpParser.GetSynopsis(gitCommandEntityList);
-
-
-            //git-scm.comから、オプションの一覧を取得する（html parserを使用）
-            gitCommandEntityList = helpParser.GetOptions(gitCommandEntityList);
-
-
-
-            //xml出力
-            fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
-
-            //xml読み込み
-
 
             //synopsisを解析 -> パターンを検討し、生成するpowershellでどうやって使うかを検討する
 
+
+
             //optionsを解析 -> synopsisの解析結果と照らし合わせて、powershellソースに組み込む
 
+
+
             //出来上がったentityをもとに、powershellソースを自動生成する。
+
+
 
 
 
