@@ -25,8 +25,9 @@ namespace Git_Complete
             String outDir = @"C:\develop\Git-Complete\Git-Complete\instance";
             String internalOutDir = @"C:\develop\Git-Complete\Git-Complete\instance\internal";
 
-            String readPath = isMakeEntityFromGitHelp ? outDir + @"\entity_only_command.xml" : outDir + @"\entity.xml";
-            String entityPath = outDir + @"\entity.xml";
+            String entityPath = outDir + "\\" + nameof(GitCommandEntity) + ".xml";
+            String readPath = isMakeEntityFromGitHelp ? outDir + @"\entity_only_command.xml" : entityPath;
+            
 
             //gitコマンドとオプションのリストを生成する。
             FileCommon fileCommon = new FileCommon();
