@@ -64,21 +64,36 @@ namespace Git_Complete
             //test
             //オプション、synopsisをファイルに書き出す
             // 出力形式 -> {command_name}_synopsis.xml, {command_name}_options.xml
-            foreach (var item in gitCommandEntityList)
+            if (DebugProps.DEGUB_MODE)
             {
-                //debug
-                DebugCommon.ConsoleOutCommon<GitCommandEntity>(item);
+                foreach (var item in gitCommandEntityList)
+                {
+                    //command and synopsis
+                    fileCommon.OutFileTo<List<String>>(item.synopsis, internalOutDir + @"\" + item.command + "_" + nameof(item.synopsis) + ".xml");
 
-                //command and synopsis
-                fileCommon.OutFileTo<List<String>>(item.synopsis, internalOutDir + @"\" + item.command + "_" + nameof(item.synopsis) + ".xml");
-
-                //command and options
-                fileCommon.OutFileTo<List<String>>(item.options, internalOutDir + @"\" + item.command + "_" + nameof(item.options) + ".xml");
+                    //command and options
+                    fileCommon.OutFileTo<List<String>>(item.options, internalOutDir + @"\" + item.command + "_" + nameof(item.options) + ".xml");
+                }
             }
 
 
+            //debug
+            if (DebugProps.DEGUB_MODE)
+            {
+                string[] inAry = new string[gitCommandEntityList.Count];
+                var i = 0;
+                foreach (var item in gitCommandEntityList)
+                {
+                    inAry[i] = item.command;
+                    i++;
+                }
+                DebugCommon.ConsoleOut<List<GitCommandEntity>>(gitCommandEntityList, inAry);
+
+            }
+            
+
             //synopsisを解析 -> パターンを検討し、生成するpowershellでどうやって使うかを検討する
-            parsedEntity = GitEntityParser.parseSynopsis(gitCommandEntityList);
+            //parsedEntity = GitEntityParser.parseSynopsis(gitCommandEntityList);
 
 
 

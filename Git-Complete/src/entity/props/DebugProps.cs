@@ -13,8 +13,5 @@ namespace Git_Complete.src.entity.props
         //デバッグモード
         public const bool DEGUB_MODE = true;
 
-        //デバッグするコマンド
-        public static readonly string[] DEBUG_COMMAND_ARRAY = { "" };
-
     }
 }

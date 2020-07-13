@@ -9,133 +9,91 @@ namespace Git_Complete.src.function.debug
     class DebugCommon
     {
 
-        //定数で保持してるコマンドの情報を出力する。共通的なやつ
-        public static void ConsoleOutCommon<T>(T _in)
+        //コマンドの情報を出力する。commandNameは未指定の場合定数で保持しているものを出力する
+        public static void ConsoleOut<T>(T _in, string[] commandNameAry, bool isOutSynopsis = true, bool isOutOptions = true)
         {
             if (!DebugProps.DEGUB_MODE) { return; }
 
-            if (_in is null)
+            if (_in is null || commandNameAry is null)
             {
                 throw new ArgumentNullException();
             }
 
             string type = DebugCommon.TypeCheck(_in);
 
-            if (typeof(GitCommandEntity).FullName.Equals(type))
+            if (typeof(List<GitCommandEntity>).FullName.Equals(type))
             {
-                GitCommandEntity e = _in as GitCommandEntity;
 
-                foreach (var command in DebugProps.DEBUG_COMMAND_ARRAY)
+                foreach (var command in commandNameAry)
                 {
-                    if (command.Equals(e.command))
+
+                    foreach (var item in _in as List<GitCommandEntity>)
                     {
-                        Console.WriteLine(e.command);
-                        foreach (var temp in e.synopsis) { Console.WriteLine("    " + nameof(e.synopsis) + ": " + temp); }
-
-                        if (e.options != null)
+                        if (command.Equals(item.command))
                         {
-                            foreach (var temp in e.options) { Console.WriteLine("    " + nameof(e.options) + ": " + temp); }
-                        }
-                    }
-                }
-            }
-            else if (typeof(ParsedEntity).FullName.Equals(type))
-            {
-                ParsedEntity e = _in as ParsedEntity;
+                            Console.WriteLine(item.command);
 
-                foreach (var command in DebugProps.DEBUG_COMMAND_ARRAY)
-                {
-                    if (command.Equals(e.command))
-                    {
-                        Console.WriteLine(e.command);
-                        foreach (var temp in e.parsedSynopsis) { Console.WriteLine("    " + nameof(e.parsedSynopsis) + ": " + temp); }
-
-                        if (e.parsedOptions != null)
-                        {
-                            foreach (var temp in e.parsedOptions) { Console.WriteLine("    " + nameof(e.parsedOptions) + ": " + temp); }
-                        }
-                    }
-                }
-
-            }
-        }
-
-        //引数で渡されたコマンドを出力する。
-        public static void ConsoleOut<T>(T _in, string[] commandName, bool isOutSynopsis = true, bool isOutOptions = true)
-        {
-            if (! DebugProps.DEGUB_MODE){ return; }
-
-            if (_in is null || commandName is null)
-            {
-                throw new ArgumentNullException();
-            }
-
-            string type = DebugCommon.TypeCheck(_in);
-
-            if (typeof(GitCommandEntity).FullName.Equals(type))
-            {
-                GitCommandEntity e = _in as GitCommandEntity;
-
-                foreach (var command in commandName)
-                {
-                    if (command.Equals(e.command))
-                    {
-                        Console.WriteLine(e.command);
-
-                        if (isOutSynopsis)
-                        {
-                            foreach (var temp in e.synopsis) { Console.WriteLine("    " + nameof(e.synopsis) + ": " + temp); }
-                        }
-
-                        if (isOutOptions)
-                        {
-                            if (e.options != null)
+                            if (isOutSynopsis)
                             {
-                                foreach (var temp in e.options) { Console.WriteLine("    " + nameof(e.options) + ": " + temp); }
+                                foreach (var temp in item.synopsis) { Console.WriteLine("    " + nameof(item.synopsis) + ": " + temp); }
                             }
+
+                            if (isOutOptions)
+                            {
+                                if (item.options != null)
+                                {
+                                    foreach (var temp in item.options) { Console.WriteLine("    " + nameof(item.options) + ": " + temp); }
+                                }
+                            }
+                            break;
                         }
                     }
                 }
             }
-            else if (typeof(ParsedEntity).FullName.Equals(type))
+            else if (typeof(List<ParsedEntity>).FullName.Equals(type))
             {
-                ParsedEntity e = _in as ParsedEntity;
-
-                foreach (var command in commandName)
+                foreach (var command in commandNameAry)
                 {
-                    if (command.Equals(e.command))
+                    foreach (var item in _in as List<ParsedEntity>)
                     {
-                        Console.WriteLine(e.command);
-
-                        if (isOutSynopsis)
+                        if (command.Equals(item.command))
                         {
-                            foreach (var temp in e.parsedSynopsis) { Console.WriteLine("    " + nameof(e.parsedSynopsis) + ": " + temp); }
-                        }
+                            Console.WriteLine(item.command);
 
-                        if (isOutOptions)
-                        {
-                            if (e.parsedOptions != null)
+                            if (isOutSynopsis)
                             {
-                                foreach (var temp in e.parsedOptions) { Console.WriteLine("    " + nameof(e.parsedOptions) + ": " + temp); }
+                                foreach (var temp in item.parsedSynopsis) { Console.WriteLine("    " + nameof(item.parsedSynopsis) + ": " + temp); }
                             }
+
+                            if (isOutOptions)
+                            {
+                                if (item.parsedOptions != null)
+                                {
+                                    foreach (var temp in item.parsedOptions) { Console.WriteLine("    " + nameof(item.parsedOptions) + ": " + temp); }
+                                }
+                            }
+                            break;
                         }
                     }
                 }
             }
         }
+
 
         private static string TypeCheck(Object o)
         {
-            if (typeof(GitCommandEntity).FullName.Equals(o.GetType().FullName) ||
-                typeof(ParsedEntity).FullName.Equals(o.GetType().FullName))
+            bool isTypeOfGitCommandEntityList = typeof(List<GitCommandEntity>).FullName.Equals(o.GetType().FullName);
+            bool isTypeOfParsedEntityList = typeof(List<ParsedEntity>).FullName.Equals(o.GetType().FullName);
+
+            if (isTypeOfGitCommandEntityList || isTypeOfParsedEntityList)
             {
-                if (typeof(GitCommandEntity).FullName.Equals(o.GetType().FullName))
+                if (isTypeOfGitCommandEntityList)
                 {
-                    return typeof(GitCommandEntity).FullName;
+                    return typeof(List<GitCommandEntity>).FullName;
                 }
-                else if (typeof(ParsedEntity).FullName.Equals(o.GetType().FullName))
+                else if (isTypeOfParsedEntityList)
                 {
-                    return typeof(ParsedEntity).FullName;
+                    return typeof(List<ParsedEntity>).FullName;
                 }
                 else
                 {
@@ -145,8 +103,8 @@ namespace Git_Complete.src.function.debug
             else
             {
                 throw new ArgumentException(
-                    "この関数の引数は" + nameof(GitCommandEntity) + "、もしくは" + nameof(ParsedEntity) + "を期待しています。" +
-                    "\n渡された値の型: " + o.GetType().ToString()
+                    "この関数の引数は" + typeof(List<GitCommandEntity>).FullName + "、もしくは" + typeof(List<ParsedEntity>).FullName + "を期待しています。" +
+                    "\r\n渡された値の型: " + o.GetType().FullName
                 );
             }
         }
