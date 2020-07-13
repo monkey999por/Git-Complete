@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Git_Complete.function.parser;
 using Git_Complete.src.function.parser;
 using Git_Complete.src.function.debug;
+using Git_Complete.src.entity.props;
 
 namespace Git_Complete
 {
@@ -16,10 +17,6 @@ namespace Git_Complete
     {
         static void Main(string[] args)
         {
-
-            bool isMakeEntityFromGitHelp = false;
-            bool debugMode = true;
-
             //初期化
             MainEntity mainEntity = MainEntity.getInstance();
             var gitCommandEntityList = mainEntity.gitCommandEntityList;
@@ -29,8 +26,8 @@ namespace Git_Complete
             String internalOutDir = @"C:\develop\Git-Complete\Git-Complete\instance\internal";
 
             String entityPath = outDir + "\\" + nameof(GitCommandEntity) + ".xml";
-            String readPath = isMakeEntityFromGitHelp ? outDir + @"\entity_only_command.xml" : entityPath;
-            
+            String readPath = DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP ? outDir + @"\entity_only_command.xml" : entityPath;
+
 
             //gitコマンドとオプションのリストを生成する。
             FileCommon fileCommon = new FileCommon();
@@ -46,7 +43,7 @@ namespace Git_Complete
                 throw new Exception("コマンドの数があってない");
             }
 
-            if (isMakeEntityFromGitHelp)
+            if (DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP)
             {
 
                 var helpParser = new GitHelpParser();
@@ -67,15 +64,13 @@ namespace Git_Complete
             //test
             //オプション、synopsisをファイルに書き出す
             // 出力形式 -> {command_name}_synopsis.xml, {command_name}_options.xml
-            if (debugMode)
+            if (DebugProps.DEGUB_MODE)
             {
                 foreach (var item in gitCommandEntityList)
                 {
                     //debug
-                    if (item.command.Equals("add"))
-                    {
-                        DebugCommon.ConsoleOut<GitCommandEntity>(item);
-                    }
+                    DebugCommon.ConsoleOut<GitCommandEntity>(item);
+
 
                     //command and synopsis
                     fileCommon.OutFileTo<List<String>>(item.synopsis, internalOutDir + @"\" + item.command + "_" + nameof(item.synopsis) + ".xml");

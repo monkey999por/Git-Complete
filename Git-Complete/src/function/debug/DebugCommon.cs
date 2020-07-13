@@ -1,4 +1,5 @@
 ﻿using Git_Complete.src.entity;
+using Git_Complete.src.entity.props;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,24 +21,41 @@ namespace Git_Complete.src.function.debug
                 if (typeof(GitCommandEntity).FullName.Equals(_in.GetType().FullName))
                 {
                     GitCommandEntity e = _in as GitCommandEntity;
-                    Console.WriteLine(e.command);
-                    foreach (var temp in e.synopsis) { Console.WriteLine("    " + nameof(e.synopsis) + ": " + temp); }
 
-                    if (e.options != null)
+                    foreach (var command in DebugProps.DEBUG_COMMAND_ARRAY)
                     {
-                        foreach (var temp in e.options) { Console.WriteLine("    " + nameof(e.options) + ": " + temp); }
+                        if (command.Equals(e.command))
+                        {
+                            Console.WriteLine(e.command);
+                            foreach (var temp in e.synopsis) { Console.WriteLine("    " + nameof(e.synopsis) + ": " + temp); }
+
+                            if (e.options != null)
+                            {
+                                foreach (var temp in e.options) { Console.WriteLine("    " + nameof(e.options) + ": " + temp); }
+                            }
+                        }
                     }
+
+
                 }
                 else if (typeof(ParsedEntity).FullName.Equals(_in.GetType().FullName))
                 {
                     ParsedEntity e = _in as ParsedEntity;
-                    Console.WriteLine(e.command);
-                    foreach (var temp in e.parsedSynopsis) { Console.WriteLine("    " + nameof(e.parsedSynopsis) + ": " + temp); }
 
-                    if (e.parsedOptions != null)
+                    foreach (var command in DebugProps.DEBUG_COMMAND_ARRAY)
                     {
-                        foreach (var temp in e.parsedOptions) { Console.WriteLine("    " + nameof(e.parsedOptions) + ": " + temp); }
+                        if (command.Equals(e.command))
+                        {
+                            Console.WriteLine(e.command);
+                            foreach (var temp in e.parsedSynopsis) { Console.WriteLine("    " + nameof(e.parsedSynopsis) + ": " + temp); }
+
+                            if (e.parsedOptions != null)
+                            {
+                                foreach (var temp in e.parsedOptions) { Console.WriteLine("    " + nameof(e.parsedOptions) + ": " + temp); }
+                            }
+                        }
                     }
+
                 }
             }
             else
