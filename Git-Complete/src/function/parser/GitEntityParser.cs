@@ -1,4 +1,5 @@
 ﻿using Git_Complete.src.entity;
+using Git_Complete.src.function.debug;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,9 +10,13 @@ namespace Git_Complete.src.function.parser
     {
 
         //GitCommandEntityをもとに
-        public static List<ParsedEntity> parseSynopsis(List<ParsedEntity> _in)
+        public static List<ParsedEntity> parseSynopsis(List<GitCommandEntity> _in)
         {
-
+            foreach (var item in _in)
+            {
+                DebugCommon.ConsoleOut<GitCommandEntity>(item, new string[] { "commit" });
+            }
+            
 
             return default(List<ParsedEntity>);
 

@@ -12,6 +12,8 @@ namespace Git_Complete.src.function.debug
         //定数で保持してるコマンドの情報を出力する。共通的なやつ
         public static void ConsoleOutCommon<T>(T _in)
         {
+            if (!DebugProps.DEGUB_MODE) { return; }
+
             if (_in is null)
             {
                 throw new ArgumentNullException();
@@ -59,9 +61,67 @@ namespace Git_Complete.src.function.debug
         }
 
         //引数で渡されたコマンドを出力する。
-        public static void ConsoleOut<T>(T _in)
+        public static void ConsoleOut<T>(T _in, string[] commandName, bool isOutSynopsis = true, bool isOutOptions = true)
         {
+            if (! DebugProps.DEGUB_MODE){ return; }
 
+            if (_in is null || commandName is null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            string type = DebugCommon.TypeCheck(_in);
+
+            if (typeof(GitCommandEntity).FullName.Equals(type))
+            {
+                GitCommandEntity e = _in as GitCommandEntity;
+
+                foreach (var command in commandName)
+                {
+                    if (command.Equals(e.command))
+                    {
+                        Console.WriteLine(e.command);
+
+                        if (isOutSynopsis)
+                        {
+                            foreach (var temp in e.synopsis) { Console.WriteLine("    " + nameof(e.synopsis) + ": " + temp); }
+                        }
+
+                        if (isOutOptions)
+                        {
+                            if (e.options != null)
+                            {
+                                foreach (var temp in e.options) { Console.WriteLine("    " + nameof(e.options) + ": " + temp); }
+                            }
+                        }
+                    }
+                }
+            }
+            else if (typeof(ParsedEntity).FullName.Equals(type))
+            {
+                ParsedEntity e = _in as ParsedEntity;
+
+                foreach (var command in commandName)
+                {
+                    if (command.Equals(e.command))
+                    {
+                        Console.WriteLine(e.command);
+
+                        if (isOutSynopsis)
+                        {
+                            foreach (var temp in e.parsedSynopsis) { Console.WriteLine("    " + nameof(e.parsedSynopsis) + ": " + temp); }
+                        }
+
+                        if (isOutOptions)
+                        {
+                            if (e.parsedOptions != null)
+                            {
+                                foreach (var temp in e.parsedOptions) { Console.WriteLine("    " + nameof(e.parsedOptions) + ": " + temp); }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private static string TypeCheck(Object o)

@@ -64,23 +64,21 @@ namespace Git_Complete
             //test
             //オプション、synopsisをファイルに書き出す
             // 出力形式 -> {command_name}_synopsis.xml, {command_name}_options.xml
-            if (DebugProps.DEGUB_MODE)
+            foreach (var item in gitCommandEntityList)
             {
-                foreach (var item in gitCommandEntityList)
-                {
-                    //debug
-                    DebugCommon.ConsoleOutCommon<GitCommandEntity>(item);
+                //debug
+                DebugCommon.ConsoleOutCommon<GitCommandEntity>(item);
 
-                    //command and synopsis
-                    fileCommon.OutFileTo<List<String>>(item.synopsis, internalOutDir + @"\" + item.command + "_" + nameof(item.synopsis) + ".xml");
+                //command and synopsis
+                fileCommon.OutFileTo<List<String>>(item.synopsis, internalOutDir + @"\" + item.command + "_" + nameof(item.synopsis) + ".xml");
 
-                    //command and options
-                    fileCommon.OutFileTo<List<String>>(item.options, internalOutDir + @"\" + item.command + "_" + nameof(item.options) + ".xml");
-                }
+                //command and options
+                fileCommon.OutFileTo<List<String>>(item.options, internalOutDir + @"\" + item.command + "_" + nameof(item.options) + ".xml");
             }
 
+
             //synopsisを解析 -> パターンを検討し、生成するpowershellでどうやって使うかを検討する
-            parsedEntity = GitEntityParser.parseSynopsis(parsedEntity);
+            parsedEntity = GitEntityParser.parseSynopsis(gitCommandEntityList);
 
 
 
@@ -93,51 +91,6 @@ namespace Git_Complete
 
             //出来上がったentityをもとに、powershellソースを自動生成する。
 
-
-
-
-
-
-
-
-
-            /*
-
-            //gitのヘルプファイルパスとコマンド名を持ったentityを作成する
-            var gitMetaInfoParser = new GitMetaInfoParser();
-            gitInstance.commandAndOptionsList = gitMetaInfoParser.CreatGitCommandAndHelpFilePathEntity();
-
-            //xml出力
-            var fileCommon = new FileCommon();
-            fileCommon.OutFileFrom<List<GitCommandAndHelpFilePathEntity>>(helpEntityList, outDir + @"\git_help.xml");
-
-            var gitHelpParser = new GitHelpParser();
-            var entityListOut = new List<GitCommandEntity>();
-
-            //gitEnrityListにコマンドごとのインスタンスを入れ込む
-            await gitHelpParser.GetGitOptions(helpEntityList, entityListOut);
-
-            //xml出力
-            fileCommon.OutFileFrom<List<GitCommandEntity>>(entityListOut, outDir + @"\git_command_and_options.xml");
-
-            //とりあえず目視確認用のテスト and ファイル出力
-            StringBuilder sb = new StringBuilder();
-
-            foreach (var gitEntity in entityListOut)
-            {
-                sb.AppendLine(gitEntity.command);
-                Console.WriteLine("git command: " + gitEntity.command);
-                foreach (var gitOption in gitEntity.options)
-                {
-                    sb.AppendLine("  options: " + gitOption);
-                    Console.WriteLine("  options: " + gitOption);
-                }
-
-            }
-            //コマンドとオプションのツリーをファイルに出力
-            string outFullPath = outDir + @"\command_and_options_list.txt";
-            File.WriteAllText(outFullPath, sb.ToString());
-            */
         }
     }
 }
