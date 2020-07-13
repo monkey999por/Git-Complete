@@ -69,8 +69,7 @@ namespace Git_Complete
                 foreach (var item in gitCommandEntityList)
                 {
                     //debug
-                    DebugCommon.ConsoleOut<GitCommandEntity>(item);
-
+                    DebugCommon.ConsoleOutCommon<GitCommandEntity>(item);
 
                     //command and synopsis
                     fileCommon.OutFileTo<List<String>>(item.synopsis, internalOutDir + @"\" + item.command + "_" + nameof(item.synopsis) + ".xml");

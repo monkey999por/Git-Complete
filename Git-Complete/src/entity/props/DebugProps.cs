@@ -14,7 +14,7 @@ namespace Git_Complete.src.entity.props
         public const bool DEGUB_MODE = true;
 
         //デバッグするコマンド
-        public static readonly string[] DEBUG_COMMAND_ARRAY = { "add", "branch" };
+        public static readonly string[] DEBUG_COMMAND_ARRAY = { "add", "pull" };
 
     }
 }

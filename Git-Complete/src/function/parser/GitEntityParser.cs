@@ -11,6 +11,8 @@ namespace Git_Complete.src.function.parser
         //GitCommandEntityをもとに
         public static List<ParsedEntity> parseSynopsis(List<ParsedEntity> _in)
         {
+
+
             return default(List<ParsedEntity>);
 
         }
