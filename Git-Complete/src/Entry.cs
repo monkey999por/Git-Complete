@@ -93,8 +93,7 @@ namespace Git_Complete
             
 
             //synopsisを解析 -> パターンを検討し、生成するpowershellでどうやって使うかを検討する
-            //parsedEntity = GitEntityParser.parseSynopsis(gitCommandEntityList);
-
+            parsedEntity = GitEntityParser.parseSynopsis(gitCommandEntityList);
 
 
 

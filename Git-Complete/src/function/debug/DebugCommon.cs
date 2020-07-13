@@ -12,8 +12,6 @@ namespace Git_Complete.src.function.debug
         //コマンドの情報を出力する。commandNameは未指定の場合定数で保持しているものを出力する
         public static void ConsoleOut<T>(T _in, string[] commandNameAry, bool isOutSynopsis = true, bool isOutOptions = true)
         {
-            if (!DebugProps.DEGUB_MODE) { return; }
-
             if (_in is null || commandNameAry is null)
             {
                 throw new ArgumentNullException();
