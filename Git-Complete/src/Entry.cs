@@ -22,11 +22,8 @@ namespace Git_Complete
             var gitCommandEntityList = mainEntity.gitCommandEntityList;
             var parsedEntity = mainEntity.parsedEntities;
 
-            String outDir = @"C:\develop\Git-Complete\Git-Complete\instance";
-            String internalOutDir = @"C:\develop\Git-Complete\Git-Complete\instance\internal";
-
-            String entityPath = outDir + "\\" + nameof(GitCommandEntity) + ".xml";
-            String readPath = DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP ? outDir + @"\entity_only_command.xml" : entityPath;
+            String entityPath = PathProps.INSTANCE_DIR + nameof(GitCommandEntity) + ".xml";
+            String readPath = DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP ? PathProps.INSTANCE_DIR + @"entity_only_command.xml" : entityPath;
 
 
             //gitコマンドとオプションのリストを生成する。
@@ -69,10 +66,10 @@ namespace Git_Complete
                 foreach (var item in gitCommandEntityList)
                 {
                     //command and synopsis
-                    fileCommon.OutFileTo<List<String>>(item.synopsis, internalOutDir + @"\" + item.command + "_" + nameof(item.synopsis) + ".xml");
+                    fileCommon.OutFileTo<List<String>>(item.synopsis, PathProps.INSTANCE_INTERNAL_OUT_DIR + item.command + "_" + nameof(item.synopsis) + ".xml");
 
                     //command and options
-                    fileCommon.OutFileTo<List<String>>(item.options, internalOutDir + @"\" + item.command + "_" + nameof(item.options) + ".xml");
+                    fileCommon.OutFileTo<List<String>>(item.options, PathProps.INSTANCE_INTERNAL_OUT_DIR + item.command + "_" + nameof(item.options) + ".xml");
                 }
             }
 

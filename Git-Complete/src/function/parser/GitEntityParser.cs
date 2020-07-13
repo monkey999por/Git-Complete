@@ -12,7 +12,7 @@ namespace Git_Complete.src.function.parser
         //GitCommandEntityをもとに
         public static List<ParsedEntity> parseSynopsis(List<GitCommandEntity> _in)
         {
-            DebugCommon.ConsoleOut<List<GitCommandEntity>>(_in, new string[] { "commit" });
+            DebugCommon.ConsoleOut<List<GitCommandEntity>>(_in, new string[] { "commit" }, isOutOptions:false);
             
             
 
