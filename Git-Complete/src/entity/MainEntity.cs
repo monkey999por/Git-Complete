@@ -10,7 +10,11 @@ namespace Git_Complete.src.entity
         //singleton 
         private static MainEntity mainEntity = new MainEntity();
 
+        //主にgitの公式ヘルプからスクレイピングした素のオプションやシナプスを保持
         public List<GitCommandEntity> gitCommandEntityList = new List<GitCommandEntity>();
+
+        //解析後のgitのオプションやシナプスを保持
+        public List<ParsedEntity> parsedEntities = new List<ParsedEntity>();
 
         private MainEntity() { }
 

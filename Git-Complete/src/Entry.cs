@@ -7,6 +7,8 @@ using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using Git_Complete.function.parser;
+using Git_Complete.src.function.parser;
+using Git_Complete.src.function.debug;
 
 namespace Git_Complete
 {
@@ -21,7 +23,8 @@ namespace Git_Complete
             //初期化
             MainEntity mainEntity = MainEntity.getInstance();
             var gitCommandEntityList = mainEntity.gitCommandEntityList;
-            
+            var parsedEntity = mainEntity.parsedEntities;
+
             String outDir = @"C:\develop\Git-Complete\Git-Complete\instance";
             String internalOutDir = @"C:\develop\Git-Complete\Git-Complete\instance\internal";
 
@@ -58,6 +61,9 @@ namespace Git_Complete
                 fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
             }
 
+            //MainEntityに保存する
+            mainEntity.gitCommandEntityList = gitCommandEntityList;
+
             //test
             //オプション、synopsisをファイルに書き出す
             // 出力形式 -> {command_name}_synopsis.xml, {command_name}_options.xml
@@ -65,6 +71,12 @@ namespace Git_Complete
             {
                 foreach (var item in gitCommandEntityList)
                 {
+                    //debug
+                    if (item.command.Equals("add"))
+                    {
+                        DebugCommon.ConsoleOut<GitCommandEntity>(item);
+                    }
+
                     //command and synopsis
                     fileCommon.OutFileTo<List<String>>(item.synopsis, internalOutDir + @"\" + item.command + "_" + nameof(item.synopsis) + ".xml");
 
@@ -73,8 +85,11 @@ namespace Git_Complete
                 }
             }
 
-
             //synopsisを解析 -> パターンを検討し、生成するpowershellでどうやって使うかを検討する
+            parsedEntity = GitEntityParser.parseSynopsis(parsedEntity);
+
+
+
 
 
 
