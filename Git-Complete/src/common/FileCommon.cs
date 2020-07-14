@@ -34,8 +34,12 @@ namespace Git_Complete.src.common
                 }
 
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                Console.WriteLine(e.Source);
+
                 throw new Exception();
             }
         }
