@@ -13,7 +13,7 @@ namespace Git_Complete.src.function.parser
     class GitEntityParser
     {
 
-        //GitCommandEntityをもとに整形したシナプスを返す
+        //GitCommandEntityをもとに整形したsynopsisを返す
         public static List<ParsedEntity> parseSynopsis(List<GitCommandEntity> _in)
         {
             //test out synopsis to text file 
