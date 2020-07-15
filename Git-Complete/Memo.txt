@@ -1,3 +1,25 @@
 Synopsisを検証したやつの
 
 解析後のエンテティの持ち方について
+
+[ A ] : 任意で入力できる項目。あってもなくても良い。Optional。
+
+[--refresh] : --refresh というオプションを指定可能。なくても動く。
+
+[ A | B ] : A または B のどちらかを指定可能。
+
+[--verbose | -v] : --verbose というオプションを指定可能。 この場合、-v は同じ意味の省略形。
+
+[--[no-]all | --[no-]ignore-removal | [--update | -u]] : この場合、 --all, --ignore-removal, --update は同時に指定できないことを示す。
+
+( A | B ) : A または B を必ず指定。
+
+[--chmod=(+|-)x] : --chmod オプションを使うときは +x または -x で指定する。
+
+<A> : 変数。リビジョン番号やブランチ名、ファイルパスなどが入る。
+
+<pathspec> : file1 とか dir1/* とか dir1/**/*.ext とか。
+
+A... : Aの繰り返し。
+
+<pathspec>... : file1 file2 file3 のようにスペースで区切って指定可能。
