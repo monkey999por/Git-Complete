@@ -10,7 +10,7 @@ namespace Git_Complete.src.function.debug
     {
 
         //コマンドの情報を出力する。commandNameは未指定の場合定数で保持しているものを出力する
-        public static void ConsoleOut<T>(T _in, string[] commandNameAry, bool isOutSynopsis = true, bool isOutOptions = true)
+        public static StringBuilder ConsoleOut<T>(T _in, string[] commandNameAry, bool isOutSynopsis = true, bool isOutOptions = true)
         {
             if (_in is null || commandNameAry is null)
             {
@@ -19,9 +19,10 @@ namespace Git_Complete.src.function.debug
 
             string type = DebugCommon.TypeCheck(_in);
 
+            StringBuilder outText = new StringBuilder();
             if (typeof(List<GitCommandEntity>).FullName.Equals(type))
             {
-
+                
                 foreach (var command in commandNameAry)
                 {
 
@@ -29,18 +30,27 @@ namespace Git_Complete.src.function.debug
                     {
                         if (command.Equals(item.command))
                         {
-                            Console.WriteLine(item.command);
+                            Console.WriteLine("■" + item.command);
+                            outText.Append("■" + item.command + Environment.NewLine);
 
                             if (isOutSynopsis)
                             {
-                                foreach (var temp in item.synopsis) { Console.WriteLine("    " + nameof(item.synopsis) + ": " + temp); }
+                                foreach (var temp in item.synopsis) {
+                                    Console.WriteLine("    " + nameof(item.synopsis) + ": " + temp);
+                                    outText.Append("    " + nameof(item.synopsis) + ": " + temp + Environment.NewLine);
+                                }
+                                
                             }
 
                             if (isOutOptions)
                             {
                                 if (item.options != null)
                                 {
-                                    foreach (var temp in item.options) { Console.WriteLine("    " + nameof(item.options) + ": " + temp); }
+                                    foreach (var temp in item.options) {
+                                        Console.WriteLine("    " + nameof(item.options) + ": " + temp);
+                                        outText.Append("    " + nameof(item.options) + ": " + temp + Environment.NewLine);
+                                    }
+
                                 }
                             }
                             break;
@@ -48,33 +58,7 @@ namespace Git_Complete.src.function.debug
                     }
                 }
             }
-            else if (typeof(List<ParsedEntity>).FullName.Equals(type))
-            {
-                foreach (var command in commandNameAry)
-                {
-                    foreach (var item in _in as List<ParsedEntity>)
-                    {
-                        if (command.Equals(item.command))
-                        {
-                            Console.WriteLine(item.command);
-
-                            if (isOutSynopsis)
-                            {
-                                foreach (var temp in item.parsedSynopsis) { Console.WriteLine("    " + nameof(item.parsedSynopsis) + ": " + temp); }
-                            }
-
-                            if (isOutOptions)
-                            {
-                                if (item.parsedOptions != null)
-                                {
-                                    foreach (var temp in item.parsedOptions) { Console.WriteLine("    " + nameof(item.parsedOptions) + ": " + temp); }
-                                }
-                            }
-                            break;
-                        }
-                    }
-                }
-            }
+            return outText;
         }
 
 
