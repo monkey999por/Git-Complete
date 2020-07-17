@@ -10,8 +10,6 @@ namespace Git_Complete.src.entity
         //gitのコマンドを保持. primary key
         public string command;
 
-
-
         public ParsedEntity() { }
         public ParsedEntity(string command) : this()
         {

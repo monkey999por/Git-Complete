@@ -51,7 +51,7 @@ namespace Git_Complete.function.parser
             return _helpDocsDom;
         }
 
-        public List<GitCommandEntity> GetSynopsis(List<GitCommandEntity> _in)
+        public List<GitCommandEntity> GetSynopsisAll(List<GitCommandEntity> _in)
         {
 
             //戻り値初期化(コピー)
@@ -94,7 +94,7 @@ namespace Git_Complete.function.parser
             return ret;
         }
 
-        public List<GitCommandEntity> GetOptions(List<GitCommandEntity> _in)
+        public List<GitCommandEntity> GetOptionsAll(List<GitCommandEntity> _in)
         {
 
             //戻り値初期化

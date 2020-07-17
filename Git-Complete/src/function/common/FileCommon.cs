@@ -6,7 +6,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Xml;
 
-namespace Git_Complete.src.common
+namespace Git_Complete.src.function.common
 {
     class FileCommon
     {
@@ -44,7 +44,7 @@ namespace Git_Complete.src.common
             }
         }
 
-        public T getInstanceFrom<T>(String filePath)
+        public T GetInstanceFrom<T>(String filePath)
         {
             try
             {

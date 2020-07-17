@@ -1,6 +1,6 @@
-﻿using Git_Complete.src.common;
+﻿using Git_Complete.src.function.common;
 using Git_Complete.src.entity;
-using Git_Complete.src.entity.props;
+using Git_Complete.src.props;
 using Git_Complete.src.entity.temp;
 using Git_Complete.src.function.debug;
 using System;
@@ -14,7 +14,7 @@ namespace Git_Complete.src.function.parser
     {
 
         //GitCommandEntityをもとに整形したsynopsisを返す
-        public static List<ParsedEntity> parseSynopsis(List<GitCommandEntity> _in)
+        public static List<ParsedEntity> ParseSynopsis(List<GitCommandEntity> _in)
         {
             //test out synopsis to text file 
             {
@@ -25,7 +25,7 @@ namespace Git_Complete.src.function.parser
                     commands[i] = item.command;
                     i++;
                 }
-                StringBuilder temp =  DebugCommon.ConsoleOut<List<GitCommandEntity>>(_in, commands);
+                StringBuilder temp =  DebugCommon.OutEntity(_in, commands);
                 File.AppendAllText(PathProps.OUT_DIR + "synopsis.txt", temp.ToString());
 
             }

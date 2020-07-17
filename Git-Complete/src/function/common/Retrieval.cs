@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Git_Complete.src.common
+namespace Git_Complete.src.function.common
 {
     class Retrieval
     {
-        public static GitCommandEntity retrievalFrom(List<GitCommandEntity> entitys,String keyCommand)
+        public static GitCommandEntity RetrievalFrom(List<GitCommandEntity> entitys,String keyCommand)
         {
             if (entitys is null)
             {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 
-namespace Git_Complete.src.entity.props
+namespace Git_Complete.src.props
 {
     class DebugProps
     {
@@ -11,7 +11,7 @@ namespace Git_Complete.src.entity.props
         public const bool IS_MAKE_ENTITY_FROM_GIT_HELP = false;
 
         //デバッグモード
-        public const bool DEGUB_MODE = false;
+        public const bool DEGUB_MODE = true;
 
     }
 }

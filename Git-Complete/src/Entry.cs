@@ -2,14 +2,14 @@
 using Git_Complete.src;
 using Git_Complete.src.entity;
 using System.Collections.Generic;
-using Git_Complete.src.common;
+using Git_Complete.src.function.common;
 using System.Text;
 using System.IO;
 using System.Threading.Tasks;
 using Git_Complete.function.parser;
 using Git_Complete.src.function.parser;
 using Git_Complete.src.function.debug;
-using Git_Complete.src.entity.props;
+using Git_Complete.src.props;
 
 namespace Git_Complete
 {
@@ -28,7 +28,7 @@ namespace Git_Complete
 
             //gitコマンドとオプションのリストを生成する。
             FileCommon fileCommon = new FileCommon();
-            gitCommandEntityList = fileCommon.getInstanceFrom<List<GitCommandEntity>>(readPath);
+            gitCommandEntityList = fileCommon.GetInstanceFrom<List<GitCommandEntity>>(readPath);
 
             //なぜか↑の読み込みでおかしな文字コードの空白がxmlに付加されて、再度xmlを読もうとするとエラーになる
             //なので、ここで再書き込みする
@@ -46,10 +46,10 @@ namespace Git_Complete
                 var helpParser = new GitHelpParser();
 
                 //git-scm.comから、synopsisを取得する（html parserを使用）
-                gitCommandEntityList = helpParser.GetSynopsis(gitCommandEntityList);
+                gitCommandEntityList = helpParser.GetSynopsisAll(gitCommandEntityList);
 
                 //git-scm.comから、オプションの一覧を取得する（html parserを使用）
-                gitCommandEntityList = helpParser.GetOptions(gitCommandEntityList);
+                gitCommandEntityList = helpParser.GetOptionsAll(gitCommandEntityList);
 
                 //xml出力
                 fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
@@ -84,13 +84,13 @@ namespace Git_Complete
                     inAry[i] = item.command;
                     i++;
                 }
-                DebugCommon.ConsoleOut<List<GitCommandEntity>>(gitCommandEntityList, inAry);
+                DebugCommon.OutEntity(gitCommandEntityList, inAry);
 
             }
             
 
             //synopsisを解析 -> パターンを検討し、生成するpowershellでどうやって使うかを検討する
-            parsedEntity = GitEntityParser.parseSynopsis(gitCommandEntityList);
+            parsedEntity = GitEntityParser.ParseSynopsis(gitCommandEntityList);
 
 
 
