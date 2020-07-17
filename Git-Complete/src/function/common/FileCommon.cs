@@ -11,9 +11,9 @@ namespace Git_Complete.src.function.common
     class FileCommon
     {
 
-       public void OutFileTo<T>(T obj, String outPath)
+        public void OutFileTo<T>(T obj, String outPath)
         {
-            
+
             Directory.CreateDirectory(Path.GetDirectoryName(outPath));
 
             //File.Delete(outPath);
@@ -66,9 +66,9 @@ namespace Git_Complete.src.function.common
             }
             catch (Exception e)
             {
-            	Console.WriteLine(e.StackTrace);
+                Console.WriteLine(e.StackTrace);
                 throw new Exception();
-            } 
+            }
         }
     }
 }

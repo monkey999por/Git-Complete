@@ -22,8 +22,9 @@ namespace Git_Complete
             var gitCommandEntityList = mainEntity.gitCommandEntityList;
             var parsedEntity = mainEntity.parsedEntities;
 
-            String entityPath = PathProps.INSTANCE_DIR + nameof(GitCommandEntity) + ".xml";
-            String readPath = DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP ? PathProps.INSTANCE_DIR + @"entity_only_command.xml" : entityPath;
+            String entityPath = PathProps.INSTANCE_DIR + nameof(GitCommandEntity) + "_List.xml";
+            String readPath = DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP ? 
+                                PathProps.INSTANCE_DIR + nameof(GitCommandEntity) + "_OnlyCommand.xml" : entityPath;
 
 
             //gitコマンドとオプションのリストを生成する。
