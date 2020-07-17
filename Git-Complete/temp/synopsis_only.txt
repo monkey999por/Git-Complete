@@ -1,0 +1,619 @@
+■annotate
+    synopsis: git annotate [<options>] <file> [<revision>]
+■blame
+    synopsis: git blame [-c] [-b] [-l] [--root] [-t] [-f] [-n] [-s] [-e] [-p] [-w] [--incremental]
+	    [-L <range>] [-S <revs-file>] [-M] [-C] [-C] [-C] [--since=<date>]
+	    [--ignore-rev <rev>] [--ignore-revs-file <file>]
+	    [--progress] [--abbrev=<n>] [<rev> | --contents <file> | --reverse <rev>..<rev>]
+	    [--] <file>
+■rerere
+    synopsis: git rerere [clear|forget <pathspec>|diff|remaining|status|gc]
+■bugreport
+    synopsis: git bugreport [(-o | --output-directory) <path>] [(-s | --suffix) <format>]
+■count-objects
+    synopsis: git count-objects [-v] [-H | --human-readable]
+■difftool
+    synopsis: git difftool [<options>] [<commit> [<commit>]] [--] [<path>…​]
+■fsck
+    synopsis: git fsck [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]
+	 [--[no-]full] [--strict] [--verbose] [--lost-found]
+	 [--[no-]dangling] [--[no-]progress] [--connectivity-only]
+	 [--[no-]name-objects] [<object>*]
+■help
+    synopsis: git help [-a|--all [--[no-]verbose]] [-g|--guide]
+	   [-i|--info|-m|--man|-w|--web] [COMMAND|GUIDE]
+■instaweb
+    synopsis: git instaweb [--local] [--httpd=<httpd>] [--port=<port>]
+               [--browser=<browser>]
+git instaweb [--start] [--stop] [--restart]
+■merge-tree
+    synopsis: git merge-tree <base-tree> <branch1> <branch2>
+■show-branch
+    synopsis: git show-branch [-a|--all] [-r|--remotes] [--topo-order | --date-order]
+		[--current] [--color[=<when>] | --no-color] [--sparse]
+		[--more=<n> | --list | --independent | --merge-base]
+		[--no-name | --sha1-name] [--topics]
+		[(<rev> | <glob>)…​]
+git show-branch (-g|--reflog)[=<n>[,<base>]] [--list] [<ref>]
+■verify-commit
+    synopsis: git verify-commit <commit>…​
+■verify-tag
+    synopsis: git verify-tag [--format=<format>] <tag>…​
+■whatchanged
+    synopsis: git whatchanged <option>…​
+■reflog
+    synopsis: git reflog <subcommand> <options>
+■remote
+    synopsis: git remote [-v | --verbose]
+git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=<fetch|push>] <name> <url>
+git remote rename <old> <new>
+git remote remove <name>
+git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+git remote set-branches [--add] <name> <branch>…​
+git remote get-url [--push] [--all] <name>
+git remote set-url [--push] <name> <newurl> [<oldurl>]
+git remote set-url --add [--push] <name> <newurl>
+git remote set-url --delete [--push] <name> <url>
+git remote [-v | --verbose] show [-n] <name>…​
+git remote prune [-n | --dry-run] <name>…​
+git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]
+■repack
+    synopsis: git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]
+■replace
+    synopsis: git replace [-f] <object> <replacement>
+git replace [-f] --edit <object>
+git replace [-f] --graft <commit> [<parent>…​]
+git replace [-f] --convert-graft-file
+git replace -d <object>…​
+git replace [--format=<format>] [-l [<pattern>]]
+■config
+    synopsis: git config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] name [value [value_regex]]
+git config [<file-option>] [--type=<type>] --add name value
+git config [<file-option>] [--type=<type>] --replace-all name value [value_regex]
+git config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] --get name [value_regex]
+git config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] --get-all name [value_regex]
+git config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--name-only] --get-regexp name_regex [value_regex]
+git config [<file-option>] [--type=<type>] [-z|--null] --get-urlmatch name URL
+git config [<file-option>] --unset name [value_regex]
+git config [<file-option>] --unset-all name [value_regex]
+git config [<file-option>] --rename-section old_name new_name
+git config [<file-option>] --remove-section name
+git config [<file-option>] [--show-origin] [--show-scope] [-z|--null] [--name-only] -l | --list
+git config [<file-option>] --get-color name [default]
+git config [<file-option>] --get-colorbool name [stdout-is-tty]
+git config [<file-option>] -e | --edit
+■filter-branch
+    synopsis: git filter-branch [--setup <command>] [--subdirectory-filter <directory>]
+	[--env-filter <command>] [--tree-filter <command>]
+	[--index-filter <command>] [--parent-filter <command>]
+	[--msg-filter <command>] [--commit-filter <command>]
+	[--tag-name-filter <command>] [--prune-empty]
+	[--original <namespace>] [-d <directory>] [-f | --force]
+	[--state-branch <branch>] [--] [<rev-list options>…​]
+■mergetool
+    synopsis: git mergetool [--tool=<tool>] [-y | --[no-]prompt] [<file>…​]
+■pack-refs
+    synopsis: git pack-refs [--all] [--no-prune]
+■prune
+    synopsis: git prune [-n] [-v] [--progress] [--expire <time>] [--] [<head>…​]
+■svn
+    synopsis: git svn <command> [<options>] [<arguments>]
+■archimport
+    synopsis: git archimport [-h] [-v] [-o] [-a] [-f] [-T] [-D depth] [-t tempdir]
+               <archive/branch>[:<git-branch>] …​
+■cvsexportcommit
+    synopsis: git cvsexportcommit [-h] [-u] [-v] [-c] [-P] [-p] [-a] [-d cvsroot]
+	[-w cvsworkdir] [-W] [-f] [-m msgprefix] [PARENTCOMMIT] COMMITID
+■cvsimport
+    synopsis: git cvsimport [-o <branch-for-HEAD>] [-h] [-v] [-d <CVSROOT>]
+	      [-A <author-conv-file>] [-p <options-for-cvsps>] [-P <file>]
+	      [-C <git_repository>] [-z <fuzz>] [-i] [-k] [-u] [-s <subst>]
+	      [-a] [-m] [-M <regex>] [-S <regex>] [-L <commitlimit>]
+	      [-r <remote>] [-R] [<CVS_module>]
+■imap-send
+    synopsis: git imap-send [-v] [-q] [--[no-]curl]
+■p4
+    synopsis: git p4 clone [<sync options>] [<clone options>] <p4 depot path>…​
+git p4 sync [<sync options>] [<p4 depot path>…​]
+git p4 rebase
+git p4 submit [<submit options>] [<master branch name>]
+■quiltimport
+    synopsis: git quiltimport [--dry-run | -n] [--author <author>] [--patches <dir>]
+		[--series <file>] [--keep-non-patch]
+■request-pull
+    synopsis: git request-pull [-p] <start> <url> [<end>]
+■send-email
+    synopsis: git send-email [<options>] <file|directory|rev-list options>…​
+git send-email --dump-aliases
+■bisect
+    synopsis: git bisect <subcommand> <options>
+■format-patch
+    synopsis: git format-patch [-k] [(-o|--output-directory) <dir> | --stdout]
+		   [--no-thread | --thread[=<style>]]
+		   [(--attach|--inline)[=<boundary>] | --no-attach]
+		   [-s | --signoff]
+		   [--signature=<signature> | --no-signature]
+		   [--signature-file=<file>]
+		   [-n | --numbered | -N | --no-numbered]
+		   [--start-number <n>] [--numbered-files]
+		   [--in-reply-to=<message id>] [--suffix=.<sfx>]
+		   [--ignore-if-in-upstream]
+		   [--cover-from-description=<mode>]
+		   [--rfc] [--subject-prefix=<subject prefix>]
+		   [(--reroll-count|-v) <n>]
+		   [--to=<email>] [--cc=<email>]
+		   [--[no-]cover-letter] [--quiet]
+		   [--[no-]encode-email-headers]
+		   [--no-notes | --notes[=<ref>]]
+		   [--interdiff=<previous>]
+		   [--range-diff=<previous> [--creation-factor=<percent>]]
+		   [--progress]
+		   [<common diff options>]
+		   [ <since> | <revision range> ]
+■init
+    synopsis: git init [-q | --quiet] [--bare] [--template=<template_directory>]
+	  [--separate-git-dir <git dir>] [--object-format=<format]
+	  [--shared[=<permissions>]] [directory]
+■rm
+    synopsis: git rm [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch]
+	  [--quiet] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+	  [--] [<pathspec>…​]
+■show
+    synopsis: git show [<options>] [<object>…​]
+■stash
+    synopsis: git stash list [<options>]
+git stash show [<options>] [<stash>]
+git stash drop [-q|--quiet] [<stash>]
+git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+git stash branch <branchname> [<stash>]
+git stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]
+	     [-u|--include-untracked] [-a|--all] [-m|--message <message>]
+	     [--pathspec-from-file=<file> [--pathspec-file-nul]]
+	     [--] [<pathspec>…​]]
+git stash clear
+git stash create [<message>]
+git stash store [-m|--message <message>] [-q|--quiet] <commit>
+■archive
+    synopsis: git archive [--format=<fmt>] [--list] [--prefix=<prefix>/] [<extra>]
+	      [-o <file> | --output=<file>] [--worktree-attributes]
+	      [--remote=<repo> [--exec=<git-upload-archive>]] <tree-ish>
+	      [<path>…​]
+■describe
+    synopsis: git describe [--all] [--tags] [--contains] [--abbrev=<n>] [<commit-ish>…​]
+git describe [--all] [--tags] [--contains] [--abbrev=<n>] --dirty[=<mark>]
+git describe <blob>
+■shortlog
+    synopsis: git shortlog [<options>] [<revision range>] [[--] <path>…​]
+git log --pretty=short | git shortlog [<options>]
+■clean
+    synopsis: git clean [-d] [-f] [-i] [-n] [-q] [-e <pattern>] [-x | -X] [--] <path>…​
+■pull
+    synopsis: git pull [<options>] [<repository> [<refspec>…​]]
+■reset
+    synopsis: git reset [-q] [<tree-ish>] [--] <pathspec>…​
+git reset [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]
+git reset (--patch | -p) [<tree-ish>] [--] [<pathspec>…​]
+git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]
+■add
+    synopsis: git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]
+	  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]
+	  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]
+	  [--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+	  [--] [<pathspec>…​]
+■am
+    synopsis: git am [--signoff] [--keep] [--[no-]keep-cr] [--[no-]utf8]
+	 [--[no-]3way] [--interactive] [--committer-date-is-author-date]
+	 [--ignore-date] [--ignore-space-change | --ignore-whitespace]
+	 [--whitespace=<option>] [-C<n>] [-p<n>] [--directory=<dir>]
+	 [--exclude=<path>] [--include=<path>] [--reject] [-q | --quiet]
+	 [--[no-]scissors] [-S[<keyid>]] [--patch-format=<format>]
+	 [(<mbox> | <Maildir>)…​]
+git am (--continue | --skip | --abort | --quit | --show-current-patch[=(diff|raw)])
+■branch
+    synopsis: git branch [--color[=<when>] | --no-color] [--show-current]
+	[-v [--abbrev=<length> | --no-abbrev]]
+	[--column[=<options>] | --no-column] [--sort=<key>]
+	[(--merged | --no-merged) [<commit>]]
+	[--contains [<commit]] [--no-contains [<commit>]]
+	[--points-at <object>] [--format=<format>]
+	[(-r | --remotes) | (-a | --all)]
+	[--list] [<pattern>…​]
+git branch [--track | --no-track] [-f] <branchname> [<start-point>]
+git branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]
+git branch --unset-upstream [<branchname>]
+git branch (-m | -M) [<oldbranch>] <newbranch>
+git branch (-c | -C) [<oldbranch>] <newbranch>
+git branch (-d | -D) [-r] <branchname>…​
+git branch --edit-description [<branchname>]
+■bundle
+    synopsis: git bundle create [-q | --quiet | --progress | --all-progress] [--all-progress-implied] <file> <git-rev-list-args>
+git bundle verify [-q | --quiet] <file>
+git bundle list-heads <file> [<refname>…​]
+git bundle unbundle <file> [<refname>…​]
+■checkout
+    synopsis: git checkout [-q] [-f] [-m] [<branch>]
+git checkout [-q] [-f] [-m] --detach [<branch>]
+git checkout [-q] [-f] [-m] [--detach] <commit>
+git checkout [-q] [-f] [-m] [[-b|-B|--orphan] <new_branch>] [<start_point>]
+git checkout [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] [--] <pathspec>…​
+git checkout [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] --pathspec-from-file=<file> [--pathspec-file-nul]
+git checkout (-p|--patch) [<tree-ish>] [--] [<pathspec>…​]
+■cherry-pick
+    synopsis: git cherry-pick [--edit] [-n] [-m parent-number] [-s] [-x] [--ff]
+		  [-S[<keyid>]] <commit>…​
+git cherry-pick (--continue | --skip | --abort | --quit)
+■citool
+    synopsis: git citool
+■clone
+    synopsis: git clone [--template=<template_directory>]
+	  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]
+	  [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]
+	  [--dissociate] [--separate-git-dir <git dir>]
+	  [--depth <depth>] [--[no-]single-branch] [--no-tags]
+	  [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]
+	  [--[no-]remote-submodules] [--jobs <n>] [--sparse]
+	  [--filter=<filter>] [--] <repository>
+	  [<directory>]
+■commit
+    synopsis: git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]
+	   [--dry-run] [(-c | -C | --fixup | --squash) <commit>]
+	   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]
+	   [--allow-empty-message] [--no-verify] [-e] [--author=<author>]
+	   [--date=<date>] [--cleanup=<mode>] [--[no-]status]
+	   [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]
+	   [-S[<keyid>]] [--] [<pathspec>…​]
+■diff
+    synopsis: git diff [<options>] [<commit>] [--] [<path>…​]
+git diff [<options>] --cached [<commit>] [--] [<path>…​]
+git diff [<options>] <commit> <commit> [--] [<path>…​]
+git diff [<options>] <blob> <blob>
+git diff [<options>] --no-index [--] <path> <path>
+■fetch
+    synopsis: git fetch [<options>] [<repository> [<refspec>…​]]
+git fetch [<options>] <group>
+git fetch --multiple [<options>] [(<repository> | <group>)…​]
+git fetch --all [<options>]
+■gc
+    synopsis: git gc [--aggressive] [--auto] [--quiet] [--prune=<date> | --no-prune] [--force] [--keep-largest-pack]
+■grep
+    synopsis: git grep [-a | --text] [-I] [--textconv] [-i | --ignore-case] [-w | --word-regexp]
+	   [-v | --invert-match] [-h|-H] [--full-name]
+	   [-E | --extended-regexp] [-G | --basic-regexp]
+	   [-P | --perl-regexp]
+	   [-F | --fixed-strings] [-n | --line-number] [--column]
+	   [-l | --files-with-matches] [-L | --files-without-match]
+	   [(-O | --open-files-in-pager) [<pager>]]
+	   [-z | --null]
+	   [ -o | --only-matching ] [-c | --count] [--all-match] [-q | --quiet]
+	   [--max-depth <depth>] [--[no-]recursive]
+	   [--color[=<when>] | --no-color]
+	   [--break] [--heading] [-p | --show-function]
+	   [-A <post-context>] [-B <pre-context>] [-C <context>]
+	   [-W | --function-context]
+	   [--threads <num>]
+	   [-f <file>] [-e] <pattern>
+	   [--and|--or|--not|(|)|-e <pattern>…​]
+	   [--recurse-submodules] [--parent-basename <basename>]
+	   [ [--[no-]exclude-standard] [--cached | --no-index | --untracked] | <tree>…​]
+	   [--] [<pathspec>…​]
+■gui
+    synopsis: git gui [<command>] [arguments]
+■log
+    synopsis: git log [<options>] [<revision range>] [[--] <path>…​]
+■merge
+    synopsis: git merge [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]
+	[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]
+	[--[no-]allow-unrelated-histories]
+	[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>] [<commit>…​]
+git merge (--continue | --abort | --quit)
+■mv
+    synopsis: git mv <options>…​ <args>…​
+■notes
+    synopsis: git notes [list [<object>]]
+git notes add [-f] [--allow-empty] [-F <file> | -m <msg> | (-c | -C) <object>] [<object>]
+git notes copy [-f] ( --stdin | <from-object> [<to-object>] )
+git notes append [--allow-empty] [-F <file> | -m <msg> | (-c | -C) <object>] [<object>]
+git notes edit [--allow-empty] [<object>]
+git notes show [<object>]
+git notes merge [-v | -q] [-s <strategy> ] <notes-ref>
+git notes merge --commit [-v | -q]
+git notes merge --abort [-v | -q]
+git notes remove [--ignore-missing] [--stdin] [<object>…​]
+git notes prune [-n] [-v]
+git notes get-ref
+■push
+    synopsis: git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=<git-receive-pack>]
+	   [--repo=<repository>] [-f | --force] [-d | --delete] [--prune] [-v | --verbose]
+	   [-u | --set-upstream] [-o <string> | --push-option=<string>]
+	   [--[no-]signed|--signed=(true|false|if-asked)]
+	   [--force-with-lease[=<refname>[:<expect>]]]
+	   [--no-verify] [<repository> [<refspec>…​]]
+■range-diff
+    synopsis: git range-diff [--color=[<when>]] [--no-color] [<diff-options>]
+	[--no-dual-color] [--creation-factor=<factor>]
+	( <range1> <range2> | <rev1>…​<rev2> | <base> <rev1> <rev2> )
+■rebase
+    synopsis: git rebase [-i | --interactive] [<options>] [--exec <cmd>]
+	[--onto <newbase> | --keep-base] [<upstream> [<branch>]]
+git rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]
+	--root [<branch>]
+git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)
+■restore
+    synopsis: git restore [<options>] [--source=<tree>] [--staged] [--worktree] [--] <pathspec>…​
+git restore [<options>] [--source=<tree>] [--staged] [--worktree] --pathspec-from-file=<file> [--pathspec-file-nul]
+git restore (-p|--patch) [<options>] [--source=<tree>] [--staged] [--worktree] [--] [<pathspec>…​]
+■revert
+    synopsis: git revert [--[no-]edit] [-n] [-m parent-number] [-s] [-S[<keyid>]] <commit>…​
+git revert (--continue | --skip | --abort | --quit)
+■sparse-checkout
+    synopsis: git sparse-checkout <subcommand> [options]
+■status
+    synopsis: git status [<options>…​] [--] [<pathspec>…​]
+■submodule
+    synopsis: git submodule [--quiet] [--cached]
+git submodule [--quiet] add [<options>] [--] <repository> [<path>]
+git submodule [--quiet] status [--cached] [--recursive] [--] [<path>…​]
+git submodule [--quiet] init [--] [<path>…​]
+git submodule [--quiet] deinit [-f|--force] (--all|[--] <path>…​)
+git submodule [--quiet] update [<options>] [--] [<path>…​]
+git submodule [--quiet] set-branch [<options>] [--] <path>
+git submodule [--quiet] set-url [--] <path> <newurl>
+git submodule [--quiet] summary [<options>] [--] [<path>…​]
+git submodule [--quiet] foreach [--recursive] <command>
+git submodule [--quiet] sync [--recursive] [--] [<path>…​]
+git submodule [--quiet] absorbgitdirs [--] [<path>…​]
+■switch
+    synopsis: git switch [<options>] [--no-guess] <branch>
+git switch [<options>] --detach [<start-point>]
+git switch [<options>] (-c|-C) <new-branch> [<start-point>]
+git switch [<options>] --orphan <new-branch>
+■tag
+    synopsis: git tag [-a | -s | -u <keyid>] [-f] [-m <msg> | -F <file>] [-e]
+	<tagname> [<commit> | <object>]
+git tag -d <tagname>…​
+git tag [-n[<num>]] -l [--contains <commit>] [--no-contains <commit>]
+	[--points-at <object>] [--column[=<options>] | --no-column]
+	[--create-reflog] [--sort=<key>] [--format=<format>]
+	[--[no-]merged [<commit>]] [<pattern>…​]
+git tag -v [--format=<format>] <tagname>…​
+■worktree
+    synopsis: git worktree add [-f] [--detach] [--checkout] [--lock] [-b <new-branch>] <path> [<commit-ish>]
+git worktree list [--porcelain]
+git worktree lock [--reason <string>] <worktree>
+git worktree move <worktree> <new-path>
+git worktree prune [-n] [-v] [--expire <expire>]
+git worktree remove [-f] <worktree>
+git worktree unlock <worktree>
+■diff-tree
+    synopsis: git diff-tree [--stdin] [-m] [-s] [-v] [--no-commit-id] [--pretty]
+	      [-t] [-r] [-c | --cc] [--combined-all-paths] [--root]
+	      [<common diff options>] <tree-ish> [<tree-ish>] [<path>…​]
+■get-tar-commit-id
+    synopsis: git get-tar-commit-id
+■rev-parse
+    synopsis: git rev-parse [<options>] <args>…​
+■cat-file
+    synopsis: git cat-file (-t [--allow-unknown-type]| -s [--allow-unknown-type]| -e | -p | <type> | --textconv | --filters ) [--path=<path>] <object>
+git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-symlinks]
+■cherry
+    synopsis: git cherry [-v] [<upstream> [<head> [<limit>]]]
+■diff-files
+    synopsis: git diff-files [-q] [-0|-1|-2|-3|-c|--cc] [<common diff options>] [<path>…​]
+■diff-index
+    synopsis: git diff-index [-m] [--cached] [<common diff options>] <tree-ish> [<path>…​]
+■for-each-ref
+    synopsis: git for-each-ref [--count=<count>] [--shell|--perl|--python|--tcl]
+		   [(--sort=<key>)…​] [--format=<format>] [<pattern>…​]
+		   [--points-at=<object>]
+		   (--merged[=<object>] | --no-merged[=<object>])
+		   [--contains[=<object>]] [--no-contains[=<object>]]
+■ls-files
+    synopsis: git ls-files [-z] [-t] [-v] [-f]
+		(--[cached|deleted|others|ignored|stage|unmerged|killed|modified])*
+		(-[c|d|o|i|s|u|k|m])*
+		[--eol]
+		[-x <pattern>|--exclude=<pattern>]
+		[-X <file>|--exclude-from=<file>]
+		[--exclude-per-directory=<file>]
+		[--exclude-standard]
+		[--error-unmatch] [--with-tree=<tree-ish>]
+		[--full-name] [--recurse-submodules]
+		[--abbrev] [--] [<file>…​]
+■ls-remote
+    synopsis: git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]
+	      [-q | --quiet] [--exit-code] [--get-url] [--sort=<key>]
+	      [--symref] [<repository> [<refs>…​]]
+■ls-tree
+    synopsis: git ls-tree [-d] [-r] [-t] [-l] [-z]
+	    [--name-only] [--name-status] [--full-name] [--full-tree] [--abbrev[=<n>]]
+	    <tree-ish> [<path>…​]
+■merge-base
+    synopsis: git merge-base [-a|--all] <commit> <commit>…​
+git merge-base [-a|--all] --octopus <commit>…​
+git merge-base --is-ancestor <commit> <commit>
+git merge-base --independent <commit>…​
+git merge-base --fork-point <ref> [<commit>]
+■name-rev
+    synopsis: git name-rev [--tags] [--refs=<pattern>]
+	       ( --all | --stdin | <commit-ish>…​ )
+■pack-redundant
+    synopsis: git pack-redundant [ --verbose ] [ --alt-odb ] < --all | .pack filename …​ >
+■rev-list
+    synopsis: git rev-list [<options>] <commit>…​ [[--] <path>…​]
+■show-index
+    synopsis: git show-index
+■show-ref
+    synopsis: git show-ref [-q|--quiet] [--verify] [--head] [-d|--dereference]
+	     [-s|--hash[=<n>]] [--abbrev[=<n>]] [--tags]
+	     [--heads] [--] [<pattern>…​]
+git show-ref --exclude-existing[=<pattern>]
+■unpack-file
+    synopsis: git unpack-file <blob>
+■var
+    synopsis: git var ( -l | <variable> )
+■verify-pack
+    synopsis: git verify-pack [-v|--verbose] [-s|--stat-only] [--] <pack>.idx …​
+■commit-tree
+    synopsis: git commit-tree <tree> [(-p <parent>)…​]
+git commit-tree [(-p <parent>)…​] [-S[<keyid>]] [(-m <message>)…​]
+		  [(-F <file>)…​] <tree>
+■hash-object
+    synopsis: git hash-object [-t <type>] [-w] [--path=<file>|--no-filters] [--stdin [--literally]] [--] <file>…​
+git hash-object [-t <type>] [-w] --stdin-paths [--no-filters]
+■read-tree
+    synopsis: git read-tree [[-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>]
+		[-u [--exclude-per-directory=<gitignore>] | -i]]
+		[--index-output=<file>] [--no-sparse-checkout]
+		(--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])
+■symbolic-ref
+    synopsis: git symbolic-ref [-m <reason>] <name> <ref>
+git symbolic-ref [-q] [--short] <name>
+git symbolic-ref --delete [-q] <name>
+■index-pack
+    synopsis: git index-pack [-v] [-o <index-file>] <pack-file>
+git index-pack --stdin [--fix-thin] [--keep] [-v] [-o <index-file>]
+                 [<pack-file>]
+■prune-packed
+    synopsis: git prune-packed [-n|--dry-run] [-q|--quiet]
+■mktree
+    synopsis: git mktree [-z] [--missing] [--batch]
+■apply
+    synopsis: git apply [--stat] [--numstat] [--summary] [--check] [--index | --intent-to-add] [--3way]
+	  [--apply] [--no-add] [--build-fake-ancestor=<file>] [-R | --reverse]
+	  [--allow-binary-replacement | --binary] [--reject] [-z]
+	  [-p<n>] [-C<n>] [--inaccurate-eof] [--recount] [--cached]
+	  [--ignore-space-change | --ignore-whitespace]
+	  [--whitespace=(nowarn|warn|fix|error|error-all)]
+	  [--exclude=<path>] [--include=<path>] [--directory=<root>]
+	  [--verbose] [--unsafe-paths] [<patch>…​]
+■checkout-index
+    synopsis: git checkout-index [-u] [-q] [-a] [-f] [-n] [--prefix=<string>]
+		   [--stage=<number>|all]
+		   [--temp]
+		   [-z] [--stdin]
+		   [--] [<file>…​]
+■commit-graph
+    synopsis: git commit-graph verify [--object-dir <dir>] [--shallow] [--[no-]progress]
+git commit-graph write <options> [--object-dir <dir>] [--[no-]progress]
+■merge-file
+    synopsis: git merge-file [-L <current-name> [-L <base-name> [-L <other-name>]]]
+	[--ours|--theirs|--union] [-p|--stdout] [-q|--quiet] [--marker-size=<n>]
+	[--[no-]diff3] <current-file> <base-file> <other-file>
+■merge-index
+    synopsis: git merge-index [-o] [-q] <merge-program> (-a | [--] <file>*)
+■mktag
+    synopsis: git mktag
+■multi-pack-index
+    synopsis: git multi-pack-index [--object-dir=<dir>] [--[no-]progress] <subcommand>
+■pack-objects
+    synopsis: git pack-objects [-q | --progress | --all-progress] [--all-progress-implied]
+	[--no-reuse-delta] [--delta-base-offset] [--non-empty]
+	[--local] [--incremental] [--window=<n>] [--depth=<n>]
+	[--revs [--unpacked | --all]] [--keep-pack=<pack-name>]
+	[--stdout [--filter=<filter-spec>] | base-name]
+	[--shallow] [--keep-true-parents] [--[no-]sparse] < object-list
+■unpack-objects
+    synopsis: git unpack-objects [-n] [-q] [-r] [--strict]
+■update-index
+    synopsis: git update-index
+	     [--add] [--remove | --force-remove] [--replace]
+	     [--refresh] [-q] [--unmerged] [--ignore-missing]
+	     [(--cacheinfo <mode>,<object>,<file>)…​]
+	     [--chmod=(+|-)x]
+	     [--[no-]assume-unchanged]
+	     [--[no-]skip-worktree]
+	     [--[no-]ignore-skip-worktree-entries]
+	     [--[no-]fsmonitor-valid]
+	     [--ignore-submodules]
+	     [--[no-]split-index]
+	     [--[no-|test-|force-]untracked-cache]
+	     [--[no-]fsmonitor]
+	     [--really-refresh] [--unresolve] [--again | -g]
+	     [--info-only] [--index-info]
+	     [-z] [--stdin] [--index-version <n>]
+	     [--verbose]
+	     [--] [<file>…​]
+■update-ref
+    synopsis: git update-ref [-m <reason>] [--no-deref] (-d <ref> [<oldvalue>] | [--create-reflog] <ref> <newvalue> [<oldvalue>] | --stdin [-z])
+■write-tree
+    synopsis: git write-tree [--missing-ok] [--prefix=<prefix>/]
+■check-ref-format
+    synopsis: git check-ref-format [--normalize]
+       [--[no-]allow-onelevel] [--refspec-pattern]
+       <refname>
+git check-ref-format --branch <branchname-shorthand>
+■merge-one-file
+    synopsis: git merge-one-file
+■patch-id
+    synopsis: git patch-id [--stable | --unstable]
+■column
+    synopsis: git column [--command=<name>] [--[raw-]mode=<mode>] [--width=<width>]
+	     [--indent=<string>] [--nl=<string>] [--padding=<n>]
+■mailsplit
+    synopsis: git mailsplit [-b] [-f<nn>] [-d<prec>] [--keep-cr] [--mboxrd]
+		-o<directory> [--] [(<mbox>|<Maildir>)…​]
+■check-attr
+    synopsis: git check-attr [-a | --all | <attr>…​] [--] <pathname>…​
+git check-attr --stdin [-z] [-a | --all | <attr>…​]
+■check-ignore
+    synopsis: git check-ignore [<options>] <pathname>…​
+git check-ignore [<options>] --stdin
+■check-mailmap
+    synopsis: git check-mailmap [<options>] <contact>…​
+■credential
+    synopsis: 
+git credential <fill|approve|reject>
+
+■fmt-merge-msg
+    synopsis: git fmt-merge-msg [-m <message>] [--log[=<n>] | --no-log]
+git fmt-merge-msg [-m <message>] [--log[=<n>] | --no-log] -F <file>
+■interpret-trailers
+    synopsis: git interpret-trailers [<options>] [(--trailer <token>[(=|:)<value>])…​] [<file>…​]
+git interpret-trailers [<options>] [--parse] [<file>…​]
+■mailinfo
+    synopsis: git mailinfo [-k|-b] [-u | --encoding=<encoding> | -n] [--[no-]scissors] <msg> <patch>
+■stripspace
+    synopsis: git stripspace [-s | --strip-comments]
+git stripspace [-c | --comment-lines]
+■receive-pack
+    synopsis: git-receive-pack <directory>
+■http-fetch
+    synopsis: git http-fetch [-c] [-t] [-a] [-d] [-v] [-w filename] [--recover] [--stdin] <commit> <url>
+■http-push
+    synopsis: git http-push [--all] [--dry-run] [--force] [--verbose] <url> <ref> [<ref>…​]
+■upload-archive
+    synopsis: git upload-archive <directory>
+■upload-pack
+    synopsis: git-upload-pack [--[no-]strict] [--timeout=<n>] [--stateless-rpc]
+		  [--advertise-refs] <directory>
+■daemon
+    synopsis: git daemon [--verbose] [--syslog] [--export-all]
+	     [--timeout=<n>] [--init-timeout=<n>] [--max-connections=<n>]
+	     [--strict-paths] [--base-path=<path>] [--base-path-relaxed]
+	     [--user-path | --user-path=<path>]
+	     [--interpolated-path=<pathtemplate>]
+	     [--reuseaddr] [--detach] [--pid-file=<file>]
+	     [--enable=<service>] [--disable=<service>]
+	     [--allow-override=<service>] [--forbid-override=<service>]
+	     [--access-hook=<path>] [--[no-]informative-errors]
+	     [--inetd |
+	      [--listen=<host_or_ipaddr>] [--port=<n>]
+	      [--user=<user> [--group=<group>]]]
+	     [--log-destination=(stderr|syslog|none)]
+	     [<directory>…​]
+■fetch-pack
+    synopsis: git fetch-pack [--all] [--quiet|-q] [--keep|-k] [--thin] [--include-tag]
+	[--upload-pack=<git-upload-pack>]
+	[--depth=<n>] [--no-progress]
+	[-v] <repository> [<refs>…​]
+■http-backend
+    synopsis: git http-backend
+■send-pack
+    synopsis: git send-pack [--all] [--dry-run] [--force] [--receive-pack=<git-receive-pack>]
+		[--verbose] [--thin] [--atomic]
+		[--[no-]signed|--signed=(true|false|if-asked)]
+		[<host>:]<directory> [<ref>…​]
+■update-server-info
+    synopsis: git update-server-info
+■stage
+    synopsis: git stage args…​
