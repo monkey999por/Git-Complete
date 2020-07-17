@@ -3,6 +3,7 @@ using Git_Complete.src.props;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Git_Complete.src.function.common;
 
 namespace Git_Complete.src.function.debug
 {
@@ -19,41 +20,38 @@ namespace Git_Complete.src.function.debug
 
             //戻り値用の文字列.　コンソールに出力する内容と同じもの
             StringBuilder outText = new StringBuilder();
+#nullable enable
+            GitCommandEntity? target;
             foreach (var command in commandNameAry)
             {
+                target = Retrieval.GetEntityByCommand(_in, command) ?? new GitCommandEntity();
 
-                foreach (var item in _in as List<GitCommandEntity>)
+                Console.WriteLine("■" + target.command);
+                outText.Append("■" + target.command + Environment.NewLine);
+
+                if (isOutSynopsis)
                 {
-                    if (command.Equals(item.command))
+                    foreach (var temp in target.synopsis)
                     {
-                        Console.WriteLine("■" + item.command);
-                        outText.Append("■" + item.command + Environment.NewLine);
+                        Console.WriteLine("    " + nameof(target.synopsis) + ": " + temp);
+                        outText.Append("    " + nameof(target.synopsis) + ": " + temp + Environment.NewLine);
+                    }
 
-                        if (isOutSynopsis)
+                }
+
+                if (isOutOptions)
+                {
+                    if (target.options != null)
+                    {
+                        foreach (var temp in target.options)
                         {
-                            foreach (var temp in item.synopsis)
-                            {
-                                Console.WriteLine("    " + nameof(item.synopsis) + ": " + temp);
-                                outText.Append("    " + nameof(item.synopsis) + ": " + temp + Environment.NewLine);
-                            }
-
+                            Console.WriteLine("    " + nameof(target.options) + ": " + temp);
+                            outText.Append("    " + nameof(target.options) + ": " + temp + Environment.NewLine);
                         }
 
-                        if (isOutOptions)
-                        {
-                            if (item.options != null)
-                            {
-                                foreach (var temp in item.options)
-                                {
-                                    Console.WriteLine("    " + nameof(item.options) + ": " + temp);
-                                    outText.Append("    " + nameof(item.options) + ": " + temp + Environment.NewLine);
-                                }
-
-                            }
-                        }
-                        break;
                     }
                 }
+
             }
 
             return outText;

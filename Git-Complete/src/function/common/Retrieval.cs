@@ -7,7 +7,7 @@ namespace Git_Complete.src.function.common
 {
     class Retrieval
     {
-        public static GitCommandEntity RetrievalFrom(List<GitCommandEntity> entitys,String keyCommand)
+        public static GitCommandEntity GetEntityByCommand(List<GitCommandEntity> entitys,String keyCommand)
         {
             if (entitys is null)
             {

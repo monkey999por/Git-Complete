@@ -26,7 +26,8 @@ namespace Git_Complete.src.function.parser
                     i++;
                 }
                 StringBuilder temp =  DebugCommon.OutEntity(_in, commands);
-                File.AppendAllText(PathProps.OUT_DIR + "synopsis.txt", temp.ToString());
+                File.Delete(PathProps.OUT_DIR + "synopsis.txt");
+                File.AppendAllText(PathProps.OUT_DIR + "synopsis.txt", temp.ToString(), Encoding.UTF8);
 
             }
 
