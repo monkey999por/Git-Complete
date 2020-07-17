@@ -1,4 +1,4 @@
-<mxfile version="13.4.5" type="github" host="app.diagrams.net" modified="2020-07-17T03:27:01.272Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763" etag="RwoA6EwvcAauUCYs-uAj">
+<mxfile version="13.4.5" type="github" host="app.diagrams.net" modified="2020-07-17T03:29:45.365Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/18.17763" etag="jDxRiRW6BEsSHU0fm8xh">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel grid="1" shadow="0" math="0" pageHeight="1169" pageWidth="827" pageScale="1" page="1" fold="1" arrows="1" connect="1" tooltips="1" guides="1" gridSize="10" dy="604" dx="1102">
       <root>
@@ -37,7 +37,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="2" value="" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1">
+        <mxCell id="2" value="公式helpのスクレイピングで取得できなかったやつは、個別編集する。（sysnopsisが取れなかったり、オプションじゃないやつがオプションに入ってたり）" parent="WIyWlLk6GJQsqaUBKTNV-1" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1">
           <mxGeometry as="geometry" height="110" width="220" y="490" x="570" />
         </mxCell>
         <mxCell id="eOAtrBW3Mt4_9_wZZWKc-9" value="&lt;span class=&quot;pl-en&quot; style=&quot;color: rgb(111, 66, 193); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; word-spacing: 0px; box-sizing: border-box;&quot;&gt;List&lt;/span&gt;&lt;span style=&quot;color: rgb(36, 41, 46); text-transform: none; text-indent: 0px; letter-spacing: normal; text-decoration: none; word-spacing: 0px; display: inline; float: none; overflow-wrap: normal; background-color: rgb(255, 255, 255);&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pl-en&quot; style=&quot;color: rgb(111, 66, 193); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; word-spacing: 0px; box-sizing: border-box;&quot;&gt;GitCommandEntity&lt;/span&gt;&lt;span style=&quot;color: rgb(36, 41, 46); text-transform: none; text-indent: 0px; letter-spacing: normal; text-decoration: none; word-spacing: 0px; display: inline; float: none; overflow-wrap: normal; background-color: rgb(255, 255, 255);&quot;&gt;&amp;gt;&lt;/span&gt;" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" vertex="1">
