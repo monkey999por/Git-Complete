@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git replace [-f] &lt;object&gt; &lt;replacement&gt;
-git replace [-f] --edit &lt;object&gt;
-git replace [-f] --graft &lt;commit&gt; [&lt;parent&gt;…​]
-git replace [-f] --convert-graft-file
-git replace -d &lt;object&gt;…​
-git replace [--format=&lt;format&gt;] [-l [&lt;pattern&gt;]]</string>
-</ArrayOfstring>

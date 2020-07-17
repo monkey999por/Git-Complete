@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git shortlog [&lt;options&gt;] [&lt;revision range&gt;] [[--] &lt;path&gt;…​]
-git log --pretty=short | git shortlog [&lt;options&gt;]</string>
-</ArrayOfstring>

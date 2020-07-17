@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git fetch-pack [--all] [--quiet|-q] [--keep|-k] [--thin] [--include-tag]
-	[--upload-pack=&lt;git-upload-pack&gt;]
-	[--depth=&lt;n&gt;] [--no-progress]
-	[-v] &lt;repository&gt; [&lt;refs&gt;…​]</string>
-</ArrayOfstring>

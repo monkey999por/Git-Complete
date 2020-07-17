@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=&lt;git-receive-pack&gt;]
-	   [--repo=&lt;repository&gt;] [-f | --force] [-d | --delete] [--prune] [-v | --verbose]
-	   [-u | --set-upstream] [-o &lt;string&gt; | --push-option=&lt;string&gt;]
-	   [--[no-]signed|--signed=(true|false|if-asked)]
-	   [--force-with-lease[=&lt;refname&gt;[:&lt;expect&gt;]]]
-	   [--no-verify] [&lt;repository&gt; [&lt;refspec&gt;…​]]</string>
-</ArrayOfstring>

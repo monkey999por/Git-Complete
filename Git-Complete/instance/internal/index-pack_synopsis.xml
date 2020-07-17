@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git index-pack [-v] [-o &lt;index-file&gt;] &lt;pack-file&gt;
-git index-pack --stdin [--fix-thin] [--keep] [-v] [-o &lt;index-file&gt;]
-                 [&lt;pack-file&gt;]</string>
-</ArrayOfstring>

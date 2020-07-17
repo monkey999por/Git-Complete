@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git cherry-pick [--edit] [-n] [-m parent-number] [-s] [-x] [--ff]
-		  [-S[&lt;keyid&gt;]] &lt;commit&gt;…​
-git cherry-pick (--continue | --skip | --abort | --quit)</string>
-</ArrayOfstring>

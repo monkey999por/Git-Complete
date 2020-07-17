@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git show-ref [-q|--quiet] [--verify] [--head] [-d|--dereference]
-	     [-s|--hash[=&lt;n&gt;]] [--abbrev[=&lt;n&gt;]] [--tags]
-	     [--heads] [--] [&lt;pattern&gt;…​]
-git show-ref --exclude-existing[=&lt;pattern&gt;]</string>
-</ArrayOfstring>

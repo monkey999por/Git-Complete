@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git restore [&lt;options&gt;] [--source=&lt;tree&gt;] [--staged] [--worktree] [--] &lt;pathspec&gt;…​
-git restore [&lt;options&gt;] [--source=&lt;tree&gt;] [--staged] [--worktree] --pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]
-git restore (-p|--patch) [&lt;options&gt;] [--source=&lt;tree&gt;] [--staged] [--worktree] [--] [&lt;pathspec&gt;…​]</string>
-</ArrayOfstring>

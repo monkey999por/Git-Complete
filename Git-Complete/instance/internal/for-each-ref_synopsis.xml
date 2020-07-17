@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git for-each-ref [--count=&lt;count&gt;] [--shell|--perl|--python|--tcl]
-		   [(--sort=&lt;key&gt;)…​] [--format=&lt;format&gt;] [&lt;pattern&gt;…​]
-		   [--points-at=&lt;object&gt;]
-		   (--merged[=&lt;object&gt;] | --no-merged[=&lt;object&gt;])
-		   [--contains[=&lt;object&gt;]] [--no-contains[=&lt;object&gt;]]</string>
-</ArrayOfstring>

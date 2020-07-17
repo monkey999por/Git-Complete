@@ -59,22 +59,6 @@ namespace Git_Complete
             //MainEntityに保存する
             mainEntity.gitCommandEntityList = gitCommandEntityList;
 
-            //test
-            //オプション、synopsisをファイルに書き出す
-            // 出力形式 -> {command_name}_synopsis.xml, {command_name}_options.xml
-            if (DebugProps.DEGUB_MODE)
-            {
-                foreach (var item in gitCommandEntityList)
-                {
-                    //command and synopsis
-                    fileCommon.OutFileTo<List<String>>(item.synopsis, PathProps.INSTANCE_INTERNAL_OUT_DIR + item.command + "_" + nameof(item.synopsis) + ".xml");
-
-                    //command and options
-                    fileCommon.OutFileTo<List<String>>(item.options, PathProps.INSTANCE_INTERNAL_OUT_DIR + item.command + "_" + nameof(item.options) + ".xml");
-                }
-            }
-
-
             //debug
             if (DebugProps.DEGUB_MODE)
             {

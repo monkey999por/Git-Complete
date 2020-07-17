@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git symbolic-ref [-m &lt;reason&gt;] &lt;name&gt; &lt;ref&gt;
-git symbolic-ref [-q] [--short] &lt;name&gt;
-git symbolic-ref --delete [-q] &lt;name&gt;</string>
-</ArrayOfstring>

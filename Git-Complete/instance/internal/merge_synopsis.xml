@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfstring xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-	<string>git merge [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]
-	[--no-verify] [-s &lt;strategy&gt;] [-X &lt;strategy-option&gt;] [-S[&lt;keyid&gt;]]
-	[--[no-]allow-unrelated-histories]
-	[--[no-]rerere-autoupdate] [-m &lt;msg&gt;] [-F &lt;file&gt;] [&lt;commit&gt;…​]
-git merge (--continue | --abort | --quit)</string>
-</ArrayOfstring>
