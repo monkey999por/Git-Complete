@@ -16,15 +16,15 @@ namespace Git_Complete
     {
         static void Main(string[] args)
         {
-            EGitCommandList<EHelpScrape> eGitCommandList = new EGitCommandList<EHelpScrape>();
+            EGitCommandList<EGitCommand> eGitCommandList = new EGitCommandList<EGitCommand>();
 
-            String entityPath = PathProps.INSTANCE_DIR + nameof(EHelpScrape) + "_List.xml";
+            String entityPath = PathProps.INSTANCE_DIR + nameof(EGitCommand) + "_List.xml";
 
             //gitコマンドとオプションのリストを生成する。
-            eGitCommandList.Value = FileCommon.GetInstanceFrom<List<EHelpScrape>>(entityPath);
+            eGitCommandList.Value = FileCommon.GetInstanceFrom<List<EGitCommand>>(entityPath);
 
             //読み込み後にファイルにおかしなもしコードの文字が付加されるため、再書き込み
-            FileCommon.OutFileTo<List<EHelpScrape>>(eGitCommandList.Value, entityPath);
+            FileCommon.OutFileTo<List<EGitCommand>>(eGitCommandList.Value, entityPath);
 
             //test -> コマンド数は136個
             if (!(eGitCommandList.Value.Count == 136))
@@ -33,10 +33,10 @@ namespace Git_Complete
             //Gitの公式ヘルプサイトからスクレイピングする用
             if (DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP)
             {
-                eGitCommandList.Value = new List<EHelpScrape>();
+                eGitCommandList.Value = new List<EGitCommand>();
                 foreach (var command in CommonProps.ALL_COMMAND)
                 {
-                    eGitCommandList.Value.Add(new EHelpScrape(command));
+                    eGitCommandList.Value.Add(new EGitCommand(command));
                 }
 
                 var helpParser = new GitHelpParser();
@@ -48,7 +48,7 @@ namespace Git_Complete
                 eGitCommandList.Value = helpParser.GetOptionsAll(eGitCommandList.Value);
 
                 //xml出力
-                FileCommon.OutFileTo<List<EHelpScrape>>(eGitCommandList.Value, entityPath);
+                FileCommon.OutFileTo<List<EGitCommand>>(eGitCommandList.Value, entityPath);
             }
 
             //debug -> EGitCommandListの中身を出力
@@ -67,12 +67,10 @@ namespace Git_Complete
 
 
             //個別解析をする
-            EGitCommandList<EParsedHelpScrape> eParsedHelpScrapeList = new EGitCommandList<EParsedHelpScrape>();
+            EGitCommandList<EGitCommand> eParsedHelpScrapeList = 
+                new EGitCommandList<EGitCommand>(eGitCommandList.Value);
+            
 
-
-
-            //synopsisを解析 -> パターンを検討し、生成するpowershellでどうやって使うかを検討する
-            //parsedEntity = GitEntityParser.ParseSynopsis(eHelpScrapeList);
 
             //optionsを解析 -> synopsisの解析結果と照らし合わせて、powershellソースに組み込む
 

@@ -21,6 +21,13 @@ namespace Git_Complete.src.entity
             set { this.value = value; }
         }
 
+        public EGitCommandList() { }
+        public EGitCommandList(List<T> value)
+        {
+            this.value = new List<T>((List<T>)value);
+        }
+
+
         public EGitCommand GetEntityByCommand(String keyCommand)
         {
             if (this.value is null)
@@ -98,29 +105,11 @@ namespace Git_Complete.src.entity
 
         //各gitコマンドで使用できるオプションの説明を保持する
         public List<string> optionsDescription = new List<string>();
-    }
 
-
-    [Serializable]
-    class EHelpScrape : EGitCommand
-    {
-        public EHelpScrape() { }
-        public EHelpScrape(string command) : this()
+        public EGitCommand() { }
+        public EGitCommand(string command)
         {
             this.command = command;
         }
     }
-
-    [Serializable]
-    class EParsedHelpScrape : EGitCommand
-    {
-        public EParsedHelpScrape() { }
-        public EParsedHelpScrape(string command) : this()
-        {
-            this.command = command;
-        }
-    }
-
-
-
 }
