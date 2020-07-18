@@ -23,13 +23,11 @@ namespace Git_Complete
         {
             EGitCommandList<EGitCommand> eGitCommandList = new EGitCommandList<EGitCommand>();
 
-            String entityPath = PathProps.INSTANCE_DIR + nameof(EGitCommand) + "_HelpScrapeList.xml";
-
             //gitコマンドとオプションのリストを生成する。
-            eGitCommandList.Value = FileCommon.GetInstanceFrom<List<EGitCommand>>(entityPath);
+            eGitCommandList.Value = FileCommon.GetInstanceFrom<List<EGitCommand>>(PathProps.HELP_SCRAPE_Path);
 
             //読み込み後にファイルにおかしなもしコードの文字が付加されるため、再書き込み
-            FileCommon.OutFileTo<List<EGitCommand>>(eGitCommandList.Value, entityPath);
+            FileCommon.OutFileTo<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_Path);
 
             //test -> コマンド数は136個
             if (!(eGitCommandList.Value.Count == 136))
@@ -53,7 +51,7 @@ namespace Git_Complete
                 eGitCommandList.Value = helpParser.GetOptionsAll(eGitCommandList.Value);
 
                 //xml出力
-                FileCommon.OutFileTo<List<EGitCommand>>(eGitCommandList.Value, entityPath);
+                FileCommon.OutFileTo<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_Path);
             }
 
             //debug -> EGitCommandListの中身を出力
