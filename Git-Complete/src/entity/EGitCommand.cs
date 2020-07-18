@@ -4,6 +4,15 @@ using System.Text;
 
 namespace Git_Complete.src.entity
 {
+
+    class EGitCommandList 
+    {
+        //主にgitの公式ヘルプからスクレイピングした素のオプションやシナプスを保持
+        public List<EGitCommand> eHelpScrape = new List<EGitCommand>();
+
+    }
+
+
     [Serializable]
     class EGitCommand {
         //gitのコマンドを保持. primary key
