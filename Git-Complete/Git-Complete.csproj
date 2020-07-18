@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Git_Complete</RootNamespace>
-    <StartupObject>Git_Complete.Entry</StartupObject>
+    <StartupObject>Git_Complete.Start</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

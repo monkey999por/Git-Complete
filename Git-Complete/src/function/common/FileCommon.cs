@@ -11,7 +11,7 @@ namespace Git_Complete.src.function.common
     class FileCommon
     {
 
-        public void OutFileTo<T>(T obj, String outPath)
+        public static void OutFileTo<T>(T obj, String outPath)
         {
 
             Directory.CreateDirectory(Path.GetDirectoryName(outPath));
@@ -44,7 +44,7 @@ namespace Git_Complete.src.function.common
             }
         }
 
-        public T GetInstanceFrom<T>(String filePath)
+        public static T GetInstanceFrom<T>(String filePath)
         {
             try
             {
