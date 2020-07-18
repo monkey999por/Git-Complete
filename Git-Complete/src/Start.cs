@@ -74,6 +74,13 @@ namespace Git_Complete
                 new EGitCommandList<EGitCommand>(eGitCommandList.Value);
 
 
+
+
+
+
+
+
+
             //optionsを解析 -> synopsisの解析結果と照らし合わせて、powershellソースに組み込む
 
 

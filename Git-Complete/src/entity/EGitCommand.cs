@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Security.Claims;
 using System.Text;
 
 namespace Git_Complete.src.entity
@@ -122,6 +123,23 @@ namespace Git_Complete.src.entity
             }
             return outText;
         }
+
+        /// <summary>
+        /// コマンド名の配列をもとに、フィールド:valueから一致するものをすべて返す。
+        /// </summary>
+        /// 
+        /// <param name="keyCommands">Gitのコマンド名配列。例:new String[]{"add", "commin","pull"}</param>
+        /// <returns></returns>
+        public List<EGitCommand> GetEntityListByCommands(String[] keyCommands)
+        {
+            List<EGitCommand> ret = new List<EGitCommand>();
+            foreach (var command in keyCommands)
+                ret.Add(GetEntityByCommand(command));
+
+            return ret;
+        }
+
+        
     }
 
 
