@@ -6,6 +6,9 @@ namespace Git_Complete.src.props
 {
     class CommonProps
     {
+        /// <summary>
+        /// このアプリで対象とするGitの全コマンド
+        /// </summary>
         public static readonly string[] ALL_COMMAND = new string[]{
             "annotate",
             "blame",

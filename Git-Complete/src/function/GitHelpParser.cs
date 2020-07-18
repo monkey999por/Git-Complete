@@ -18,8 +18,16 @@ namespace Git_Complete.function.parser
     {
         private const String _helpUrlBase = @"https://git-scm.com/docs/";
 
+        /// <summary>
+        /// <see cref=">GetHelpDocsDom"/>
+        /// </summary>
         private static Dictionary<String, IDocument> _helpDocsDom = null;
 
+        /// <summary>
+        /// Gitの公式Help(https://git-scm.com/docs/git-{command})のコマンドごとのDomを取得し、フィールド:<c>_helpDocsDom</c>に保存する
+        /// </summary>
+        /// <param name="_in"></param>
+        /// <returns></returns>
         private static async Task<Dictionary<string, IDocument>> GetHelpDocsDom(List<EGitCommand> _in)
         {
             if (_helpDocsDom != null)
@@ -51,6 +59,20 @@ namespace Git_Complete.function.parser
             return _helpDocsDom;
         }
 
+        /// <summary>
+        /// Gitの公式HelpからSysnopsisをスクレイピングする。
+        /// 公式Helpは（おそらく）自動生成されているわけではなく、形式にばらつきがあるため、
+        /// ここでは下記のルールでスクレイピングし、正常に取得できなかったものについては
+        /// 別メソッドで個別に補正を行う。
+        /// 
+        /// ■ルール
+        /// 取得URL : https://git-scm.com/docs/git-{command}(Dom)
+        /// {id: _synopsis}を持った要素の親要素の中で、{class: .content}を持った項目すべて
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="_in">コマンドが入っているinstance</param>
+        /// <returns>引数にSynopsisのリストをセットしたもの（それ以外には影響なし）</returns>
         public List<EGitCommand> GetSynopsisAll(List<EGitCommand> _in)
         {
 
@@ -59,7 +81,7 @@ namespace Git_Complete.function.parser
 
             IHtmlCollection<IElement> synopsisList;
             List<String> synopsis = null;
-            
+
             //ヘルプファイルのDomを取得
             Task<Dictionary<String, IDocument>> task = (Task<Dictionary<String, IDocument>>)Task.Run(() =>
             {
@@ -74,26 +96,26 @@ namespace Git_Complete.function.parser
                 var document = helpDocsDom[entity.command];
 
                 synopsisList = document.QuerySelector("#_synopsis").ParentElement.QuerySelectorAll(".content");
-                
+
                 synopsis = new List<string>();
 
-                foreach (var e in synopsisList)
-                {
-                    synopsis.Add(e.TextContent);
-                }
-                
+                foreach (var e in synopsisList) { synopsis.Add(e.TextContent); }
                 entity.synopsis = synopsis;
-
-                Debug.WriteLine(entity.command);
-
-                foreach (var item in synopsis)
-                {
-                    Debug.WriteLine("   " + item);
-                }
             }
             return ret;
         }
 
+        /// <summary>
+        /// <see cref="GetSynopsisAll(List{EGitCommand})"/>と同じ
+        /// 取得ルールは下記。
+        /// 
+        /// ■ルール
+        /// 取得URL : https://git-scm.com/docs/git-{command}(Dom)
+        /// {id: _options}を持った要素の親要素の中で、{class: .hdlist1}を持った項目すべて
+        /// 
+        /// </summary>
+        /// <param name="_in">コマンドが入っているinstance</param>
+        /// <returns>引数にOptionsのリストをセットしたもの（それ以外には影響なし）</returns>
         public List<EGitCommand> GetOptionsAll(List<EGitCommand> _in)
         {
 
@@ -118,24 +140,13 @@ namespace Git_Complete.function.parser
 
                 var temp = document.QuerySelector("#_options");
                 if (temp is null)
-                {
                     continue;
-                }
+
                 optionsList = temp.ParentElement.QuerySelectorAll(".hdlist1");
 
                 options = new List<string>();
-                foreach (var e in optionsList)
-                {
-                    options.Add(e.TextContent);
-                }
+                foreach (var e in optionsList) { options.Add(e.TextContent); }
                 entity.options = options;
-
-                Debug.WriteLine(entity.command);
-
-                foreach (var item in options)
-                {
-                    Debug.WriteLine("   " + item);
-                }
             }
             return ret;
         }

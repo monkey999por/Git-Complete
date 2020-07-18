@@ -14,6 +14,11 @@ namespace Git_Complete
 {
     class Start
     {
+        /// <summary>
+        /// 処理の本流は以下参照
+        /// <see cref="https://app.diagrams.net/#Hmonkey999por%2FGit-Complete%2Fmaster%2FGit-Complete%2Ftemp%2FUntitled%20Diagram.drawio"/>
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             EGitCommandList<EGitCommand> eGitCommandList = new EGitCommandList<EGitCommand>();
