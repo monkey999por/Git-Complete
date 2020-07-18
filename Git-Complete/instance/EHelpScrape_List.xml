@@ -79,7 +79,7 @@
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>rerere</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git rerere [clear|forget &lt;pathspec&gt;|diff|remaining|status|gc]</d3p1:string>
@@ -212,7 +212,7 @@ git instaweb [--start] [--stop] [--restart]</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>merge-tree</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git merge-tree &lt;base-tree&gt; &lt;branch1&gt; &lt;branch2&gt;</d3p1:string>
@@ -281,7 +281,7 @@ git show-branch (-g|--reflog)[=&lt;n&gt;[,&lt;base&gt;]] [--list] [&lt;ref&gt;]<
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>whatchanged</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git whatchanged &lt;option&gt;…​</d3p1:string>
@@ -1613,7 +1613,7 @@ git cherry-pick (--continue | --skip | --abort | --quit)</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>citool</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git citool</d3p1:string>
@@ -2076,7 +2076,7 @@ git fetch --all [&lt;options&gt;]</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>gui</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git gui [&lt;command&gt;] [arguments]</d3p1:string>
@@ -2546,7 +2546,7 @@ git revert (--continue | --skip | --abort | --quit)</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>sparse-checkout</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git sparse-checkout &lt;subcommand&gt; [options]</d3p1:string>
@@ -2919,7 +2919,7 @@ git worktree unlock &lt;worktree&gt;</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>get-tar-commit-id</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git get-tar-commit-id</d3p1:string>
@@ -3599,7 +3599,7 @@ git merge-base --fork-point &lt;ref&gt; [&lt;commit&gt;]</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>show-index</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git show-index</d3p1:string>
@@ -3918,7 +3918,7 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>mktag</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git mktag</d3p1:string>
@@ -4068,7 +4068,7 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>update-ref</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git update-ref [-m &lt;reason&gt;] [--no-deref] (-d &lt;ref&gt; [&lt;oldvalue&gt;] | [--create-reflog] &lt;ref&gt; &lt;newvalue&gt; [&lt;oldvalue&gt;] | --stdin [-z])</d3p1:string>
@@ -4102,7 +4102,7 @@ git check-ref-format --branch &lt;branchname-shorthand&gt;</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>merge-one-file</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git merge-one-file</d3p1:string>
@@ -4197,7 +4197,7 @@ git check-ignore [&lt;options&gt;] --stdin</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>credential</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>
@@ -4432,7 +4432,7 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>http-backend</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git http-backend</d3p1:string>
@@ -4467,7 +4467,7 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>update-server-info</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git update-server-info</d3p1:string>
@@ -4475,7 +4475,7 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 	</EHelpScrape>
 	<EHelpScrape>
 		<command>stage</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git stage args…​</d3p1:string>
