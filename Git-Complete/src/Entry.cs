@@ -23,16 +23,23 @@ namespace Git_Complete
             var parsedEntity = mainEntity.parsedEntities;
 
             String entityPath = PathProps.INSTANCE_DIR + nameof(EHelpScrape) + "_List.xml";
-            String readPath = DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP ? 
-                                PathProps.INSTANCE_DIR + nameof(EHelpScrape) + "_OnlyCommand.xml" : entityPath;
+
+            if (DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP)
+            {
+                eHelpScrape = new List<EHelpScrape>();
+                foreach (var command in CommonProps.ALL_COMMAND)
+                {
+                    eHelpScrape.Add(new EHelpScrape(command));
+                }
+            }
 
             //gitコマンドとオプションのリストを生成する。
             FileCommon fileCommon = new FileCommon();
-            eHelpScrape = fileCommon.GetInstanceFrom<List<EHelpScrape>>(readPath);
+            eHelpScrape = fileCommon.GetInstanceFrom<List<EHelpScrape>>(entityPath);
 
             //なぜか↑の読み込みでおかしな文字コードの空白がxmlに付加されて、再度xmlを読もうとするとエラーになる
             //なので、ここで再書き込みする
-            fileCommon.OutFileTo<List<EHelpScrape>>(eHelpScrape, readPath);
+            fileCommon.OutFileTo<List<EHelpScrape>>(eHelpScrape, entityPath);
 
             //test
             if (!(eHelpScrape.Count == 136))
@@ -61,14 +68,14 @@ namespace Git_Complete
             //debug
             if (DebugProps.DEGUB_MODE)
             {
-                string[] inAry = new string[eHelpScrape.Count];
+                string[] inAry = new string[mainEntity.eHelpScrape.Count];
                 var i = 0;
-                foreach (var item in eHelpScrape)
+                foreach (var item in mainEntity.eHelpScrape)
                 {
                     inAry[i] = item.command;
                     i++;
                 }
-                DebugCommon.OutEntity(eHelpScrape, inAry);
+                DebugCommon.OutEntity(mainEntity.eHelpScrape, inAry);
 
             }
             

@@ -17,26 +17,27 @@ namespace Git_Complete.src.entity
 
         //各gitコマンドで使用できるオプションの説明を保持する
         public List<string> optionsDescription = new List<string>();
-
-        public EGitCommand() { }
-        public EGitCommand(string command) : this()
-        {
-            this.command = command;
-        }
-
     }
 
 
     [Serializable]
     class EHelpScrape : EGitCommand
     {
-        
+        public EHelpScrape() { }
+        public EHelpScrape(string command) : this()
+        {
+            this.command = command;
+        }
     }
 
     [Serializable]
     class EParsedHelpScrape :EGitCommand
-    { 
-        
+    {
+        public EParsedHelpScrape() { }
+        public EParsedHelpScrape(string command) : this()
+        {
+            this.command = command;
+        }
     }
 
 
