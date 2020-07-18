@@ -11,7 +11,7 @@ namespace Git_Complete.src.entity
         private static MainEntity mainEntity = new MainEntity();
 
         //主にgitの公式ヘルプからスクレイピングした素のオプションやシナプスを保持
-        public List<GitCommandEntity> gitCommandEntityList = new List<GitCommandEntity>();
+        public List<EHelpScrape> eHelpScrape = new List<EHelpScrape>();
 
         //解析後のgitのオプションやシナプスを保持
         public List<ParsedEntity> parsedEntities = new List<ParsedEntity>();
@@ -22,11 +22,5 @@ namespace Git_Complete.src.entity
         {
             return mainEntity;
         }
-
-        
-
-
-
-
     }
 }

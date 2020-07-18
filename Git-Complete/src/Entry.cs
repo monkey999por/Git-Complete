@@ -19,24 +19,23 @@ namespace Git_Complete
         {
             //初期化
             MainEntity mainEntity = MainEntity.getInstance();
-            var gitCommandEntityList = mainEntity.gitCommandEntityList;
+            var eHelpScrape = mainEntity.eHelpScrape;
             var parsedEntity = mainEntity.parsedEntities;
 
-            String entityPath = PathProps.INSTANCE_DIR + nameof(GitCommandEntity) + "_List.xml";
+            String entityPath = PathProps.INSTANCE_DIR + nameof(EHelpScrape) + "_List.xml";
             String readPath = DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP ? 
-                                PathProps.INSTANCE_DIR + nameof(GitCommandEntity) + "_OnlyCommand.xml" : entityPath;
-
+                                PathProps.INSTANCE_DIR + nameof(EHelpScrape) + "_OnlyCommand.xml" : entityPath;
 
             //gitコマンドとオプションのリストを生成する。
             FileCommon fileCommon = new FileCommon();
-            gitCommandEntityList = fileCommon.GetInstanceFrom<List<GitCommandEntity>>(readPath);
+            eHelpScrape = fileCommon.GetInstanceFrom<List<EHelpScrape>>(readPath);
 
             //なぜか↑の読み込みでおかしな文字コードの空白がxmlに付加されて、再度xmlを読もうとするとエラーになる
             //なので、ここで再書き込みする
-            fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, readPath);
+            fileCommon.OutFileTo<List<EHelpScrape>>(eHelpScrape, readPath);
 
             //test
-            if (!(gitCommandEntityList.Count == 136))
+            if (!(eHelpScrape.Count == 136))
             {
                 throw new Exception("コマンドの数があってない");
             }
@@ -47,35 +46,35 @@ namespace Git_Complete
                 var helpParser = new GitHelpParser();
 
                 //git-scm.comから、synopsisを取得する（html parserを使用）
-                gitCommandEntityList = helpParser.GetSynopsisAll(gitCommandEntityList);
+                eHelpScrape = helpParser.GetSynopsisAll(eHelpScrape);
 
                 //git-scm.comから、オプションの一覧を取得する（html parserを使用）
-                gitCommandEntityList = helpParser.GetOptionsAll(gitCommandEntityList);
+                eHelpScrape = helpParser.GetOptionsAll(eHelpScrape);
 
                 //xml出力
-                fileCommon.OutFileTo<List<GitCommandEntity>>(gitCommandEntityList, entityPath);
+                fileCommon.OutFileTo<List<EHelpScrape>>(eHelpScrape, entityPath);
             }
 
             //MainEntityに保存する
-            mainEntity.gitCommandEntityList = gitCommandEntityList;
+            mainEntity.eHelpScrape = eHelpScrape;
 
             //debug
             if (DebugProps.DEGUB_MODE)
             {
-                string[] inAry = new string[gitCommandEntityList.Count];
+                string[] inAry = new string[eHelpScrape.Count];
                 var i = 0;
-                foreach (var item in gitCommandEntityList)
+                foreach (var item in eHelpScrape)
                 {
                     inAry[i] = item.command;
                     i++;
                 }
-                DebugCommon.OutEntity(gitCommandEntityList, inAry);
+                DebugCommon.OutEntity(eHelpScrape, inAry);
 
             }
             
 
             //synopsisを解析 -> パターンを検討し、生成するpowershellでどうやって使うかを検討する
-            parsedEntity = GitEntityParser.ParseSynopsis(gitCommandEntityList);
+            parsedEntity = GitEntityParser.ParseSynopsis(eHelpScrape);
 
 
 

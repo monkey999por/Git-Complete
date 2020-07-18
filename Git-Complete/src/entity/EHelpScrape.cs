@@ -5,8 +5,7 @@ using System.Text;
 namespace Git_Complete.src.entity
 {
     [Serializable]
-    class GitCommandEntity
-    {
+    class EGitCommand {
         //gitのコマンドを保持. primary key
         public string command;
 
@@ -19,12 +18,27 @@ namespace Git_Complete.src.entity
         //各gitコマンドで使用できるオプションの説明を保持する
         public List<string> optionsDescription = new List<string>();
 
-        public GitCommandEntity(){}
-        public GitCommandEntity(string command) : this()
+        public EGitCommand() { }
+        public EGitCommand(string command) : this()
         {
             this.command = command;
-            
         }
 
     }
+
+
+    [Serializable]
+    class EHelpScrape : EGitCommand
+    {
+        
+    }
+
+    [Serializable]
+    class EParsedHelpScrape :EGitCommand
+    { 
+        
+    }
+
+
+
 }

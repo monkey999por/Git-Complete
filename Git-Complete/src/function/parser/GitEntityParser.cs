@@ -14,7 +14,7 @@ namespace Git_Complete.src.function.parser
     {
 
         //GitCommandEntityをもとに整形したsynopsisを返す
-        public static List<ParsedEntity> ParseSynopsis(List<GitCommandEntity> _in)
+        public static List<ParsedEntity> ParseSynopsis(List<EHelpScrape> _in)
         {
             //test out synopsis to text file 
             {

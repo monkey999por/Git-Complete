@@ -11,7 +11,7 @@ namespace Git_Complete.src.function.debug
     {
 
         //コマンドの情報を出力する。commandNameは未指定の場合定数で保持しているものを出力する
-        public static StringBuilder OutEntity(List<GitCommandEntity> _in, string[] commandNameAry, bool isOutSynopsis = true, bool isOutOptions = true)
+        public static StringBuilder OutEntity(List<EHelpScrape> _in, string[] commandNameAry, bool isOutSynopsis = true, bool isOutOptions = true)
         {
             if (_in is null || commandNameAry is null)
             {
@@ -21,10 +21,10 @@ namespace Git_Complete.src.function.debug
             //戻り値用の文字列.　コンソールに出力する内容と同じもの
             StringBuilder outText = new StringBuilder();
 #nullable enable
-            GitCommandEntity? target;
+            EHelpScrape? target;
             foreach (var command in commandNameAry)
             {
-                target = Retrieval.GetEntityByCommand(_in, command) ?? new GitCommandEntity();
+                target = Retrieval.GetEntityByCommand(_in, command) ?? new EHelpScrape();
 
                 Console.WriteLine("■" + target.command);
                 outText.Append("■" + target.command + Environment.NewLine);

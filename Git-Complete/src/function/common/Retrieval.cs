@@ -7,11 +7,11 @@ namespace Git_Complete.src.function.common
 {
     class Retrieval
     {
-        public static GitCommandEntity GetEntityByCommand(List<GitCommandEntity> entitys,String keyCommand)
+        public static EHelpScrape GetEntityByCommand(List<EHelpScrape> entitys,String keyCommand)
         {
             if (entitys is null)
             {
-                throw new Exception(nameof(entitys) + ":" + typeof(List<GitCommandEntity>) + "がnullです");
+                throw new Exception(nameof(entitys) + ":" + typeof(List<EHelpScrape>) + "がnullです");
             }
 
             foreach (var entity in entitys)

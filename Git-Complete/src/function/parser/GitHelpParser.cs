@@ -20,7 +20,7 @@ namespace Git_Complete.function.parser
 
         private static Dictionary<String, IDocument> _helpDocsDom = null;
 
-        private static async Task<Dictionary<string, IDocument>> GetHelpDocsDom(List<GitCommandEntity> _in)
+        private static async Task<Dictionary<string, IDocument>> GetHelpDocsDom(List<EHelpScrape> _in)
         {
             if (_helpDocsDom != null)
             {
@@ -51,11 +51,11 @@ namespace Git_Complete.function.parser
             return _helpDocsDom;
         }
 
-        public List<GitCommandEntity> GetSynopsisAll(List<GitCommandEntity> _in)
+        public List<EHelpScrape> GetSynopsisAll(List<EHelpScrape> _in)
         {
 
             //戻り値初期化(コピー)
-            var ret = new List<GitCommandEntity>(_in);
+            var ret = new List<EHelpScrape>(_in);
 
             IHtmlCollection<IElement> synopsisList;
             List<String> synopsis = null;
@@ -94,11 +94,11 @@ namespace Git_Complete.function.parser
             return ret;
         }
 
-        public List<GitCommandEntity> GetOptionsAll(List<GitCommandEntity> _in)
+        public List<EHelpScrape> GetOptionsAll(List<EHelpScrape> _in)
         {
 
             //戻り値初期化
-            var ret = new List<GitCommandEntity>(_in);
+            var ret = new List<EHelpScrape>(_in);
 
             IHtmlCollection<IElement> optionsList;
             List<String> options = null;
