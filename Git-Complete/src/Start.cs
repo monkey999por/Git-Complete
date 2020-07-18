@@ -18,7 +18,7 @@ namespace Git_Complete
         {
             EGitCommandList<EGitCommand> eGitCommandList = new EGitCommandList<EGitCommand>();
 
-            String entityPath = PathProps.INSTANCE_DIR + nameof(EGitCommand) + "_List.xml";
+            String entityPath = PathProps.INSTANCE_DIR + nameof(EGitCommand) + "_HelpScrapeList.xml";
 
             //gitコマンドとオプションのリストを生成する。
             eGitCommandList.Value = FileCommon.GetInstanceFrom<List<EGitCommand>>(entityPath);
@@ -69,7 +69,6 @@ namespace Git_Complete
             //個別解析をする
             EGitCommandList<EGitCommand> eParsedHelpScrapeList = 
                 new EGitCommandList<EGitCommand>(eGitCommandList.Value);
-            
 
 
             //optionsを解析 -> synopsisの解析結果と照らし合わせて、powershellソースに組み込む
