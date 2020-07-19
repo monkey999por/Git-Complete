@@ -138,8 +138,6 @@ namespace Git_Complete.src.entity
 
             return ret;
         }
-
-        
     }
 
 

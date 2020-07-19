@@ -73,8 +73,8 @@ namespace Git_Complete
             EGitCommandList<EGitCommand> eParsedHelpScrapeList = 
                 new EGitCommandList<EGitCommand>(eGitCommandList.Value);
 
-
-
+            GitEntityParser gitEntityParser = new GitEntityParser();
+            gitEntityParser.ShapSynopsisCommonAll(eParsedHelpScrapeList.Value);
 
 
 
