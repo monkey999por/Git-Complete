@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Git_Complete.function.parser;
 using Git_Complete.src.parser;
 using Git_Complete.src.props;
+using Git_Complete.src.exception;
 
 namespace Git_Complete
 {
@@ -70,15 +71,37 @@ namespace Git_Complete
 
 
             //個別解析をする
-            EGitCommandList<EGitCommand> eParsedHelpScrapeList = 
+            EGitCommandList<EGitCommand> eParsedHelpScrapeList =
                 new EGitCommandList<EGitCommand>(eGitCommandList.Value);
 
             GitEntityParser gitEntityParser = new GitEntityParser();
-            gitEntityParser.ShapSynopsisCommonAll(eParsedHelpScrapeList.Value);
+
+            try
+            {
+                //test
+                var test = new EGitCommandList<EGitCommand>();
+                test.Value = new List<EGitCommand>(eParsedHelpScrapeList.Value);
+                test.Value = gitEntityParser.ShapSynopsisCommonAll(eParsedHelpScrapeList.Value);
+
+                StringBuilder sbbase = eParsedHelpScrapeList.OutEntity(new string[] { "add" }, isOutOptions: false);
+                StringBuilder sbshap = test.OutEntity(new string[] { "add" }, isOutOptions: false);
 
 
+                //test -> 比較用
+                File.WriteAllText(PathProps.OUT_DIR + nameof(sbbase) + ".txt", sbbase.ToString());
+                File.WriteAllText(PathProps.OUT_DIR + nameof(sbshap) + ".txt", sbshap.ToString());
 
-
+            }
+            catch (MyProcessFailureException<EGitCommand> e)
+            {
+                Console.WriteLine(e.message);
+                Console.WriteLine(e.errorObject.command);
+                foreach (var synopsis in e.errorObject.synopsis)
+                {
+                    Console.WriteLine(synopsis);
+                }
+                
+            }
 
 
             //optionsを解析 -> synopsisの解析結果と照らし合わせて、powershellソースに組み込む

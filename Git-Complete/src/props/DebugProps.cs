@@ -17,7 +17,7 @@ namespace Git_Complete.src.props
         /// デバッグ時の挙動は主に作業用のコンソール出力、ファイル出力のみ
         /// アプリの本仕様には組み込まない。
         /// </summary>
-        public const bool DEGUB_MODE = true;
+        public const bool DEGUB_MODE = false;
 
     }
 }

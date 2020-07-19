@@ -21,7 +21,7 @@ namespace Git_Complete.src.parser
         /// <returns></returns>
         private EGitCommand ShapSynopsisCommon(EGitCommand _in)
         {
-            return null;
+            return _in;
         }
 
         /// <summary>
