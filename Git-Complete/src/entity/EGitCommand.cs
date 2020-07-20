@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
-using System.Security.Claims;
 using System.Text;
 
 namespace Git_Complete.src.entity

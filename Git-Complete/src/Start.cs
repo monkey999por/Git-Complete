@@ -1,15 +1,13 @@
-﻿using System;
-using Git_Complete.src;
+﻿using Git_Complete.function.parser;
 using Git_Complete.src.entity;
-using System.Collections.Generic;
+using Git_Complete.src.exception;
 using Git_Complete.src.function.common;
-using System.Text;
-using System.IO;
-using System.Threading.Tasks;
-using Git_Complete.function.parser;
 using Git_Complete.src.parser;
 using Git_Complete.src.props;
-using Git_Complete.src.exception;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
 
 namespace Git_Complete
 {
@@ -100,7 +98,7 @@ namespace Git_Complete
                 {
                     Console.WriteLine(synopsis);
                 }
-                
+
             }
 
 

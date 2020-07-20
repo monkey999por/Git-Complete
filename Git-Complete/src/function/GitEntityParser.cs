@@ -1,31 +1,30 @@
-﻿using Git_Complete.src.function.common;
-using Git_Complete.src.entity;
-using Git_Complete.src.props;
-using Git_Complete.src.entity.temp;
+﻿using Git_Complete.src.entity;
+using Git_Complete.src.exception;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using Git_Complete.src.exception;
 
 namespace Git_Complete.src.parser
 {
     class GitEntityParser
     {
         /// <summary>
-        /// sinopsisの共通解析。解析のルールは下記を参照。（基本的にLinuxのmanページのsynopsisと同じ形式。斜め文字や太字でのルールはない）
-        /// ※synopsisに共通的なルールはないため、いったんGitのsynopsisをベースに解析する。
+        /// sinopsisの共通整形。整形のルールは下記を参照。（基本的にLinuxのmanページのsynopsisと同じ形式。斜め文字や太字でのルールはない）
+        /// ※synopsisに共通的なルールはないため、いったんGitのsynopsisをベースに整形する。
         /// <see cref="https://qiita.com/mather314/items/a53da94359d54443bcdc"/>
         /// </summary>
         /// <param name="_in"></param>
         /// <returns></returns>
         private EGitCommand ShapSynopsisCommon(EGitCommand _in)
         {
+            //まずは。。。。
+
+
+            //test
             return _in;
         }
 
         /// <summary>
-        /// sinopsisの共通解析呼び出しサブルーチン。
+        /// sinopsisの共通整形呼び出しサブルーチン。
         /// 利用側では主にリストをメインで処理を行うので、下記を定義。
         /// 引数は直接使用しない（引数に対して変更を行わない）
         /// 
@@ -33,7 +32,7 @@ namespace Git_Complete.src.parser
         /// </summary>
         /// <param name="_in">基本的にEGitCommand.Valueを渡す</param>
         /// <returns></returns>
-        public List<EGitCommand> ShapSynopsisCommonAll(List<EGitCommand> _in) 
+        public List<EGitCommand> ShapSynopsisCommonAll(List<EGitCommand> _in)
         {
             if (_in is null)
             {
@@ -47,12 +46,12 @@ namespace Git_Complete.src.parser
             var ret = new List<EGitCommand>();
             EGitCommand temp;
             foreach (var item in c)
-            {   
+            {
                 temp = ShapSynopsisCommon(item);
-                if (temp is null) 
+                if (temp is null)
                 {
                     //todo -> この例外はあとでShapSynopsisCommon(item);のほうで投げるようにする
-                    throw new MyProcessFailureException<EGitCommand>("synopsis解析エラー", item);
+                    throw new MyProcessFailureException<EGitCommand>("synopsis整形エラー", item);
                 }
 
                 ret.Add(temp);

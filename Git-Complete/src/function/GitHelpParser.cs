@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using AngleSharp;
-using AngleSharp.Html.Parser;
-using System.IO;
-using Git_Complete.src.entity;
-using System.Threading.Tasks;
+﻿using AngleSharp;
 using AngleSharp.Dom;
-using AngleSharp.Html.Dom;
-using System.ComponentModel;
+using Git_Complete.src.entity;
+using System;
+using System.Collections.Generic;
 using System.Net.Http;
-using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Git_Complete.function.parser
 {

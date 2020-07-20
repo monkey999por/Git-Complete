@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-
-namespace Git_Complete.src.props
+﻿namespace Git_Complete.src.props
 {
     class DebugProps
     {

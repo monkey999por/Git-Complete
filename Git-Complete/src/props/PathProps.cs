@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Git_Complete.src.entity;
+﻿using Git_Complete.src.entity;
+using System;
 
 namespace Git_Complete.src.props
 {
