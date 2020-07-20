@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-07-17T10:32:50.708Z" agent="5.0 (Linux; Android 8.0.0; WAS-LX2J) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36" etag="ikFwT8dlYFcadm2B6Wef" version="13.4.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-07-20T23:33:53.773Z" agent="5.0 (Linux; Android 8.0.0; WAS-LX2J) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Mobile Safari/537.36" etag="qVhdUgAiSFirMIFJ8O-D" version="13.4.9" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1153" dy="399" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -21,27 +21,24 @@
         <mxCell id="eOAtrBW3Mt4_9_wZZWKc-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eOAtrBW3Mt4_9_wZZWKc-6" target="2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="450" y="530" />
-              <mxPoint x="450" y="530" />
+              <mxPoint x="220" y="590" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="aSt6UWVed7p7qFlXKZXF-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="eOAtrBW3Mt4_9_wZZWKc-6" target="aSt6UWVed7p7qFlXKZXF-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="eOAtrBW3Mt4_9_wZZWKc-6" value="Gitの公式サイトから、optionsとsynopsisを取得して、&lt;span class=&quot;pl-smi&quot; style=&quot;text-align: left ; color: rgb(36 , 41 , 46) ; text-transform: none ; text-indent: 0px ; letter-spacing: normal ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-variant: normal ; font-weight: 400 ; text-decoration: none ; word-spacing: 0px ; box-sizing: border-box&quot;&gt;gitCommandEntityListに入れる&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="170" y="370" width="100" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="eOAtrBW3Mt4_9_wZZWKc-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="2" edge="1">
+        <mxCell id="eOAtrBW3Mt4_9_wZZWKc-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="220" y="610" as="targetPoint" />
             <Array as="points">
               <mxPoint x="220" y="590" />
             </Array>
+            <mxPoint x="470" y="590" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="2" value="公式helpのスクレイピングで取得できなかったやつは、個別編集する。（sysnopsisが取れなかったり、オプションじゃないやつがオプションに入ってたり）" style="whiteSpace=wrap;html=1;rounded=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="570" y="490" width="220" height="110" as="geometry" />
+          <mxGeometry x="570" y="490" width="220" height="170" as="geometry" />
         </mxCell>
         <mxCell id="eOAtrBW3Mt4_9_wZZWKc-9" value="&lt;span class=&quot;pl-en&quot; style=&quot;color: rgb(111, 66, 193); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; word-spacing: 0px; box-sizing: border-box;&quot;&gt;List&lt;/span&gt;&lt;span style=&quot;color: rgb(36, 41, 46); text-transform: none; text-indent: 0px; letter-spacing: normal; text-decoration: none; word-spacing: 0px; display: inline; float: none; overflow-wrap: normal; background-color: rgb(255, 255, 255);&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;pl-en&quot; style=&quot;color: rgb(111, 66, 193); text-transform: none; text-indent: 0px; letter-spacing: normal; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 400; text-decoration: none; word-spacing: 0px; box-sizing: border-box;&quot;&gt;GitCommandEntity&lt;/span&gt;&lt;span style=&quot;color: rgb(36, 41, 46); text-transform: none; text-indent: 0px; letter-spacing: normal; text-decoration: none; word-spacing: 0px; display: inline; float: none; overflow-wrap: normal; background-color: rgb(255, 255, 255);&quot;&gt;&amp;gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;horizontal=1;verticalAlign=top;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="430" y="190" width="360" height="30" as="geometry" />
@@ -85,7 +82,7 @@
         <mxCell id="aSt6UWVed7p7qFlXKZXF-4" value="エンテティ書き出し&lt;br&gt;そのまま、コマンドのみ、メンンエンティィに保存" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="170" y="610" width="100" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="zEEIrptdK6lAK0V_8D_--3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="aSt6UWVed7p7qFlXKZXF-6" target="zEEIrptdK6lAK0V_8D_--2">
+        <mxCell id="zEEIrptdK6lAK0V_8D_--3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="aSt6UWVed7p7qFlXKZXF-6" target="zEEIrptdK6lAK0V_8D_--2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="aSt6UWVed7p7qFlXKZXF-6" value="ParsedEntityをもとに、共通的な解析(synopsisのルールに従って解析する)" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -109,8 +106,11 @@
         <mxCell id="aSt6UWVed7p7qFlXKZXF-17" value="........." style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="480" y="820" width="320" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="zEEIrptdK6lAK0V_8D_--2" value="オプションごとの個別解析を行う。" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="zEEIrptdK6lAK0V_8D_--2" value="オプションごとの個別解析を行う。" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="170" y="1050" width="100" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="eOAtrBW3Mt4_9_wZZWKc-6" value="Gitの公式サイトから、optionsとsynopsisと説明を取得して、&lt;span class=&quot;pl-smi&quot; style=&quot;text-align: left ; color: rgb(36 , 41 , 46) ; text-transform: none ; text-indent: 0px ; letter-spacing: normal ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-variant: normal ; font-weight: 400 ; text-decoration: none ; word-spacing: 0px ; box-sizing: border-box&quot;&gt;gitCommandEntityListに入れる&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="170" y="370" width="100" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
