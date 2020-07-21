@@ -142,5 +142,8 @@
             "send-pack",
             "update-server-info",
             "stage" };
+
+        public const int ALL_COMMAND_COUNT = 136;
+
     }
 }

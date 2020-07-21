@@ -25,6 +25,11 @@ namespace Git_Complete.function.parser
             _helpDocsDom = GetHelpDocsDomDic(CommonProps.ALL_COMMAND);
         }
 
+        /// <summary>
+        /// 引数のコマンド名と一致するヘルプファイルのDomを返す
+        /// </summary>
+        /// <param name="command">key</param>
+        /// <returns></returns>
         public static IDocument GetHelpDocsDom(string command)
         {
             if (_helpDocsDom is null)
@@ -40,6 +45,11 @@ namespace Git_Complete.function.parser
             return _helpDocsDom[command];
         }
 
+        /// <summary>
+        /// 引数のコマンド名配列と一致するヘルプファイル辞書のDomを返す
+        /// </summary>
+        /// <param name="commands">key</param>
+        /// <returns></returns>
         public static Dictionary<String, IDocument> GetHelpDocsDomDic(string[] commands)
         {
             var ret = new Dictionary<String, IDocument>();
@@ -111,6 +121,24 @@ namespace Git_Complete.function.parser
                     synopsis.Add(e.TextContent);
                 entity.synopsis = synopsis;
             }
+            return ret;
+        }
+
+        public EGitCommand GetSynopsis(EGitCommand _in)
+        {
+            var ret = new EGitCommand(_in);
+
+            //ヘルプファイルのDomを取得
+            var document = GetHelpDocsDom(ret.command);
+
+            IHtmlCollection<IElement> synopsisList = document.QuerySelector("#_synopsis").ParentElement.QuerySelectorAll(".content");
+
+            List<string> synopsis = new List<string>();
+
+            foreach (var e in synopsisList)
+                synopsis.Add(e.TextContent);
+            ret.synopsis = synopsis;
+
             return ret;
         }
 

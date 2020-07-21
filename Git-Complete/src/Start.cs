@@ -29,7 +29,7 @@ namespace Git_Complete
             FileCommon.OutFileToXml<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_XML_Path);
 
             //test -> コマンド数は136個
-            if (eGitCommandList.Value.Count != 136)
+            if (eGitCommandList.Value.Count != CommonProps.ALL_COMMAND_COUNT)
                 throw new Exception("コマンドの数があってない");
 
             //jsonのシリアライズ・デシリアライズのテスト
@@ -43,6 +43,23 @@ namespace Git_Complete
                 FileCommon.OutFileToXml<List<EGitCommand>>(temp, PathProps.HELP_SCRAPE_XML_Path);
 
             }
+
+
+            //test -> swap
+            if (DebugProps.DEGUB_MODE)
+            {
+                /*
+                var test = new EGitCommand("add");
+                test.options.Add("nnnnn");
+                test.options.Add("--gggg");
+                test.synopsis.Add("-ghgh");
+
+                eGitCommandList.Swap(test);
+
+                FileCommon.OutFileToXml<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_XML_Path);
+                */
+            }
+
 
             //Gitの公式ヘルプサイトからスクレイピングする用
             if (DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP)

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Git_Complete.src.exception;
+using Git_Complete.src.props;
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
@@ -52,21 +54,23 @@ namespace Git_Complete.src.entity
         /// 
         /// <param name="keyCommand">Gitのコマンド名。例:add , commit</param>
         /// <returns></returns>
-        public EGitCommand GetEntityByCommand(String keyCommand)
+        public (int index, EGitCommand eGitCommand) GetEntityByCommand(String keyCommand)
         {
             if (this.value is null)
             {
                 throw new Exception(nameof(this.value) + ":" + typeof(T) + "がnullです");
             }
 
+            var index = 0;
             foreach (var entity in this.value)
             {
                 if (entity.command.Equals(keyCommand))
                 {
-                    return entity;
+                    return (index, entity);
                 }
+                index++;
             }
-            return null;
+            return (0, null);
         }
 
         /// <summary>
@@ -94,7 +98,7 @@ namespace Git_Complete.src.entity
             EGitCommand? target;
             foreach (var command in commandAry)
             {
-                target = GetEntityByCommand(command) ?? new EGitCommand();
+                target = GetEntityByCommand(command).eGitCommand ?? new EGitCommand();
 
                 Console.WriteLine("■" + target.command);
                 outText.Append("■" + target.command + Environment.NewLine);
@@ -135,9 +139,29 @@ namespace Git_Complete.src.entity
         {
             List<EGitCommand> ret = new List<EGitCommand>();
             foreach (var command in keyCommands)
-                ret.Add(GetEntityByCommand(command));
+                ret.Add(GetEntityByCommand(command).eGitCommand);
 
             return ret;
+        }
+
+        /// <summary>
+        /// <see cref="EGitCommandList.value"/>の中から引数で渡されたオブジェクトの<see cref="EGitCommand.command"/>に
+        /// 一致するオブジェクトを見つけ、取り替えます（一致した元のオブジェクトを削除し、引数のオブジェクトで入れ替える）
+        /// </summary>
+        public void Swap(T swapObj)
+        {
+            //確認用
+            if (this.Value.Count != CommonProps.ALL_COMMAND_COUNT)
+                throw new MyProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
+
+            var result = GetEntityByCommand(swapObj.command);
+            this.Value.RemoveAt(result.index);
+            this.Value.Add(swapObj);
+
+            //確認用
+            if (this.Value.Count != CommonProps.ALL_COMMAND_COUNT)
+                throw new MyProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
+
         }
     }
 
@@ -170,6 +194,18 @@ namespace Git_Complete.src.entity
         public EGitCommand(string command)
         {
             this.command = command;
+        }
+
+        /// <summary>
+        /// Deep Copy
+        /// </summary>
+        /// <param name="_base">base object</param>
+        public EGitCommand(EGitCommand _base)
+        {
+            this.command = _base.command;
+            this.synopsis = new List<string>(_base.synopsis);
+            this.options = new List<string>(_base.options);
+            this.optionsDescription = new List<string>(_base.optionsDescription);
         }
     }
 }
