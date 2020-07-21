@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Git_Complete.src.entity
@@ -26,9 +27,11 @@ namespace Git_Complete.src.entity
     /// <see cref="EGitCommand"/>
     /// <typeparam name="T"></typeparam>
     [Serializable]
+    [DataContract]
     class EGitCommandList<T> where T : EGitCommand
     {
         //主にgitの公式ヘルプからスクレイピングした素のオプションやシナプスを保持
+        [DataMember]
         private List<T> value = new List<T>();
 
         public List<T> Value
@@ -148,15 +151,19 @@ namespace Git_Complete.src.entity
     class EGitCommand
     {
         //gitのコマンドを保持. primary key
+        [DataMember]
         public string? command;
 
         //各gitコマンドで使用できるSYNOPSISを保持する. 
+        [DataMember]
         public List<string> synopsis = new List<string>();
 
         //各gitコマンドで使用できるオプションを保持する. 
+        [DataMember]
         public List<string> options = new List<string>();
 
         //各gitコマンドで使用できるオプションの説明を保持する
+        [DataMember]
         public List<string> optionsDescription = new List<string>();
 
         public EGitCommand() { }

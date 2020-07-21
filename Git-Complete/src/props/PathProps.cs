@@ -12,7 +12,9 @@ namespace Git_Complete.src.props
         public const string INSTANCE_DIR = @"C:\develop\Git-Complete\Git-Complete\instance\";
 
 
-        public const String HELP_SCRAPE_Path = PathProps.INSTANCE_DIR + nameof(EGitCommand) + "_HelpScrapeList.xml";
+        public const String HELP_SCRAPE_XML_Path = PathProps.INSTANCE_DIR + nameof(EGitCommand) + "_HelpScrapeList.xml";
+
+        public const String HELP_SCRAPE_JSON_Path = PathProps.INSTANCE_DIR + nameof(EGitCommand) + "_HelpScrapeList.JSON";
 
 
         /// <summary>

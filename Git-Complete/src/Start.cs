@@ -23,14 +23,26 @@ namespace Git_Complete
             EGitCommandList<EGitCommand> eGitCommandList = new EGitCommandList<EGitCommand>();
 
             //gitコマンドとオプションのリストを生成する。
-            eGitCommandList.Value = FileCommon.GetInstanceFrom<List<EGitCommand>>(PathProps.HELP_SCRAPE_Path);
+            eGitCommandList.Value = FileCommon.GetInstanceFromXml<List<EGitCommand>>(PathProps.HELP_SCRAPE_XML_Path);
 
             //読み込み後にファイルにおかしなもしコードの文字が付加されるため、再書き込み
-            FileCommon.OutFileTo<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_Path);
+            FileCommon.OutFileToXml<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_XML_Path);
 
             //test -> コマンド数は136個
-            if (!(eGitCommandList.Value.Count == 136))
+            if (eGitCommandList.Value.Count != 136)
                 throw new Exception("コマンドの数があってない");
+
+            //jsonのシリアライズ・デシリアライズのテスト
+            if (DebugProps.DEGUB_MODE)
+            {
+                FileCommon.OutFileToJson<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_JSON_Path);
+
+                var temp = FileCommon.GetInstanceFromJson<List<EGitCommand>>(PathProps.HELP_SCRAPE_JSON_Path);
+
+                //読み込み後にファイルにおかしなもしコードの文字が付加されるため、再書き込み
+                FileCommon.OutFileToXml<List<EGitCommand>>(temp, PathProps.HELP_SCRAPE_XML_Path);
+
+            }
 
             //Gitの公式ヘルプサイトからスクレイピングする用
             if (DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP)
@@ -50,7 +62,7 @@ namespace Git_Complete
                 eGitCommandList.Value = helpParser.GetOptionsAll(eGitCommandList.Value);
 
                 //xml出力
-                FileCommon.OutFileTo<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_Path);
+                FileCommon.OutFileToXml<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_XML_Path);
             }
 
             //debug -> EGitCommandListの中身を出力
