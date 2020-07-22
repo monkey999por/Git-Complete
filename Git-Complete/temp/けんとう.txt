@@ -1,7 +1,3 @@
-todo -> swap関数で存在しないコマンドが来たらthrow
-
-
-
 c#からPlantUMLに成形してくれるツールがあるっぽいのでこれ使ってみる
 https://marketplace.visualstudio.com/items?itemName=pierre3.csharp-to-plantuml
 

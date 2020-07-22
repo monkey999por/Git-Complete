@@ -155,6 +155,9 @@ namespace Git_Complete.src.entity
                 throw new MyProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
 
             var result = GetEntityByCommand(swapObj.command);
+            if (result.eGitCommand is null)
+                throw new Exception("gitのコマンドではありません");
+
             this.Value.RemoveAt(result.index);
             this.Value.Add(swapObj);
 
