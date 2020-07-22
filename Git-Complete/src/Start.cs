@@ -33,7 +33,7 @@ namespace Git_Complete
                 throw new Exception("コマンドの数があってない");
 
             //jsonのシリアライズ・デシリアライズのテスト
-            if (DebugProps.DEGUB_MODE)
+            if (DebugProps.DEBUG_MODE)
             {
                 FileCommon.OutFileToJson<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_JSON_Path);
 
@@ -46,7 +46,7 @@ namespace Git_Complete
 
 
             //test -> swap
-            if (DebugProps.DEGUB_MODE)
+            if (DebugProps.DEBUG_MODE)
             {
                 /*
                 var test = new EGitCommand("add");
@@ -83,7 +83,7 @@ namespace Git_Complete
             }
 
             //debug -> EGitCommandListの中身を出力
-            if (DebugProps.DEGUB_MODE)
+            if (DebugProps.DEBUG_MODE)
             {
                 string[] inAry = new string[eGitCommandList.Value.Count];
                 var i = 0;
