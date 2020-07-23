@@ -47,8 +47,6 @@ namespace Git_Complete.src.function.scrape
 
         public void ScrapeBy(EGitCommandList<EGitCommand> _in)
         {
-
-
             //foreachだとループ元が変更されるので
             for (int i = 0; i < _in.Value.Count; i++)
             {
