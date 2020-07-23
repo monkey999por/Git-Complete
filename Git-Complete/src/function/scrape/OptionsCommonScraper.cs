@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Git_Complete.src.function.scrape
 {
-    class SynopsisCommonScraper : IScraper
+    class OptionsCommonScraper : IScraper
     {
         private static GitHelpDocs gitHelpDocs = new GitHelpDocs();
 
@@ -15,11 +15,16 @@ namespace Git_Complete.src.function.scrape
             //ヘルプファイルのDomを取得
             var document = gitHelpDocs.GetDom(command);
 
-            IHtmlCollection<IElement> synopsis = document.QuerySelector("#_synopsis").ParentElement.QuerySelectorAll(".content");
+            //get synopsis
+            var temp = document.QuerySelector("#_options");
+            if (temp is null)
+                return null;
+
+            IHtmlCollection<IElement> options = temp.ParentElement.QuerySelectorAll(".hdlist1");
 
             var ret = new List<string>();
 
-            foreach (var e in synopsis)
+            foreach (var e in options)
             {
                 ret.Add(e.TextContent);
             }
@@ -29,19 +34,16 @@ namespace Git_Complete.src.function.scrape
         public EGitCommand ScrapeBy(EGitCommand _in)
         {
             var ret = new EGitCommand(_in);
-            ret.synopsis = ScrapeBy(ret.command);
+            ret.options = ScrapeBy(ret.command);
             return ret;
         }
 
         public void ScrapeBy(EGitCommandList<EGitCommand> _in)
         {
-
-
             //foreachだとループ元が変更されるので
             for (int i = 0; i < _in.Value.Count; i++)
             {
-                var temp = ScrapeBy(_in.Value[i]);
-                _in.Swap(temp);
+                _in.Swap(ScrapeBy(_in.Value[i]));
             }
         }
     }

@@ -1,7 +1,7 @@
-﻿using Git_Complete.function.parser;
-using Git_Complete.src.entity;
+﻿using Git_Complete.src.entity;
 using Git_Complete.src.exception;
 using Git_Complete.src.function.common;
+using Git_Complete.src.function.scrape;
 using Git_Complete.src.parser;
 using Git_Complete.src.props;
 using System;
@@ -20,10 +20,11 @@ namespace Git_Complete
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            EGitCommandList<EGitCommand> eGitCommandList = new EGitCommandList<EGitCommand>();
-
-            //gitコマンドとオプションのリストを生成する。
-            eGitCommandList.Value = FileCommon.GetInstanceFromXml<List<EGitCommand>>(PathProps.HELP_SCRAPE_XML_Path);
+            EGitCommandList<EGitCommand> eGitCommandList = new EGitCommandList<EGitCommand>
+            {
+                //gitコマンドとオプションのリストを生成する。
+                Value = FileCommon.GetInstanceFromXml<List<EGitCommand>>(PathProps.HELP_SCRAPE_XML_Path)
+            };
 
             //読み込み後にファイルにおかしなもしコードの文字が付加されるため、再書き込み
             FileCommon.OutFileToXml<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_XML_Path);
@@ -70,13 +71,13 @@ namespace Git_Complete
                     eGitCommandList.Value.Add(new EGitCommand(command));
                 }
 
-                var helpParser = new GitHelpParser();
-
                 //git-scm.comから、synopsisを取得する（html parserを使用）
-                eGitCommandList.Value = helpParser.GetSynopsisAll(eGitCommandList.Value);
+                var synopsisCommonScraper = new SynopsisCommonScraper();
+                synopsisCommonScraper.ScrapeBy(eGitCommandList);
 
                 //git-scm.comから、オプションの一覧を取得する（html parserを使用）
-                eGitCommandList.Value = helpParser.GetOptionsAll(eGitCommandList.Value);
+                var optionsCommonScraper = new OptionsCommonScraper();
+                optionsCommonScraper.ScrapeBy(eGitCommandList);
 
                 //xml出力
                 FileCommon.OutFileToXml<List<EGitCommand>>(eGitCommandList.Value, PathProps.HELP_SCRAPE_XML_Path);

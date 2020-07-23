@@ -30,7 +30,7 @@ namespace Git_Complete.src.entity
     /// <typeparam name="T"></typeparam>
     [Serializable]
     [DataContract]
-    class EGitCommandList<T> where T : EGitCommand
+    public class EGitCommandList<T> where T : EGitCommand
     {
         //主にgitの公式ヘルプからスクレイピングした素のオプションやシナプスを保持
         [DataMember]
@@ -159,7 +159,7 @@ namespace Git_Complete.src.entity
                 throw new Exception("gitのコマンドではありません");
 
             this.Value.RemoveAt(result.index);
-            this.Value.Add(swapObj);
+            this.Value.Insert(result.index, swapObj);
 
             //確認用
             if (this.Value.Count != CommonProps.ALL_COMMAND_COUNT)
@@ -175,7 +175,7 @@ namespace Git_Complete.src.entity
     ///（デバッグコード等での一時的な使用はあるが、正規の使い方ではない） 
     /// </summary>
     [Serializable]
-    class EGitCommand
+    public class EGitCommand
     {
         //gitのコマンドを保持. primary key
         [DataMember]
@@ -205,10 +205,23 @@ namespace Git_Complete.src.entity
         /// <param name="_base">base object</param>
         public EGitCommand(EGitCommand _base)
         {
+            if (_base.command is null)
+            {
+                throw new MyProcessFailureException<EGitCommand>(
+                    "コマンドがnullです",
+                    _base
+                    );
+            }
+
+            //null対策
+            var synopsis = _base.synopsis ?? new List<string>();
+            var options = _base.options ?? new List<string>();
+            var optionsDescription = _base.optionsDescription ?? new List<string>();
+
             this.command = _base.command;
-            this.synopsis = new List<string>(_base.synopsis);
-            this.options = new List<string>(_base.options);
-            this.optionsDescription = new List<string>(_base.optionsDescription);
+            this.synopsis = new List<string>(synopsis);
+            this.options = new List<string>(options);
+            this.optionsDescription = new List<string>(optionsDescription);
         }
     }
 }

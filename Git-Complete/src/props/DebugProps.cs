@@ -5,7 +5,7 @@
         /// <summary>
         /// instanceの作成時に、gitの公式から読み込むか
         /// </summary>
-        public const bool IS_MAKE_ENTITY_FROM_GIT_HELP = true   ;
+        public const bool IS_MAKE_ENTITY_FROM_GIT_HELP = true;
 
         /// <summary>
         /// デバッグモードを指定する。

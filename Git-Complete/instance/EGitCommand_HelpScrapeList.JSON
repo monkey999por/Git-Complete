@@ -77,7 +77,7 @@
     "synopsis": [
       "git rerere [clear|forget <pathspec>|diff|remaining|status|gc]"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -204,7 +204,7 @@
     "synopsis": [
       "git merge-tree <base-tree> <branch1> <branch2>"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -268,7 +268,7 @@
     "synopsis": [
       "git whatchanged <option>…​"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -1471,7 +1471,7 @@
     "synopsis": [
       "git citool"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -1894,7 +1894,7 @@
     "synopsis": [
       "git gui [<command>] [arguments]"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -2335,7 +2335,7 @@
     "synopsis": [
       "git sparse-checkout <subcommand> [options]"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -2679,7 +2679,7 @@
     "synopsis": [
       "git get-tar-commit-id"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -3335,7 +3335,7 @@
     "synopsis": [
       "git show-index"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -3627,7 +3627,7 @@
     "synopsis": [
       "git mktag"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -3755,7 +3755,7 @@
     "synopsis": [
       "git update-ref [-m <reason>] [--no-deref] (-d <ref> [<oldvalue>] | [--create-reflog] <ref> <newvalue> [<oldvalue>] | --stdin [-z])"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -3786,7 +3786,7 @@
     "synopsis": [
       "git merge-one-file"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -3877,7 +3877,7 @@
     "synopsis": [
       "\ngit credential <fill|approve|reject>\n"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -4090,7 +4090,7 @@
     "synopsis": [
       "git http-backend"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -4122,7 +4122,7 @@
     "synopsis": [
       "git update-server-info"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   },
   {
@@ -4130,7 +4130,7 @@
     "synopsis": [
       "git stage args…​"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": []
   }
 ]

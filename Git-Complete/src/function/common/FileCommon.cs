@@ -2,7 +2,6 @@
 using System;
 using System.IO;
 using System.Runtime.Serialization;
-using System.Runtime.Serialization.Json;
 using System.Xml;
 
 namespace Git_Complete.src.function.common

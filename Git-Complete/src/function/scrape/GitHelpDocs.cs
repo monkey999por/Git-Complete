@@ -1,6 +1,5 @@
 ﻿using AngleSharp;
 using AngleSharp.Dom;
-using Git_Complete.src.entity;
 using Git_Complete.src.props;
 using System;
 using System.Collections.Generic;
@@ -9,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Git_Complete.function.parser
 {
-    class GitHelpDocs
+    public class GitHelpDocs
     {
         private const String HELP_URL_BASE = @"https://git-scm.com/docs/";
 
@@ -22,7 +21,11 @@ namespace Git_Complete.function.parser
 
         public GitHelpDocs()
         {
-            domDic = GetHelpDocsDomDic(CommonProps.ALL_COMMAND);
+            if (domDic is null)
+            {
+                domDic = GetDomDic(CommonProps.ALL_COMMAND);
+            }
+
         }
 
         /// <summary>
@@ -30,14 +33,14 @@ namespace Git_Complete.function.parser
         /// </summary>
         /// <param name="command">key</param>
         /// <returns></returns>
-        public static IDocument GetHelpDocsDom(string command)
+        public IDocument GetDom(string command)
         {
             if (domDic is null)
             {
                 //ヘルプファイルのDomを取得
                 Task<Dictionary<String, IDocument>> task = (Task<Dictionary<String, IDocument>>)Task.Run(() =>
                 {
-                    return GitHelpDocs.CreateHelpDocsDomAll();
+                    return CreateDomAll();
                 });
                 domDic = task.Result;
             }
@@ -50,12 +53,12 @@ namespace Git_Complete.function.parser
         /// </summary>
         /// <param name="commands">key</param>
         /// <returns></returns>
-        public static Dictionary<String, IDocument> GetHelpDocsDomDic(string[] commands)
+        public Dictionary<String, IDocument> GetDomDic(string[] commands)
         {
             var ret = new Dictionary<String, IDocument>();
             foreach (var command in commands)
             {
-                ret.Add(command, GetHelpDocsDom(command));
+                ret.Add(command, GetDom(command));
             }
             return ret;
         }
@@ -64,7 +67,7 @@ namespace Git_Complete.function.parser
         /// Gitの公式Help(https://git-scm.com/docs/git-{command})のコマンドごとのDomを取得し、フィールド:<c>_helpDocsDom</c>に保存する
         /// </summary>
         /// <returns></returns>
-        private static async Task<Dictionary<string, IDocument>> CreateHelpDocsDomAll()
+        private async Task<Dictionary<string, IDocument>> CreateDomAll()
         {
             if (domDic != null) { return domDic; }
 
