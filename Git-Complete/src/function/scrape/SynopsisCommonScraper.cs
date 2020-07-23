@@ -10,10 +10,8 @@ namespace Git_Complete.src.function.scrape
     /// メソッド詳細はインターフェイス参照
     /// <see cref="IScraper"/>
     /// </summary>
-    class SynopsisCommonScraper : IScraper
+    class SynopsisCommonScraper : CommonScraper
     {
-        private static GitHelpDocs gitHelpDocs = new GitHelpDocs();
-
         /// <summary>
         /// ■取得ルール
         /// 取得URL : https://git-scm.com/docs/git-{command}(Dom)
@@ -22,7 +20,7 @@ namespace Git_Complete.src.function.scrape
         /// </summary>
         /// <param name="command"></param>
         /// <returns></returns>
-        public List<string> ScrapeBy(string command)
+        public override List<string> ScrapeBy(string command)
         {
             //ヘルプファイルのDomを取得
             var document = gitHelpDocs.GetDom(command);
@@ -38,21 +36,11 @@ namespace Git_Complete.src.function.scrape
             return ret;
         }
 
-        public EGitCommand ScrapeBy(EGitCommand _in)
+        public override EGitCommand ScrapeBy(EGitCommand _in)
         {
             var ret = new EGitCommand(_in);
             ret.synopsis = ScrapeBy(ret.command);
             return ret;
-        }
-
-        public void ScrapeBy(EGitCommandList<EGitCommand> _in)
-        {
-            //foreachだとループ元が変更されるので
-            for (int i = 0; i < _in.Value.Count; i++)
-            {
-                var temp = ScrapeBy(_in.Value[i]);
-                _in.Swap(temp);
-            }
         }
     }
 }
