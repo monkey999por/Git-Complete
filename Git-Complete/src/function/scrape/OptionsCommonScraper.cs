@@ -6,10 +6,22 @@ using System.Collections.Generic;
 
 namespace Git_Complete.src.function.scrape
 {
+    /// <summary>
+    /// メソッド詳細はインターフェイス参照
+    /// <see cref="IScraper"/>
+    /// </summary>
     class OptionsCommonScraper : IScraper
     {
         private static GitHelpDocs gitHelpDocs = new GitHelpDocs();
 
+        /// <summary>
+        /// ■取得ルール
+        /// 取得URL : https://git-scm.com/docs/git-{command}(Dom)
+        /// {id: _options}を持った要素の親要素の中で、{class: .hdlist1}を持った項目すべて
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
         public List<string> ScrapeBy(string command)
         {
             //ヘルプファイルのDomを取得
