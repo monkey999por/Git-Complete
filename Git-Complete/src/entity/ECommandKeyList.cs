@@ -3,7 +3,6 @@ using Git_Complete.src.props;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
 
 namespace Git_Complete.src.entity
 {
@@ -17,7 +16,7 @@ namespace Git_Complete.src.entity
     /// <code>
     /// EGitCommandList<EGitCommand> eGitCommandList = new EGitCommandList<EGitCommand>();
     /// 
-    /// //<see cref="value"/>は<see cref="List{EGitCommand}"/>型。メソッドメンバが<see cref="value"/>フィールドに値が設定されていることを前提に作られているので、下記のように使用すること
+    /// //<see cref="Value"/>は<see cref="List{EGitCommand}"/>型。メソッドメンバが<see cref="Value"/>フィールドに値が設定されていることを前提に作られているので、下記のように使用すること
     /// eGitCommandList.Value = FileCommon.GetInstanceFrom<List<EGitCommand>>(entityPath);
     /// 
     /// //こういうのは基本的にNG
@@ -26,26 +25,19 @@ namespace Git_Complete.src.entity
     /// eGitCommandList.Value = temp;
     /// </code>
     /// </summary>
-    /// <see cref="ECommandKey"/>
+    /// <see cref="ECommandKeyScrape"/>
     /// <typeparam name="T"></typeparam>
     [Serializable]
     [DataContract]
-    public class ECommandKeyList<T> where T : ECommandKey
+    public class ECommandKeyList<T> : IECommandKeyList<T> where T : ECommandKey
     {
         //主にgitの公式ヘルプからスクレイピングした素のオプションやシナプスを保持
         [DataMember]
-        private List<T> value = new List<T>();
-
-        public List<T> Value
-        {
-            get { return this.value; }
-            set { this.value = value; }
-        }
-
+        public List<T> Value { get; set; }
         public ECommandKeyList() { }
         public ECommandKeyList(List<T> value)
         {
-            this.value = new List<T>((List<T>)value);
+            this.Value = new List<T>((List<T>)value);
         }
 
         /// <summary>
@@ -54,15 +46,15 @@ namespace Git_Complete.src.entity
         /// 
         /// <param name="keyCommand">Gitのコマンド名。例:add , commit</param>
         /// <returns></returns>
-        public (int index, ECommandKey eGitCommand) GetEntityByCommand(String keyCommand)
+        public (int index, T eGitCommand) GetEntityByCommand(String keyCommand)
         {
-            if (this.value is null)
+            if (this.Value is null)
             {
-                throw new Exception(nameof(this.value) + ":" + typeof(T) + "がnullです");
+                throw new Exception(nameof(this.Value) + ":" + typeof(T) + "がnullです");
             }
 
             var index = 0;
-            foreach (var entity in this.value)
+            foreach (var entity in this.Value)
             {
                 if (entity.command.Equals(keyCommand))
                 {
@@ -79,9 +71,9 @@ namespace Git_Complete.src.entity
         /// 
         /// <param name="keyCommands">Gitのコマンド名配列。例:new String[]{"add", "commin","pull"}</param>
         /// <returns></returns>
-        public List<ECommandKey> GetEntityListByCommands(String[] keyCommands)
+        public List<T> GetEntityListByCommands(String[] keyCommands)
         {
-            List<ECommandKey> ret = new List<ECommandKey>();
+            List<T> ret = new List<T>();
             foreach (var command in keyCommands)
                 ret.Add(GetEntityByCommand(command).eGitCommand);
 
@@ -89,25 +81,25 @@ namespace Git_Complete.src.entity
         }
 
         /// <summary>
-        /// <see cref="ECommandKeyList.value"/>の中から引数で渡されたオブジェクトの<see cref="ECommandKey.command"/>に
+        /// <see cref="ECommandKeyList.value"/>の中から引数で渡されたオブジェクトの<see cref="ECommandKeyScrape.command"/>に
         /// 一致するオブジェクトを見つけ、取り替えます（一致した元のオブジェクトを削除し、引数のオブジェクトで入れ替える）
         /// </summary>
         public void Swap(T swapObj)
         {
             //確認用
             if (this.Value.Count != CommonProps.ALL_COMMAND_COUNT)
-                throw new MyProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
+                throw new ObjectProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
 
-            var target = GetEntityByCommand(swapObj.command);
-            if (target.eGitCommand is null)
-                throw new Exception("gitのコマンドではありません");
+            var (index, eGitCommand) = GetEntityByCommand(swapObj.command);
+            if (eGitCommand is null)
+                throw new ObjectProcessFailureException<T>("gitのコマンドではありません", eGitCommand);
 
-            this.Value.RemoveAt(target.index);
-            this.Value.Insert(target.index, (T)new ECommandKey(swapObj));
+            this.Value.RemoveAt(index);
+            this.Value.Insert(index, swapObj);
 
             //確認用
             if (this.Value.Count != CommonProps.ALL_COMMAND_COUNT)
-                throw new MyProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
+                throw new ObjectProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
 
         }
 
@@ -120,10 +112,10 @@ namespace Git_Complete.src.entity
             //重複チェック
             if (GetEntityByCommand(addObj.command).eGitCommand != null)
             {
-                throw new MyProcessFailureException<T>("コマンドが重複してます。", addObj);
-            } 
-            
-            this.Value.Add((T)new ECommandKey(addObj));
+                throw new ObjectProcessFailureException<T>("コマンドが重複してます。", addObj);
+            }
+
+            this.Value.Add(addObj);
         }
 
     }

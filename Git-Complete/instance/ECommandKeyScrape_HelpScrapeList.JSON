@@ -1,6 +1,5 @@
 [
   {
-    "command": "annotate",
     "synopsis": [
       "git annotate [<options>] <file> [<revision>]"
     ],
@@ -28,10 +27,10 @@
       " --ignore-revs-file <file> ",
       " -h "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "annotate"
   },
   {
-    "command": "blame",
     "synopsis": [
       "git blame [-c] [-b] [-l] [--root] [-t] [-f] [-n] [-s] [-e] [-p] [-w] [--incremental]\n\t    [-L <range>] [-S <revs-file>] [-M] [-C] [-C] [-C] [--since=<date>]\n\t    [--ignore-rev <rev>] [--ignore-revs-file <file>]\n\t    [--progress] [--abbrev=<n>] [<rev> | --contents <file> | --reverse <rev>..<rev>]\n\t    [--] <file>"
     ],
@@ -70,18 +69,18 @@
       " -w ",
       " --abbrev=<n> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "blame"
   },
   {
-    "command": "rerere",
     "synopsis": [
       "git rerere [clear|forget <pathspec>|diff|remaining|status|gc]"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "rerere"
   },
   {
-    "command": "bugreport",
     "synopsis": [
       "git bugreport [(-o | --output-directory) <path>] [(-s | --suffix) <format>]"
     ],
@@ -91,10 +90,10 @@
       " -s <format> ",
       " --suffix <format> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "bugreport"
   },
   {
-    "command": "count-objects",
     "synopsis": [
       "git count-objects [-v] [-H | --human-readable]"
     ],
@@ -104,10 +103,10 @@
       " -H ",
       " --human-readable "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "count-objects"
   },
   {
-    "command": "difftool",
     "synopsis": [
       "git difftool [<options>] [<commit> [<commit>]] [--] [<path>…​]"
     ],
@@ -127,10 +126,10 @@
       " --[no-]gui ",
       " --[no-]trust-exit-code "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "difftool"
   },
   {
-    "command": "fsck",
     "synopsis": [
       "git fsck [--tags] [--root] [--unreachable] [--cache] [--no-reflogs]\n\t [--[no-]full] [--strict] [--verbose] [--lost-found]\n\t [--[no-]dangling] [--[no-]progress] [--connectivity-only]\n\t [--[no-]name-objects] [<object>*]"
     ],
@@ -150,10 +149,10 @@
       " --name-objects ",
       " --[no-]progress "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "fsck"
   },
   {
-    "command": "help",
     "synopsis": [
       "git help [-a|--all [--[no-]verbose]] [-g|--guide]\n\t   [-i|--info|-m|--man|-w|--web] [COMMAND|GUIDE]"
     ],
@@ -172,10 +171,10 @@
       " -w ",
       " --web "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "help"
   },
   {
-    "command": "instaweb",
     "synopsis": [
       "git instaweb [--local] [--httpd=<httpd>] [--port=<port>]\n               [--browser=<browser>]\ngit instaweb [--start] [--stop] [--restart]"
     ],
@@ -197,18 +196,18 @@
       " restart ",
       " --restart "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "instaweb"
   },
   {
-    "command": "merge-tree",
     "synopsis": [
       "git merge-tree <base-tree> <branch1> <branch2>"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "merge-tree"
   },
   {
-    "command": "show-branch",
     "synopsis": [
       "git show-branch [-a|--all] [-r|--remotes] [--topo-order | --date-order]\n\t\t[--current] [--color[=<when>] | --no-color] [--sparse]\n\t\t[--more=<n> | --list | --independent | --merge-base]\n\t\t[--no-name | --sha1-name] [--topics]\n\t\t[(<rev> | <glob>)…​]\ngit show-branch (-g|--reflog)[=<n>[,<base>]] [--list] [<ref>]"
     ],
@@ -235,10 +234,10 @@
       " --color[=<when>] ",
       " --no-color "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "show-branch"
   },
   {
-    "command": "verify-commit",
     "synopsis": [
       "git verify-commit <commit>…​"
     ],
@@ -248,10 +247,10 @@
       " --verbose ",
       " <commit>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "verify-commit"
   },
   {
-    "command": "verify-tag",
     "synopsis": [
       "git verify-tag [--format=<format>] <tag>…​"
     ],
@@ -261,18 +260,18 @@
       " --verbose ",
       " <tag>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "verify-tag"
   },
   {
-    "command": "whatchanged",
     "synopsis": [
       "git whatchanged <option>…​"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "whatchanged"
   },
   {
-    "command": "reflog",
     "synopsis": [
       "git reflog <subcommand> <options>"
     ],
@@ -288,10 +287,10 @@
       " --dry-run ",
       " --verbose "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "reflog"
   },
   {
-    "command": "remote",
     "synopsis": [
       "git remote [-v | --verbose]\ngit remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=<fetch|push>] <name> <url>\ngit remote rename <old> <new>\ngit remote remove <name>\ngit remote set-head <name> (-a | --auto | -d | --delete | <branch>)\ngit remote set-branches [--add] <name> <branch>…​\ngit remote get-url [--push] [--all] <name>\ngit remote set-url [--push] <name> <newurl> [<oldurl>]\ngit remote set-url --add [--push] <name> <newurl>\ngit remote set-url --delete [--push] <name> <url>\ngit remote [-v | --verbose] show [-n] <name>…​\ngit remote prune [-n | --dry-run] <name>…​\ngit remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)…​]"
     ],
@@ -299,10 +298,10 @@
       " -v ",
       " --verbose "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "remote"
   },
   {
-    "command": "repack",
     "synopsis": [
       "git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [--window=<n>] [--depth=<n>] [--threads=<n>] [--keep-pack=<pack-name>]"
     ],
@@ -330,10 +329,10 @@
       " -i ",
       " --delta-islands "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "repack"
   },
   {
-    "command": "replace",
     "synopsis": [
       "git replace [-f] <object> <replacement>\ngit replace [-f] --edit <object>\ngit replace [-f] --graft <commit> [<parent>…​]\ngit replace [-f] --convert-graft-file\ngit replace -d <object>…​\ngit replace [--format=<format>] [-l [<pattern>]]"
     ],
@@ -350,10 +349,10 @@
       " --list <pattern> ",
       " --format=<format> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "replace"
   },
   {
-    "command": "config",
     "synopsis": [
       "git config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] name [value [value_regex]]\ngit config [<file-option>] [--type=<type>] --add name value\ngit config [<file-option>] [--type=<type>] --replace-all name value [value_regex]\ngit config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] --get name [value_regex]\ngit config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] --get-all name [value_regex]\ngit config [<file-option>] [--type=<type>] [--show-origin] [--show-scope] [-z|--null] [--name-only] --get-regexp name_regex [value_regex]\ngit config [<file-option>] [--type=<type>] [-z|--null] --get-urlmatch name URL\ngit config [<file-option>] --unset name [value_regex]\ngit config [<file-option>] --unset-all name [value_regex]\ngit config [<file-option>] --rename-section old_name new_name\ngit config [<file-option>] --remove-section name\ngit config [<file-option>] [--show-origin] [--show-scope] [-z|--null] [--name-only] -l | --list\ngit config [<file-option>] --get-color name [default]\ngit config [<file-option>] --get-colorbool name [stdout-is-tty]\ngit config [<file-option>] -e | --edit"
     ],
@@ -396,10 +395,10 @@
       " --[no-]includes ",
       " --default <value> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "config"
   },
   {
-    "command": "filter-branch",
     "synopsis": [
       "git filter-branch [--setup <command>] [--subdirectory-filter <directory>]\n\t[--env-filter <command>] [--tree-filter <command>]\n\t[--index-filter <command>] [--parent-filter <command>]\n\t[--msg-filter <command>] [--commit-filter <command>]\n\t[--tag-name-filter <command>] [--prune-empty]\n\t[--original <namespace>] [-d <directory>] [-f | --force]\n\t[--state-branch <branch>] [--] [<rev-list options>…​]"
     ],
@@ -421,10 +420,10 @@
       " --state-branch <branch> ",
       " <rev-list options>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "filter-branch"
   },
   {
-    "command": "mergetool",
     "synopsis": [
       "git mergetool [--tool=<tool>] [-y | --[no-]prompt] [<file>…​]"
     ],
@@ -440,10 +439,10 @@
       " --no-gui ",
       " -O<orderfile> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "mergetool"
   },
   {
-    "command": "pack-refs",
     "synopsis": [
       "git pack-refs [--all] [--no-prune]"
     ],
@@ -451,10 +450,10 @@
       " --all ",
       " --no-prune "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "pack-refs"
   },
   {
-    "command": "prune",
     "synopsis": [
       "git prune [-n] [-v] [--progress] [--expire <time>] [--] [<head>…​]"
     ],
@@ -468,10 +467,10 @@
       " -- ",
       " <head>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "prune"
   },
   {
-    "command": "svn",
     "synopsis": [
       "git svn <command> [<options>] [<arguments>]"
     ],
@@ -504,10 +503,10 @@
       " --use-log-author ",
       " --add-author-from "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "svn"
   },
   {
-    "command": "archimport",
     "synopsis": [
       "git archimport [-h] [-v] [-o] [-a] [-f] [-T] [-D depth] [-t tempdir]\n               <archive/branch>[:<git-branch>] …​"
     ],
@@ -522,10 +521,10 @@
       " -t <tmpdir> ",
       " <archive/branch> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "archimport"
   },
   {
-    "command": "cvsexportcommit",
     "synopsis": [
       "git cvsexportcommit [-h] [-u] [-v] [-c] [-P] [-p] [-a] [-d cvsroot]\n\t[-w cvsworkdir] [-W] [-f] [-m msgprefix] [PARENTCOMMIT] COMMITID"
     ],
@@ -543,10 +542,10 @@
       " -W ",
       " -v "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "cvsexportcommit"
   },
   {
-    "command": "cvsimport",
     "synopsis": [
       "git cvsimport [-o <branch-for-HEAD>] [-h] [-v] [-d <CVSROOT>]\n\t      [-A <author-conv-file>] [-p <options-for-cvsps>] [-P <file>]\n\t      [-C <git_repository>] [-z <fuzz>] [-i] [-k] [-u] [-s <subst>]\n\t      [-a] [-m] [-M <regex>] [-S <regex>] [-L <commitlimit>]\n\t      [-r <remote>] [-R] [<CVS_module>]"
     ],
@@ -573,10 +572,10 @@
       " -R ",
       " -h "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "cvsimport"
   },
   {
-    "command": "imap-send",
     "synopsis": [
       "git imap-send [-v] [-q] [--[no-]curl]"
     ],
@@ -588,10 +587,10 @@
       " --curl ",
       " --no-curl "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "imap-send"
   },
   {
-    "command": "p4",
     "synopsis": [
       "git p4 clone [<sync options>] [<clone options>] <p4 depot path>…​\ngit p4 sync [<sync options>] [<p4 depot path>…​]\ngit p4 rebase\ngit p4 submit [<submit options>] [<master branch name>]"
     ],
@@ -628,10 +627,10 @@
       " --disable-rebase ",
       " --disable-p4sync "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "p4"
   },
   {
-    "command": "quiltimport",
     "synopsis": [
       "git quiltimport [--dry-run | -n] [--author <author>] [--patches <dir>]\n\t\t[--series <file>] [--keep-non-patch]"
     ],
@@ -643,10 +642,10 @@
       " --series <file> ",
       " --keep-non-patch "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "quiltimport"
   },
   {
-    "command": "request-pull",
     "synopsis": [
       "git request-pull [-p] <start> <url> [<end>]"
     ],
@@ -656,10 +655,10 @@
       " <url> ",
       " <end> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "request-pull"
   },
   {
-    "command": "send-email",
     "synopsis": [
       "git send-email [<options>] <file|directory|rev-list options>…​\ngit send-email --dump-aliases"
     ],
@@ -713,20 +712,20 @@
       " --force ",
       " --dump-aliases "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "send-email"
   },
   {
-    "command": "bisect",
     "synopsis": [
       "git bisect <subcommand> <options>"
     ],
     "options": [
       " --no-checkout "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "bisect"
   },
   {
-    "command": "format-patch",
     "synopsis": [
       "git format-patch [-k] [(-o|--output-directory) <dir> | --stdout]\n\t\t   [--no-thread | --thread[=<style>]]\n\t\t   [(--attach|--inline)[=<boundary>] | --no-attach]\n\t\t   [-s | --signoff]\n\t\t   [--signature=<signature> | --no-signature]\n\t\t   [--signature-file=<file>]\n\t\t   [-n | --numbered | -N | --no-numbered]\n\t\t   [--start-number <n>] [--numbered-files]\n\t\t   [--in-reply-to=<message id>] [--suffix=.<sfx>]\n\t\t   [--ignore-if-in-upstream]\n\t\t   [--cover-from-description=<mode>]\n\t\t   [--rfc] [--subject-prefix=<subject prefix>]\n\t\t   [(--reroll-count|-v) <n>]\n\t\t   [--to=<email>] [--cc=<email>]\n\t\t   [--[no-]cover-letter] [--quiet]\n\t\t   [--[no-]encode-email-headers]\n\t\t   [--no-notes | --notes[=<ref>]]\n\t\t   [--interdiff=<previous>]\n\t\t   [--range-diff=<previous> [--creation-factor=<percent>]]\n\t\t   [--progress]\n\t\t   [<common diff options>]\n\t\t   [ <since> | <revision range> ]"
     ],
@@ -852,10 +851,10 @@
       " --root ",
       " --progress "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "format-patch"
   },
   {
-    "command": "init",
     "synopsis": [
       "git init [-q | --quiet] [--bare] [--template=<template_directory>]\n\t  [--separate-git-dir <git dir>] [--object-format=<format]\n\t  [--shared[=<permissions>]] [directory]"
     ],
@@ -872,10 +871,10 @@
       " all (or world or everybody) ",
       " 0xxx "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "init"
   },
   {
-    "command": "rm",
     "synopsis": [
       "git rm [-f | --force] [-n] [-r] [--cached] [--ignore-unmatch]\n\t  [--quiet] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t  [--] [<pathspec>…​]"
     ],
@@ -894,10 +893,10 @@
       " --pathspec-from-file=<file> ",
       " --pathspec-file-nul "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "rm"
   },
   {
-    "command": "show",
     "synopsis": [
       "git show [<options>] [<object>…​]"
     ],
@@ -918,10 +917,10 @@
       " --[no-]standard-notes ",
       " --show-signature "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "show"
   },
   {
-    "command": "stash",
     "synopsis": [
       "git stash list [<options>]\ngit stash show [<options>] [<stash>]\ngit stash drop [-q|--quiet] [<stash>]\ngit stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]\ngit stash branch <branchname> [<stash>]\ngit stash [push [-p|--patch] [-k|--[no-]keep-index] [-q|--quiet]\n\t     [-u|--include-untracked] [-a|--all] [-m|--message <message>]\n\t     [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t     [--] [<pathspec>…​]]\ngit stash clear\ngit stash create [<message>]\ngit stash store [-m|--message <message>] [-q|--quiet] <commit>"
     ],
@@ -944,10 +943,10 @@
       " <pathspec>…​ ",
       " <stash> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "stash"
   },
   {
-    "command": "archive",
     "synopsis": [
       "git archive [--format=<fmt>] [--list] [--prefix=<prefix>/] [<extra>]\n\t      [-o <file> | --output=<file>] [--worktree-attributes]\n\t      [--remote=<repo> [--exec=<git-upload-archive>]] <tree-ish>\n\t      [<path>…​]"
     ],
@@ -967,10 +966,10 @@
       " <tree-ish> ",
       " <path> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "archive"
   },
   {
-    "command": "describe",
     "synopsis": [
       "git describe [--all] [--tags] [--contains] [--abbrev=<n>] [<commit-ish>…​]\ngit describe [--all] [--tags] [--contains] [--abbrev=<n>] --dirty[=<mark>]\ngit describe <blob>"
     ],
@@ -991,10 +990,10 @@
       " --always ",
       " --first-parent "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "describe"
   },
   {
-    "command": "shortlog",
     "synopsis": [
       "git shortlog [<options>] [<revision range>] [[--] <path>…​]\ngit log --pretty=short | git shortlog [<options>]"
     ],
@@ -1082,10 +1081,10 @@
       " --ancestry-path ",
       " --show-pulls "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "shortlog"
   },
   {
-    "command": "clean",
     "synopsis": [
       "git clean [-d] [-f] [-i] [-n] [-q] [-e <pattern>] [-x | -X] [--] <path>…​"
     ],
@@ -1104,10 +1103,10 @@
       " -x ",
       " -X "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "clean"
   },
   {
-    "command": "pull",
     "synopsis": [
       "git pull [<options>] [<repository> [<refspec>…​]]"
     ],
@@ -1190,10 +1189,10 @@
       " <repository> ",
       " <refspec> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "pull"
   },
   {
-    "command": "reset",
     "synopsis": [
       "git reset [-q] [<tree-ish>] [--] <pathspec>…​\ngit reset [-q] [--pathspec-from-file=<file> [--pathspec-file-nul]] [<tree-ish>]\ngit reset (--patch | -p) [<tree-ish>] [--] [<pathspec>…​]\ngit reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [<commit>]"
     ],
@@ -1206,10 +1205,10 @@
       " -- ",
       " <pathspec>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "reset"
   },
   {
-    "command": "add",
     "synopsis": [
       "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n\t  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]\n\t  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n\t  [--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t  [--] [<pathspec>…​]"
     ],
@@ -1246,10 +1245,10 @@
       " --pathspec-file-nul ",
       " -- "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "add"
   },
   {
-    "command": "am",
     "synopsis": [
       "git am [--signoff] [--keep] [--[no-]keep-cr] [--[no-]utf8]\n\t [--[no-]3way] [--interactive] [--committer-date-is-author-date]\n\t [--ignore-date] [--ignore-space-change | --ignore-whitespace]\n\t [--whitespace=<option>] [-C<n>] [-p<n>] [--directory=<dir>]\n\t [--exclude=<path>] [--include=<path>] [--reject] [-q | --quiet]\n\t [--[no-]scissors] [-S[<keyid>]] [--patch-format=<format>]\n\t [(<mbox> | <Maildir>)…​]\ngit am (--continue | --skip | --abort | --quit | --show-current-patch[=(diff|raw)])"
     ],
@@ -1303,10 +1302,10 @@
       " --quit ",
       " --show-current-patch[=(diff|raw)] "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "am"
   },
   {
-    "command": "branch",
     "synopsis": [
       "git branch [--color[=<when>] | --no-color] [--show-current]\n\t[-v [--abbrev=<length> | --no-abbrev]]\n\t[--column[=<options>] | --no-column] [--sort=<key>]\n\t[(--merged | --no-merged) [<commit>]]\n\t[--contains [<commit]] [--no-contains [<commit>]]\n\t[--points-at <object>] [--format=<format>]\n\t[(-r | --remotes) | (-a | --all)]\n\t[--list] [<pattern>…​]\ngit branch [--track | --no-track] [-f] <branchname> [<start-point>]\ngit branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]\ngit branch --unset-upstream [<branchname>]\ngit branch (-m | -M) [<oldbranch>] <newbranch>\ngit branch (-c | -C) [<oldbranch>] <newbranch>\ngit branch (-d | -D) [-r] <branchname>…​\ngit branch --edit-description [<branchname>]"
     ],
@@ -1363,10 +1362,10 @@
       " --points-at <object> ",
       " --format <format> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "branch"
   },
   {
-    "command": "bundle",
     "synopsis": [
       "git bundle create [-q | --quiet | --progress | --all-progress] [--all-progress-implied] <file> <git-rev-list-args>\ngit bundle verify [-q | --quiet] <file>\ngit bundle list-heads <file> [<refname>…​]\ngit bundle unbundle <file> [<refname>…​]"
     ],
@@ -1383,10 +1382,10 @@
       " -q ",
       " --quiet "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "bundle"
   },
   {
-    "command": "checkout",
     "synopsis": [
       "git checkout [-q] [-f] [-m] [<branch>]\ngit checkout [-q] [-f] [-m] --detach [<branch>]\ngit checkout [-q] [-f] [-m] [--detach] <commit>\ngit checkout [-q] [-f] [-m] [[-b|-B|--orphan] <new_branch>] [<start_point>]\ngit checkout [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] [--] <pathspec>…​\ngit checkout [-f|--ours|--theirs|-m|--conflict=<style>] [<tree-ish>] --pathspec-from-file=<file> [--pathspec-file-nul]\ngit checkout (-p|--patch) [<tree-ish>] [--] [<pathspec>…​]"
     ],
@@ -1431,10 +1430,10 @@
       " -- ",
       " <pathspec>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "checkout"
   },
   {
-    "command": "cherry-pick",
     "synopsis": [
       "git cherry-pick [--edit] [-n] [-m parent-number] [-s] [-x] [--ff]\n\t\t  [-S[<keyid>]] <commit>…​\ngit cherry-pick (--continue | --skip | --abort | --quit)"
     ],
@@ -1464,18 +1463,18 @@
       " --rerere-autoupdate ",
       " --no-rerere-autoupdate "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "cherry-pick"
   },
   {
-    "command": "citool",
     "synopsis": [
       "git citool"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "citool"
   },
   {
-    "command": "clone",
     "synopsis": [
       "git clone [--template=<template_directory>]\n\t  [-l] [-s] [--no-hardlinks] [-q] [-n] [--bare] [--mirror]\n\t  [-o <name>] [-b <name>] [-u <upload-pack>] [--reference <repository>]\n\t  [--dissociate] [--separate-git-dir <git dir>]\n\t  [--depth <depth>] [--[no-]single-branch] [--no-tags]\n\t  [--recurse-submodules[=<pathspec>]] [--[no-]shallow-submodules]\n\t  [--[no-]remote-submodules] [--jobs <n>] [--sparse]\n\t  [--filter=<filter>] [--] <repository>\n\t  [<directory>]"
     ],
@@ -1522,10 +1521,10 @@
       " <repository> ",
       " <directory> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "clone"
   },
   {
-    "command": "commit",
     "synopsis": [
       "git commit [-a | --interactive | --patch] [-s] [-v] [-u<mode>] [--amend]\n\t   [--dry-run] [(-c | -C | --fixup | --squash) <commit>]\n\t   [-F <file> | -m <msg>] [--reset-author] [--allow-empty]\n\t   [--allow-empty-message] [--no-verify] [-e] [--author=<author>]\n\t   [--date=<date>] [--cleanup=<mode>] [--[no-]status]\n\t   [-i | -o] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t   [-S[<keyid>]] [--] [<pathspec>…​]"
     ],
@@ -1593,10 +1592,10 @@
       " -- ",
       " <pathspec>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "commit"
   },
   {
-    "command": "diff",
     "synopsis": [
       "git diff [<options>] [<commit>] [--] [<path>…​]\ngit diff [<options>] --cached [<commit>] [--] [<path>…​]\ngit diff [<options>] <commit> <commit> [--] [<path>…​]\ngit diff [<options>] <blob> <blob>\ngit diff [<options>] --no-index [--] <path> <path>"
     ],
@@ -1724,10 +1723,10 @@
       " -0 ",
       " <path>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "diff"
   },
   {
-    "command": "fetch",
     "synopsis": [
       "git fetch [<options>] [<repository> [<refspec>…​]]\ngit fetch [<options>] <group>\ngit fetch --multiple [<options>] [(<repository> | <group>)…​]\ngit fetch --all [<options>]"
     ],
@@ -1786,10 +1785,10 @@
       " <group> ",
       " <refspec> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "fetch"
   },
   {
-    "command": "gc",
     "synopsis": [
       "git gc [--aggressive] [--auto] [--quiet] [--prune=<date> | --no-prune] [--force] [--keep-largest-pack]"
     ],
@@ -1802,10 +1801,10 @@
       " --force ",
       " --keep-largest-pack "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "gc"
   },
   {
-    "command": "grep",
     "synopsis": [
       "git grep [-a | --text] [-I] [--textconv] [-i | --ignore-case] [-w | --word-regexp]\n\t   [-v | --invert-match] [-h|-H] [--full-name]\n\t   [-E | --extended-regexp] [-G | --basic-regexp]\n\t   [-P | --perl-regexp]\n\t   [-F | --fixed-strings] [-n | --line-number] [--column]\n\t   [-l | --files-with-matches] [-L | --files-without-match]\n\t   [(-O | --open-files-in-pager) [<pager>]]\n\t   [-z | --null]\n\t   [ -o | --only-matching ] [-c | --count] [--all-match] [-q | --quiet]\n\t   [--max-depth <depth>] [--[no-]recursive]\n\t   [--color[=<when>] | --no-color]\n\t   [--break] [--heading] [-p | --show-function]\n\t   [-A <post-context>] [-B <pre-context>] [-C <context>]\n\t   [-W | --function-context]\n\t   [--threads <num>]\n\t   [-f <file>] [-e] <pattern>\n\t   [--and|--or|--not|(|)|-e <pattern>…​]\n\t   [--recurse-submodules] [--parent-basename <basename>]\n\t   [ [--[no-]exclude-standard] [--cached | --no-index | --untracked] | <tree>…​]\n\t   [--] [<pathspec>…​]"
     ],
@@ -1887,18 +1886,18 @@
       " -- ",
       " <pathspec>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "grep"
   },
   {
-    "command": "gui",
     "synopsis": [
       "git gui [<command>] [arguments]"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "gui"
   },
   {
-    "command": "log",
     "synopsis": [
       "git log [<options>] [<revision range>] [[--] <path>…​]"
     ],
@@ -2021,10 +2020,10 @@
       " -r ",
       " -t "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "log"
   },
   {
-    "command": "merge",
     "synopsis": [
       "git merge [-n] [--stat] [--no-commit] [--squash] [--[no-]edit]\n\t[--no-verify] [-s <strategy>] [-X <strategy-option>] [-S[<keyid>]]\n\t[--[no-]allow-unrelated-histories]\n\t[--[no-]rerere-autoupdate] [-m <msg>] [-F <file>] [<commit>…​]\ngit merge (--continue | --abort | --quit)"
     ],
@@ -2080,10 +2079,10 @@
       " --continue ",
       " <commit>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "merge"
   },
   {
-    "command": "mv",
     "synopsis": [
       "git mv <options>…​ <args>…​"
     ],
@@ -2096,10 +2095,10 @@
       " -v ",
       " --verbose "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "mv"
   },
   {
-    "command": "notes",
     "synopsis": [
       "git notes [list [<object>]]\ngit notes add [-f] [--allow-empty] [-F <file> | -m <msg> | (-c | -C) <object>] [<object>]\ngit notes copy [-f] ( --stdin | <from-object> [<to-object>] )\ngit notes append [--allow-empty] [-F <file> | -m <msg> | (-c | -C) <object>] [<object>]\ngit notes edit [--allow-empty] [<object>]\ngit notes show [<object>]\ngit notes merge [-v | -q] [-s <strategy> ] <notes-ref>\ngit notes merge --commit [-v | -q]\ngit notes merge --abort [-v | -q]\ngit notes remove [--ignore-missing] [--stdin] [<object>…​]\ngit notes prune [-n] [-v]\ngit notes get-ref"
     ],
@@ -2129,10 +2128,10 @@
       " -v ",
       " --verbose "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "notes"
   },
   {
-    "command": "push",
     "synopsis": [
       "git push [--all | --mirror | --tags] [--follow-tags] [--atomic] [-n | --dry-run] [--receive-pack=<git-receive-pack>]\n\t   [--repo=<repository>] [-f | --force] [-d | --delete] [--prune] [-v | --verbose]\n\t   [-u | --set-upstream] [-o <string> | --push-option=<string>]\n\t   [--[no-]signed|--signed=(true|false|if-asked)]\n\t   [--force-with-lease[=<refname>[:<expect>]]]\n\t   [--no-verify] [<repository> [<refspec>…​]]"
     ],
@@ -2178,10 +2177,10 @@
       " -6 ",
       " --ipv6 "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "push"
   },
   {
-    "command": "range-diff",
     "synopsis": [
       "git range-diff [--color=[<when>]] [--no-color] [<diff-options>]\n\t[--no-dual-color] [--creation-factor=<factor>]\n\t( <range1> <range2> | <rev1>…​<rev2> | <base> <rev1> <rev2> )"
     ],
@@ -2193,10 +2192,10 @@
       " <rev1>…​<rev2> ",
       " <base> <rev1> <rev2> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "range-diff"
   },
   {
-    "command": "rebase",
     "synopsis": [
       "git rebase [-i | --interactive] [<options>] [--exec <cmd>]\n\t[--onto <newbase> | --keep-base] [<upstream> [<branch>]]\ngit rebase [-i | --interactive] [<options>] [--exec <cmd>] [--onto <newbase>]\n\t--root [<branch>]\ngit rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)"
     ],
@@ -2264,10 +2263,10 @@
       " --reschedule-failed-exec ",
       " --no-reschedule-failed-exec "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "rebase"
   },
   {
-    "command": "restore",
     "synopsis": [
       "git restore [<options>] [--source=<tree>] [--staged] [--worktree] [--] <pathspec>…​\ngit restore [<options>] [--source=<tree>] [--staged] [--worktree] --pathspec-from-file=<file> [--pathspec-file-nul]\ngit restore (-p|--patch) [<options>] [--source=<tree>] [--staged] [--worktree] [--] [<pathspec>…​]"
     ],
@@ -2300,10 +2299,10 @@
       " -- ",
       " <pathspec>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "restore"
   },
   {
-    "command": "revert",
     "synopsis": [
       "git revert [--[no-]edit] [-n] [-m parent-number] [-s] [-S[<keyid>]] <commit>…​\ngit revert (--continue | --skip | --abort | --quit)"
     ],
@@ -2328,18 +2327,18 @@
       " --rerere-autoupdate ",
       " --no-rerere-autoupdate "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "revert"
   },
   {
-    "command": "sparse-checkout",
     "synopsis": [
       "git sparse-checkout <subcommand> [options]"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "sparse-checkout"
   },
   {
-    "command": "status",
     "synopsis": [
       "git status [<options>…​] [--] [<pathspec>…​]"
     ],
@@ -2367,10 +2366,10 @@
       " --find-renames[=<n>] ",
       " <pathspec>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "status"
   },
   {
-    "command": "submodule",
     "synopsis": [
       "git submodule [--quiet] [--cached]\ngit submodule [--quiet] add [<options>] [--] <repository> [<path>]\ngit submodule [--quiet] status [--cached] [--recursive] [--] [<path>…​]\ngit submodule [--quiet] init [--] [<path>…​]\ngit submodule [--quiet] deinit [-f|--force] (--all|[--] <path>…​)\ngit submodule [--quiet] update [<options>] [--] [<path>…​]\ngit submodule [--quiet] set-branch [<options>] [--] <path>\ngit submodule [--quiet] set-url [--] <path> <newurl>\ngit submodule [--quiet] summary [<options>] [--] [<path>…​]\ngit submodule [--quiet] foreach [--recursive] <command>\ngit submodule [--quiet] sync [--recursive] [--] [<path>…​]\ngit submodule [--quiet] absorbgitdirs [--] [<path>…​]"
     ],
@@ -2405,10 +2404,10 @@
       " --[no-]single-branch ",
       " <path>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "submodule"
   },
   {
-    "command": "switch",
     "synopsis": [
       "git switch [<options>] [--no-guess] <branch>\ngit switch [<options>] --detach [<start-point>]\ngit switch [<options>] (-c|-C) <new-branch> [<start-point>]\ngit switch [<options>] --orphan <new-branch>"
     ],
@@ -2442,10 +2441,10 @@
       " --recurse-submodules ",
       " --no-recurse-submodules "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "switch"
   },
   {
-    "command": "tag",
     "synopsis": [
       "git tag [-a | -s | -u <keyid>] [-f] [-m <msg> | -F <file>] [-e]\n\t<tagname> [<commit> | <object>]\ngit tag -d <tagname>…​\ngit tag [-n[<num>]] -l [--contains <commit>] [--no-contains <commit>]\n\t[--points-at <object>] [--column[=<options>] | --no-column]\n\t[--create-reflog] [--sort=<key>] [--format=<format>]\n\t[--[no-]merged [<commit>]] [<pattern>…​]\ngit tag -v [--format=<format>] <tagname>…​"
     ],
@@ -2490,10 +2489,10 @@
       " <commit> ",
       " <object> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "tag"
   },
   {
-    "command": "worktree",
     "synopsis": [
       "git worktree add [-f] [--detach] [--checkout] [--lock] [-b <new-branch>] <path> [<commit-ish>]\ngit worktree list [--porcelain]\ngit worktree lock [--reason <string>] <worktree>\ngit worktree move <worktree> <new-path>\ngit worktree prune [-n] [-v] [--expire <expire>]\ngit worktree remove [-f] <worktree>\ngit worktree unlock <worktree>"
     ],
@@ -2518,10 +2517,10 @@
       " --reason <string> ",
       " <worktree> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "worktree"
   },
   {
-    "command": "diff-tree",
     "synopsis": [
       "git diff-tree [--stdin] [-m] [-s] [-v] [--no-commit-id] [--pretty]\n\t      [-t] [-r] [-c | --cc] [--combined-all-paths] [--root]\n\t      [<common diff options>] <tree-ish> [<tree-ish>] [<path>…​]"
     ],
@@ -2672,18 +2671,18 @@
       " --combined-all-paths ",
       " --always "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "diff-tree"
   },
   {
-    "command": "get-tar-commit-id",
     "synopsis": [
       "git get-tar-commit-id"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "get-tar-commit-id"
   },
   {
-    "command": "rev-parse",
     "synopsis": [
       "git rev-parse [<options>] <args>…​"
     ],
@@ -2737,10 +2736,10 @@
       " --before=datestring ",
       " <args>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "rev-parse"
   },
   {
-    "command": "cat-file",
     "synopsis": [
       "git cat-file (-t [--allow-unknown-type]| -s [--allow-unknown-type]| -e | -p | <type> | --textconv | --filters ) [--path=<path>] <object>\ngit cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-symlinks]"
     ],
@@ -2764,10 +2763,10 @@
       " --allow-unknown-type ",
       " --follow-symlinks "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "cat-file"
   },
   {
-    "command": "cherry",
     "synopsis": [
       "git cherry [-v] [<upstream> [<head> [<limit>]]]"
     ],
@@ -2777,10 +2776,10 @@
       " <head> ",
       " <limit> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "cherry"
   },
   {
-    "command": "diff-files",
     "synopsis": [
       "git diff-files [-q] [-0|-1|-2|-3|-c|--cc] [<common diff options>] [<path>…​]"
     ],
@@ -2910,10 +2909,10 @@
       " --cc ",
       " -q "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "diff-files"
   },
   {
-    "command": "diff-index",
     "synopsis": [
       "git diff-index [-m] [--cached] [<common diff options>] <tree-ish> [<path>…​]"
     ],
@@ -3039,10 +3038,10 @@
       " --cached ",
       " -m "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "diff-index"
   },
   {
-    "command": "for-each-ref",
     "synopsis": [
       "git for-each-ref [--count=<count>] [--shell|--perl|--python|--tcl]\n\t\t   [(--sort=<key>)…​] [--format=<format>] [<pattern>…​]\n\t\t   [--points-at=<object>]\n\t\t   (--merged[=<object>] | --no-merged[=<object>])\n\t\t   [--contains[=<object>]] [--no-contains[=<object>]]"
     ],
@@ -3063,10 +3062,10 @@
       " --no-contains[=<object>] ",
       " --ignore-case "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "for-each-ref"
   },
   {
-    "command": "ls-files",
     "synopsis": [
       "git ls-files [-z] [-t] [-v] [-f]\n\t\t(--[cached|deleted|others|ignored|stage|unmerged|killed|modified])*\n\t\t(-[c|d|o|i|s|u|k|m])*\n\t\t[--eol]\n\t\t[-x <pattern>|--exclude=<pattern>]\n\t\t[-X <file>|--exclude-from=<file>]\n\t\t[--exclude-per-directory=<file>]\n\t\t[--exclude-standard]\n\t\t[--error-unmatch] [--with-tree=<tree-ish>]\n\t\t[--full-name] [--recurse-submodules]\n\t\t[--abbrev] [--] [<file>…​]"
     ],
@@ -3116,10 +3115,10 @@
       " -- ",
       " <file> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "ls-files"
   },
   {
-    "command": "ls-remote",
     "synopsis": [
       "git ls-remote [--heads] [--tags] [--refs] [--upload-pack=<exec>]\n\t      [-q | --quiet] [--exit-code] [--get-url] [--sort=<key>]\n\t      [--symref] [<repository> [<refs>…​]]"
     ],
@@ -3141,10 +3140,10 @@
       " <repository> ",
       " <refs>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "ls-remote"
   },
   {
-    "command": "ls-tree",
     "synopsis": [
       "git ls-tree [-d] [-r] [-t] [-l] [-z]\n\t    [--name-only] [--name-status] [--full-name] [--full-tree] [--abbrev[=<n>]]\n\t    <tree-ish> [<path>…​]"
     ],
@@ -3163,10 +3162,10 @@
       " --full-tree ",
       " [<path>…​] "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "ls-tree"
   },
   {
-    "command": "merge-base",
     "synopsis": [
       "git merge-base [-a|--all] <commit> <commit>…​\ngit merge-base [-a|--all] --octopus <commit>…​\ngit merge-base --is-ancestor <commit> <commit>\ngit merge-base --independent <commit>…​\ngit merge-base --fork-point <ref> [<commit>]"
     ],
@@ -3174,10 +3173,10 @@
       " -a ",
       " --all "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "merge-base"
   },
   {
-    "command": "name-rev",
     "synopsis": [
       "git name-rev [--tags] [--refs=<pattern>]\n\t       ( --all | --stdin | <commit-ish>…​ )"
     ],
@@ -3191,10 +3190,10 @@
       " --no-undefined ",
       " --always "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "name-rev"
   },
   {
-    "command": "pack-redundant",
     "synopsis": [
       "git pack-redundant [ --verbose ] [ --alt-odb ] < --all | .pack filename …​ >"
     ],
@@ -3203,10 +3202,10 @@
       " --alt-odb ",
       " --verbose "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "pack-redundant"
   },
   {
-    "command": "rev-list",
     "synopsis": [
       "git rev-list [<options>] <commit>…​ [[--] <path>…​]"
     ],
@@ -3328,18 +3327,18 @@
       " --show-linear-break[=<barrier>] ",
       " --count "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "rev-list"
   },
   {
-    "command": "show-index",
     "synopsis": [
       "git show-index"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "show-index"
   },
   {
-    "command": "show-ref",
     "synopsis": [
       "git show-ref [-q|--quiet] [--verify] [--head] [-d|--dereference]\n\t     [-s|--hash[=<n>]] [--abbrev[=<n>]] [--tags]\n\t     [--heads] [--] [<pattern>…​]\ngit show-ref --exclude-existing[=<pattern>]"
     ],
@@ -3358,30 +3357,30 @@
       " --exclude-existing[=<pattern>] ",
       " <pattern>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "show-ref"
   },
   {
-    "command": "unpack-file",
     "synopsis": [
       "git unpack-file <blob>"
     ],
     "options": [
       " <blob> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "unpack-file"
   },
   {
-    "command": "var",
     "synopsis": [
       "git var ( -l | <variable> )"
     ],
     "options": [
       " -l "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "var"
   },
   {
-    "command": "verify-pack",
     "synopsis": [
       "git verify-pack [-v|--verbose] [-s|--stat-only] [--] <pack>.idx …​"
     ],
@@ -3393,10 +3392,10 @@
       " --stat-only ",
       " -- "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "verify-pack"
   },
   {
-    "command": "commit-tree",
     "synopsis": [
       "git commit-tree <tree> [(-p <parent>)…​]\ngit commit-tree [(-p <parent>)…​] [-S[<keyid>]] [(-m <message>)…​]\n\t\t  [(-F <file>)…​] <tree>"
     ],
@@ -3409,10 +3408,10 @@
       " --gpg-sign[=<keyid>] ",
       " --no-gpg-sign "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "commit-tree"
   },
   {
-    "command": "hash-object",
     "synopsis": [
       "git hash-object [-t <type>] [-w] [--path=<file>|--no-filters] [--stdin [--literally]] [--] <file>…​\ngit hash-object [-t <type>] [-w] --stdin-paths [--no-filters]"
     ],
@@ -3425,10 +3424,10 @@
       " --no-filters ",
       " --literally "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "hash-object"
   },
   {
-    "command": "read-tree",
     "synopsis": [
       "git read-tree [[-m [--trivial] [--aggressive] | --reset | --prefix=<prefix>]\n\t\t[-u [--exclude-per-directory=<gitignore>] | -i]]\n\t\t[--index-output=<file>] [--no-sparse-checkout]\n\t\t(--empty | <tree-ish1> [<tree-ish2> [<tree-ish3>]])"
     ],
@@ -3452,10 +3451,10 @@
       " --quiet ",
       " <tree-ish#> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "read-tree"
   },
   {
-    "command": "symbolic-ref",
     "synopsis": [
       "git symbolic-ref [-m <reason>] <name> <ref>\ngit symbolic-ref [-q] [--short] <name>\ngit symbolic-ref --delete [-q] <name>"
     ],
@@ -3467,10 +3466,10 @@
       " --short ",
       " -m "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "symbolic-ref"
   },
   {
-    "command": "index-pack",
     "synopsis": [
       "git index-pack [-v] [-o <index-file>] <pack-file>\ngit index-pack --stdin [--fix-thin] [--keep] [-v] [-o <index-file>]\n                 [<pack-file>]"
     ],
@@ -3488,10 +3487,10 @@
       " --threads=<n> ",
       " --max-input-size=<size> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "index-pack"
   },
   {
-    "command": "prune-packed",
     "synopsis": [
       "git prune-packed [-n|--dry-run] [-q|--quiet]"
     ],
@@ -3501,10 +3500,10 @@
       " -q ",
       " --quiet "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "prune-packed"
   },
   {
-    "command": "mktree",
     "synopsis": [
       "git mktree [-z] [--missing] [--batch]"
     ],
@@ -3513,10 +3512,10 @@
       " --missing ",
       " --batch "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "mktree"
   },
   {
-    "command": "apply",
     "synopsis": [
       "git apply [--stat] [--numstat] [--summary] [--check] [--index | --intent-to-add] [--3way]\n\t  [--apply] [--no-add] [--build-fake-ancestor=<file>] [-R | --reverse]\n\t  [--allow-binary-replacement | --binary] [--reject] [-z]\n\t  [-p<n>] [-C<n>] [--inaccurate-eof] [--recount] [--cached]\n\t  [--ignore-space-change | --ignore-whitespace]\n\t  [--whitespace=(nowarn|warn|fix|error|error-all)]\n\t  [--exclude=<path>] [--include=<path>] [--directory=<root>]\n\t  [--verbose] [--unsafe-paths] [<patch>…​]"
     ],
@@ -3555,10 +3554,10 @@
       " --directory=<root> ",
       " --unsafe-paths "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "apply"
   },
   {
-    "command": "checkout-index",
     "synopsis": [
       "git checkout-index [-u] [-q] [-a] [-f] [-n] [--prefix=<string>]\n\t\t   [--stage=<number>|all]\n\t\t   [--temp]\n\t\t   [-z] [--stdin]\n\t\t   [--] [<file>…​]"
     ],
@@ -3580,10 +3579,10 @@
       " -z ",
       " -- "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "checkout-index"
   },
   {
-    "command": "commit-graph",
     "synopsis": [
       "git commit-graph verify [--object-dir <dir>] [--shallow] [--[no-]progress]\ngit commit-graph write <options> [--object-dir <dir>] [--[no-]progress]"
     ],
@@ -3591,10 +3590,10 @@
       " --object-dir ",
       " --[no-]progress "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "commit-graph"
   },
   {
-    "command": "merge-file",
     "synopsis": [
       "git merge-file [-L <current-name> [-L <base-name> [-L <other-name>]]]\n\t[--ours|--theirs|--union] [-p|--stdout] [-q|--quiet] [--marker-size=<n>]\n\t[--[no-]diff3] <current-file> <base-file> <other-file>"
     ],
@@ -3607,10 +3606,10 @@
       " --theirs ",
       " --union "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "merge-file"
   },
   {
-    "command": "merge-index",
     "synopsis": [
       "git merge-index [-o] [-q] <merge-program> (-a | [--] <file>*)"
     ],
@@ -3620,18 +3619,18 @@
       " -o ",
       " -q "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "merge-index"
   },
   {
-    "command": "mktag",
     "synopsis": [
       "git mktag"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "mktag"
   },
   {
-    "command": "multi-pack-index",
     "synopsis": [
       "git multi-pack-index [--object-dir=<dir>] [--[no-]progress] <subcommand>"
     ],
@@ -3643,10 +3642,10 @@
       " expire ",
       " repack "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "multi-pack-index"
   },
   {
-    "command": "pack-objects",
     "synopsis": [
       "git pack-objects [-q | --progress | --all-progress] [--all-progress-implied]\n\t[--no-reuse-delta] [--delta-base-offset] [--non-empty]\n\t[--local] [--incremental] [--window=<n>] [--depth=<n>]\n\t[--revs [--unpacked | --all]] [--keep-pack=<pack-name>]\n\t[--stdout [--filter=<filter-spec>] | base-name]\n\t[--shallow] [--keep-true-parents] [--[no-]sparse] < object-list"
     ],
@@ -3689,10 +3688,10 @@
       " --unpack-unreachable ",
       " --delta-islands "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "pack-objects"
   },
   {
-    "command": "unpack-objects",
     "synopsis": [
       "git unpack-objects [-n] [-q] [-r] [--strict]"
     ],
@@ -3703,10 +3702,10 @@
       " --strict ",
       " --max-input-size=<size> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "unpack-objects"
   },
   {
-    "command": "update-index",
     "synopsis": [
       "git update-index\n\t     [--add] [--remove | --force-remove] [--replace]\n\t     [--refresh] [-q] [--unmerged] [--ignore-missing]\n\t     [(--cacheinfo <mode>,<object>,<file>)…​]\n\t     [--chmod=(+|-)x]\n\t     [--[no-]assume-unchanged]\n\t     [--[no-]skip-worktree]\n\t     [--[no-]ignore-skip-worktree-entries]\n\t     [--[no-]fsmonitor-valid]\n\t     [--ignore-submodules]\n\t     [--[no-]split-index]\n\t     [--[no-|test-|force-]untracked-cache]\n\t     [--[no-]fsmonitor]\n\t     [--really-refresh] [--unresolve] [--again | -g]\n\t     [--info-only] [--index-info]\n\t     [-z] [--stdin] [--index-version <n>]\n\t     [--verbose]\n\t     [--] [<file>…​]"
     ],
@@ -3748,18 +3747,18 @@
       " -- ",
       " <file> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "update-index"
   },
   {
-    "command": "update-ref",
     "synopsis": [
       "git update-ref [-m <reason>] [--no-deref] (-d <ref> [<oldvalue>] | [--create-reflog] <ref> <newvalue> [<oldvalue>] | --stdin [-z])"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "update-ref"
   },
   {
-    "command": "write-tree",
     "synopsis": [
       "git write-tree [--missing-ok] [--prefix=<prefix>/]"
     ],
@@ -3767,10 +3766,10 @@
       " --missing-ok ",
       " --prefix=<prefix>/ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "write-tree"
   },
   {
-    "command": "check-ref-format",
     "synopsis": [
       "git check-ref-format [--normalize]\n       [--[no-]allow-onelevel] [--refspec-pattern]\n       <refname>\ngit check-ref-format --branch <branchname-shorthand>"
     ],
@@ -3779,18 +3778,18 @@
       " --refspec-pattern ",
       " --normalize "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "check-ref-format"
   },
   {
-    "command": "merge-one-file",
     "synopsis": [
       "git merge-one-file"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "merge-one-file"
   },
   {
-    "command": "patch-id",
     "synopsis": [
       "git patch-id [--stable | --unstable]"
     ],
@@ -3798,10 +3797,10 @@
       " --stable ",
       " --unstable "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "patch-id"
   },
   {
-    "command": "column",
     "synopsis": [
       "git column [--command=<name>] [--[raw-]mode=<mode>] [--width=<width>]\n\t     [--indent=<string>] [--nl=<string>] [--padding=<n>]"
     ],
@@ -3814,10 +3813,10 @@
       " --nl=<N> ",
       " --padding=<N> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "column"
   },
   {
-    "command": "mailsplit",
     "synopsis": [
       "git mailsplit [-b] [-f<nn>] [-d<prec>] [--keep-cr] [--mboxrd]\n\t\t-o<directory> [--] [(<mbox>|<Maildir>)…​]"
     ],
@@ -3831,10 +3830,10 @@
       " --keep-cr ",
       " --mboxrd "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "mailsplit"
   },
   {
-    "command": "check-attr",
     "synopsis": [
       "git check-attr [-a | --all | <attr>…​] [--] <pathname>…​\ngit check-attr --stdin [-z] [-a | --all | <attr>…​]"
     ],
@@ -3845,10 +3844,10 @@
       " -z ",
       " -- "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "check-attr"
   },
   {
-    "command": "check-ignore",
     "synopsis": [
       "git check-ignore [<options>] <pathname>…​\ngit check-ignore [<options>] --stdin"
     ],
@@ -3860,28 +3859,28 @@
       " -n, --non-matching ",
       " --no-index "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "check-ignore"
   },
   {
-    "command": "check-mailmap",
     "synopsis": [
       "git check-mailmap [<options>] <contact>…​"
     ],
     "options": [
       " --stdin "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "check-mailmap"
   },
   {
-    "command": "credential",
     "synopsis": [
       "\ngit credential <fill|approve|reject>\n"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "credential"
   },
   {
-    "command": "fmt-merge-msg",
     "synopsis": [
       "git fmt-merge-msg [-m <message>] [--log[=<n>] | --no-log]\ngit fmt-merge-msg [-m <message>] [--log[=<n>] | --no-log] -F <file>"
     ],
@@ -3894,10 +3893,10 @@
       " -F <file> ",
       " --file <file> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "fmt-merge-msg"
   },
   {
-    "command": "interpret-trailers",
     "synopsis": [
       "git interpret-trailers [<options>] [(--trailer <token>[(=|:)<value>])…​] [<file>…​]\ngit interpret-trailers [<options>] [--parse] [<file>…​]"
     ],
@@ -3917,10 +3916,10 @@
       " --parse ",
       " --no-divider "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "interpret-trailers"
   },
   {
-    "command": "mailinfo",
     "synopsis": [
       "git mailinfo [-k|-b] [-u | --encoding=<encoding> | -n] [--[no-]scissors] <msg> <patch>"
     ],
@@ -3937,10 +3936,10 @@
       " <msg> ",
       " <patch> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "mailinfo"
   },
   {
-    "command": "stripspace",
     "synopsis": [
       "git stripspace [-s | --strip-comments]\ngit stripspace [-c | --comment-lines]"
     ],
@@ -3950,20 +3949,20 @@
       " -c ",
       " --comment-lines "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "stripspace"
   },
   {
-    "command": "receive-pack",
     "synopsis": [
       "git-receive-pack <directory>"
     ],
     "options": [
       " <directory> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "receive-pack"
   },
   {
-    "command": "http-fetch",
     "synopsis": [
       "git http-fetch [-c] [-t] [-a] [-d] [-v] [-w filename] [--recover] [--stdin] <commit> <url>"
     ],
@@ -3975,10 +3974,10 @@
       " --stdin ",
       " --recover "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "http-fetch"
   },
   {
-    "command": "http-push",
     "synopsis": [
       "git http-push [--all] [--dry-run] [--force] [--verbose] <url> <ref> [<ref>…​]"
     ],
@@ -3991,20 +3990,20 @@
       " -D ",
       " <ref>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "http-push"
   },
   {
-    "command": "upload-archive",
     "synopsis": [
       "git upload-archive <directory>"
     ],
     "options": [
       " <directory> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "upload-archive"
   },
   {
-    "command": "upload-pack",
     "synopsis": [
       "git-upload-pack [--[no-]strict] [--timeout=<n>] [--stateless-rpc]\n\t\t  [--advertise-refs] <directory>"
     ],
@@ -4015,10 +4014,10 @@
       " --advertise-refs ",
       " <directory> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "upload-pack"
   },
   {
-    "command": "daemon",
     "synopsis": [
       "git daemon [--verbose] [--syslog] [--export-all]\n\t     [--timeout=<n>] [--init-timeout=<n>] [--max-connections=<n>]\n\t     [--strict-paths] [--base-path=<path>] [--base-path-relaxed]\n\t     [--user-path | --user-path=<path>]\n\t     [--interpolated-path=<pathtemplate>]\n\t     [--reuseaddr] [--detach] [--pid-file=<file>]\n\t     [--enable=<service>] [--disable=<service>]\n\t     [--allow-override=<service>] [--forbid-override=<service>]\n\t     [--access-hook=<path>] [--[no-]informative-errors]\n\t     [--inetd |\n\t      [--listen=<host_or_ipaddr>] [--port=<n>]\n\t      [--user=<user> [--group=<group>]]]\n\t     [--log-destination=(stderr|syslog|none)]\n\t     [<directory>…​]"
     ],
@@ -4055,10 +4054,10 @@
       " --access-hook=<path> ",
       " <directory> "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "daemon"
   },
   {
-    "command": "fetch-pack",
     "synopsis": [
       "git fetch-pack [--all] [--quiet|-q] [--keep|-k] [--thin] [--include-tag]\n\t[--upload-pack=<git-upload-pack>]\n\t[--depth=<n>] [--no-progress]\n\t[-v] <repository> [<refs>…​]"
     ],
@@ -4083,18 +4082,18 @@
       " <repository> ",
       " <refs>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "fetch-pack"
   },
   {
-    "command": "http-backend",
     "synopsis": [
       "git http-backend"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "http-backend"
   },
   {
-    "command": "send-pack",
     "synopsis": [
       "git send-pack [--all] [--dry-run] [--force] [--receive-pack=<git-receive-pack>]\n\t\t[--verbose] [--thin] [--atomic]\n\t\t[--[no-]signed|--signed=(true|false|if-asked)]\n\t\t[<host>:]<directory> [<ref>…​]"
     ],
@@ -4115,22 +4114,23 @@
       " <directory> ",
       " <ref>…​ "
     ],
-    "optionsDescription": []
+    "optionsDescription": [],
+    "command": "send-pack"
   },
   {
-    "command": "update-server-info",
     "synopsis": [
       "git update-server-info"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "update-server-info"
   },
   {
-    "command": "stage",
     "synopsis": [
       "git stage args…​"
     ],
-    "options": [],
-    "optionsDescription": []
+    "options": null,
+    "optionsDescription": [],
+    "command": "stage"
   }
 ]

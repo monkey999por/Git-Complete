@@ -1,6 +1,4 @@
 ﻿using AngleSharp.Dom;
-
-using Git_Complete.function.parser;
 using Git_Complete.src.entity;
 using System.Collections.Generic;
 
@@ -36,9 +34,9 @@ namespace Git_Complete.src.function.scrape
             return ret;
         }
 
-        public override ECommandKey ScrapeBy(ECommandKey _in)
+        public override ECommandKeyScrape ScrapeBy(ECommandKeyScrape _in)
         {
-            var ret = new ECommandKey(_in);
+            var ret = new ECommandKeyScrape(_in);
             ret.synopsis = ScrapeBy(ret.command);
             return ret;
         }

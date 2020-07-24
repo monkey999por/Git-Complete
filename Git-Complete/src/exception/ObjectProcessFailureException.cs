@@ -12,14 +12,14 @@ namespace Git_Complete.src.exception
     /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    class MyProcessFailureException<T> : Exception
+    class ObjectProcessFailureException<T> : Exception
     {
         public string message;
         public T errorObject;
 
-        public MyProcessFailureException() : base() { }
+        public ObjectProcessFailureException() : base() { }
 
-        public MyProcessFailureException(string message, T errorObject)
+        public ObjectProcessFailureException(string message, T errorObject)
         {
             this.message = message;
             this.errorObject = errorObject;

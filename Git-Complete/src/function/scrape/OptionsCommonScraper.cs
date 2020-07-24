@@ -1,6 +1,4 @@
 ﻿using AngleSharp.Dom;
-
-using Git_Complete.function.parser;
 using Git_Complete.src.entity;
 using System.Collections.Generic;
 
@@ -20,7 +18,7 @@ namespace Git_Complete.src.function.scrape
         /// </summary>
         /// <param name="command"></param>
         /// <returns></returns>
-        public　override List<string> ScrapeBy(string command)
+        public override List<string> ScrapeBy(string command)
         {
             //ヘルプファイルのDomを取得
             var document = gitHelpDocs.GetDom(command);
@@ -41,9 +39,9 @@ namespace Git_Complete.src.function.scrape
             return ret;
         }
 
-        public override ECommandKey ScrapeBy(ECommandKey _in)
+        public override ECommandKeyScrape ScrapeBy(ECommandKeyScrape _in)
         {
-            var ret = new ECommandKey(_in);
+            var ret = new ECommandKeyScrape(_in);
             ret.options = ScrapeBy(ret.command);
             return ret;
         }

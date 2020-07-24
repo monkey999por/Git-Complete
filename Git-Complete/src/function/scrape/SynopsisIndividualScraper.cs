@@ -1,5 +1,4 @@
 ﻿using Git_Complete.src.entity;
-using System;
 using System.Collections.Generic;
 
 namespace Git_Complete.src.function.scrape
@@ -165,9 +164,9 @@ namespace Git_Complete.src.function.scrape
 
         }
 
-        public override ECommandKey ScrapeBy(ECommandKey _in)
+        public override ECommandKeyScrape ScrapeBy(ECommandKeyScrape _in)
         {
-            var ret = new ECommandKey(_in);
+            var ret = new ECommandKeyScrape(_in);
             ret.synopsis = ScrapeBy(ret.command);
             return ret;
         }
