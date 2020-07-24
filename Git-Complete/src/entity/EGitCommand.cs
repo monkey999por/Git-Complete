@@ -17,7 +17,7 @@ namespace Git_Complete.src.entity
     /// <code>
     /// EGitCommandList<EGitCommand> eGitCommandList = new EGitCommandList<EGitCommand>();
     /// 
-    /// //valueはList<EGitCommand>型。メソッドメンバがvalueフィールドに値が設定されていることを前提に作られているので、下記のように使用すること
+    /// //<see cref="value"/>は<see cref="List{EGitCommand}"/>型。メソッドメンバが<see cref="value"/>フィールドに値が設定されていることを前提に作られているので、下記のように使用すること
     /// eGitCommandList.Value = FileCommon.GetInstanceFrom<List<EGitCommand>>(entityPath);
     /// 
     /// //こういうのは基本的にNG
@@ -154,18 +154,34 @@ namespace Git_Complete.src.entity
             if (this.Value.Count != CommonProps.ALL_COMMAND_COUNT)
                 throw new MyProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
 
-            var result = GetEntityByCommand(swapObj.command);
-            if (result.eGitCommand is null)
+            var target = GetEntityByCommand(swapObj.command);
+            if (target.eGitCommand is null)
                 throw new Exception("gitのコマンドではありません");
 
-            this.Value.RemoveAt(result.index);
-            this.Value.Insert(result.index, swapObj);
+            this.Value.RemoveAt(target.index);
+            this.Value.Insert(target.index, (T)new EGitCommand(swapObj));
 
             //確認用
             if (this.Value.Count != CommonProps.ALL_COMMAND_COUNT)
                 throw new MyProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
 
         }
+
+        /// <summary>
+        /// <see cref="EGitCommandList.value"/>の中から引数で渡されたオブジェクトを<see cref="Value"/>に追加します
+        /// </summary>
+        /// <param name="addObj"></param>
+        public void Add(T addObj)
+        {
+            //重複チェック
+            if (GetEntityByCommand(addObj.command).eGitCommand != null)
+            {
+                throw new MyProcessFailureException<T>("コマンドが重複してます。", addObj);
+            } 
+            
+            this.Value.Add((T)new EGitCommand(addObj));
+        }
+
     }
 
 

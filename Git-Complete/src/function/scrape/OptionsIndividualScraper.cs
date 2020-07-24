@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Git_Complete.src.function.scrape
 {
-    class SynopsisIndividualScraper : IndividualScraper
+    class OptionsIndividualScraper : IndividualScraper
     {
         /// <summary>
         /// 受け取ったコマンドごとの個別スクレイプ
@@ -14,9 +14,9 @@ namespace Git_Complete.src.function.scrape
         /// <returns></returns>
         public override List<string> ScrapeBy(string command)
         {
+            CommonScraper cs = new OptionsCommonScraper();
 
-            CommonScraper cs = new SynopsisCommonScraper();
-
+            //return value
             var ret = new List<string>();
 
             switch (command)
