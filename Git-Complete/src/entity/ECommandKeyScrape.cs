@@ -13,15 +13,21 @@ namespace Git_Complete.src.entity
     [Serializable]
     public class ECommandKeyScrape : ECommandKey
     {
-        //各gitコマンドで使用できるSYNOPSISを保持する. 
+        /// <summary>
+        /// 各gitコマンドで使用できるSYNOPSISを保持する. 
+        /// </summary>
         [DataMember]
         public List<string> synopsis = new List<string>();
 
-        //各gitコマンドで使用できるオプションを保持する. 
+        /// <summary>
+        /// 各gitコマンドで使用できるオプションを保持する. 
+        /// </summary>
         [DataMember]
         public List<string> options = new List<string>();
 
-        //各gitコマンドで使用できるオプションの説明を保持する
+        /// <summary>
+        /// 各gitコマンドで使用できるオプションの説明を保持する
+        /// </summary>
         [DataMember]
         public List<string> optionsDescription = new List<string>();
 
@@ -34,15 +40,12 @@ namespace Git_Complete.src.entity
         /// <summary>
         /// Deep Copy
         /// </summary>
-        /// <param name="_base">base object</param>
+        /// <param name="_base">copy base</param>
         public ECommandKeyScrape(ECommandKeyScrape _base)
         {
             if (_base.command is null)
             {
-                throw new ObjectProcessFailureException<ECommandKeyScrape>(
-                    "コマンドがnullです",
-                    _base
-                    );
+                throw new ObjectProcessFailureException<ECommandKeyScrape>("コマンドがnullです", _base);
             }
 
             //null対策

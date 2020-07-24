@@ -13,7 +13,6 @@ namespace Git_Complete.src.function.scrape
         /// <returns></returns>
         public override List<string> ScrapeBy(string command)
         {
-
             CommonScraper cs = new SynopsisCommonScraper();
 
             var ret = new List<string>();
@@ -163,7 +162,7 @@ namespace Git_Complete.src.function.scrape
             return ret;
 
         }
-
+        /// <inheritdoc/>
         public override ECommandKeyScrape ScrapeBy(ECommandKeyScrape _in)
         {
             var ret = new ECommandKeyScrape(_in);

@@ -4,10 +4,7 @@ using System.Collections.Generic;
 
 namespace Git_Complete.src.function.scrape
 {
-    /// <summary>
-    /// メソッド詳細はインターフェイス参照
-    /// <see cref="IScraper"/>
-    /// </summary>
+    /// <inheritdoc/>
     class SynopsisCommonScraper : CommonScraper
     {
         /// <summary>
@@ -33,7 +30,7 @@ namespace Git_Complete.src.function.scrape
             }
             return ret;
         }
-
+        /// <inheritdoc/>
         public override ECommandKeyScrape ScrapeBy(ECommandKeyScrape _in)
         {
             var ret = new ECommandKeyScrape(_in);

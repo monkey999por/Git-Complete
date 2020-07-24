@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace Git_Complete.function.parser
 {
+
+    /// <summary>
+    /// Gitの公式ヘルプのDomを取得・保持する。
+    /// </summary>
     public class GitHelpDocs
     {
         private const String HELP_URL_BASE = @"https://git-scm.com/docs/";
@@ -22,10 +26,7 @@ namespace Git_Complete.function.parser
         public GitHelpDocs()
         {
             if (domDic is null)
-            {
                 domDic = GetDomDic(CommonProps.ALL_COMMAND);
-            }
-
         }
 
         /// <summary>
@@ -44,7 +45,6 @@ namespace Git_Complete.function.parser
                 });
                 domDic = task.Result;
             }
-
             return domDic[command];
         }
 
@@ -64,9 +64,9 @@ namespace Git_Complete.function.parser
         }
 
         /// <summary>
-        /// Gitの公式Help(https://git-scm.com/docs/git-{command})のコマンドごとのDomを取得し、フィールド:<c>_helpDocsDom</c>に保存する
+        /// Gitの公式Help(https://git-scm.com/docs/git-{command})のコマンドごとのDomを取得し、
+        /// <see cref="domDic"/>保存する
         /// </summary>
-        /// <returns></returns>
         private async Task<Dictionary<string, IDocument>> CreateDomAll()
         {
             if (domDic != null) { return domDic; }

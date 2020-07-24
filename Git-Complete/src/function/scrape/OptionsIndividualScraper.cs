@@ -161,15 +161,14 @@ namespace Git_Complete.src.function.scrape
                     break;
             }
             return ret;
-
         }
 
+        /// <inheritdoc/>
         public override ECommandKeyScrape ScrapeBy(ECommandKeyScrape _in)
         {
             var ret = new ECommandKeyScrape(_in);
             ret.synopsis = ScrapeBy(ret.command);
             return ret;
         }
-
     }
 }

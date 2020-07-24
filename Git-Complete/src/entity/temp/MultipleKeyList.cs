@@ -4,14 +4,14 @@ using System.Collections.Generic;
 namespace Git_Complete.src.entity.temp
 {
     /// <summary>
-    /// 複数キーのDictionaryを再現するためのクラス
-    /// 利用側では下記のように利用すること
+    /// 複数キーの<see cref="Dictionary{TKey, TValue}"/>を再現するためのクラス
+    /// 下記のように利用する
     /// 
     /// <code>
     /// List<MultipleKeyList<string>> m = new List<MultipleKeyList<string>>("key", new List<string>());
     /// </code>
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">value</typeparam>
     [Serializable]
     class MultipleKeyList<T>
     {

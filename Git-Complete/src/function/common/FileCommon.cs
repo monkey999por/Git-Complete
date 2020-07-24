@@ -116,18 +116,16 @@ namespace Git_Complete.src.function.common
             {
                 var serializer = new DataContractSerializer(typeof(T));
 
-                using (var fs = new FileStream(filePath, FileMode.Open))
-                using (XmlWriter xw = XmlWriter.Create(fs, new XmlWriterSettings
+                using var fs = new FileStream(filePath, FileMode.Open);
+                using XmlWriter xw = XmlWriter.Create(fs, new XmlWriterSettings
                 {
                     Indent = true,
                     IndentChars = "\t"
 
-                }))
-                {
-                    // XMLファイルからオブジェクトを読み込む
-                    var ret = (T)serializer.ReadObject(fs);
-                    return ret;
-                }
+                });
+                // XMLファイルからオブジェクトを読み込む
+                var ret = (T)serializer.ReadObject(fs);
+                return ret;
 
             }
             catch (Exception e)
