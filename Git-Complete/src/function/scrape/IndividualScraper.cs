@@ -21,12 +21,12 @@ namespace Git_Complete.src.function.scrape
             throw new Exception("overrideして使ってください");
         }
 
-        public virtual EGitCommand ScrapeBy(EGitCommand _in)
+        public virtual ECommandKey ScrapeBy(ECommandKey _in)
         {
             throw new Exception("overrideして使ってください");
         }
 
-        public void ScrapeBy(EGitCommandList<EGitCommand> _in)
+        public void ScrapeBy(ECommandKeyList<ECommandKey> _in)
         {
             //foreachだとループ元が変更されるので
             for (int i = 0; i < _in.Value.Count; i++)
@@ -41,7 +41,7 @@ namespace Git_Complete.src.function.scrape
         /// </summary>
         /// <param name="_in"></param>
         /// <param name="targetCommands"></param>
-        public virtual void ScrapeBy(EGitCommandList<EGitCommand> _in, string[] targetCommands)
+        public virtual void ScrapeBy(ECommandKeyList<ECommandKey> _in, string[] targetCommands)
         {
 
             //前提
@@ -51,9 +51,9 @@ namespace Git_Complete.src.function.scrape
             targetCommands ??= CommonProps.ALL_COMMAND;
 
             //スクレイプ対象のコマンドを持ったの作る
-            var target = new EGitCommandList<EGitCommand>();
+            var target = new ECommandKeyList<ECommandKey>();
             var targetEnt = _in.GetEntityListByCommands(targetCommands);
-            target.Value = new List<EGitCommand>(targetEnt);
+            target.Value = new List<ECommandKey>(targetEnt);
 
             ScrapeBy(target);
 

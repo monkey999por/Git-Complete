@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ArrayOfEGitCommand xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Git_Complete.src.entity">
-	<EGitCommand>
+<ArrayOfECommandKey xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/Git_Complete.src.entity">
+	<ECommandKey>
 		<command>annotate</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -b </d3p1:string>
@@ -30,8 +30,8 @@
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git annotate [&lt;options&gt;] &lt;file&gt; [&lt;revision&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>blame</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -b </d3p1:string>
@@ -76,16 +76,16 @@
 	    [--progress] [--abbrev=&lt;n&gt;] [&lt;rev&gt; | --contents &lt;file&gt; | --reverse &lt;rev&gt;..&lt;rev&gt;]
 	    [--] &lt;file&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>rerere</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git rerere [clear|forget &lt;pathspec&gt;|diff|remaining|status|gc]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>bugreport</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -o &lt;path&gt; </d3p1:string>
@@ -97,8 +97,8 @@
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git bugreport [(-o | --output-directory) &lt;path&gt;] [(-s | --suffix) &lt;format&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>count-objects</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -v </d3p1:string>
@@ -110,8 +110,8 @@
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git count-objects [-v] [-H | --human-readable]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>difftool</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -d </d3p1:string>
@@ -133,8 +133,8 @@
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git difftool [&lt;options&gt;] [&lt;commit&gt; [&lt;commit&gt;]] [--] [&lt;path&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>fsck</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;object&gt; </d3p1:string>
@@ -159,8 +159,8 @@
 	 [--[no-]dangling] [--[no-]progress] [--connectivity-only]
 	 [--[no-]name-objects] [&lt;object&gt;*]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>help</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -a </d3p1:string>
@@ -182,8 +182,8 @@
 			<d3p1:string>git help [-a|--all [--[no-]verbose]] [-g|--guide]
 	   [-i|--info|-m|--man|-w|--web] [COMMAND|GUIDE]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>instaweb</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -l </d3p1:string>
@@ -209,16 +209,16 @@
                [--browser=&lt;browser&gt;]
 git instaweb [--start] [--stop] [--restart]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>merge-tree</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git merge-tree &lt;base-tree&gt; &lt;branch1&gt; &lt;branch2&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>show-branch</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;rev&gt; </d3p1:string>
@@ -252,8 +252,8 @@ git instaweb [--start] [--stop] [--restart]</d3p1:string>
 		[(&lt;rev&gt; | &lt;glob&gt;)…​]
 git show-branch (-g|--reflog)[=&lt;n&gt;[,&lt;base&gt;]] [--list] [&lt;ref&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>verify-commit</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --raw </d3p1:string>
@@ -265,8 +265,8 @@ git show-branch (-g|--reflog)[=&lt;n&gt;[,&lt;base&gt;]] [--list] [&lt;ref&gt;]<
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git verify-commit &lt;commit&gt;…​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>verify-tag</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --raw </d3p1:string>
@@ -278,16 +278,16 @@ git show-branch (-g|--reflog)[=&lt;n&gt;[,&lt;base&gt;]] [--list] [&lt;ref&gt;]<
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git verify-tag [--format=&lt;format&gt;] &lt;tag&gt;…​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>whatchanged</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git whatchanged &lt;option&gt;…​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>reflog</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --all </d3p1:string>
@@ -305,8 +305,8 @@ git show-branch (-g|--reflog)[=&lt;n&gt;[,&lt;base&gt;]] [--list] [&lt;ref&gt;]<
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git reflog &lt;subcommand&gt; &lt;options&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>remote</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -v </d3p1:string>
@@ -328,8 +328,8 @@ git remote [-v | --verbose] show [-n] &lt;name&gt;…​
 git remote prune [-n | --dry-run] &lt;name&gt;…​
 git remote [-v | --verbose] update [-p | --prune] [(&lt;group&gt; | &lt;remote&gt;)…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>repack</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -a </d3p1:string>
@@ -359,8 +359,8 @@ git remote [-v | --verbose] update [-p | --prune] [(&lt;group&gt; | &lt;remote&g
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git repack [-a] [-A] [-d] [-f] [-F] [-l] [-n] [-q] [-b] [--window=&lt;n&gt;] [--depth=&lt;n&gt;] [--threads=&lt;n&gt;] [--keep-pack=&lt;pack-name&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>replace</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -f </d3p1:string>
@@ -384,8 +384,8 @@ git replace [-f] --convert-graft-file
 git replace -d &lt;object&gt;…​
 git replace [--format=&lt;format&gt;] [-l [&lt;pattern&gt;]]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>config</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --replace-all </d3p1:string>
@@ -444,8 +444,8 @@ git config [&lt;file-option&gt;] --get-color name [default]
 git config [&lt;file-option&gt;] --get-colorbool name [stdout-is-tty]
 git config [&lt;file-option&gt;] -e | --edit</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>filter-branch</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --setup &lt;command&gt; </d3p1:string>
@@ -475,8 +475,8 @@ git config [&lt;file-option&gt;] -e | --edit</d3p1:string>
 	[--original &lt;namespace&gt;] [-d &lt;directory&gt;] [-f | --force]
 	[--state-branch &lt;branch&gt;] [--] [&lt;rev-list options&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>mergetool</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -t &lt;tool&gt; </d3p1:string>
@@ -494,8 +494,8 @@ git config [&lt;file-option&gt;] -e | --edit</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git mergetool [--tool=&lt;tool&gt;] [-y | --[no-]prompt] [&lt;file&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>pack-refs</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --all </d3p1:string>
@@ -505,8 +505,8 @@ git config [&lt;file-option&gt;] -e | --edit</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git pack-refs [--all] [--no-prune]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>prune</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -n </d3p1:string>
@@ -522,8 +522,8 @@ git config [&lt;file-option&gt;] -e | --edit</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git prune [-n] [-v] [--progress] [--expire &lt;time&gt;] [--] [&lt;head&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>svn</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --shared[=(false|true|umask|group|all|world|everybody)] </d3p1:string>
@@ -558,8 +558,8 @@ git config [&lt;file-option&gt;] -e | --edit</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git svn &lt;command&gt; [&lt;options&gt;] [&lt;arguments&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>archimport</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -h </d3p1:string>
@@ -577,8 +577,8 @@ git config [&lt;file-option&gt;] -e | --edit</d3p1:string>
 			<d3p1:string>git archimport [-h] [-v] [-o] [-a] [-f] [-T] [-D depth] [-t tempdir]
                &lt;archive/branch&gt;[:&lt;git-branch&gt;] …​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>cvsexportcommit</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -c </d3p1:string>
@@ -599,8 +599,8 @@ git config [&lt;file-option&gt;] -e | --edit</d3p1:string>
 			<d3p1:string>git cvsexportcommit [-h] [-u] [-v] [-c] [-P] [-p] [-a] [-d cvsroot]
 	[-w cvsworkdir] [-W] [-f] [-m msgprefix] [PARENTCOMMIT] COMMITID</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>cvsimport</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -v </d3p1:string>
@@ -633,8 +633,8 @@ git config [&lt;file-option&gt;] -e | --edit</d3p1:string>
 	      [-a] [-m] [-M &lt;regex&gt;] [-S &lt;regex&gt;] [-L &lt;commitlimit&gt;]
 	      [-r &lt;remote&gt;] [-R] [&lt;CVS_module&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>imap-send</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -v </d3p1:string>
@@ -648,8 +648,8 @@ git config [&lt;file-option&gt;] -e | --edit</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git imap-send [-v] [-q] [--[no-]curl]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>p4</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --git-dir &lt;dir&gt; </d3p1:string>
@@ -691,8 +691,8 @@ git p4 sync [&lt;sync options&gt;] [&lt;p4 depot path&gt;…​]
 git p4 rebase
 git p4 submit [&lt;submit options&gt;] [&lt;master branch name&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>quiltimport</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -n </d3p1:string>
@@ -707,8 +707,8 @@ git p4 submit [&lt;submit options&gt;] [&lt;master branch name&gt;]</d3p1:string
 			<d3p1:string>git quiltimport [--dry-run | -n] [--author &lt;author&gt;] [--patches &lt;dir&gt;]
 		[--series &lt;file&gt;] [--keep-non-patch]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>request-pull</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -p </d3p1:string>
@@ -720,8 +720,8 @@ git p4 submit [&lt;submit options&gt;] [&lt;master branch name&gt;]</d3p1:string
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git request-pull [-p] &lt;start&gt; &lt;url&gt; [&lt;end&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>send-email</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --annotate </d3p1:string>
@@ -778,8 +778,8 @@ git p4 submit [&lt;submit options&gt;] [&lt;master branch name&gt;]</d3p1:string
 			<d3p1:string>git send-email [&lt;options&gt;] &lt;file|directory|rev-list options&gt;…​
 git send-email --dump-aliases</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>bisect</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --no-checkout </d3p1:string>
@@ -788,8 +788,8 @@ git send-email --dump-aliases</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git bisect &lt;subcommand&gt; &lt;options&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>format-patch</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -p </d3p1:string>
@@ -938,8 +938,8 @@ git send-email --dump-aliases</d3p1:string>
 		   [&lt;common diff options&gt;]
 		   [ &lt;since&gt; | &lt;revision range&gt; ]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>init</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -q </d3p1:string>
@@ -960,8 +960,8 @@ git send-email --dump-aliases</d3p1:string>
 	  [--separate-git-dir &lt;git dir&gt;] [--object-format=&lt;format]
 	  [--shared[=&lt;permissions&gt;]] [directory]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>rm</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;pathspec&gt;…​ </d3p1:string>
@@ -984,8 +984,8 @@ git send-email --dump-aliases</d3p1:string>
 	  [--quiet] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]]
 	  [--] [&lt;pathspec&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>show</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;object&gt;…​ </d3p1:string>
@@ -1008,8 +1008,8 @@ git send-email --dump-aliases</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git show [&lt;options&gt;] [&lt;object&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>stash</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -a </d3p1:string>
@@ -1045,8 +1045,8 @@ git stash clear
 git stash create [&lt;message&gt;]
 git stash store [-m|--message &lt;message&gt;] [-q|--quiet] &lt;commit&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>archive</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --format=&lt;fmt&gt; </d3p1:string>
@@ -1071,8 +1071,8 @@ git stash store [-m|--message &lt;message&gt;] [-q|--quiet] &lt;commit&gt;</d3p1
 	      [--remote=&lt;repo&gt; [--exec=&lt;git-upload-archive&gt;]] &lt;tree-ish&gt;
 	      [&lt;path&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>describe</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;commit-ish&gt;…​ </d3p1:string>
@@ -1097,8 +1097,8 @@ git stash store [-m|--message &lt;message&gt;] [-q|--quiet] &lt;commit&gt;</d3p1
 git describe [--all] [--tags] [--contains] [--abbrev=&lt;n&gt;] --dirty[=&lt;mark&gt;]
 git describe &lt;blob&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>shortlog</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -n </d3p1:string>
@@ -1189,8 +1189,8 @@ git describe &lt;blob&gt;</d3p1:string>
 			<d3p1:string>git shortlog [&lt;options&gt;] [&lt;revision range&gt;] [[--] &lt;path&gt;…​]
 git log --pretty=short | git shortlog [&lt;options&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>clean</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -d </d3p1:string>
@@ -1211,8 +1211,8 @@ git log --pretty=short | git shortlog [&lt;options&gt;]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git clean [-d] [-f] [-i] [-n] [-q] [-e &lt;pattern&gt;] [-x | -X] [--] &lt;path&gt;…​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>pull</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -q </d3p1:string>
@@ -1297,8 +1297,8 @@ git log --pretty=short | git shortlog [&lt;options&gt;]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git pull [&lt;options&gt;] [&lt;repository&gt; [&lt;refspec&gt;…​]]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>reset</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -q </d3p1:string>
@@ -1316,8 +1316,8 @@ git reset [-q] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]] [&lt;tr
 git reset (--patch | -p) [&lt;tree-ish&gt;] [--] [&lt;pathspec&gt;…​]
 git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [&lt;commit&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>add</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;pathspec&gt;…​ </d3p1:string>
@@ -1360,8 +1360,8 @@ git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [&lt;commit&g
 	  [--chmod=(+|-)x] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]]
 	  [--] [&lt;pathspec&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>am</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> (&lt;mbox&gt;|&lt;Maildir&gt;)…​ </d3p1:string>
@@ -1424,8 +1424,8 @@ git reset [--soft | --mixed [-N] | --hard | --merge | --keep] [-q] [&lt;commit&g
 	 [(&lt;mbox&gt; | &lt;Maildir&gt;)…​]
 git am (--continue | --skip | --abort | --quit | --show-current-patch[=(diff|raw)])</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>branch</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -d </d3p1:string>
@@ -1498,8 +1498,8 @@ git branch (-c | -C) [&lt;oldbranch&gt;] &lt;newbranch&gt;
 git branch (-d | -D) [-r] &lt;branchname&gt;…​
 git branch --edit-description [&lt;branchname&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>bundle</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> create [options] &lt;file&gt; &lt;git-rev-list-args&gt; </d3p1:string>
@@ -1521,8 +1521,8 @@ git bundle verify [-q | --quiet] &lt;file&gt;
 git bundle list-heads &lt;file&gt; [&lt;refname&gt;…​]
 git bundle unbundle &lt;file&gt; [&lt;refname&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>checkout</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -q </d3p1:string>
@@ -1575,8 +1575,8 @@ git checkout [-f|--ours|--theirs|-m|--conflict=&lt;style&gt;] [&lt;tree-ish&gt;]
 git checkout [-f|--ours|--theirs|-m|--conflict=&lt;style&gt;] [&lt;tree-ish&gt;] --pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]
 git checkout (-p|--patch) [&lt;tree-ish&gt;] [--] [&lt;pathspec&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>cherry-pick</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;commit&gt;…​ </d3p1:string>
@@ -1610,16 +1610,16 @@ git checkout (-p|--patch) [&lt;tree-ish&gt;] [--] [&lt;pathspec&gt;…​]</d3p1
 		  [-S[&lt;keyid&gt;]] &lt;commit&gt;…​
 git cherry-pick (--continue | --skip | --abort | --quit)</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>citool</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git citool</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>clone</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -l </d3p1:string>
@@ -1676,8 +1676,8 @@ git cherry-pick (--continue | --skip | --abort | --quit)</d3p1:string>
 	  [--filter=&lt;filter&gt;] [--] &lt;repository&gt;
 	  [&lt;directory&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>commit</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -a </d3p1:string>
@@ -1753,8 +1753,8 @@ git cherry-pick (--continue | --skip | --abort | --quit)</d3p1:string>
 	   [-i | -o] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]]
 	   [-S[&lt;keyid&gt;]] [--] [&lt;pathspec&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>diff</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -p </d3p1:string>
@@ -1888,8 +1888,8 @@ git diff [&lt;options&gt;] &lt;commit&gt; &lt;commit&gt; [--] [&lt;path&gt;…�
 git diff [&lt;options&gt;] &lt;blob&gt; &lt;blob&gt;
 git diff [&lt;options&gt;] --no-index [--] &lt;path&gt; &lt;path&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>fetch</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --all </d3p1:string>
@@ -1953,8 +1953,8 @@ git fetch [&lt;options&gt;] &lt;group&gt;
 git fetch --multiple [&lt;options&gt;] [(&lt;repository&gt; | &lt;group&gt;)…​]
 git fetch --all [&lt;options&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>gc</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --aggressive </d3p1:string>
@@ -1969,8 +1969,8 @@ git fetch --all [&lt;options&gt;]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git gc [--aggressive] [--auto] [--quiet] [--prune=&lt;date&gt; | --no-prune] [--force] [--keep-largest-pack]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>grep</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --cached </d3p1:string>
@@ -2073,16 +2073,16 @@ git fetch --all [&lt;options&gt;]</d3p1:string>
 	   [ [--[no-]exclude-standard] [--cached | --no-index | --untracked] | &lt;tree&gt;…​]
 	   [--] [&lt;pathspec&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>gui</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git gui [&lt;command&gt;] [arguments]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>log</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --follow </d3p1:string>
@@ -2207,8 +2207,8 @@ git fetch --all [&lt;options&gt;]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git log [&lt;options&gt;] [&lt;revision range&gt;] [[--] &lt;path&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>merge</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --commit </d3p1:string>
@@ -2270,8 +2270,8 @@ git fetch --all [&lt;options&gt;]</d3p1:string>
 	[--[no-]rerere-autoupdate] [-m &lt;msg&gt;] [-F &lt;file&gt;] [&lt;commit&gt;…​]
 git merge (--continue | --abort | --quit)</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>mv</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -f </d3p1:string>
@@ -2286,8 +2286,8 @@ git merge (--continue | --abort | --quit)</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git mv &lt;options&gt;…​ &lt;args&gt;…​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>notes</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -f </d3p1:string>
@@ -2330,8 +2330,8 @@ git notes remove [--ignore-missing] [--stdin] [&lt;object&gt;…​]
 git notes prune [-n] [-v]
 git notes get-ref</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>push</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;repository&gt; </d3p1:string>
@@ -2384,8 +2384,8 @@ git notes get-ref</d3p1:string>
 	   [--force-with-lease[=&lt;refname&gt;[:&lt;expect&gt;]]]
 	   [--no-verify] [&lt;repository&gt; [&lt;refspec&gt;…​]]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>range-diff</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --no-dual-color </d3p1:string>
@@ -2401,8 +2401,8 @@ git notes get-ref</d3p1:string>
 	[--no-dual-color] [--creation-factor=&lt;factor&gt;]
 	( &lt;range1&gt; &lt;range2&gt; | &lt;rev1&gt;…​&lt;rev2&gt; | &lt;base&gt; &lt;rev1&gt; &lt;rev2&gt; )</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>rebase</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --onto &lt;newbase&gt; </d3p1:string>
@@ -2476,8 +2476,8 @@ git rebase [-i | --interactive] [&lt;options&gt;] [--exec &lt;cmd&gt;] [--onto &
 	--root [&lt;branch&gt;]
 git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-current-patch)</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>restore</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -s &lt;tree&gt; </d3p1:string>
@@ -2514,8 +2514,8 @@ git rebase (--continue | --skip | --abort | --quit | --edit-todo | --show-curren
 git restore [&lt;options&gt;] [--source=&lt;tree&gt;] [--staged] [--worktree] --pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]
 git restore (-p|--patch) [&lt;options&gt;] [--source=&lt;tree&gt;] [--staged] [--worktree] [--] [&lt;pathspec&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>revert</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;commit&gt;…​ </d3p1:string>
@@ -2543,16 +2543,16 @@ git restore (-p|--patch) [&lt;options&gt;] [--source=&lt;tree&gt;] [--staged] [-
 			<d3p1:string>git revert [--[no-]edit] [-n] [-m parent-number] [-s] [-S[&lt;keyid&gt;]] &lt;commit&gt;…​
 git revert (--continue | --skip | --abort | --quit)</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>sparse-checkout</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git sparse-checkout &lt;subcommand&gt; [options]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>status</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -s </d3p1:string>
@@ -2582,8 +2582,8 @@ git revert (--continue | --skip | --abort | --quit)</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git status [&lt;options&gt;…​] [--] [&lt;pathspec&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>submodule</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -q </d3p1:string>
@@ -2631,8 +2631,8 @@ git submodule [--quiet] foreach [--recursive] &lt;command&gt;
 git submodule [--quiet] sync [--recursive] [--] [&lt;path&gt;…​]
 git submodule [--quiet] absorbgitdirs [--] [&lt;path&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>switch</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;branch&gt; </d3p1:string>
@@ -2671,8 +2671,8 @@ git switch [&lt;options&gt;] --detach [&lt;start-point&gt;]
 git switch [&lt;options&gt;] (-c|-C) &lt;new-branch&gt; [&lt;start-point&gt;]
 git switch [&lt;options&gt;] --orphan &lt;new-branch&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>tag</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -a </d3p1:string>
@@ -2726,8 +2726,8 @@ git tag [-n[&lt;num&gt;]] -l [--contains &lt;commit&gt;] [--no-contains &lt;comm
 	[--[no-]merged [&lt;commit&gt;]] [&lt;pattern&gt;…​]
 git tag -v [--format=&lt;format&gt;] &lt;tagname&gt;…​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>worktree</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -f </d3p1:string>
@@ -2760,8 +2760,8 @@ git worktree prune [-n] [-v] [--expire &lt;expire&gt;]
 git worktree remove [-f] &lt;worktree&gt;
 git worktree unlock &lt;worktree&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>diff-tree</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -p </d3p1:string>
@@ -2916,16 +2916,16 @@ git worktree unlock &lt;worktree&gt;</d3p1:string>
 	      [-t] [-r] [-c | --cc] [--combined-all-paths] [--root]
 	      [&lt;common diff options&gt;] &lt;tree-ish&gt; [&lt;tree-ish&gt;] [&lt;path&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>get-tar-commit-id</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git get-tar-commit-id</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>rev-parse</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --parseopt </d3p1:string>
@@ -2981,8 +2981,8 @@ git worktree unlock &lt;worktree&gt;</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git rev-parse [&lt;options&gt;] &lt;args&gt;…​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>cat-file</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;object&gt; </d3p1:string>
@@ -3009,8 +3009,8 @@ git worktree unlock &lt;worktree&gt;</d3p1:string>
 			<d3p1:string>git cat-file (-t [--allow-unknown-type]| -s [--allow-unknown-type]| -e | -p | &lt;type&gt; | --textconv | --filters ) [--path=&lt;path&gt;] &lt;object&gt;
 git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-symlinks]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>cherry</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -v </d3p1:string>
@@ -3022,8 +3022,8 @@ git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-syml
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git cherry [-v] [&lt;upstream&gt; [&lt;head&gt; [&lt;limit&gt;]]]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>diff-files</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -p </d3p1:string>
@@ -3155,8 +3155,8 @@ git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-syml
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git diff-files [-q] [-0|-1|-2|-3|-c|--cc] [&lt;common diff options&gt;] [&lt;path&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>diff-index</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -p </d3p1:string>
@@ -3284,8 +3284,8 @@ git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-syml
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git diff-index [-m] [--cached] [&lt;common diff options&gt;] &lt;tree-ish&gt; [&lt;path&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>for-each-ref</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;pattern&gt;…​ </d3p1:string>
@@ -3312,8 +3312,8 @@ git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-syml
 		   (--merged[=&lt;object&gt;] | --no-merged[=&lt;object&gt;])
 		   [--contains[=&lt;object&gt;]] [--no-contains[=&lt;object&gt;]]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>ls-files</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -c </d3p1:string>
@@ -3375,8 +3375,8 @@ git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-syml
 		[--full-name] [--recurse-submodules]
 		[--abbrev] [--] [&lt;file&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>ls-remote</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -h </d3p1:string>
@@ -3402,8 +3402,8 @@ git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-syml
 	      [-q | --quiet] [--exit-code] [--get-url] [--sort=&lt;key&gt;]
 	      [--symref] [&lt;repository&gt; [&lt;refs&gt;…​]]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>ls-tree</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;tree-ish&gt; </d3p1:string>
@@ -3426,8 +3426,8 @@ git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-syml
 	    [--name-only] [--name-status] [--full-name] [--full-tree] [--abbrev[=&lt;n&gt;]]
 	    &lt;tree-ish&gt; [&lt;path&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>merge-base</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -a </d3p1:string>
@@ -3441,8 +3441,8 @@ git merge-base --is-ancestor &lt;commit&gt; &lt;commit&gt;
 git merge-base --independent &lt;commit&gt;…​
 git merge-base --fork-point &lt;ref&gt; [&lt;commit&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>name-rev</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --tags </d3p1:string>
@@ -3459,8 +3459,8 @@ git merge-base --fork-point &lt;ref&gt; [&lt;commit&gt;]</d3p1:string>
 			<d3p1:string>git name-rev [--tags] [--refs=&lt;pattern&gt;]
 	       ( --all | --stdin | &lt;commit-ish&gt;…​ )</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>pack-redundant</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --all </d3p1:string>
@@ -3471,8 +3471,8 @@ git merge-base --fork-point &lt;ref&gt; [&lt;commit&gt;]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git pack-redundant [ --verbose ] [ --alt-odb ] &lt; --all | .pack filename …​ &gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>rev-list</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -&lt;number&gt; </d3p1:string>
@@ -3596,16 +3596,16 @@ git merge-base --fork-point &lt;ref&gt; [&lt;commit&gt;]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git rev-list [&lt;options&gt;] &lt;commit&gt;…​ [[--] &lt;path&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>show-index</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git show-index</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>show-ref</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --head </d3p1:string>
@@ -3629,8 +3629,8 @@ git merge-base --fork-point &lt;ref&gt; [&lt;commit&gt;]</d3p1:string>
 	     [--heads] [--] [&lt;pattern&gt;…​]
 git show-ref --exclude-existing[=&lt;pattern&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>unpack-file</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;blob&gt; </d3p1:string>
@@ -3639,8 +3639,8 @@ git show-ref --exclude-existing[=&lt;pattern&gt;]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git unpack-file &lt;blob&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>var</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -l </d3p1:string>
@@ -3649,8 +3649,8 @@ git show-ref --exclude-existing[=&lt;pattern&gt;]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git var ( -l | &lt;variable&gt; )</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>verify-pack</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;pack&gt;.idx …​ </d3p1:string>
@@ -3664,8 +3664,8 @@ git show-ref --exclude-existing[=&lt;pattern&gt;]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git verify-pack [-v|--verbose] [-s|--stat-only] [--] &lt;pack&gt;.idx …​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>commit-tree</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;tree&gt; </d3p1:string>
@@ -3682,8 +3682,8 @@ git show-ref --exclude-existing[=&lt;pattern&gt;]</d3p1:string>
 git commit-tree [(-p &lt;parent&gt;)…​] [-S[&lt;keyid&gt;]] [(-m &lt;message&gt;)…​]
 		  [(-F &lt;file&gt;)…​] &lt;tree&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>hash-object</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -t &lt;type&gt; </d3p1:string>
@@ -3699,8 +3699,8 @@ git commit-tree [(-p &lt;parent&gt;)…​] [-S[&lt;keyid&gt;]] [(-m &lt;message
 			<d3p1:string>git hash-object [-t &lt;type&gt;] [-w] [--path=&lt;file&gt;|--no-filters] [--stdin [--literally]] [--] &lt;file&gt;…​
 git hash-object [-t &lt;type&gt;] [-w] --stdin-paths [--no-filters]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>read-tree</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -m </d3p1:string>
@@ -3729,8 +3729,8 @@ git hash-object [-t &lt;type&gt;] [-w] --stdin-paths [--no-filters]</d3p1:string
 		[--index-output=&lt;file&gt;] [--no-sparse-checkout]
 		(--empty | &lt;tree-ish1&gt; [&lt;tree-ish2&gt; [&lt;tree-ish3&gt;]])</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>symbolic-ref</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -d </d3p1:string>
@@ -3746,8 +3746,8 @@ git hash-object [-t &lt;type&gt;] [-w] --stdin-paths [--no-filters]</d3p1:string
 git symbolic-ref [-q] [--short] &lt;name&gt;
 git symbolic-ref --delete [-q] &lt;name&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>index-pack</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -v </d3p1:string>
@@ -3769,8 +3769,8 @@ git symbolic-ref --delete [-q] &lt;name&gt;</d3p1:string>
 git index-pack --stdin [--fix-thin] [--keep] [-v] [-o &lt;index-file&gt;]
                  [&lt;pack-file&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>prune-packed</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -n </d3p1:string>
@@ -3782,8 +3782,8 @@ git index-pack --stdin [--fix-thin] [--keep] [-v] [-o &lt;index-file&gt;]
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git prune-packed [-n|--dry-run] [-q|--quiet]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>mktree</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -z </d3p1:string>
@@ -3794,8 +3794,8 @@ git index-pack --stdin [--fix-thin] [--keep] [-v] [-o &lt;index-file&gt;]
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git mktree [-z] [--missing] [--batch]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>apply</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;patch&gt;…​ </d3p1:string>
@@ -3843,8 +3843,8 @@ git index-pack --stdin [--fix-thin] [--keep] [-v] [-o &lt;index-file&gt;]
 	  [--exclude=&lt;path&gt;] [--include=&lt;path&gt;] [--directory=&lt;root&gt;]
 	  [--verbose] [--unsafe-paths] [&lt;patch&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>checkout-index</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -u </d3p1:string>
@@ -3872,8 +3872,8 @@ git index-pack --stdin [--fix-thin] [--keep] [-v] [-o &lt;index-file&gt;]
 		   [-z] [--stdin]
 		   [--] [&lt;file&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>commit-graph</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --object-dir </d3p1:string>
@@ -3884,8 +3884,8 @@ git index-pack --stdin [--fix-thin] [--keep] [-v] [-o &lt;index-file&gt;]
 			<d3p1:string>git commit-graph verify [--object-dir &lt;dir&gt;] [--shallow] [--[no-]progress]
 git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progress]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>merge-file</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -L &lt;label&gt; </d3p1:string>
@@ -3902,8 +3902,8 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
 	[--ours|--theirs|--union] [-p|--stdout] [-q|--quiet] [--marker-size=&lt;n&gt;]
 	[--[no-]diff3] &lt;current-file&gt; &lt;base-file&gt; &lt;other-file&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>merge-index</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -- </d3p1:string>
@@ -3915,16 +3915,16 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git merge-index [-o] [-q] &lt;merge-program&gt; (-a | [--] &lt;file&gt;*)</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>mktag</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git mktag</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>multi-pack-index</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --object-dir=&lt;dir&gt; </d3p1:string>
@@ -3938,8 +3938,8 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git multi-pack-index [--object-dir=&lt;dir&gt;] [--[no-]progress] &lt;subcommand&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>pack-objects</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> base-name </d3p1:string>
@@ -3989,8 +3989,8 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
 	[--stdout [--filter=&lt;filter-spec&gt;] | base-name]
 	[--shallow] [--keep-true-parents] [--[no-]sparse] &lt; object-list</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>unpack-objects</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -n </d3p1:string>
@@ -4003,8 +4003,8 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git unpack-objects [-n] [-q] [-r] [--strict]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>update-index</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --add </d3p1:string>
@@ -4065,16 +4065,16 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
 	     [--verbose]
 	     [--] [&lt;file&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>update-ref</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git update-ref [-m &lt;reason&gt;] [--no-deref] (-d &lt;ref&gt; [&lt;oldvalue&gt;] | [--create-reflog] &lt;ref&gt; &lt;newvalue&gt; [&lt;oldvalue&gt;] | --stdin [-z])</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>write-tree</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --missing-ok </d3p1:string>
@@ -4084,8 +4084,8 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git write-tree [--missing-ok] [--prefix=&lt;prefix&gt;/]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>check-ref-format</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --[no-]allow-onelevel </d3p1:string>
@@ -4099,16 +4099,16 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
        &lt;refname&gt;
 git check-ref-format --branch &lt;branchname-shorthand&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>merge-one-file</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git merge-one-file</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>patch-id</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --stable </d3p1:string>
@@ -4118,8 +4118,8 @@ git check-ref-format --branch &lt;branchname-shorthand&gt;</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git patch-id [--stable | --unstable]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>column</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --command=&lt;name&gt; </d3p1:string>
@@ -4135,8 +4135,8 @@ git check-ref-format --branch &lt;branchname-shorthand&gt;</d3p1:string>
 			<d3p1:string>git column [--command=&lt;name&gt;] [--[raw-]mode=&lt;mode&gt;] [--width=&lt;width&gt;]
 	     [--indent=&lt;string&gt;] [--nl=&lt;string&gt;] [--padding=&lt;n&gt;]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>mailsplit</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;mbox&gt; </d3p1:string>
@@ -4153,8 +4153,8 @@ git check-ref-format --branch &lt;branchname-shorthand&gt;</d3p1:string>
 			<d3p1:string>git mailsplit [-b] [-f&lt;nn&gt;] [-d&lt;prec&gt;] [--keep-cr] [--mboxrd]
 		-o&lt;directory&gt; [--] [(&lt;mbox&gt;|&lt;Maildir&gt;)…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>check-attr</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -a, --all </d3p1:string>
@@ -4168,8 +4168,8 @@ git check-ref-format --branch &lt;branchname-shorthand&gt;</d3p1:string>
 			<d3p1:string>git check-attr [-a | --all | &lt;attr&gt;…​] [--] &lt;pathname&gt;…​
 git check-attr --stdin [-z] [-a | --all | &lt;attr&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>check-ignore</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -q, --quiet </d3p1:string>
@@ -4184,8 +4184,8 @@ git check-attr --stdin [-z] [-a | --all | &lt;attr&gt;…​]</d3p1:string>
 			<d3p1:string>git check-ignore [&lt;options&gt;] &lt;pathname&gt;…​
 git check-ignore [&lt;options&gt;] --stdin</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>check-mailmap</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --stdin </d3p1:string>
@@ -4194,8 +4194,8 @@ git check-ignore [&lt;options&gt;] --stdin</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git check-mailmap [&lt;options&gt;] &lt;contact&gt;…​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>credential</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
@@ -4204,8 +4204,8 @@ git check-ignore [&lt;options&gt;] --stdin</d3p1:string>
 git credential &lt;fill|approve|reject&gt;
 </d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>fmt-merge-msg</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --log[=&lt;n&gt;] </d3p1:string>
@@ -4221,8 +4221,8 @@ git credential &lt;fill|approve|reject&gt;
 			<d3p1:string>git fmt-merge-msg [-m &lt;message&gt;] [--log[=&lt;n&gt;] | --no-log]
 git fmt-merge-msg [-m &lt;message&gt;] [--log[=&lt;n&gt;] | --no-log] -F &lt;file&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>interpret-trailers</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --in-place </d3p1:string>
@@ -4245,8 +4245,8 @@ git fmt-merge-msg [-m &lt;message&gt;] [--log[=&lt;n&gt;] | --no-log] -F &lt;fil
 			<d3p1:string>git interpret-trailers [&lt;options&gt;] [(--trailer &lt;token&gt;[(=|:)&lt;value&gt;])…​] [&lt;file&gt;…​]
 git interpret-trailers [&lt;options&gt;] [--parse] [&lt;file&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>mailinfo</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -k </d3p1:string>
@@ -4265,8 +4265,8 @@ git interpret-trailers [&lt;options&gt;] [--parse] [&lt;file&gt;…​]</d3p1:st
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git mailinfo [-k|-b] [-u | --encoding=&lt;encoding&gt; | -n] [--[no-]scissors] &lt;msg&gt; &lt;patch&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>stripspace</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> -s </d3p1:string>
@@ -4279,8 +4279,8 @@ git interpret-trailers [&lt;options&gt;] [--parse] [&lt;file&gt;…​]</d3p1:st
 			<d3p1:string>git stripspace [-s | --strip-comments]
 git stripspace [-c | --comment-lines]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>receive-pack</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;directory&gt; </d3p1:string>
@@ -4289,8 +4289,8 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git-receive-pack &lt;directory&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>http-fetch</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> commit-id </d3p1:string>
@@ -4304,8 +4304,8 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git http-fetch [-c] [-t] [-a] [-d] [-v] [-w filename] [--recover] [--stdin] &lt;commit&gt; &lt;url&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>http-push</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --all </d3p1:string>
@@ -4320,8 +4320,8 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git http-push [--all] [--dry-run] [--force] [--verbose] &lt;url&gt; &lt;ref&gt; [&lt;ref&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>upload-archive</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> &lt;directory&gt; </d3p1:string>
@@ -4330,8 +4330,8 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git upload-archive &lt;directory&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>upload-pack</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --[no-]strict </d3p1:string>
@@ -4345,8 +4345,8 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 			<d3p1:string>git-upload-pack [--[no-]strict] [--timeout=&lt;n&gt;] [--stateless-rpc]
 		  [--advertise-refs] &lt;directory&gt;</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>daemon</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --strict-paths </d3p1:string>
@@ -4398,8 +4398,8 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 	     [--log-destination=(stderr|syslog|none)]
 	     [&lt;directory&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>fetch-pack</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --all </d3p1:string>
@@ -4429,16 +4429,16 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 	[--depth=&lt;n&gt;] [--no-progress]
 	[-v] &lt;repository&gt; [&lt;refs&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>http-backend</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git http-backend</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>send-pack</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string> --receive-pack=&lt;git-receive-pack&gt; </d3p1:string>
@@ -4464,21 +4464,21 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 		[--[no-]signed|--signed=(true|false|if-asked)]
 		[&lt;host&gt;:]&lt;directory&gt; [&lt;ref&gt;…​]</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>update-server-info</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git update-server-info</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-	<EGitCommand>
+	</ECommandKey>
+	<ECommandKey>
 		<command>stage</command>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git stage args…​</d3p1:string>
 		</synopsis>
-	</EGitCommand>
-</ArrayOfEGitCommand>
+	</ECommandKey>
+</ArrayOfECommandKey>

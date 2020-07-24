@@ -14,7 +14,7 @@ namespace Git_Complete.src.parser
         /// </summary>
         /// <param name="_in"></param>
         /// <returns></returns>
-        private EGitCommand ShapSynopsisCommon(EGitCommand _in)
+        private ECommandKey ShapSynopsisCommon(ECommandKey _in)
         {
             //まずは。。。。
 
@@ -28,11 +28,11 @@ namespace Git_Complete.src.parser
         /// 利用側では主にリストをメインで処理を行うので、下記を定義。
         /// 引数は直接使用しない（引数に対して変更を行わない）
         /// 
-        /// <see cref="ShapSynopsisCommon(EGitCommand)"/>
+        /// <see cref="ShapSynopsisCommon(ECommandKey)"/>
         /// </summary>
         /// <param name="_in">基本的にEGitCommand.Valueを渡す</param>
         /// <returns></returns>
-        public List<EGitCommand> ShapSynopsisCommonAll(List<EGitCommand> _in)
+        public List<ECommandKey> ShapSynopsisCommonAll(List<ECommandKey> _in)
         {
             if (_in is null)
             {
@@ -40,18 +40,18 @@ namespace Git_Complete.src.parser
             }
 
             //引数には影響を与えないよう、以降は下記を使用する
-            var c = new List<EGitCommand>(_in);
+            var c = new List<ECommandKey>(_in);
 
             //return
-            var ret = new List<EGitCommand>();
-            EGitCommand temp;
+            var ret = new List<ECommandKey>();
+            ECommandKey temp;
             foreach (var item in c)
             {
                 temp = ShapSynopsisCommon(item);
                 if (temp is null)
                 {
                     //todo -> この例外はあとでShapSynopsisCommon(item);のほうで投げるようにする
-                    throw new MyProcessFailureException<EGitCommand>("synopsis整形エラー", item);
+                    throw new MyProcessFailureException<ECommandKey>("synopsis整形エラー", item);
                 }
 
                 ret.Add(temp);

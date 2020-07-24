@@ -36,9 +36,9 @@ namespace Git_Complete.src.function.scrape
             return ret;
         }
 
-        public override EGitCommand ScrapeBy(EGitCommand _in)
+        public override ECommandKey ScrapeBy(ECommandKey _in)
         {
-            var ret = new EGitCommand(_in);
+            var ret = new ECommandKey(_in);
             ret.synopsis = ScrapeBy(ret.command);
             return ret;
         }

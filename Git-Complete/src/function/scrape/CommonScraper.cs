@@ -20,12 +20,12 @@ namespace Git_Complete.src.function.scrape
             throw new Exception("overrideして使ってください");
         }
 
-        public virtual EGitCommand ScrapeBy(EGitCommand _in)
+        public virtual ECommandKey ScrapeBy(ECommandKey _in)
         {
             throw new Exception("overrideして使ってください");
         }
 
-        public void ScrapeBy(EGitCommandList<EGitCommand> _in)
+        public void ScrapeBy(ECommandKeyList<ECommandKey> _in)
         {
             //foreachだとループ元が変更されるので
             for (int i = 0; i < _in.Value.Count; i++)
