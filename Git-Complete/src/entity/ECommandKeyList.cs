@@ -54,21 +54,12 @@ namespace Git_Complete.src.entity
         /// <inheritdoc/>
         public void Swap(T swapObj)
         {
-            //確認用
-            if (this.Value.Count != CommonProps.ALL_COMMAND_COUNT)
-                throw new ObjectProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
-
             var (index, eGitCommand) = GetEntityByCommand(swapObj.command);
             if (eGitCommand is null)
                 throw new ObjectProcessFailureException<T>("gitのコマンドではありません", eGitCommand);
 
             this.Value.RemoveAt(index);
             this.Value.Insert(index, swapObj);
-
-            //確認用
-            if (this.Value.Count != CommonProps.ALL_COMMAND_COUNT)
-                throw new ObjectProcessFailureException<T>("オブジェクトの入れ替えで例外が発生しました。", swapObj);
-
         }
 
         /// <inheritdoc/>

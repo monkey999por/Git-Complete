@@ -141,9 +141,24 @@
             "http-backend",
             "send-pack",
             "update-server-info",
-            "stage" };
+            "stage"
+        };
 
         public const int ALL_COMMAND_COUNT = 136;
+
+        /// <summary>
+        /// synopsisの個別解析対象のコマンド
+        /// </summary>
+        public static readonly string[] SYNOPSIS_INDEVIDUAL_SCRAPE_COMMAND = new string[]{
+            "annotate","blame","add"
+        };
+
+        /// <summary>
+        /// optionsの個別解析対象のコマンド
+        /// </summary>
+        public static readonly string[] OPTIONS_INDEVIDUAL_SCRAPE_COMMAND = new string[]{
+            "commit", "pull"
+        };
 
     }
 }

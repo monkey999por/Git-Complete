@@ -30,7 +30,7 @@ namespace Git_Complete
 
             //test -> xmlに出力して確認
             FileCommon.OutFileToXml<List<ECommandKeyScrape>>(eCommandKeyScrapeList.Value, PathProps.HELP_SCRAPE_XML_Path);
-            
+
             //Gitの公式ヘルプサイトからスクレイピングする用
             if (DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP)
             {
@@ -38,13 +38,24 @@ namespace Git_Complete
                 foreach (var command in CommonProps.ALL_COMMAND)
                     eCommandKeyScrapeList.Value.Add(new ECommandKeyScrape(command));
 
-                //git-scm.comから、synopsisを取得する（html parserを使用）
+
+                //*******synopsisを共通スクレイプ*******
                 var synopsisCommonScraper = new SynopsisCommonScraper();
                 synopsisCommonScraper.ScrapeBy(eCommandKeyScrapeList);
 
-                //git-scm.comから、オプションの一覧を取得する（html parserを使用）
+                //*******optionsを共通スクレイプ*******
                 var optionsCommonScraper = new OptionsCommonScraper();
                 optionsCommonScraper.ScrapeBy(eCommandKeyScrapeList);
+
+                //*******synopsisを共通スクレイプ*******
+                var synopsisIndividualScraper = new SynopsisIndividualScraper();
+                ///解析対象は<see cref="CommonProps.SYNOPSIS_INDEVIDUAL_SCRAPE_COMMAND"/>
+                synopsisIndividualScraper.ScrapeBy(eCommandKeyScrapeList);
+
+                //*******optionsを共通スクレイプ*******
+                var optionsIndividualScraper = new OptionsIndividualScraper();
+                ///解析対象は<see cref="CommonProps.OPTIONS_INDEVIDUAL_SCRAPE_COMMAND"/>
+                optionsIndividualScraper.ScrapeBy(eCommandKeyScrapeList);
 
                 //xml出力
                 FileCommon.OutFileToXml<List<ECommandKeyScrape>>(eCommandKeyScrapeList.Value, PathProps.HELP_SCRAPE_XML_Path);
