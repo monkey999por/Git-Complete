@@ -25,7 +25,11 @@ namespace Git_Complete.src.function.scrape
             {
                 case "annotate": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "blame": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
-                case "rerere": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
+                case "rerere": Console.WriteLine("options個別解析: " + command);
+
+                    
+                    
+                    break;
                 case "bugreport": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "count-objects": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "difftool": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;

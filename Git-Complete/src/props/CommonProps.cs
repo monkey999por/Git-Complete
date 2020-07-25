@@ -148,16 +148,31 @@
 
         /// <summary>
         /// synopsisの個別解析対象のコマンド
+        /// Git Version 2.27.0 -> 個別スクレイプは不要
         /// </summary>
         public static readonly string[] SYNOPSIS_INDEVIDUAL_SCRAPE_COMMAND = new string[]{
-            "annotate","blame","add"
+            ""
         };
 
         /// <summary>
         /// optionsの個別解析対象のコマンド
         /// </summary>
         public static readonly string[] OPTIONS_INDEVIDUAL_SCRAPE_COMMAND = new string[]{
-            "commit", "pull"
+            "rerere",
+            "merge-tree",
+            "whatchanged",
+            "citool",
+            "gui",
+            "sparse-checkout",
+            "get-tar-commit-id",
+            "show-index",
+            "mktag",
+            "update-ref",
+            "merge-one-file",
+            "credential",
+            "http-backend",
+            "update-server-info",
+            "stage"
         };
 
     }

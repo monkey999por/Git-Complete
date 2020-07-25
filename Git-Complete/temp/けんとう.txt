@@ -73,7 +73,7 @@ class: EShapedGitCommand : EgitCommand
  value: string synopsis
  value: List<string> options
  value: Dictionary<string, string> description   key:options
-
+ 
 
 ⇒
 　とりあえず決まっていること

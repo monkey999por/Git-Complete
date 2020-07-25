@@ -64,6 +64,9 @@ namespace Git_Complete
                 FileCommon.OutFileToJson<List<ECommandKeyScrape>>(eCommandKeyScrapeList.Value, PathProps.HELP_SCRAPE_JSON_Path);
             }
 
+            //test
+            
+
             //個別解析をする
             ECommandKeyList<ECommandKeyScrape> eParsedHelpScrapeList =
                 new ECommandKeyList<ECommandKeyScrape>(eCommandKeyScrapeList.Value);

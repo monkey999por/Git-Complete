@@ -76,7 +76,7 @@
     "synopsis": [
       "git rerere [clear|forget <pathspec>|diff|remaining|status|gc]"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "rerere"
   },
