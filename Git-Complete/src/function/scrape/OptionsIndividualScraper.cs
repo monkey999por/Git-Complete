@@ -35,7 +35,6 @@ namespace Git_Complete.src.function.scrape
                     ret.Add(" <branch1> ");
                     ret.Add(" <branch2> ");
                     break;
-                case "show-branch": ret = cs.ScrapeBy(command); break;
                 case "citool":
                     //オプションなし
                     break;
@@ -55,6 +54,7 @@ namespace Git_Complete.src.function.scrape
                     // オプションなし
                     break;
                 case "update-ref":
+                    //ちょっとよくわからんのでアプリでは対象外かな
                     break;
                 case "merge-one-file":
                     // オプションなし
@@ -75,6 +75,7 @@ namespace Git_Complete.src.function.scrape
                     ret.Add(" url=<url> ");
                     break;
                 case "http-backend":
+                    //ちょっとよくわからんのでアプリでは対象外かな
                     break;
                 case "update-server-info":
                     // オプションなし
