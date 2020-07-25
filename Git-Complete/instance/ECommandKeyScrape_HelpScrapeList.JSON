@@ -2342,7 +2342,14 @@
     "synopsis": [
       "git sparse-checkout <subcommand> [options]"
     ],
-    "options": null,
+    "options": [
+      " list ",
+      " init ",
+      " set ",
+      " add ",
+      " reapply ",
+      " disable "
+    ],
     "optionsDescription": [],
     "command": "sparse-checkout"
   },
@@ -2686,7 +2693,7 @@
     "synopsis": [
       "git get-tar-commit-id"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "get-tar-commit-id"
   },
@@ -3342,7 +3349,7 @@
     "synopsis": [
       "git show-index"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "show-index"
   },
@@ -3634,7 +3641,7 @@
     "synopsis": [
       "git mktag"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "mktag"
   },
@@ -3762,7 +3769,7 @@
     "synopsis": [
       "git update-ref [-m <reason>] [--no-deref] (-d <ref> [<oldvalue>] | [--create-reflog] <ref> <newvalue> [<oldvalue>] | --stdin [-z])"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "update-ref"
   },
@@ -3793,7 +3800,7 @@
     "synopsis": [
       "git merge-one-file"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "merge-one-file"
   },
@@ -3884,7 +3891,7 @@
     "synopsis": [
       "\ngit credential <fill|approve|reject>\n"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "credential"
   },
@@ -4097,7 +4104,7 @@
     "synopsis": [
       "git http-backend"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "http-backend"
   },
@@ -4129,7 +4136,7 @@
     "synopsis": [
       "git update-server-info"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "update-server-info"
   },
@@ -4137,7 +4144,7 @@
     "synopsis": [
       "git stage args…​"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "stage"
   }
