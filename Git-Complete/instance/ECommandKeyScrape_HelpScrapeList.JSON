@@ -4152,7 +4152,7 @@
   },
   {
     "synopsis": [
-      "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n\t  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]\n\t  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n\t  [--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t  [--] [<pathspec>…​]"
+      "git stage [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n\t  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]\n\t  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n\t  [--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t  [--] [<pathspec>…​]"
     ],
     "options": [
       " <pathspec>…​ ",
