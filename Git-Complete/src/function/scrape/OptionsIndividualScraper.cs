@@ -4,6 +4,7 @@ using Git_Complete.src.props;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Git_Complete.src.function.scrape
 {
@@ -21,18 +22,12 @@ namespace Git_Complete.src.function.scrape
 
             //return value
             var ret = new List<string>();
-            var _document = gitHelpDocs.GetDom(command);
             switch (command)
             {
                 case "annotate": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "blame": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "rerere": Console.WriteLine("options個別解析: " + command);
-                    var temp = _document.QuerySelector("#_commands");
-                    IHtmlCollection<IElement> options = temp.ParentElement.QuerySelectorAll(".hdlist1");
-                    foreach (var e in options)
-                    {
-                        ret.Add(e.TextContent);
-                    }
+                    ret = ScrapeByIdIsCommand(command);
                     break;
                 case "bugreport": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "count-objects": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
@@ -95,12 +90,7 @@ namespace Git_Complete.src.function.scrape
                 case "gc": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "grep": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "gui": Console.WriteLine("options個別解析: " + command);
-                    var temp2 = _document.QuerySelector("#_commands");
-                    IHtmlCollection<IElement> options2 = temp2.ParentElement.QuerySelectorAll(".hdlist1");
-                    foreach (var e in options2)
-                    {
-                        ret.Add(e.TextContent);
-                    }
+                    ret = ScrapeByIdIsCommand(command);
                     break;
                 case "log": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "merge": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
@@ -197,7 +187,25 @@ namespace Git_Complete.src.function.scrape
                 return ret;
             }
             return _in;
+        }
 
+        /// <summary>
+        /// ID: _commandで取得できるパターンのものが思ったより多かったので
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
+        private List<string> ScrapeByIdIsCommand(string command)
+        {
+            var document = gitHelpDocs.GetDom(command);
+            var temp = document.QuerySelector("#_commands");
+            IHtmlCollection<IElement> options = temp.ParentElement.QuerySelectorAll(".hdlist1");
+            var ret = new List<string>();
+
+            foreach (var e in options)
+            {
+                ret.Add(e.TextContent);
+            }
+            return ret;
         }
     }
 }
