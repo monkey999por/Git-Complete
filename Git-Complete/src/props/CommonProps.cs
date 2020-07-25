@@ -150,7 +150,8 @@
         /// Git Version 2.27.0 -> 個別スクレイプは不要
         /// </summary>
         public static readonly string[] SYNOPSIS_INDEVIDUAL_SCRAPE_COMMAND = new string[]{
-            ""
+            //こいつは特別
+            "credential"
         };
 
         /// <summary>

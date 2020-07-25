@@ -4212,12 +4212,20 @@ git check-ignore [&lt;options&gt;] --stdin</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>credential</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<d3p1:string> fill </d3p1:string>
+			<d3p1:string> approve </d3p1:string>
+			<d3p1:string> reject </d3p1:string>
+			<d3p1:string> protocol=&lt;protocol&gt; </d3p1:string>
+			<d3p1:string> host=&lt;host&gt; </d3p1:string>
+			<d3p1:string> path=&lt;path&gt; </d3p1:string>
+			<d3p1:string> username=&lt;username&gt; </d3p1:string>
+			<d3p1:string> password=&lt;password&gt; </d3p1:string>
+			<d3p1:string> url=&lt;url&gt; </d3p1:string>
+		</options>
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-			<d3p1:string>
-git credential &lt;fill|approve|reject&gt;
-</d3p1:string>
+			<d3p1:string>git credential &lt;fill|approve|reject&gt; [&lt;stdin&gt;…]</d3p1:string>
 		</synopsis>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>

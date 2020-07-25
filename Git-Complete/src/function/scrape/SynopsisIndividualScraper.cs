@@ -23,7 +23,8 @@ namespace Git_Complete.src.function.scrape
 
             switch (command)
             {
-                case "dummy":
+                case "credential":
+                    ret.Add("git credential <fill|approve|reject> [<stdin>…]");
                     break;
                 default:
                     break;

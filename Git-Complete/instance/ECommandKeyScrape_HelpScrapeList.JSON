@@ -3889,9 +3889,19 @@
   },
   {
     "synopsis": [
-      "\ngit credential <fill|approve|reject>\n"
+      "git credential <fill|approve|reject> [<stdin>…]"
     ],
-    "options": [],
+    "options": [
+      " fill ",
+      " approve ",
+      " reject ",
+      " protocol=<protocol> ",
+      " host=<host> ",
+      " path=<path> ",
+      " username=<username> ",
+      " password=<password> ",
+      " url=<url> "
+    ],
     "optionsDescription": [],
     "command": "credential"
   },

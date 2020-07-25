@@ -26,25 +26,60 @@ namespace Git_Complete.src.function.scrape
 
             switch (command)
             {
-               case "rerere": 
+                case "rerere":
                     ret = ScrapeByIdIsCommand(command);
                     break;
-                case "merge-tree": 
+                case "merge-tree":
                     //スクレイピングはせずに個別に追加
                     ret.Add(" <base-tree> ");
                     ret.Add(" <branch1> ");
                     ret.Add(" <branch2> ");
                     break;
-                case "show-branch":  ret = cs.ScrapeBy(command); break;
-                case "citool": 
+                case "show-branch": ret = cs.ScrapeBy(command); break;
+                case "citool":
                     //オプションなし
                     break;
-                case "gui": 
+                case "gui":
                     ret = ScrapeByIdIsCommand(command);
                     break;
-                case "sparse-checkout": 
+                case "sparse-checkout":
                     ret = ScrapeByIdIsCommand(command);
                     break;
+                case "get-tar-commit-id":
+                    //オプションなし
+                    break;
+                case "show-index":
+                    //オプションなし
+                    break;
+                case "mktag":
+                    // オプションなし
+                    break;
+                case "update-ref":
+                    break;
+                case "merge-one-file":
+                    break;
+                case "credential":
+                    //これもスクレイプはしない、、
+                    //※synopsisの方も個別に書き換えをしてるので注意
+                    //subcommand
+                    ret.Add(" fill ");
+                    ret.Add(" approve ");
+                    ret.Add(" reject ");
+                    //format (input to "standard in")
+                    ret.Add(" protocol=<protocol> ");
+                    ret.Add(" host=<host> ");
+                    ret.Add(" path=<path> ");
+                    ret.Add(" username=<username> ");
+                    ret.Add(" password=<password> ");
+                    ret.Add(" url=<url> ");
+                    break;
+                case "http-backend":
+                    break;
+                case "update-server-info":
+                    break;
+                case "stage":
+                    break;
+
                 default:
                     break;
             }
