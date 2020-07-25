@@ -1,4 +1,5 @@
-﻿using Git_Complete.src.entity;
+﻿using AngleSharp.Dom;
+using Git_Complete.src.entity;
 using Git_Complete.src.props;
 using System;
 using System.Collections.Generic;
@@ -20,15 +21,18 @@ namespace Git_Complete.src.function.scrape
 
             //return value
             var ret = new List<string>();
-
+            var _document = gitHelpDocs.GetDom(command);
             switch (command)
             {
                 case "annotate": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "blame": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "rerere": Console.WriteLine("options個別解析: " + command);
-
-                    
-                    
+                    var temp = _document.QuerySelector("#_commands");
+                    IHtmlCollection<IElement> options = temp.ParentElement.QuerySelectorAll(".hdlist1");
+                    foreach (var e in options)
+                    {
+                        ret.Add(e.TextContent);
+                    }
                     break;
                 case "bugreport": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "count-objects": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
@@ -36,11 +40,15 @@ namespace Git_Complete.src.function.scrape
                 case "fsck": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "help": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "instaweb": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
-                case "merge-tree": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
+                case "merge-tree": Console.WriteLine("options個別解析: " + command);
+                    //スクレイピングはせずに個別に追加
+                    ret.Add(" <base-tree> ");
+                    ret.Add(" <branch1> ");
+                    ret.Add(" <branch2> ");
+                    break;
                 case "show-branch": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "verify-commit": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "verify-tag": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
-                case "whatchanged": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "reflog": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "remote": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "repack": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
@@ -77,14 +85,23 @@ namespace Git_Complete.src.function.scrape
                 case "bundle": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "checkout": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "cherry-pick": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
-                case "citool": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
+                case "citool": Console.WriteLine("options個別解析: " + command);
+                    //オプションなし
+                    break;
                 case "clone": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "commit": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "diff": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "fetch": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "gc": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "grep": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
-                case "gui": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
+                case "gui": Console.WriteLine("options個別解析: " + command);
+                    var temp2 = _document.QuerySelector("#_commands");
+                    IHtmlCollection<IElement> options2 = temp2.ParentElement.QuerySelectorAll(".hdlist1");
+                    foreach (var e in options2)
+                    {
+                        ret.Add(e.TextContent);
+                    }
+                    break;
                 case "log": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "merge": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "mv": Console.WriteLine("options個別解析: " + command); ret = cs.ScrapeBy(command); break;

@@ -19,7 +19,6 @@
             "show-branch",
             "verify-commit",
             "verify-tag",
-            "whatchanged",
             "reflog",
             "remote",
             "repack",
@@ -144,7 +143,7 @@
             "stage"
         };
 
-        public const int ALL_COMMAND_COUNT = 136;
+        public const int ALL_COMMAND_COUNT = 135;
 
         /// <summary>
         /// synopsisの個別解析対象のコマンド
@@ -160,7 +159,6 @@
         public static readonly string[] OPTIONS_INDEVIDUAL_SCRAPE_COMMAND = new string[]{
             "rerere",
             "merge-tree",
-            "whatchanged",
             "citool",
             "gui",
             "sparse-checkout",

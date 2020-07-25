@@ -24,10 +24,6 @@ namespace Git_Complete
                 Value = FileCommon.GetInstanceFromJson<List<ECommandKeyScrape>>(PathProps.HELP_SCRAPE_JSON_Path),
             };
 
-            //test -> コマンド数は136個
-            if (eCommandKeyScrapeList.Value.Count != CommonProps.ALL_COMMAND_COUNT)
-                throw new Exception("コマンドの数があってない");
-
             //test -> xmlに出力して確認
             FileCommon.OutFileToXml<List<ECommandKeyScrape>>(eCommandKeyScrapeList.Value, PathProps.HELP_SCRAPE_XML_Path);
 

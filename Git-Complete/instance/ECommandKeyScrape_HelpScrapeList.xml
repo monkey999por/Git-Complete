@@ -79,7 +79,14 @@
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>rerere</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<d3p1:string> clear </d3p1:string>
+			<d3p1:string> forget &lt;pathspec&gt; </d3p1:string>
+			<d3p1:string> diff </d3p1:string>
+			<d3p1:string> status </d3p1:string>
+			<d3p1:string> remaining </d3p1:string>
+			<d3p1:string> gc </d3p1:string>
+		</options>
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git rerere [clear|forget &lt;pathspec&gt;|diff|remaining|status|gc]</d3p1:string>
@@ -212,7 +219,11 @@ git instaweb [--start] [--stop] [--restart]</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>merge-tree</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<d3p1:string> &lt;base-tree&gt; </d3p1:string>
+			<d3p1:string> &lt;branch1&gt; </d3p1:string>
+			<d3p1:string> &lt;branch2&gt; </d3p1:string>
+		</options>
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git merge-tree &lt;base-tree&gt; &lt;branch1&gt; &lt;branch2&gt;</d3p1:string>
@@ -277,14 +288,6 @@ git show-branch (-g|--reflog)[=&lt;n&gt;[,&lt;base&gt;]] [--list] [&lt;ref&gt;]<
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git verify-tag [--format=&lt;format&gt;] &lt;tag&gt;…​</d3p1:string>
-		</synopsis>
-	</ECommandKeyScrape>
-	<ECommandKeyScrape>
-		<command>whatchanged</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
-		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
-		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-			<d3p1:string>git whatchanged &lt;option&gt;…​</d3p1:string>
 		</synopsis>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
@@ -1613,7 +1616,7 @@ git cherry-pick (--continue | --skip | --abort | --quit)</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>citool</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git citool</d3p1:string>
@@ -2076,7 +2079,12 @@ git fetch --all [&lt;options&gt;]</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>gui</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<d3p1:string> blame </d3p1:string>
+			<d3p1:string> browser </d3p1:string>
+			<d3p1:string> citool </d3p1:string>
+			<d3p1:string> version </d3p1:string>
+		</options>
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git gui [&lt;command&gt;] [arguments]</d3p1:string>

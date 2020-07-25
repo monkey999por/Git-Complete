@@ -21,7 +21,7 @@ namespace Git_Complete.src.function.scrape
             //ヘルプファイルのDomを取得
             var document = gitHelpDocs.GetDom(command);
 
-            //get synopsis
+            //get options
             var temp = document.QuerySelector("#_options");
             if (temp is null)
                 return null;

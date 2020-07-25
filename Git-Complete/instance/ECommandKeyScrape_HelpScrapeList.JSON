@@ -76,7 +76,14 @@
     "synopsis": [
       "git rerere [clear|forget <pathspec>|diff|remaining|status|gc]"
     ],
-    "options": [],
+    "options": [
+      " clear ",
+      " forget <pathspec> ",
+      " diff ",
+      " status ",
+      " remaining ",
+      " gc "
+    ],
     "optionsDescription": [],
     "command": "rerere"
   },
@@ -203,7 +210,11 @@
     "synopsis": [
       "git merge-tree <base-tree> <branch1> <branch2>"
     ],
-    "options": null,
+    "options": [
+      " <base-tree> ",
+      " <branch1> ",
+      " <branch2> "
+    ],
     "optionsDescription": [],
     "command": "merge-tree"
   },
@@ -262,14 +273,6 @@
     ],
     "optionsDescription": [],
     "command": "verify-tag"
-  },
-  {
-    "synopsis": [
-      "git whatchanged <option>…​"
-    ],
-    "options": null,
-    "optionsDescription": [],
-    "command": "whatchanged"
   },
   {
     "synopsis": [
@@ -1470,7 +1473,7 @@
     "synopsis": [
       "git citool"
     ],
-    "options": null,
+    "options": [],
     "optionsDescription": [],
     "command": "citool"
   },
@@ -1893,7 +1896,12 @@
     "synopsis": [
       "git gui [<command>] [arguments]"
     ],
-    "options": null,
+    "options": [
+      " blame ",
+      " browser ",
+      " citool ",
+      " version "
+    ],
     "optionsDescription": [],
     "command": "gui"
   },

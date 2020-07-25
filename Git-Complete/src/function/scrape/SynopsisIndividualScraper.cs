@@ -35,7 +35,6 @@ namespace Git_Complete.src.function.scrape
                 case "show-branch": Console.WriteLine("synopsis個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "verify-commit": Console.WriteLine("synopsis個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "verify-tag": Console.WriteLine("synopsis個別解析: " + command); ret = cs.ScrapeBy(command); break;
-                case "whatchanged": Console.WriteLine("synopsis個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "reflog": Console.WriteLine("synopsis個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "remote": Console.WriteLine("synopsis個別解析: " + command); ret = cs.ScrapeBy(command); break;
                 case "repack": Console.WriteLine("synopsis個別解析: " + command); ret = cs.ScrapeBy(command); break;
