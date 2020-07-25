@@ -57,6 +57,7 @@ namespace Git_Complete.src.function.scrape
                 case "update-ref":
                     break;
                 case "merge-one-file":
+                    // オプションなし
                     break;
                 case "credential":
                     //これもスクレイプはしない、、
@@ -76,8 +77,11 @@ namespace Git_Complete.src.function.scrape
                 case "http-backend":
                     break;
                 case "update-server-info":
+                    // オプションなし
                     break;
                 case "stage":
+                    //addと同様
+                    ret = cs.ScrapeBy("add");
                     break;
 
                 default:

@@ -4152,9 +4152,41 @@
   },
   {
     "synopsis": [
-      "git stage args…​"
+      "git add [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n\t  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]\n\t  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n\t  [--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t  [--] [<pathspec>…​]"
     ],
-    "options": [],
+    "options": [
+      " <pathspec>…​ ",
+      " -n ",
+      " --dry-run ",
+      " -v ",
+      " --verbose ",
+      " -f ",
+      " --force ",
+      " -i ",
+      " --interactive ",
+      " -p ",
+      " --patch ",
+      " -e ",
+      " --edit ",
+      " -u ",
+      " --update ",
+      " -A ",
+      " --all ",
+      " --no-ignore-removal ",
+      " --no-all ",
+      " --ignore-removal ",
+      " -N ",
+      " --intent-to-add ",
+      " --refresh ",
+      " --ignore-errors ",
+      " --ignore-missing ",
+      " --no-warn-embedded-repo ",
+      " --renormalize ",
+      " --chmod=(+|-)x ",
+      " --pathspec-from-file=<file> ",
+      " --pathspec-file-nul ",
+      " -- "
+    ],
     "optionsDescription": [],
     "command": "stage"
   }

@@ -151,7 +151,8 @@
         /// </summary>
         public static readonly string[] SYNOPSIS_INDEVIDUAL_SCRAPE_COMMAND = new string[]{
             //こいつは特別
-            "credential"
+            "credential",
+            "stage"
         };
 
         /// <summary>

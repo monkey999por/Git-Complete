@@ -26,6 +26,10 @@ namespace Git_Complete.src.function.scrape
                 case "credential":
                     ret.Add("git credential <fill|approve|reject> [<stdin>…]");
                     break;
+                case "stage":
+                    ret = cs.ScrapeBy("add");
+                    break;
+
                 default:
                     break;
             }
