@@ -1,11 +1,11 @@
 ﻿using Git_Complete.src.entity;
 using Git_Complete.src.exception;
-using Git_Complete.src.function.common;
 using Git_Complete.src.function.scrape;
 using Git_Complete.src.parser;
 using Git_Complete.src.props;
 using System;
 using System.Collections.Generic;
+using ComFunc;
 
 namespace Git_Complete
 {

@@ -18,4 +18,8 @@
     <Folder Include="shell\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ComFunc\ComFunc.csproj" />
+  </ItemGroup>
+
 </Project>

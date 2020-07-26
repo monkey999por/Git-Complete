@@ -4,9 +4,9 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Xml;
 
-namespace Git_Complete.src.function.common
+namespace ComFunc
 {
-    class FileCommon
+    public class FileCommon
     {
         /// <summary>
         /// シリアライズされたオブジェクトをjsonファイルに書き出す
