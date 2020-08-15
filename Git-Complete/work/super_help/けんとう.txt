@@ -1,0 +1,94 @@
+c#からPlantUMLに成形してくれるツールがあるっぽいのでこれ使ってみる
+https://marketplace.visualstudio.com/items?itemName=pierre3.csharp-to-plantuml
+
+Ascii DocのVSCodeプラグインを入れる。
+マークダウンとの返還も入れる（Ascii Doc ⇔ HTML ⇔ MarkDown）
+
+テストのやり方について
+（今作ってるテストプロジェクトは消していいかも）
+https://docs.microsoft.com/ja-jp/visualstudio/test/unit-test-basics?view=vs-2019
+
+
+※変更後はこんなイメージ ※説明のスクレイピングは、下の解析と整理が終わった後に、それに対して取得する
+●共通スクレイピング
+⇒
+　namespace: scrape
+　　class: GitHelpDocs ※こいつをシングルトンで作成する。
+　　　value: Gitのドキュメントを取得、保持　⇒　これは個別スクレイプでも使うので、抽象クラス作って移動しよう
+　　　value: _helpUrlBase ⇒　名前だけ定数用に変えようかな
+　　　func : public IDocument GetDom(string command)　⇒コマンドに対応したもの
+　　　func : public Dictionary<String, IDocument> GetDomDic(string[] commands)　⇒　複数コマンドに対応したもの
+　　　func : private void CreateDomAll()　⇒　ドキュメント自書を作成。そのままで
+　　　
+　　　
+　　　スクレイプクラス全部のインターフェイス。共通だろうが個別だろうが、やることは同じだよ（内部処理が違うだけ）
+　　class IScraper
+　　　func: protected List<string> ScrapeBy(string command)
+　　　func: protected EGitCommand ScrapeBy(EGitcommand _in)
+　　　func: public List<EGitCommand> ScrapeBy(EgitCommandList<EGitCommand> _in)
+　　　
+　　class: SynopsisCommonScraper : IScraper
+　　　func: List<string> ScrapeBy(string command)
+　　　func: EGitCommand ScrapeBy(EGitcommand _in)
+　　　func: List<EGitCommand> ScrapeBy(EgitCommandList<EGitCommand> _in)
+　　　
+　　class: OptionsCommonScraper : IScraper
+　　　func: List<string> ScrapeBy(string command)
+　　　func: EGitCommand ScrapeBy(EGitcommand _in)
+　　　func: List<EGitCommand> Scrape(EgitCommandList<EGitCommand> _in)
+　　　
+　　　
+●個別スクレイピング（コマンド個別）
+コマンド、またはエンティティ、またはエンティティのリストを渡し、それをもとに個別のメソッドの呼び出しを行う共通サブルーチンを定義する。
+⇒
+　namespace: scrape.individual
+　　class: ISynopsisIndividualScraper
+　　　func: private void Scrape{command(※パスカルケースで書く)}
+　　　
+　　class: SynopsisIndividualScraper : IScraper, ISynopsisIndividualScraper
+　　　func: sealed List<string> ScrapeBy(string command)
+　　　func: sealed EGitCommand ScrapeBy(EGitcommand _in)
+　　　func: sealed List<EGitCommand> ScrapeBy(EgitCommandList<EGitCommand> _in)
+　　　func: private void Scrape{command(※パスカルケースで書く)}
+　　　....
+　　
+●共通成形
+前提：ここでは上記で利用したEGitCommandをもとに、新規のエンティティを出力とする。
+
+***********************
+備考：再設計を行う
+EGitCommandList<T> where EgitCommandを親クラスとする。EgitCommandListはEGitCommandから派生したオブジェクトを扱うことができる
+EGitCommandListはコマンド名によるエンティティの検索、入れ替え、を共通的なメソッドとして保持する。
+
+EgitCommandはコマンド名だけを持つ。EGitCommandから派生したクラスに、List<Synopsis>やString synopsisを定義する。
+
+class: EgitCommand
+ value : string command
+ 
+***********************
+
+※説明はこのエンティティをインプットにしてで取得する予定。（この時点でオプションはすべて成形されている、かつ説明は成形しない）
+■エンティティ
+class: EShapedGitCommand : EgitCommand
+ value: string synopsis
+ value: List<string> options
+ value: Dictionary<string, string> description   key:options
+ 
+
+⇒
+　とりあえず決まっていること
+　・synopsisを一行にする。
+　　
+個別成形（全コマンド、optionsとsynopsisの記載レベルを統一する　※要するに、後述のsynopsis共通解析関数で解析可能な形に成形する。）
+⇒
+・commandは、powershellでの関数ごとにuniqueになる。（例: stash-save, stash-list, ※基本的にサブコマンドを持った奴が、メインコマンドとサブコマンドをくっつけた名前でuniqueになる予定）
+・synopsisとoptionsの整合性をとる（optionsで指定されているものが必ずsynopsisに含まれるように成形する。）
+・
+
+●ここから解析（isSwitchとかを作る）
+
+
+
+
+
+
