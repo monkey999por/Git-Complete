@@ -43,12 +43,12 @@ namespace Git_Complete
                 var optionsCommonScraper = new OptionsCommonScraper();
                 optionsCommonScraper.ScrapeBy(eCommandKeyScrapeList);
 
-                //*******synopsisを共通スクレイプ*******
+                //*******synopsisを個別スクレイプ*******
                 var synopsisIndividualScraper = new SynopsisIndividualScraper();
                 ///解析対象は<see cref="CommonProps.SYNOPSIS_INDEVIDUAL_SCRAPE_COMMAND"/>
                 synopsisIndividualScraper.ScrapeBy(eCommandKeyScrapeList);
 
-                //*******optionsを共通スクレイプ*******
+                //*******optionsを個別スクレイプ*******
                 var optionsIndividualScraper = new OptionsIndividualScraper();
                 ///解析対象は<see cref="CommonProps.OPTIONS_INDEVIDUAL_SCRAPE_COMMAND"/>
                 optionsIndividualScraper.ScrapeBy(eCommandKeyScrapeList);

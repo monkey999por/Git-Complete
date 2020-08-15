@@ -140,10 +140,11 @@
             "http-backend",
             "send-pack",
             "update-server-info",
-            "stage"
+            "stage",
+            "whatchanged"
         };
 
-        public const int ALL_COMMAND_COUNT = 135;
+        public const int ALL_COMMAND_COUNT = 136;
 
         /// <summary>
         /// synopsisの個別解析対象のコマンド
