@@ -18,14 +18,14 @@ namespace Git_Complete
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            ECommandKeyList<ECommandKeyScrape> eCommandKeyScrapeList = new ECommandKeyList<ECommandKeyScrape>
+            var eCommandKeyScrapeList = new ECommandKeyList<ECommandKeyScrape>
             {
                 //gitコマンドとオプションのリストを生成する。
-                Value = FileCommon.GetInstanceFromJson<List<ECommandKeyScrape>>(PathProps.HELP_SCRAPE_JSON_Path),
+                Value = FileCommon.GetInstanceFromJson<List<ECommandKeyScrape>>(PathProps.HELP_SCRAPE_JSON_PATH),
             };
 
             //test -> xmlに出力して確認
-            FileCommon.OutFileToXml<List<ECommandKeyScrape>>(eCommandKeyScrapeList.Value, PathProps.HELP_SCRAPE_XML_Path);
+            FileCommon.OutFileToXml<List<ECommandKeyScrape>>(eCommandKeyScrapeList.Value, PathProps.HELP_SCRAPE_XML_PATH);
 
             //Gitの公式ヘルプサイトからスクレイピングする用
             if (DebugProps.IS_MAKE_ENTITY_FROM_GIT_HELP)
@@ -54,20 +54,20 @@ namespace Git_Complete
                 optionsIndividualScraper.ScrapeBy(eCommandKeyScrapeList);
 
                 //xml出力
-                FileCommon.OutFileToXml<List<ECommandKeyScrape>>(eCommandKeyScrapeList.Value, PathProps.HELP_SCRAPE_XML_Path);
+                FileCommon.OutFileToXml<List<ECommandKeyScrape>>(eCommandKeyScrapeList.Value, PathProps.HELP_SCRAPE_XML_PATH);
 
                 //Json出力
-                FileCommon.OutFileToJson<List<ECommandKeyScrape>>(eCommandKeyScrapeList.Value, PathProps.HELP_SCRAPE_JSON_Path);
+                FileCommon.OutFileToJson<List<ECommandKeyScrape>>(eCommandKeyScrapeList.Value, PathProps.HELP_SCRAPE_JSON_PATH);
             }
 
             //test
             
 
             //個別解析をする
-            ECommandKeyList<ECommandKeyScrape> eParsedHelpScrapeList =
+            var eParsedHelpScrapeList =
                 new ECommandKeyList<ECommandKeyScrape>(eCommandKeyScrapeList.Value);
 
-            GitEntityParser gitEntityParser = new GitEntityParser();
+            var gitEntityParser = new GitEntityParser();
 
             try
             {
