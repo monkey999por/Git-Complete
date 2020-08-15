@@ -1,10 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
 	<RootNamespace>ComFunc</RootNamespace>
-	<StartupObject>ComFunc.Start</StartupObject>
   </PropertyGroup>
 	
   <ItemGroup>

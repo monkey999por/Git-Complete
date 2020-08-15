@@ -782,6 +782,8 @@
       " --irreversible-delete ",
       " -l<num> ",
       " -O<orderfile> ",
+      " --relative[=<path>] ",
+      " --no-relative ",
       " -a ",
       " --text ",
       " --ignore-cr-at-eol ",
@@ -859,7 +861,7 @@
   },
   {
     "synopsis": [
-      "git init [-q | --quiet] [--bare] [--template=<template_directory>]\n\t  [--separate-git-dir <git dir>] [--object-format=<format]\n\t  [--shared[=<permissions>]] [directory]"
+      "git init [-q | --quiet] [--bare] [--template=<template_directory>]\n\t  [--separate-git-dir <git dir>] [--object-format=<format>]\n\t  [-b <branch-name> | --initial-branch=<branch-name>]\n\t  [--shared[=<permissions>]] [directory]"
     ],
     "options": [
       " -q ",
@@ -868,6 +870,8 @@
       " --object-format=<format> ",
       " --template=<template_directory> ",
       " --separate-git-dir=<git dir> ",
+      " -b <branch-name ",
+      " --initial-branch=<branch-name> ",
       " --shared[=(false|true|umask|group|all|world|everybody|0xxx)] ",
       " umask (or false) ",
       " group (or true) ",
@@ -1310,7 +1314,7 @@
   },
   {
     "synopsis": [
-      "git branch [--color[=<when>] | --no-color] [--show-current]\n\t[-v [--abbrev=<length> | --no-abbrev]]\n\t[--column[=<options>] | --no-column] [--sort=<key>]\n\t[(--merged | --no-merged) [<commit>]]\n\t[--contains [<commit]] [--no-contains [<commit>]]\n\t[--points-at <object>] [--format=<format>]\n\t[(-r | --remotes) | (-a | --all)]\n\t[--list] [<pattern>…​]\ngit branch [--track | --no-track] [-f] <branchname> [<start-point>]\ngit branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]\ngit branch --unset-upstream [<branchname>]\ngit branch (-m | -M) [<oldbranch>] <newbranch>\ngit branch (-c | -C) [<oldbranch>] <newbranch>\ngit branch (-d | -D) [-r] <branchname>…​\ngit branch --edit-description [<branchname>]"
+      "git branch [--color[=<when>] | --no-color] [--show-current]\n\t[-v [--abbrev=<length> | --no-abbrev]]\n\t[--column[=<options>] | --no-column] [--sort=<key>]\n\t[(--merged | --no-merged) [<commit>]]\n\t[--contains [<commit>]] [--no-contains [<commit>]]\n\t[--points-at <object>] [--format=<format>]\n\t[(-r | --remotes) | (-a | --all)]\n\t[--list] [<pattern>…​]\ngit branch [--track | --no-track] [-f] <branchname> [<start-point>]\ngit branch (--set-upstream-to=<upstream> | -u <upstream>) [<branchname>]\ngit branch --unset-upstream [<branchname>]\ngit branch (-m | -M) [<oldbranch>] <newbranch>\ngit branch (-c | -C) [<oldbranch>] <newbranch>\ngit branch (-d | -D) [-r] <branchname>…​\ngit branch --edit-description [<branchname>]"
     ],
     "options": [
       " -d ",
@@ -1515,7 +1519,7 @@
       " --shallow-exclude=<revision> ",
       " --[no-]single-branch ",
       " --no-tags ",
-      " --recurse-submodules[=<pathspec] ",
+      " --recurse-submodules[=<pathspec>] ",
       " --[no-]shallow-submodules ",
       " --[no-]remote-submodules ",
       " --separate-git-dir=<git dir> ",
@@ -1600,7 +1604,7 @@
   },
   {
     "synopsis": [
-      "git diff [<options>] [<commit>] [--] [<path>…​]\ngit diff [<options>] --cached [<commit>] [--] [<path>…​]\ngit diff [<options>] <commit> <commit> [--] [<path>…​]\ngit diff [<options>] <blob> <blob>\ngit diff [<options>] --no-index [--] <path> <path>"
+      "git diff [<options>] [<commit>] [--] [<path>…​]\ngit diff [<options>] --cached [<commit>] [--] [<path>…​]\ngit diff [<options>] <commit> [<commit>…​] <commit> [--] [<path>…​]\ngit diff [<options>] <commit>…​<commit> [--] [<path>…​]\ngit diff [<options>] <blob> <blob>\ngit diff [<options>] --no-index [--] <path> <path>"
     ],
     "options": [
       " -p ",
@@ -1696,6 +1700,7 @@
       " -O<orderfile> ",
       " -R ",
       " --relative[=<path>] ",
+      " --no-relative ",
       " -a ",
       " --text ",
       " --ignore-cr-at-eol ",
@@ -2215,6 +2220,7 @@
       " --continue ",
       " --abort ",
       " --quit ",
+      " --apply ",
       " --empty={drop,keep,ask} ",
       " --no-keep-empty ",
       " --keep-empty ",
@@ -2633,6 +2639,7 @@
       " -O<orderfile> ",
       " -R ",
       " --relative[=<path>] ",
+      " --no-relative ",
       " -a ",
       " --text ",
       " --ignore-cr-at-eol ",
@@ -2756,7 +2763,7 @@
   },
   {
     "synopsis": [
-      "git cat-file (-t [--allow-unknown-type]| -s [--allow-unknown-type]| -e | -p | <type> | --textconv | --filters ) [--path=<path>] <object>\ngit cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-symlinks]"
+      "git cat-file (-t [--allow-unknown-type]| -s [--allow-unknown-type]| -e | -p | <type> | --textconv | --filters ) [--path=<path>] <object>\ngit cat-file (--batch[=<format>] | --batch-check[=<format>]) [ --textconv | --filters ] [--follow-symlinks]"
     ],
     "options": [
       " <object> ",
@@ -2892,6 +2899,7 @@
       " -O<orderfile> ",
       " -R ",
       " --relative[=<path>] ",
+      " --no-relative ",
       " -a ",
       " --text ",
       " --ignore-cr-at-eol ",
@@ -3025,6 +3033,7 @@
       " -O<orderfile> ",
       " -R ",
       " --relative[=<path>] ",
+      " --no-relative ",
       " -a ",
       " --text ",
       " --ignore-cr-at-eol ",
@@ -3347,7 +3356,7 @@
   },
   {
     "synopsis": [
-      "git show-index"
+      "git show-index [--object-format=<hash-algorithm>]"
     ],
     "options": [],
     "optionsDescription": [],
@@ -3500,7 +3509,8 @@
       " --check-self-contained-and-connected ",
       " --fsck-objects ",
       " --threads=<n> ",
-      " --max-input-size=<size> "
+      " --max-input-size=<size> ",
+      " --object-format=<hash-algorithm> "
     ],
     "optionsDescription": [],
     "command": "index-pack"
@@ -3989,7 +3999,7 @@
   },
   {
     "synopsis": [
-      "git http-fetch [-c] [-t] [-a] [-d] [-v] [-w filename] [--recover] [--stdin] <commit> <url>"
+      "git http-fetch [-c] [-t] [-a] [-d] [-v] [-w filename] [--recover] [--stdin | --packfile=<hash> | <commit>] <url>"
     ],
     "options": [
       " commit-id ",
@@ -3997,6 +4007,7 @@
       " -v ",
       " -w <filename> ",
       " --stdin ",
+      " --packfile=<hash> ",
       " --recover "
     ],
     "optionsDescription": [],

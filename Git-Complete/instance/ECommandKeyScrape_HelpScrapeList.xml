@@ -844,6 +844,8 @@ git send-email --dump-aliases</d3p1:string>
 			<d3p1:string> --irreversible-delete </d3p1:string>
 			<d3p1:string> -l&lt;num&gt; </d3p1:string>
 			<d3p1:string> -O&lt;orderfile&gt; </d3p1:string>
+			<d3p1:string> --relative[=&lt;path&gt;] </d3p1:string>
+			<d3p1:string> --no-relative </d3p1:string>
 			<d3p1:string> -a </d3p1:string>
 			<d3p1:string> --text </d3p1:string>
 			<d3p1:string> --ignore-cr-at-eol </d3p1:string>
@@ -951,6 +953,8 @@ git send-email --dump-aliases</d3p1:string>
 			<d3p1:string> --object-format=&lt;format&gt; </d3p1:string>
 			<d3p1:string> --template=&lt;template_directory&gt; </d3p1:string>
 			<d3p1:string> --separate-git-dir=&lt;git dir&gt; </d3p1:string>
+			<d3p1:string> -b &lt;branch-name </d3p1:string>
+			<d3p1:string> --initial-branch=&lt;branch-name&gt; </d3p1:string>
 			<d3p1:string> --shared[=(false|true|umask|group|all|world|everybody|0xxx)] </d3p1:string>
 			<d3p1:string> umask (or false) </d3p1:string>
 			<d3p1:string> group (or true) </d3p1:string>
@@ -960,7 +964,8 @@ git send-email --dump-aliases</d3p1:string>
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git init [-q | --quiet] [--bare] [--template=&lt;template_directory&gt;]
-	  [--separate-git-dir &lt;git dir&gt;] [--object-format=&lt;format]
+	  [--separate-git-dir &lt;git dir&gt;] [--object-format=&lt;format&gt;]
+	  [-b &lt;branch-name&gt; | --initial-branch=&lt;branch-name&gt;]
 	  [--shared[=&lt;permissions&gt;]] [directory]</d3p1:string>
 		</synopsis>
 	</ECommandKeyScrape>
@@ -1489,7 +1494,7 @@ git am (--continue | --skip | --abort | --quit | --show-current-patch[=(diff|raw
 	[-v [--abbrev=&lt;length&gt; | --no-abbrev]]
 	[--column[=&lt;options&gt;] | --no-column] [--sort=&lt;key&gt;]
 	[(--merged | --no-merged) [&lt;commit&gt;]]
-	[--contains [&lt;commit]] [--no-contains [&lt;commit&gt;]]
+	[--contains [&lt;commit&gt;]] [--no-contains [&lt;commit&gt;]]
 	[--points-at &lt;object&gt;] [--format=&lt;format&gt;]
 	[(-r | --remotes) | (-a | --all)]
 	[--list] [&lt;pattern&gt;…​]
@@ -1658,7 +1663,7 @@ git cherry-pick (--continue | --skip | --abort | --quit)</d3p1:string>
 			<d3p1:string> --shallow-exclude=&lt;revision&gt; </d3p1:string>
 			<d3p1:string> --[no-]single-branch </d3p1:string>
 			<d3p1:string> --no-tags </d3p1:string>
-			<d3p1:string> --recurse-submodules[=&lt;pathspec] </d3p1:string>
+			<d3p1:string> --recurse-submodules[=&lt;pathspec&gt;] </d3p1:string>
 			<d3p1:string> --[no-]shallow-submodules </d3p1:string>
 			<d3p1:string> --[no-]remote-submodules </d3p1:string>
 			<d3p1:string> --separate-git-dir=&lt;git dir&gt; </d3p1:string>
@@ -1853,6 +1858,7 @@ git cherry-pick (--continue | --skip | --abort | --quit)</d3p1:string>
 			<d3p1:string> -O&lt;orderfile&gt; </d3p1:string>
 			<d3p1:string> -R </d3p1:string>
 			<d3p1:string> --relative[=&lt;path&gt;] </d3p1:string>
+			<d3p1:string> --no-relative </d3p1:string>
 			<d3p1:string> -a </d3p1:string>
 			<d3p1:string> --text </d3p1:string>
 			<d3p1:string> --ignore-cr-at-eol </d3p1:string>
@@ -1887,7 +1893,8 @@ git cherry-pick (--continue | --skip | --abort | --quit)</d3p1:string>
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git diff [&lt;options&gt;] [&lt;commit&gt;] [--] [&lt;path&gt;…​]
 git diff [&lt;options&gt;] --cached [&lt;commit&gt;] [--] [&lt;path&gt;…​]
-git diff [&lt;options&gt;] &lt;commit&gt; &lt;commit&gt; [--] [&lt;path&gt;…​]
+git diff [&lt;options&gt;] &lt;commit&gt; [&lt;commit&gt;…​] &lt;commit&gt; [--] [&lt;path&gt;…​]
+git diff [&lt;options&gt;] &lt;commit&gt;…​&lt;commit&gt; [--] [&lt;path&gt;…​]
 git diff [&lt;options&gt;] &lt;blob&gt; &lt;blob&gt;
 git diff [&lt;options&gt;] --no-index [--] &lt;path&gt; &lt;path&gt;</d3p1:string>
 		</synopsis>
@@ -2420,6 +2427,7 @@ git notes get-ref</d3p1:string>
 			<d3p1:string> --continue </d3p1:string>
 			<d3p1:string> --abort </d3p1:string>
 			<d3p1:string> --quit </d3p1:string>
+			<d3p1:string> --apply </d3p1:string>
 			<d3p1:string> --empty={drop,keep,ask} </d3p1:string>
 			<d3p1:string> --no-keep-empty </d3p1:string>
 			<d3p1:string> --keep-empty </d3p1:string>
@@ -2872,6 +2880,7 @@ git worktree unlock &lt;worktree&gt;</d3p1:string>
 			<d3p1:string> -O&lt;orderfile&gt; </d3p1:string>
 			<d3p1:string> -R </d3p1:string>
 			<d3p1:string> --relative[=&lt;path&gt;] </d3p1:string>
+			<d3p1:string> --no-relative </d3p1:string>
 			<d3p1:string> -a </d3p1:string>
 			<d3p1:string> --text </d3p1:string>
 			<d3p1:string> --ignore-cr-at-eol </d3p1:string>
@@ -3022,7 +3031,7 @@ git worktree unlock &lt;worktree&gt;</d3p1:string>
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git cat-file (-t [--allow-unknown-type]| -s [--allow-unknown-type]| -e | -p | &lt;type&gt; | --textconv | --filters ) [--path=&lt;path&gt;] &lt;object&gt;
-git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-symlinks]</d3p1:string>
+git cat-file (--batch[=&lt;format&gt;] | --batch-check[=&lt;format&gt;]) [ --textconv | --filters ] [--follow-symlinks]</d3p1:string>
 		</synopsis>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
@@ -3134,6 +3143,7 @@ git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-syml
 			<d3p1:string> -O&lt;orderfile&gt; </d3p1:string>
 			<d3p1:string> -R </d3p1:string>
 			<d3p1:string> --relative[=&lt;path&gt;] </d3p1:string>
+			<d3p1:string> --no-relative </d3p1:string>
 			<d3p1:string> -a </d3p1:string>
 			<d3p1:string> --text </d3p1:string>
 			<d3p1:string> --ignore-cr-at-eol </d3p1:string>
@@ -3267,6 +3277,7 @@ git cat-file (--batch | --batch-check) [ --textconv | --filters ] [--follow-syml
 			<d3p1:string> -O&lt;orderfile&gt; </d3p1:string>
 			<d3p1:string> -R </d3p1:string>
 			<d3p1:string> --relative[=&lt;path&gt;] </d3p1:string>
+			<d3p1:string> --no-relative </d3p1:string>
 			<d3p1:string> -a </d3p1:string>
 			<d3p1:string> --text </d3p1:string>
 			<d3p1:string> --ignore-cr-at-eol </d3p1:string>
@@ -3617,7 +3628,7 @@ git merge-base --fork-point &lt;ref&gt; [&lt;commit&gt;]</d3p1:string>
 		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-			<d3p1:string>git show-index</d3p1:string>
+			<d3p1:string>git show-index [--object-format=&lt;hash-algorithm&gt;]</d3p1:string>
 		</synopsis>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
@@ -3777,6 +3788,7 @@ git symbolic-ref --delete [-q] &lt;name&gt;</d3p1:string>
 			<d3p1:string> --fsck-objects </d3p1:string>
 			<d3p1:string> --threads=&lt;n&gt; </d3p1:string>
 			<d3p1:string> --max-input-size=&lt;size&gt; </d3p1:string>
+			<d3p1:string> --object-format=&lt;hash-algorithm&gt; </d3p1:string>
 		</options>
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
@@ -4321,11 +4333,12 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 			<d3p1:string> -v </d3p1:string>
 			<d3p1:string> -w &lt;filename&gt; </d3p1:string>
 			<d3p1:string> --stdin </d3p1:string>
+			<d3p1:string> --packfile=&lt;hash&gt; </d3p1:string>
 			<d3p1:string> --recover </d3p1:string>
 		</options>
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-			<d3p1:string>git http-fetch [-c] [-t] [-a] [-d] [-v] [-w filename] [--recover] [--stdin] &lt;commit&gt; &lt;url&gt;</d3p1:string>
+			<d3p1:string>git http-fetch [-c] [-t] [-a] [-d] [-v] [-w filename] [--recover] [--stdin | --packfile=&lt;hash&gt; | &lt;commit&gt;] &lt;url&gt;</d3p1:string>
 		</synopsis>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
