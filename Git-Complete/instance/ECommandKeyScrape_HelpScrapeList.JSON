@@ -1477,7 +1477,7 @@
     "synopsis": [
       "git citool"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": [],
     "command": "citool"
   },
@@ -2700,7 +2700,7 @@
     "synopsis": [
       "git get-tar-commit-id"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": [],
     "command": "get-tar-commit-id"
   },
@@ -3358,7 +3358,9 @@
     "synopsis": [
       "git show-index [--object-format=<hash-algorithm>]"
     ],
-    "options": [],
+    "options": [
+      " [--object-format=<hash-algorithm>]"
+    ],
     "optionsDescription": [],
     "command": "show-index"
   },
@@ -3651,7 +3653,7 @@
     "synopsis": [
       "git mktag"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": [],
     "command": "mktag"
   },
@@ -3810,7 +3812,7 @@
     "synopsis": [
       "git merge-one-file"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": [],
     "command": "merge-one-file"
   },
@@ -4125,7 +4127,7 @@
     "synopsis": [
       "git http-backend"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": [],
     "command": "http-backend"
   },
@@ -4157,48 +4159,24 @@
     "synopsis": [
       "git update-server-info"
     ],
-    "options": [],
+    "options": null,
     "optionsDescription": [],
     "command": "update-server-info"
   },
   {
     "synopsis": [
-      "git stage [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]\n\t  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]\n\t  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]\n\t  [--chmod=(+|-)x] [--pathspec-from-file=<file> [--pathspec-file-nul]]\n\t  [--] [<pathspec>…​]"
+      "git stage args…​"
     ],
-    "options": [
-      " <pathspec>…​ ",
-      " -n ",
-      " --dry-run ",
-      " -v ",
-      " --verbose ",
-      " -f ",
-      " --force ",
-      " -i ",
-      " --interactive ",
-      " -p ",
-      " --patch ",
-      " -e ",
-      " --edit ",
-      " -u ",
-      " --update ",
-      " -A ",
-      " --all ",
-      " --no-ignore-removal ",
-      " --no-all ",
-      " --ignore-removal ",
-      " -N ",
-      " --intent-to-add ",
-      " --refresh ",
-      " --ignore-errors ",
-      " --ignore-missing ",
-      " --no-warn-embedded-repo ",
-      " --renormalize ",
-      " --chmod=(+|-)x ",
-      " --pathspec-from-file=<file> ",
-      " --pathspec-file-nul ",
-      " -- "
-    ],
+    "options": null,
     "optionsDescription": [],
     "command": "stage"
+  },
+  {
+    "synopsis": [
+      "git whatchanged <option>…​"
+    ],
+    "options": null,
+    "optionsDescription": [],
+    "command": "whatchanged"
   }
 ]

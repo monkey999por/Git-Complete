@@ -30,13 +30,9 @@ namespace Git_Complete.src.function.scrape
                     ret = ScrapeByIdIsCommand(command);
                     break;
                 case "merge-tree":
-                    //スクレイピングはせずに個別に追加
                     ret.Add(" <base-tree> ");
                     ret.Add(" <branch1> ");
                     ret.Add(" <branch2> ");
-                    break;
-                case "citool":
-                    //オプションなし
                     break;
                 case "gui":
                     ret = ScrapeByIdIsCommand(command);
@@ -44,20 +40,11 @@ namespace Git_Complete.src.function.scrape
                 case "sparse-checkout":
                     ret = ScrapeByIdIsCommand(command);
                     break;
-                case "get-tar-commit-id":
-                    //オプションなし
-                    break;
                 case "show-index":
-                    //オプションなし
-                    break;
-                case "mktag":
-                    // オプションなし
+                    ret.Add(" [--object-format=<hash-algorithm>]");
                     break;
                 case "update-ref":
                     //ちょっとよくわからんのでアプリでは対象外かな
-                    break;
-                case "merge-one-file":
-                    // オプションなし
                     break;
                 case "credential":
                     //これもスクレイプはしない、、
@@ -74,17 +61,6 @@ namespace Git_Complete.src.function.scrape
                     ret.Add(" password=<password> ");
                     ret.Add(" url=<url> ");
                     break;
-                case "http-backend":
-                    //ちょっとよくわからんのでアプリでは対象外かな
-                    break;
-                case "update-server-info":
-                    // オプションなし
-                    break;
-                case "stage":
-                    //addと同様
-                    ret = cs.ScrapeBy("add");
-                    break;
-
                 default:
                     break;
             }

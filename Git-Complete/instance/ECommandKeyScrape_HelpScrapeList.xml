@@ -1621,7 +1621,7 @@ git cherry-pick (--continue | --skip | --abort | --quit)</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>citool</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git citool</d3p1:string>
@@ -2943,7 +2943,7 @@ git worktree unlock &lt;worktree&gt;</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>get-tar-commit-id</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git get-tar-commit-id</d3p1:string>
@@ -3625,7 +3625,9 @@ git merge-base --fork-point &lt;ref&gt; [&lt;commit&gt;]</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>show-index</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<d3p1:string> [--object-format=&lt;hash-algorithm&gt;]</d3p1:string>
+		</options>
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git show-index [--object-format=&lt;hash-algorithm&gt;]</d3p1:string>
@@ -3945,7 +3947,7 @@ git commit-graph write &lt;options&gt; [--object-dir &lt;dir&gt;] [--[no-]progre
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>mktag</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git mktag</d3p1:string>
@@ -4129,7 +4131,7 @@ git check-ref-format --branch &lt;branchname-shorthand&gt;</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>merge-one-file</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git merge-one-file</d3p1:string>
@@ -4468,7 +4470,7 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>http-backend</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git http-backend</d3p1:string>
@@ -4503,7 +4505,7 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>update-server-info</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 			<d3p1:string>git update-server-info</d3p1:string>
@@ -4511,46 +4513,18 @@ git stripspace [-c | --comment-lines]</d3p1:string>
 	</ECommandKeyScrape>
 	<ECommandKeyScrape>
 		<command>stage</command>
-		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-			<d3p1:string> &lt;pathspec&gt;…​ </d3p1:string>
-			<d3p1:string> -n </d3p1:string>
-			<d3p1:string> --dry-run </d3p1:string>
-			<d3p1:string> -v </d3p1:string>
-			<d3p1:string> --verbose </d3p1:string>
-			<d3p1:string> -f </d3p1:string>
-			<d3p1:string> --force </d3p1:string>
-			<d3p1:string> -i </d3p1:string>
-			<d3p1:string> --interactive </d3p1:string>
-			<d3p1:string> -p </d3p1:string>
-			<d3p1:string> --patch </d3p1:string>
-			<d3p1:string> -e </d3p1:string>
-			<d3p1:string> --edit </d3p1:string>
-			<d3p1:string> -u </d3p1:string>
-			<d3p1:string> --update </d3p1:string>
-			<d3p1:string> -A </d3p1:string>
-			<d3p1:string> --all </d3p1:string>
-			<d3p1:string> --no-ignore-removal </d3p1:string>
-			<d3p1:string> --no-all </d3p1:string>
-			<d3p1:string> --ignore-removal </d3p1:string>
-			<d3p1:string> -N </d3p1:string>
-			<d3p1:string> --intent-to-add </d3p1:string>
-			<d3p1:string> --refresh </d3p1:string>
-			<d3p1:string> --ignore-errors </d3p1:string>
-			<d3p1:string> --ignore-missing </d3p1:string>
-			<d3p1:string> --no-warn-embedded-repo </d3p1:string>
-			<d3p1:string> --renormalize </d3p1:string>
-			<d3p1:string> --chmod=(+|-)x </d3p1:string>
-			<d3p1:string> --pathspec-from-file=&lt;file&gt; </d3p1:string>
-			<d3p1:string> --pathspec-file-nul </d3p1:string>
-			<d3p1:string> -- </d3p1:string>
-		</options>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
 		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
 		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
-			<d3p1:string>git stage [--verbose | -v] [--dry-run | -n] [--force | -f] [--interactive | -i] [--patch | -p]
-	  [--edit | -e] [--[no-]all | --[no-]ignore-removal | [--update | -u]]
-	  [--intent-to-add | -N] [--refresh] [--ignore-errors] [--ignore-missing] [--renormalize]
-	  [--chmod=(+|-)x] [--pathspec-from-file=&lt;file&gt; [--pathspec-file-nul]]
-	  [--] [&lt;pathspec&gt;…​]</d3p1:string>
+			<d3p1:string>git stage args…​</d3p1:string>
+		</synopsis>
+	</ECommandKeyScrape>
+	<ECommandKeyScrape>
+		<command>whatchanged</command>
+		<options xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+		<optionsDescription xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+		<synopsis xmlns:d3p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+			<d3p1:string>git whatchanged &lt;option&gt;…​</d3p1:string>
 		</synopsis>
 	</ECommandKeyScrape>
 </ArrayOfECommandKeyScrape>

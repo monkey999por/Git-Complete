@@ -152,8 +152,7 @@
         /// </summary>
         public static readonly string[] SYNOPSIS_INDEVIDUAL_SCRAPE_COMMAND = new string[]{
             //こいつは特別
-            "credential",
-            "stage"
+            "credential"
         };
 
         /// <summary>
@@ -162,18 +161,11 @@
         public static readonly string[] OPTIONS_INDEVIDUAL_SCRAPE_COMMAND = new string[]{
             "rerere",
             "merge-tree",
-            "citool",
             "gui",
             "sparse-checkout",
-            "get-tar-commit-id",
             "show-index",
-            "mktag",
             "update-ref",
-            "merge-one-file",
-            "credential",
-            "http-backend",
-            "update-server-info",
-            "stage"
+            "credential"
         };
 
     }

@@ -16,8 +16,6 @@ namespace Git_Complete.src.function.scrape
         /// <returns></returns>
         public override List<string> ScrapeBy(string command)
         {
-            CommonScraper cs = new SynopsisCommonScraper();
-
             var ret = new List<string>();
             Console.WriteLine("synopsis個別解析: " + command);
 
@@ -26,18 +24,10 @@ namespace Git_Complete.src.function.scrape
                 case "credential":
                     ret.Add("git credential <fill|approve|reject> [<stdin>…]");
                     break;
-                case "stage":
-                    var temp = cs.ScrapeBy("add");
-                    foreach (var item in temp)
-                    {
-                        ret.Add(item.Replace("git add", "git " + command));
-                    }
-                    break;
                 default:
                     break;
             }
             return ret;
-
         }
         /// <inheritdoc/>
         public override ECommandKeyScrape ScrapeBy(ECommandKeyScrape _in)
