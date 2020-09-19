@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Git_CompleteTest</RootNamespace>
-
+	  <LangVersion>preview</LangVersion>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 

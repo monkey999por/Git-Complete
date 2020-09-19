@@ -5,6 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Git_Complete</RootNamespace>
     <StartupObject>Git_Complete.Start</StartupObject>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
